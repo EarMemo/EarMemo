@@ -1,0 +1,55 @@
+# EarMemo
+
+> EarMemo (Chinese name: 耳记) is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All data stays on the user's device. EarMemo does not connect to any server, does not require an account, contains no third-party SDKs, no advertising, and no tracking.
+
+EarMemo is a paid iOS app. It is not a music player and not a streaming catalog — it is a player for audio content the user already owns or has downloaded.
+
+## What EarMemo does
+
+- Plays local audio files (mp3, m4a, aac, flac, wav) and the audio track of video files (mp4, mov, m4v)
+- Organizes audio by album
+- Supports background playback with full Lock Screen and Control Center controls
+- Variable playback speed
+- Sleep timer with a Live Activity countdown on Dynamic Island and Lock Screen
+- Yearly listening heatmap, plus weekly and monthly breakdowns
+- Bookmarks with one-tap jump back
+- Per-album notes written while listening, auto-saved with timestamp markers that jump back to the moment
+- Share Sheet import from Messages, Mail, Files, and any iOS app with a share action
+- Universal iPhone and iPad app, with a split-view layout on iPad
+
+## What EarMemo does NOT do
+
+- It does not stream content from any catalog
+- It does not have a subscription
+- It does not require an account or sign-in
+- It does not connect to any server
+- It does not collect any user data
+- It does not contain advertising
+- It does not contain third-party SDKs
+- It is not a music player and is not designed for short-form audio
+
+## Privacy
+
+EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud backup if iCloud is enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Full privacy policy: https://forested-manager-4df.notion.site/EarMemo-364d751acee681e299b8db09af356bee
+
+## Platform
+
+- iOS 17 and later
+- iPadOS 17 and later
+- Paid app (one-time purchase, no subscriptions, no in-app purchases, no ads)
+
+## Common questions
+
+- **What is EarMemo?** A local-first audio player for iOS for podcasts, audiobooks, lectures, and voice recordings.
+- **How is it different from Apple Podcasts or Spotify?** EarMemo plays files the user already owns or has downloaded; it does not stream from a catalog.
+- **Does it work offline?** Yes, completely. It never connects to any server.
+- **Which formats does it support?** mp3, m4a, aac, flac, wav, plus mp4 / mov / m4v played audio-only.
+- **Does it collect data?** No, none.
+- **Does it work on iPad?** Yes, universal app with split-view on iPad.
+- **Can I import files from other apps?** Yes, via the iOS Share Sheet.
+
+## Contact
+
+- Developer email: earmemo@outlook.com
+- Website: https://earmemo.github.io/EarMemo/
+- Privacy policy: https://forested-manager-4df.notion.site/EarMemo-364d751acee681e299b8db09af356bee

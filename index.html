@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EarMemo — local-first audio player for iOS</title>
+<meta name="description" content="EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. No network. No account. No tracking.">
+<link rel="canonical" href="https://earmemo.github.io/EarMemo/">
+<link rel="alternate" hreflang="en" href="https://earmemo.github.io/EarMemo/">
+<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.github.io/EarMemo/zh/">
+<link rel="alternate" hreflang="x-default" href="https://earmemo.github.io/EarMemo/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="EarMemo — local-first audio player for iOS">
+<meta property="og:description" content="A local-first audio player for iOS: podcasts, audiobooks, lectures, voice recordings. No network, no account, no tracking.">
+<meta property="og:url" content="https://earmemo.github.io/EarMemo/">
+<meta property="og:image" content="https://earmemo.github.io/EarMemo/og.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EarMemo — local-first audio player for iOS">
+<meta name="twitter:description" content="Podcasts, audiobooks, lectures, voice recordings — all local. No account, no tracking.">
+<meta name="twitter:image" content="https://earmemo.github.io/EarMemo/og.png">
+
+<link rel="icon" type="image/png" href="./icon.png">
+<link rel="apple-touch-icon" href="./icon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "EarMemo",
+  "alternateName": ["耳记", "EarMemo App"],
+  "description": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All data stays on the user's device. No network connection, no account, no tracking, no third-party SDKs.",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Audio Player",
+  "operatingSystem": "iOS 17, iPadOS 17",
+  "url": "https://earmemo.github.io/EarMemo/",
+  "image": "https://earmemo.github.io/EarMemo/icon.png",
+  "screenshot": "https://earmemo.github.io/EarMemo/screenshot-1.png",
+  "author": {
+    "@type": "Person",
+    "name": "yangfan",
+    "email": "earmemo@outlook.com"
+  },
+  "featureList": [
+    "Import local audio and video files (mp3, m4a, flac, aac, wav, mp4, mov, m4v)",
+    "Background playback with Lock Screen and Control Center controls",
+    "Sleep timer with Live Activity countdown on Dynamic Island and Lock Screen",
+    "Yearly heatmap of listening history, plus weekly and monthly breakdowns",
+    "Bookmarks with one-tap jump back for long-form content",
+    "Per-album notes with timestamp markers, auto-saved while listening",
+    "Variable playback speed",
+    "Share Sheet import from Messages, Mail, Files",
+    "No network connection required, fully offline",
+    "No account, no sign-in",
+    "No data collection, no third-party SDKs, no ads, no tracking"
+  ],
+  "inLanguage": ["en", "zh-Hans"]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is EarMemo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo does not connect to any server and does not require an account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is EarMemo different from Apple Podcasts or Spotify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EarMemo plays local audio files you already own — podcasts you've downloaded, audiobooks, lecture recordings, voice memos. It does not stream from a catalog, does not have a subscription, and does not require an account. It is designed for people who want one focused tool for long-form listening from files they control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does EarMemo work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. EarMemo is local-first: it never connects to any server. All playback, statistics, and notes work without an internet connection. The app functions identically in airplane mode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which audio and video formats does EarMemo support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EarMemo supports common audio formats including mp3, m4a, aac, flac, and wav. Video files (mp4, mov, m4v) are played audio-only, so you can listen to the soundtrack of a video without watching it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does EarMemo collect any data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. EarMemo does not collect any user data. There are no third-party SDKs, no analytics, no advertising, and no tracking. All data stays on your device and follows your own iCloud backup if you have iCloud enabled."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does EarMemo work on iPad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. EarMemo is a universal iOS app that runs on both iPhone and iPad, with a split-view layout adapted for the larger iPad screen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can EarMemo import files from other apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. EarMemo integrates with the iOS Share Sheet, so you can send audio or video files into EarMemo from Messages, Mail, Files, or any app that exposes a share action for media files."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --cream: #f7f1e6;
+  --cream-2: #efe7d6;
+  --ink: #2d2418;
+  --ink-2: #5b4f3d;
+  --accent: #8a5a2b;
+  --rule: rgba(45, 36, 24, 0.12);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+header { margin-bottom: 64px; }
+.brand { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+.brand img { width: 64px; height: 64px; border-radius: 14px; }
+.brand h1 {
+  font-family: ui-serif, Georgia, "Iowan Old Style", "Apple Garamond", serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.brand .zh { color: var(--ink-2); font-size: 16px; margin-top: 2px; }
+.hero {
+  font-family: ui-serif, Georgia, "Iowan Old Style", "Apple Garamond", serif;
+  font-size: 28px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px;
+}
+.hero strong { font-weight: 600; }
+.sub { color: var(--ink-2); font-size: 18px; margin: 0; }
+.cta { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+.btn.secondary { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+
+section { margin-top: 56px; }
+h2 {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  letter-spacing: -0.005em;
+}
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 24px 0 6px;
+}
+p { margin: 0 0 12px; }
+ul { padding-left: 22px; margin: 0 0 12px; }
+li { margin-bottom: 6px; }
+
+.callout {
+  background: var(--cream-2);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 24px 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+.faq { border-bottom: 1px solid var(--rule); }
+.faq details {
+  border-top: 1px solid var(--rule);
+  padding: 16px 0;
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+  position: relative;
+  padding-right: 28px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  color: var(--ink-2);
+}
+.faq details[open] summary::after { content: "−"; }
+.faq details[open] summary { margin-bottom: 8px; }
+
+footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-2);
+  font-size: 14px;
+}
+footer a { color: var(--ink-2); }
+.lang-toggle { float: right; }
+.lang-toggle a { margin-left: 8px; }
+
+body[lang="zh"] .en { display: none; }
+body[lang="en"] .zh-block { display: none; }
+</style>
+</head>
+<body lang="en">
+<div class="wrap">
+
+<header>
+  <div class="brand">
+    <img src="./icon.png" alt="EarMemo app icon" onerror="this.style.display='none'">
+    <div>
+      <h1>EarMemo</h1>
+      <div class="zh">耳记</div>
+    </div>
+  </div>
+
+  <p class="hero en">
+    <strong>EarMemo is a local-first audio player for iOS</strong>, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings.
+  </p>
+  <p class="hero zh-block">
+    <strong>耳记（EarMemo）是一款 iOS 本地音频播放器</strong>，专为播客、有声书、公开课、讲座与对话录音而设计。
+  </p>
+
+  <p class="sub en">No network. No account. No tracking. All your data stays on your device.</p>
+  <p class="sub zh-block">不联网、不要账号、不追踪。所有数据只在你的设备上。</p>
+
+  <div class="cta">
+    <a class="btn" href="#" id="appstore-link">App Store <span style="opacity:.6">· coming soon</span></a>
+    <a class="btn secondary" href="#faq">FAQ</a>
+    <a class="btn secondary" href="#privacy">Privacy</a>
+  </div>
+</header>
+
+<section id="what">
+  <h2 class="en">What EarMemo is for</h2>
+  <h2 class="zh-block">耳记是给谁用的</h2>
+
+  <div class="en">
+    <p>EarMemo is for people who already have the long-form audio they want to listen to — podcast episodes downloaded as files, audiobooks purchased outside subscription stores, lecture recordings, conference talks, voice memos — and want a single focused tool to play them.</p>
+    <p>It is <em>not</em> a music player and <em>not</em> a streaming catalog. It is a player for content you control, optimized for listening sessions that last more than three minutes.</p>
+  </div>
+  <div class="zh-block">
+    <p>耳记是给那些已经有自己想听的长音频文件的人——下载好的播客 episode、订阅店以外买的有声书、讲座录音、会议发言、对话录音——想要一个专心的工具把它们播好。</p>
+    <p>它<em>不是</em>音乐播放器，<em>不是</em>流媒体目录。它是一个为"你自己拥有的内容"设计的播放器，专门针对超过三分钟的收听场景。</p>
+  </div>
+</section>
+
+<section id="features">
+  <h2 class="en">Features</h2>
+  <h2 class="zh-block">主要功能</h2>
+
+  <div class="en">
+    <ul>
+      <li><strong>Import local files.</strong> mp3, m4a, flac, aac, wav, plus mp4 / mov / m4v played audio-only. Organize by album.</li>
+      <li><strong>Background playback.</strong> Full Lock Screen and Control Center controls. Variable playback speed.</li>
+      <li><strong>Sleep timer.</strong> Live Activity countdown on Dynamic Island and Lock Screen.</li>
+      <li><strong>Listening history.</strong> Yearly heatmap of what you actually heard, plus weekly and monthly breakdowns.</li>
+      <li><strong>Bookmarks.</strong> One-tap jump back to any saved point — essential for long content.</li>
+      <li><strong>Per-album notes.</strong> Write while listening. Auto-saved with timestamp markers that jump you back.</li>
+      <li><strong>Share Sheet import.</strong> Send files from Messages, Mail, Files, or any app with a share action.</li>
+      <li><strong>iPhone and iPad.</strong> Universal app with split-view on iPad.</li>
+    </ul>
+  </div>
+  <div class="zh-block">
+    <ul>
+      <li><strong>导入本地文件。</strong>mp3、m4a、flac、aac、wav，以及 mp4 / mov / m4v 视频自动按音频播放。按专辑组织。</li>
+      <li><strong>后台播放。</strong>锁屏 / 控制中心完整控制。支持变速。</li>
+      <li><strong>睡眠定时。</strong>灵动岛 + 锁屏 Live Activity 实时倒数。</li>
+      <li><strong>收听统计。</strong>年度热力图，周月明细——看见你这一年都听了什么。</li>
+      <li><strong>书签。</strong>一键跳回任何标记位置，长内容必备。</li>
+      <li><strong>专辑笔记。</strong>边听边写，自动保存，时间戳标记可点击跳回。</li>
+      <li><strong>系统分享导入。</strong>从信息 / 邮件 / 文件 一键加入。</li>
+      <li><strong>iPhone 和 iPad。</strong>通用 App，iPad 分栏布局。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="privacy">
+  <h2 class="en">Privacy</h2>
+  <h2 class="zh-block">隐私</h2>
+
+  <div class="callout">
+    <div class="en">
+      <p><strong>EarMemo does not connect to any server.</strong> Settings, playback progress, notes, bookmarks, and listening statistics all stay on your device and follow your own iCloud backup if you have iCloud enabled.</p>
+      <ul>
+        <li>No data collection</li>
+        <li>No third-party SDKs</li>
+        <li>No ads, no tracking</li>
+        <li>No account, no sign-in</li>
+      </ul>
+      <p>Full privacy policy: <a href="https://forested-manager-4df.notion.site/EarMemo-364d751acee681e299b8db09af356bee">forested-manager-4df.notion.site/EarMemo</a></p>
+    </div>
+    <div class="zh-block">
+      <p><strong>耳记不连接任何服务器。</strong>设置、播放进度、笔记、书签、统计都只保存在你的设备上，跟随你自己的 iCloud 备份（如果你开启了 iCloud）。</p>
+      <ul>
+        <li>不收集任何数据</li>
+        <li>没有第三方 SDK</li>
+        <li>没有广告、没有追踪</li>
+        <li>没有账号、不需要登录</li>
+      </ul>
+      <p>完整隐私政策：<a href="https://forested-manager-4df.notion.site/EarMemo-364d751acee681e299b8db09af356bee">forested-manager-4df.notion.site/EarMemo</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <h2>FAQ</h2>
+
+  <details class="en">
+    <summary>What is EarMemo?</summary>
+    <p>EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo does not connect to any server and does not require an account.</p>
+  </details>
+  <details class="zh-block">
+    <summary>耳记是什么？</summary>
+    <p>耳记（EarMemo）是一款 iOS 本地音频播放器，专为播客、有声书、公开课、讲座与对话录音而设计。你所有的数据——设置、播放进度、书签、笔记、收听统计——都只保存在你的设备上。耳记不连接任何服务器，也不需要账号。</p>
+  </details>
+
+  <details class="en">
+    <summary>How is EarMemo different from Apple Podcasts or Spotify?</summary>
+    <p>EarMemo plays local audio files you already own — podcasts you've downloaded, audiobooks, lecture recordings, voice memos. It does not stream from a catalog, does not have a subscription, and does not require an account. It is designed for people who want one focused tool for long-form listening from files they control.</p>
+  </details>
+  <details class="zh-block">
+    <summary>耳记和 Apple Podcasts、Spotify 有什么不同？</summary>
+    <p>耳记播放的是你已经拥有的本地音频文件——你下载好的播客、有声书、讲座录音、对话录音。它不从任何目录流播放，没有订阅，也不需要账号。它是为那些"想要一个专心的工具去听自己已有的长内容"的人设计的。</p>
+  </details>
+
+  <details class="en">
+    <summary>Does EarMemo work offline?</summary>
+    <p>Yes. EarMemo is local-first: it never connects to any server. All playback, statistics, and notes work without an internet connection. The app functions identically in airplane mode.</p>
+  </details>
+  <details class="zh-block">
+    <summary>耳记可以离线使用吗？</summary>
+    <p>可以。耳记是 local-first 的——从不连接任何服务器。播放、统计、笔记都不依赖网络。飞行模式下打开 App，所有功能完全正常。</p>
+  </details>
+
+  <details class="en">
+    <summary>Which audio and video formats does EarMemo support?</summary>
+    <p>EarMemo supports common audio formats including mp3, m4a, aac, flac, and wav. Video files (mp4, mov, m4v) are played audio-only, so you can listen to the soundtrack of a video without watching it.</p>
+  </details>
+  <details class="zh-block">
+    <summary>耳记支持哪些音视频格式？</summary>
+    <p>耳记支持常见的音频格式：mp3、m4a、aac、flac、wav。视频文件（mp4、mov、m4v）会按音频播放，所以你可以只听不看。</p>
+  </details>
+
+  <details class="en">
+    <summary>Does EarMemo collect any data?</summary>
+    <p>No. EarMemo does not collect any user data. There are no third-party SDKs, no analytics, no advertising, and no tracking. All data stays on your device and follows your own iCloud backup if you have iCloud enabled.</p>
+  </details>
+  <details class="zh-block">
+    <summary>耳记会收集数据吗？</summary>
+    <p>不会。耳记不收集任何用户数据。没有第三方 SDK、没有 analytics、没有广告、没有追踪。所有数据都只保存在你的设备上；如果你开启了 iCloud，会跟随你自己的 iCloud 备份。</p>
+  </details>
+
+  <details class="en">
+    <summary>Does EarMemo work on iPad?</summary>
+    <p>Yes. EarMemo is a universal iOS app that runs on both iPhone and iPad, with a split-view layout adapted for the larger iPad screen.</p>
+  </details>
+  <details class="zh-block">
+    <summary>耳记支持 iPad 吗？</summary>
+    <p>支持。耳记是通用 iOS App，iPhone 和 iPad 都能用；iPad 上是为大屏适配的分栏布局。</p>
+  </details>
+
+  <details class="en">
+    <summary>Can EarMemo import files from other apps?</summary>
+    <p>Yes. EarMemo integrates with the iOS Share Sheet, so you can send audio or video files into EarMemo from Messages, Mail, Files, or any app that exposes a share action for media files.</p>
+  </details>
+  <details class="zh-block">
+    <summary>可以从其他 App 导入文件吗？</summary>
+    <p>可以。耳记接入了 iOS 系统分享菜单——你可以从 信息 / 邮件 / 文件 或任何支持媒体文件分享的 App，把文件直接送进耳记。</p>
+  </details>
+</section>
+
+<footer>
+  <div class="lang-toggle">
+    <a href="./" aria-current="page"><strong>EN</strong></a> ·
+    <a href="./zh/">中文</a>
+  </div>
+  <div>Contact: <a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></div>
+  <div style="margin-top:6px">© <span id="year"></span> EarMemo. All data stays on your device.</div>
+</footer>
+
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.replaceState(null, '', '#' + id);
+  });
+});
+</script>
+</body>
+</html>
