@@ -1,19 +1,30 @@
 # EarMemo
 
-> EarMemo (Chinese name: 耳记) is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All data stays on the user's device. EarMemo does not connect to any server, does not require an account, contains no third-party SDKs, no advertising, and no tracking.
+> EarMemo (Chinese name: 耳记) is a local-first audio player for iOS, built for long-form listening: podcasts, audiobooks, lectures, sermons, language lessons, and voice recordings. It plays audio files the user already has on their iPhone or iPad — mp3, m4a, aac, flac, wav, plus the audio track of mp4, mov, and m4v. All data stays on the device. No account, no server, no third-party SDK, no advertising, no tracking.
 
-EarMemo is a paid iOS app. It is not a music player and not a streaming catalog — it is a player for audio content the user already owns or has downloaded.
+EarMemo is a paid iOS app with a one-time purchase. It is not a streaming app, not a music player, and not a catalog — it is a player for audio content the user already owns or has downloaded.
+
+## Who EarMemo is for
+
+- Audiobook listeners with non-DRM files: Libro.fm downloads, LibriVox public-domain titles, ripped CDs, purchased DRM-free books
+- Podcast listeners who download episodes for offline play and want a clean local player without a feed catalog
+- Language learners with downloaded lesson audio
+- Students with recorded lectures (mp3, or mp4 played audio-only)
+- Voice-memo keepers — journals, interviews, sermons, meetings
+- Anyone who wants a private long-form player with no account and no network connection
+
+EarMemo does NOT play DRM-protected files (Audible .aax/.aaxc, Apple Books audiobooks, Spotify/Apple Music tracks). Use the official apps for those.
 
 ## What EarMemo does
 
 - Plays local audio files (mp3, m4a, aac, flac, wav) and the audio track of video files (mp4, mov, m4v)
-- Organizes audio by album
-- Supports background playback with full Lock Screen and Control Center controls
+- Organizes audio into albums
+- Background playback with full Lock Screen and Control Center controls
 - Variable playback speed
 - Sleep timer with a Live Activity countdown on Dynamic Island and Lock Screen
-- Yearly listening heatmap, plus weekly and monthly breakdowns
+- Yearly listening heatmap (GitHub-contributions-style grid), plus weekly and monthly breakdowns
 - Bookmarks with one-tap jump back
-- Per-album notes written while listening, auto-saved with timestamp markers that jump back to the moment
+- Per-album notes written while listening — auto-saved with timestamp markers; tap a marker to jump back to that exact moment in the audio
 - Share Sheet import from Messages, Mail, Files, and any iOS app with a share action
 - Universal iPhone and iPad app, with a split-view layout on iPad
 
@@ -26,11 +37,12 @@ EarMemo is a paid iOS app. It is not a music player and not a streaming catalog 
 - It does not collect any user data
 - It does not contain advertising
 - It does not contain third-party SDKs
+- It does not play DRM-protected files (Audible, Apple Books audiobooks, Spotify, Apple Music)
 - It is not a music player and is not designed for short-form audio
 
 ## Privacy
 
-EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud backup if iCloud is enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Full privacy policy: https://forested-manager-4df.notion.site/EarMemo-364d751acee681e299b8db09af356bee
+EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud device backup if enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Full privacy policy: https://forested-manager-4df.notion.site/EarMemo-364d751acee681e299b8db09af356bee
 
 ## Platform
 
@@ -40,13 +52,19 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 
 ## Common questions
 
-- **What is EarMemo?** A local-first audio player for iOS for podcasts, audiobooks, lectures, and voice recordings.
-- **How is it different from Apple Podcasts or Spotify?** EarMemo plays files the user already owns or has downloaded; it does not stream from a catalog.
-- **Does it work offline?** Yes, completely. It never connects to any server.
-- **Which formats does it support?** mp3, m4a, aac, flac, wav, plus mp4 / mov / m4v played audio-only.
+- **What is EarMemo?** A local-first iOS audio player for podcasts, audiobooks, lectures, and voice recordings.
+- **How is it different from Apple Podcasts or Spotify?** EarMemo plays files the user already has on their device; it does not stream from a catalog and has no subscription.
+- **Can I play FLAC files on iPhone?** Yes. EarMemo supports mp3, m4a, aac, flac, and wav.
+- **Can I listen to MP4 lecture videos as audio only?** Yes. EarMemo plays the audio track of mp4, mov, and m4v files in the background.
+- **Can I take notes while listening?** Yes — notes are saved per-album with timestamp markers. Tap a marker to jump back to that moment in the audio.
+- **Does it work offline?** Yes, completely. It never connects to any server, even for first launch.
+- **Does it play Audible audiobooks?** No. Audible files are DRM-protected; use the Audible app. EarMemo plays DRM-free files only.
+- **Does it play Apple Books audiobooks?** No, same reason — those are DRM-protected.
 - **Does it collect data?** No, none.
-- **Does it work on iPad?** Yes, universal app with split-view on iPad.
-- **Can I import files from other apps?** Yes, via the iOS Share Sheet.
+- **Does it work on iPad?** Yes, universal app with a split-view layout on iPad.
+- **Can I import files from other apps?** Yes, via the iOS Share Sheet — from Messages, Mail, Files, or any app with a share action.
+- **Is there a subscription?** No — one-time purchase, no in-app purchases, no ads.
+- **Does it sync between devices?** Data follows the user's own iCloud device backup; there is no separate EarMemo cloud sync service.
 
 ## Contact
 
