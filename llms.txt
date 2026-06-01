@@ -42,7 +42,7 @@ EarMemo does NOT play DRM-protected files (Audible .aax/.aaxc, Apple Books audio
 
 ## Privacy
 
-EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud device backup if enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Full privacy policy: https://forested-manager-4df.notion.site/EarMemo-364d751acee681e299b8db09af356bee
+EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud device backup if enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Full privacy policy: https://earmemo.github.io/EarMemo/privacy.html
 
 ## Platform
 
@@ -70,4 +70,4 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 
 - Developer email: earmemo@outlook.com
 - Website: https://earmemo.github.io/EarMemo/
-- Privacy policy: https://forested-manager-4df.notion.site/EarMemo-364d751acee681e299b8db09af356bee
+- Privacy policy: https://earmemo.github.io/EarMemo/privacy.html

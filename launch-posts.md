@@ -175,7 +175,7 @@ A few non-obvious decisions I'd be interested in feedback on:
    wanted to look at.
 
 Site: https://earmemo.github.io/EarMemo/
-Privacy policy: https://forested-manager-4df.notion.site/EarMemo-364d751acee681e299b8db09af356bee
+Privacy policy: https://earmemo.github.io/EarMemo/privacy.html
 App Store: submitting this week.
 
 Happy to answer technical questions. Particularly interested in:
@@ -486,7 +486,7 @@ m4v），按专辑组织，提供长内容场景常用的播控（跳跃、变�
    就是我自己想看一下而已。
 
 网站：https://earmemo.github.io/EarMemo/
-隐私政策：https://forested-manager-4df.notion.site/EarMemo-364d751acee681e299b8db09af356bee
+隐私政策：https://earmemo.github.io/EarMemo/zh/privacy.html
 App Store：本周提交。
 
 技术问题欢迎。特别想听：

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>隐私政策 — 耳记 EarMemo</title>
+<meta name="description" content="耳记（EarMemo）隐私政策。耳记不收集、不上传、不分享任何个人数据，完全在你的设备上运行，不与任何服务器通信。">
+<link rel="canonical" href="https://earmemo.github.io/EarMemo/zh/privacy.html">
+<link rel="alternate" hreflang="en" href="https://earmemo.github.io/EarMemo/privacy.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.github.io/EarMemo/zh/privacy.html">
+
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+
+<style>
+:root {
+  --cream: #f7f1e6;
+  --cream-2: #efe7d6;
+  --ink: #2d2418;
+  --ink-2: #5b4f3d;
+  --accent: #8a5a2b;
+  --rule: rgba(45, 36, 24, 0.12);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+.brand { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+.brand img { width: 56px; height: 56px; border-radius: 13px; }
+.brand h1 {
+  font-family: ui-serif, Georgia, "Iowan Old Style", "Apple Garamond", serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.brand .zh { color: var(--ink-2); font-size: 15px; margin-top: 2px; }
+.back { display: inline-block; margin-bottom: 32px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+.back:hover { color: var(--ink); }
+.title {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.updated { color: var(--ink-2); font-size: 14px; margin: 0 0 32px; }
+.lede { font-size: 19px; line-height: 1.6; margin: 0 0 8px; }
+h2 {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 36px 0 10px;
+  letter-spacing: -0.005em;
+}
+p { margin: 0 0 12px; }
+ul { padding-left: 22px; margin: 0 0 12px; }
+li { margin-bottom: 6px; }
+a { color: var(--accent); }
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-2);
+  font-size: 14px;
+}
+footer a { color: var(--ink-2); }
+.lang-toggle { float: right; }
+.lang-toggle a { margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="./">← 耳记</a>
+
+  <div class="brand">
+    <img src="../icon.png" alt="耳记 app 图标" onerror="this.style.display='none'">
+    <div>
+      <h1>EarMemo</h1>
+      <div class="zh">耳记</div>
+    </div>
+  </div>
+
+  <h1 class="title">隐私政策</h1>
+  <p class="updated">最后更新：2026-05-18</p>
+
+  <p class="lede">耳记不收集、不上传、不分享任何个人数据。本 app 完全在你的设备上运行，不与任何服务器通信。</p>
+
+  <h2>留在你设备上的</h2>
+  <p>你在耳记里做的一切——导入的音频、播放进度、收听统计、笔记、书签、设置——只保存在你的设备上。如果你在 iOS 设置里开启了 iCloud 备份，这些数据会随系统备份到你自己的 iCloud；耳记自己不发起任何同步、不读写任何远端服务。</p>
+
+  <h2>耳记不做的事</h2>
+  <ul>
+    <li>不发起任何网络请求。</li>
+    <li>不内嵌第三方分析、广告或追踪 SDK。</li>
+    <li>不申请通讯录、位置、照片、麦克风、通知权限。</li>
+    <li>没有自己的账号系统、不需要登录。</li>
+  </ul>
+
+  <h2>用到的系统 API</h2>
+  <p>耳记仅使用标准的本地 iOS API：UserDefaults（保存设置和收听数据）、文件修改时间（用于按日期排序）、后台音频播放、Live Activities（用于睡眠定时器显示）。这些 API 都不涉及网络或第三方。</p>
+
+  <h2>儿童隐私</h2>
+  <p>耳记年龄分级 4+，对儿童安全。零收集政策对所有用户一视同仁。</p>
+
+  <h2>联系方式与政策更新</h2>
+  <p>如有疑问请发邮件至 <a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a>。本政策如有更新，会随下一个 app 版本一起发布。</p>
+
+  <footer>
+    <div class="lang-toggle">
+      <a href="../privacy.html">EN</a> ·
+      <a href="./privacy.html" aria-current="page"><strong>中文</strong></a>
+    </div>
+    <div>联系方式：<a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></div>
+    <div style="margin-top:6px">© <span id="year"></span> 耳记 EarMemo. 所有数据只在你的设备上。</div>
+  </footer>
+
+</div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
