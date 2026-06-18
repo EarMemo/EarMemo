@@ -5,23 +5,23 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>耳记 EarMemo — iOS 本地音频播放器</title>
 <meta name="description" content="耳记（EarMemo）是一款 iOS 本地音频播放器，专为播客、有声书、公开课、讲座与对话录音而设计。不联网、不要账号、不追踪，所有数据只在你的设备上。">
-<link rel="canonical" href="https://earmemo.github.io/EarMemo/zh/">
-<link rel="alternate" hreflang="en" href="https://earmemo.github.io/EarMemo/">
-<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.github.io/EarMemo/zh/">
-<link rel="alternate" hreflang="x-default" href="https://earmemo.github.io/EarMemo/">
+<link rel="canonical" href="https://earmemo.app/zh/">
+<link rel="alternate" hreflang="en" href="https://earmemo.app/">
+<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/">
+<link rel="alternate" hreflang="x-default" href="https://earmemo.app/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="耳记 EarMemo — iOS 本地音频播放器">
 <meta property="og:description" content="iOS 本地音频播放器：播客、有声书、讲座、录音都在本地。不联网、不要账号、不追踪。">
-<meta property="og:url" content="https://earmemo.github.io/EarMemo/zh/">
-<meta property="og:image" content="https://earmemo.github.io/EarMemo/og.png">
+<meta property="og:url" content="https://earmemo.app/zh/">
+<meta property="og:image" content="https://earmemo.app/og.png">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:locale:alternate" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="耳记 EarMemo — iOS 本地音频播放器">
 <meta name="twitter:description" content="播客、有声书、讲座、录音——全部在本地。不要账号，不追踪。">
-<meta name="twitter:image" content="https://earmemo.github.io/EarMemo/og.png">
+<meta name="twitter:image" content="https://earmemo.app/og.png">
 
 <link rel="icon" type="image/png" href="../icon.png">
 <link rel="apple-touch-icon" href="../icon.png">
@@ -36,14 +36,37 @@
   "applicationCategory": "MultimediaApplication",
   "applicationSubCategory": "Audio Player",
   "operatingSystem": "iOS 17, iPadOS 17",
-  "url": "https://earmemo.github.io/EarMemo/zh/",
-  "image": "https://earmemo.github.io/EarMemo/icon.png",
-  "screenshot": "https://earmemo.github.io/EarMemo/screenshot-1.png",
+  "url": "https://earmemo.app/zh/",
+  "image": "https://earmemo.app/icon.png",
+  "screenshot": "https://earmemo.app/screenshot-1.png",
   "author": {
     "@type": "Person",
-    "name": "yangfan",
+    "name": "Fan YANG",
+    "alternateName": "yangfan",
     "email": "earmemo@outlook.com"
   },
+  "publisher": {
+    "@type": "Person",
+    "name": "Fan YANG"
+  },
+  "disambiguatingDescription": "EarMemo (耳记) is an offline, local-first audio player for iPhone and iPad made by Fan YANG. It plays audio files you already own — podcasts, audiobooks, lectures, and voice recordings. It is a separate product from, and not affiliated with, any similarly named AI study, flashcard, or memorization service.",
+  "offers": {
+    "@type": "Offer",
+    "price": "4.99",
+    "priceCurrency": "USD",
+    "category": "OneTimePurchase",
+    "url": "https://apps.apple.com/app/apple-store/id6771007097"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Apple App Store ID",
+    "value": "6771007097"
+  },
+  "downloadUrl": "https://apps.apple.com/app/apple-store/id6771007097",
+  "sameAs": [
+    "https://apps.apple.com/app/apple-store/id6771007097",
+    "https://github.com/EarMemo"
+  ],
   "featureList": [
     "Import local audio and video files (mp3, m4a, flac, aac, wav, mp4, mov, m4v)",
     "Background playback with Lock Screen and Control Center controls",
@@ -72,6 +95,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo does not connect to any server and does not require an account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is EarMemo the same as the AI study or memorization app with a similar name?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. EarMemo (耳记) is an offline, local-first audio player for iPhone and iPad, made by Fan YANG, for playing podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, no account, and never connects to a server."
       }
     },
     {
@@ -241,7 +272,7 @@ footer a { color: var(--ink-2); }
 .lang-toggle a { margin-left: 8px; }
 
 body[lang="zh"] .en { display: none; }
-body[lang="en"] .zh-block { display: none; }
+body[lang="en"] .zh-block, body[lang="en"] .zh { display: none; }
 </style>
 </head>
 <body lang="zh">
@@ -358,6 +389,15 @@ body[lang="en"] .zh-block { display: none; }
   </details>
 
   <details class="en">
+    <summary>Is EarMemo related to the AI study app with a similar name?</summary>
+    <p>No. EarMemo (耳记) is an offline audio player for iPhone and iPad, made by Fan YANG, for podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, no account, and never connects to a server.</p>
+  </details>
+  <details class="zh-block">
+    <summary>耳记和那个名字相近的 AI 背书 / 记忆 App 是同一个吗？</summary>
+    <p>不是。耳记（EarMemo）是一款 iPhone / iPad 上的本地音频播放器，由 Fan YANG 开发，用来播放你已经拥有的播客、有声书、讲座和录音。它和任何名字相近的 AI 学习 / 记忆 / 背单词产品都是不同的、互不关联的产品。耳记没有任何 AI 功能、不需要账号，也从不连接服务器。</p>
+  </details>
+
+  <details class="en">
     <summary>How is EarMemo different from Apple Podcasts or Spotify?</summary>
     <p>EarMemo plays local audio files you already own — podcasts you've downloaded, audiobooks, lecture recordings, voice memos. It does not stream from a catalog, does not have a subscription, and does not require an account. It is designed for people who want one focused tool for long-form listening from files they control.</p>
   </details>
@@ -418,6 +458,7 @@ body[lang="en"] .zh-block { display: none; }
     <a href="./" aria-current="page"><strong>中文</strong></a>
   </div>
   <div>Contact: <a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></div>
+  <div style="margin-top:6px">最后更新：2026-06-17</div>
   <div style="margin-top:6px">© <span id="year"></span> EarMemo. All data stays on your device.</div>
 </footer>
 

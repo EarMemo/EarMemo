@@ -174,8 +174,8 @@ A few non-obvious decisions I'd be interested in feedback on:
    not for retention gamification; it's just a thing I personally
    wanted to look at.
 
-Site: https://earmemo.github.io/EarMemo/
-Privacy policy: https://earmemo.github.io/EarMemo/privacy.html
+Site: https://earmemo.app/
+Privacy policy: https://earmemo.app/privacy.html
 App Store: submitting this week.
 
 Happy to answer technical questions. Particularly interested in:
@@ -345,7 +345,7 @@ mp4/mov/m4v 文件当作音频播放——锁屏放着、放进口袋里、跑�
 请告诉我，我每封邮件都看：**earmemo@outlook.com**
 
 下载：App Store 上搜"耳记"
-网站：https://earmemo.github.io/EarMemo/
+网站：https://earmemo.app/
 完整隐私政策：[Notion 页面]
 
 谢谢读到这里。
@@ -485,8 +485,8 @@ m4v），按专辑组织，提供长内容场景常用的播控（跳跃、变�
 3. 年度热力图是本地从播放事件算出来的。不是为了 retention 游戏化，
    就是我自己想看一下而已。
 
-网站：https://earmemo.github.io/EarMemo/
-隐私政策：https://earmemo.github.io/EarMemo/zh/privacy.html
+网站：https://earmemo.app/
+隐私政策：https://earmemo.app/zh/privacy.html
 App Store：本周提交。
 
 技术问题欢迎。特别想听：
@@ -553,7 +553,7 @@ m4v 视频（按音频播），导入到 App 里按专辑组织。后台播放�
 技术栈：SwiftUI + AVAudioEngine + Core Data + ActivityKit (Live
 Activity)，iOS 17+，Universal app。
 
-网站：https://earmemo.github.io/EarMemo/
+网站：https://earmemo.app/
 App Store：搜「耳记」
 邮箱：earmemo@outlook.com
 

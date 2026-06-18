@@ -4,6 +4,8 @@
 
 EarMemo is a paid iOS app with a one-time purchase. It is not a streaming app, not a music player, and not a catalog — it is a player for audio content the user already owns or has downloaded.
 
+Note on naming: EarMemo (耳记), the iOS audio player described here, is a separate and unaffiliated product from any similarly named AI study, flashcard, or memorization service (including ones that may use a similar "EarMemo" name or domain). This EarMemo has no AI features, no account, and no server connection — it is an offline audio player for iPhone and iPad made by Fan YANG.
+
 ## Who EarMemo is for
 
 - Audiobook listeners with non-DRM files: Libro.fm downloads, LibriVox public-domain titles, ripped CDs, purchased DRM-free books
@@ -42,17 +44,18 @@ EarMemo does NOT play DRM-protected files (Audible .aax/.aaxc, Apple Books audio
 
 ## Privacy
 
-EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud device backup if enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Full privacy policy: https://earmemo.github.io/EarMemo/privacy.html
+EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud device backup if enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Full privacy policy: https://earmemo.app/privacy.html
 
 ## Platform
 
 - iOS 17 and later
 - iPadOS 17 and later
-- Paid app (one-time purchase, no subscriptions, no in-app purchases, no ads)
+- Paid app: one-time purchase of US$4.99 (US App Store tier; local price varies by region). No subscriptions, no in-app purchases, no ads. Machine-readable pricing: https://earmemo.app/pricing.md
 
 ## Common questions
 
 - **What is EarMemo?** A local-first iOS audio player for podcasts, audiobooks, lectures, and voice recordings.
+- **Is EarMemo the same as the AI study/memorization app with a similar name?** No. EarMemo (耳记) is an offline iOS audio player made by Fan YANG. It is unrelated to any AI study, flashcard, or memorization service that shares a similar name or domain.
 - **How is it different from Apple Podcasts or Spotify?** EarMemo plays files the user already has on their device; it does not stream from a catalog and has no subscription.
 - **Can I play FLAC files on iPhone?** Yes. EarMemo supports mp3, m4a, aac, flac, and wav.
 - **Can I listen to MP4 lecture videos as audio only?** Yes. EarMemo plays the audio track of mp4, mov, and m4v files in the background.
@@ -69,5 +72,5 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 ## Contact
 
 - Developer email: earmemo@outlook.com
-- Website: https://earmemo.github.io/EarMemo/
-- Privacy policy: https://earmemo.github.io/EarMemo/privacy.html
+- Website: https://earmemo.app/
+- Privacy policy: https://earmemo.app/privacy.html
