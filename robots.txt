@@ -3,6 +3,7 @@
 # including AI search, AI assistant, and AI training crawlers.
 
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # Explicitly welcome AI search & assistant crawlers so they can cite EarMemo
