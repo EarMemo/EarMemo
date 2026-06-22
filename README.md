@@ -10,13 +10,23 @@ Live at:
 
 | File | Purpose |
 |---|---|
-| `index.html` | Bilingual (English / 简体中文) landing page with SoftwareApplication + FAQPage JSON-LD |
-| `zh/index.html` | Simplified-Chinese landing page |
+| `index.html` | English landing page with SoftwareApplication + FAQPage JSON-LD |
+| `zh/index.html` | Simplified-Chinese landing page (mirror of `index.html`, identical layout/CSS) |
 | `privacy.html`, `zh/privacy.html` | Privacy policy (EN / 简体中文) |
+| `img/en/*.webp`, `img/zh/*.webp` | Clean device screenshots per locale (`player`, `notes`, `stats`, `wifi`, `privacy`) |
+| `icon.png` | App icon (favicon + apple-touch-icon) |
+| `og.png` | 1200×630 Open Graph / Twitter social card |
 | `llms.txt` | Plain-text summary for LLMs / AI agents ([llmstxt.org](https://llmstxt.org)) |
 | `pricing.md` | Machine-readable pricing for AI agents |
 | `robots.txt` | Allows all search + AI crawlers; points to the sitemap |
 | `sitemap.xml` | Sitemap with `en` / `zh-Hans` hreflang |
+
+## Images
+
+Marketing copy is **never baked into images** — every headline is real HTML text (selectable, translatable, crawlable). Device shots are the clean app UI only, framed in a CSS iPhone bezel.
+
+- `tools/build-site-images.sh [UDID]` — captures the five showcase scenes from a booted simulator (EN + ZH) via `tools/capture_showcases.sh`, then encodes web-weight WebP (900px wide, q82) into `img/<lang>/`. Requires `cwebp` (`brew install webp`).
+- `tools/render-og.py` — renders `og.png` (wordmark + tagline + framed `player` shot) with Pillow.
 
 ## Hosting
 

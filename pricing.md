@@ -4,7 +4,7 @@ EarMemo is a paid iOS app with a single one-time purchase. There is no
 subscription, no in-app purchase, no advertising, and no account.
 
 ## One-time purchase
-- Price: US$4.99 (one-time; US App Store tier — local price varies by region)
+- Price: US$4.99 (one-time; US App Store tier — local price varies by region; e.g. ¥38 on the China App Store)
 - Billing: Pay once on the App Store. No recurring charges, ever.
 - Includes: Every feature, plus all future updates to the app.
 - Platforms: iPhone and iPad (universal app); also runs on Apple Silicon Macs.

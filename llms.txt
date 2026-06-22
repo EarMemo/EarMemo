@@ -50,7 +50,7 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 
 - iOS 17 and later
 - iPadOS 17 and later
-- Paid app: one-time purchase of US$4.99 (US App Store tier; local price varies by region). No subscriptions, no in-app purchases, no ads. Machine-readable pricing: https://earmemo.app/pricing.md
+- Paid app: one-time purchase of US$4.99 (US App Store tier; local price varies by region — e.g. ¥38 on the China App Store). No subscriptions, no in-app purchases, no ads. Machine-readable pricing: https://earmemo.app/pricing.md
 
 ## Common questions
 
