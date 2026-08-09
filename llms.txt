@@ -1,10 +1,10 @@
 # EarMemo
 
-> EarMemo (Chinese name: 耳记) is a local-first audio player for iOS, built for long-form listening: podcasts, audiobooks, lectures, sermons, language lessons, and voice recordings. It plays audio files the user already has on their iPhone or iPad — mp3, m4a, aac, flac, wav, plus the audio track of mp4, mov, and m4v. All data stays on the device. No account, no server, no third-party SDK, no advertising, no tracking.
+> EarMemo (Chinese name: 耳记) is a local-first audio player for iOS, built for long-form listening: podcasts, audiobooks, lectures, sermons, language lessons, and voice recordings. It plays audio files the user already has on their iPhone or iPad — mp3, m4a, aac, flac, wav, plus the audio track of mp4, mov, and m4v. All data stays on the device. No account, no external server, no third-party SDK, no advertising, no tracking. Optional Wi-Fi Transfer connects a browser directly to the device on the same local network.
 
 EarMemo is a paid iOS app with a one-time purchase. It is not a streaming app, not a music player, and not a catalog — it is a player for audio content the user already owns or has downloaded.
 
-Note on naming: EarMemo (耳记), the iOS audio player described here, is a separate and unaffiliated product from any similarly named AI study, flashcard, or memorization service (including ones that may use a similar "EarMemo" name or domain). This EarMemo has no AI features, no account, and no server connection — it is an offline audio player for iPhone and iPad made by Fan YANG.
+Note on naming: EarMemo (耳记), the iOS audio player described here, is a separate and unaffiliated product from any similarly named AI study, flashcard, or memorization service (including ones that may use a similar "EarMemo" name or domain). This EarMemo has no AI features, no account, and no cloud service — it is an offline audio player for iPhone and iPad made by Fan YANG.
 
 ## Who EarMemo is for
 
@@ -13,7 +13,7 @@ Note on naming: EarMemo (耳记), the iOS audio player described here, is a sepa
 - Language learners with downloaded lesson audio
 - Students with recorded lectures (mp3, or mp4 played audio-only)
 - Voice-memo keepers — journals, interviews, sermons, meetings
-- Anyone who wants a private long-form player with no account and no network connection
+- Anyone who wants a private long-form player with no account, no cloud service, and offline core playback
 
 EarMemo does NOT play DRM-protected files (Audible .aax/.aaxc, Apple Books audiobooks, Spotify/Apple Music tracks). Use the official apps for those.
 
@@ -27,6 +27,9 @@ EarMemo does NOT play DRM-protected files (Audible .aax/.aaxc, Apple Books audio
 - Yearly listening heatmap (GitHub-contributions-style grid), plus weekly and monthly breakdowns
 - Bookmarks with one-tap jump back
 - Per-album notes written while listening — auto-saved with timestamp markers; tap a marker to jump back to that exact moment in the audio
+- Exports notes as Markdown files or shareable long images
+- Searches across albums, tracks, notes, and listening dates
+- Imports files and folders through a browser on the same local Wi-Fi network; interrupted files retry without failing the whole batch
 - Share Sheet import from Messages, Mail, Files, and any iOS app with a share action
 - Universal iPhone and iPad app, with a split-view layout on iPad
 
@@ -35,7 +38,7 @@ EarMemo does NOT play DRM-protected files (Audible .aax/.aaxc, Apple Books audio
 - It does not stream content from any catalog
 - It does not have a subscription
 - It does not require an account or sign-in
-- It does not connect to any server
+- It does not use any external server or cloud service
 - It does not collect any user data
 - It does not contain advertising
 - It does not contain third-party SDKs
@@ -44,13 +47,14 @@ EarMemo does NOT play DRM-protected files (Audible .aax/.aaxc, Apple Books audio
 
 ## Privacy
 
-EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud device backup if enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Full privacy policy: https://earmemo.app/privacy.html
+EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud device backup if enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Optional Wi-Fi Transfer starts a temporary local web service on the iPhone or iPad; a browser on the same network connects directly to the device, and files never pass through an EarMemo server or cloud service. Full privacy policy: https://earmemo.app/privacy.html
 
 ## Platform
 
 - iOS 17 and later
 - iPadOS 17 and later
-- Paid app: one-time purchase of US$4.99 (US App Store tier; local price varies by region — e.g. ¥38 on the China App Store). No subscriptions, no in-app purchases, no ads. Machine-readable pricing: https://earmemo.app/pricing.md
+- Current version: 1.2 (updated 2026-08-09)
+- Paid app: one-time purchase of US$5.99 (US App Store; local price varies by region — e.g. ¥38 on the China App Store). No subscriptions, no in-app purchases, no ads. Machine-readable pricing: https://earmemo.app/pricing.md
 
 ## Common questions
 
@@ -60,7 +64,8 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 - **Can I play FLAC files on iPhone?** Yes. EarMemo supports mp3, m4a, aac, flac, and wav.
 - **Can I listen to MP4 lecture videos as audio only?** Yes. EarMemo plays the audio track of mp4, mov, and m4v files in the background.
 - **Can I take notes while listening?** Yes — notes are saved per-album with timestamp markers. Tap a marker to jump back to that moment in the audio.
-- **Does it work offline?** Yes, completely. It never connects to any server, even for first launch.
+- **Does it work offline?** Yes. Playback, notes, bookmarks, statistics, and search work without an internet connection, including in airplane mode. Wi-Fi Transfer is optional and only uses the local network when explicitly opened.
+- **Does Wi-Fi Transfer upload files to an EarMemo server?** No. A browser on the same Wi-Fi network connects directly to a temporary local service on the iPhone or iPad. Files never pass through an EarMemo server or cloud service.
 - **Does it play Audible audiobooks?** No. Audible files are DRM-protected; use the Audible app. EarMemo plays DRM-free files only.
 - **Does it play Apple Books audiobooks?** No, same reason — those are DRM-protected.
 - **Does it collect data?** No, none.

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>隐私政策 — 耳记 EarMemo</title>
-<meta name="description" content="耳记（EarMemo）隐私政策。耳记不收集、不上传、不分享任何个人数据，完全在你的设备上运行，不与任何服务器通信。">
+<meta name="description" content="耳记（EarMemo）隐私政策。耳记没有外部服务器，不收集、不上传、不分享任何个人数据；可选的 Wi-Fi 传输只在你的局域网内直连。">
 <link rel="canonical" href="https://earmemo.app/zh/privacy.html">
 <link rel="alternate" hreflang="en" href="https://earmemo.app/privacy.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/privacy.html">
@@ -91,23 +91,26 @@ footer a { color: var(--ink-2); }
   </div>
 
   <h1 class="title">隐私政策</h1>
-  <p class="updated">最后更新：2026-05-18</p>
+  <p class="updated">最后更新：2026-08-09</p>
 
-  <p class="lede">耳记不收集、不上传、不分享任何个人数据。本 app 完全在你的设备上运行，不与任何服务器通信。</p>
+  <p class="lede">耳记不收集、不上传、不分享任何个人数据，也不与任何外部服务器通信。你的数据只保存在你的设备上；唯一的例外是你主动开启「Wi-Fi 传输」时，文件仅在你自己的局域网内、设备之间直接传输。</p>
 
   <h2>留在你设备上的</h2>
   <p>你在耳记里做的一切——导入的音频、播放进度、收听统计、笔记、书签、设置——只保存在你的设备上。如果你在 iOS 设置里开启了 iCloud 备份，这些数据会随系统备份到你自己的 iCloud；耳记自己不发起任何同步、不读写任何远端服务。</p>
 
   <h2>耳记不做的事</h2>
   <ul>
-    <li>不发起任何网络请求。</li>
+    <li>不向任何外部服务器发起网络请求。</li>
     <li>不内嵌第三方分析、广告或追踪 SDK。</li>
     <li>不申请通讯录、位置、照片、麦克风、通知权限。</li>
     <li>没有自己的账号系统、不需要登录。</li>
   </ul>
 
+  <h2>Wi-Fi 传输</h2>
+  <p>为了方便你从电脑或其他设备导入音频，耳记提供可选的「Wi-Fi 传输」。开启时，耳记会在你的 iPhone 或 iPad 上临时启动一个本地网页服务，让同一 Wi-Fi 下的浏览器直接连接你的设备。文件不会经过耳记的服务器或云端；关闭传输页面后，本地服务就会停止。不使用这个功能时，耳记不进行任何网络通信。</p>
+
   <h2>用到的系统 API</h2>
-  <p>耳记仅使用标准的本地 iOS API：UserDefaults（保存设置和收听数据）、文件修改时间（用于按日期排序）、后台音频播放、Live Activities（用于睡眠定时器显示）。这些 API 都不涉及网络或第三方。</p>
+  <p>耳记使用标准 iOS API 保存设置、访问文件、后台播放、显示 Live Activities，以及在你开启 Wi-Fi 传输时建立可选的局域网连接。没有任何第三方服务或 SDK 会收到你的数据。</p>
 
   <h2>儿童隐私</h2>
   <p>耳记年龄分级 4+，对儿童安全。零收集政策对所有用户一视同仁。</p>

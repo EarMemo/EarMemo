@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacy Policy — EarMemo</title>
-<meta name="description" content="EarMemo privacy policy. EarMemo does not collect, transmit, or share any personal data. The app runs entirely on your device and never communicates with any server.">
+<meta name="description" content="EarMemo privacy policy. EarMemo has no external server and does not collect, upload, or share personal data. Optional Wi-Fi Transfer stays on your local network.">
 <link rel="canonical" href="https://earmemo.app/privacy.html">
 <link rel="alternate" hreflang="en" href="https://earmemo.app/privacy.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/privacy.html">
@@ -90,23 +90,26 @@ footer a { color: var(--ink-2); }
   </div>
 
   <h1 class="title">Privacy Policy</h1>
-  <p class="updated">Last updated: 2026-05-18</p>
+  <p class="updated">Last updated: 2026-08-09</p>
 
-  <p class="lede">EarMemo does not collect, transmit, or share any personal data. The app runs entirely on your device and never communicates with any server.</p>
+  <p class="lede">EarMemo does not collect, upload, or share any personal data, and it has no external server. Your data stays on your device; the only exception is when you explicitly enable Wi-Fi Transfer, which moves files directly between devices on your local network.</p>
 
   <h2>What stays on your device</h2>
   <p>Everything you do in EarMemo — imported audio, playback progress, listening stats, notes, bookmarks, and settings — stays on your device. If you have iCloud Backup enabled in iOS Settings, this data is included in your own iCloud backup as part of the standard system backup. EarMemo itself never initiates any sync or reads or writes any remote service.</p>
 
   <h2>What EarMemo does not do</h2>
   <ul>
-    <li>Makes no network requests.</li>
+    <li>Sends no requests to any external server.</li>
     <li>Includes no third-party analytics, advertising, or tracking SDKs.</li>
     <li>Requests no access to your contacts, location, photos, microphone, or notifications.</li>
     <li>Has no account system; no sign-in is required.</li>
   </ul>
 
+  <h2>Wi-Fi Transfer</h2>
+  <p>EarMemo offers optional Wi-Fi Transfer so you can import audio from a computer or another device. When you open it, EarMemo temporarily starts a local web service on your iPhone or iPad. A browser on the same Wi-Fi network connects directly to your device; files do not pass through an EarMemo server or cloud service. Closing the transfer screen stops the local service. When you are not using Wi-Fi Transfer, EarMemo makes no network connections.</p>
+
   <h2>System APIs used</h2>
-  <p>EarMemo uses only standard local iOS APIs: UserDefaults (for settings and listening data), file modification timestamps (for sorting by date), background audio playback, and Live Activities (for the sleep-timer display). None of these APIs involve a network connection or any third party.</p>
+  <p>EarMemo uses standard iOS APIs for settings, file access, background audio, Live Activities, and the optional local-network connection used by Wi-Fi Transfer. No third-party service or SDK receives your data.</p>
 
   <h2>Children's privacy</h2>
   <p>EarMemo is rated 4+ and is safe for children. The zero-collection policy applies to every user regardless of age.</p>

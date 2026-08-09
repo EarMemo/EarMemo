@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EarMemo — local-first audio player for iOS</title>
-<meta name="description" content="EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. No network. No account. No tracking.">
+<meta name="description" content="EarMemo is a local-first audio player for iOS, designed for podcasts, audiobooks, lectures, and voice recordings. No account, no cloud service, no tracking. Optional Wi-Fi Transfer stays on your local network.">
 <link rel="canonical" href="https://earmemo.app/">
 <link rel="alternate" hreflang="en" href="https://earmemo.app/">
 <link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/">
@@ -15,7 +15,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="EarMemo — local-first audio player for iOS">
-<meta property="og:description" content="A local-first audio player for iOS: podcasts, audiobooks, lectures, voice recordings. No network, no account, no tracking.">
+<meta property="og:description" content="A local-first audio player for iOS: podcasts, audiobooks, lectures, and voice recordings. No account, no cloud service, no tracking.">
 <meta property="og:url" content="https://earmemo.app/">
 <meta property="og:image" content="https://earmemo.app/og.png">
 
@@ -33,18 +33,20 @@
   "@type": "SoftwareApplication",
   "name": "EarMemo",
   "alternateName": ["EarMemo App"],
-  "description": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All data stays on the user's device. No network connection, no account, no tracking, no third-party SDKs.",
+  "description": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All data stays on the user's device. No account, no external server, no tracking, and no third-party SDKs. Optional Wi-Fi Transfer connects devices directly on the same local network.",
   "applicationCategory": "MultimediaApplication",
   "applicationSubCategory": "Audio Player",
   "operatingSystem": "iOS 17, iPadOS 17",
+  "softwareVersion": "1.2",
+  "dateModified": "2026-08-09",
   "url": "https://earmemo.app/",
   "image": "https://earmemo.app/icon.png",
   "screenshot": [
     "https://earmemo.app/img/en/player.webp",
     "https://earmemo.app/img/en/privacy.webp",
     "https://earmemo.app/img/en/notes.webp",
-    "https://earmemo.app/img/en/stats.webp",
-    "https://earmemo.app/img/en/wifi.webp"
+    "https://earmemo.app/img/en/wifi.webp",
+    "https://earmemo.app/img/en/stats.webp"
   ],
   "author": {
     "@type": "Person",
@@ -59,7 +61,7 @@
   "disambiguatingDescription": "EarMemo is an offline, local-first audio player for iPhone and iPad made by Fan YANG. It plays audio files you already own — podcasts, audiobooks, lectures, and voice recordings. It is a separate product from, and not affiliated with, any similarly named AI study, flashcard, or memorization service.",
   "offers": {
     "@type": "Offer",
-    "price": "4.99",
+    "price": "5.99",
     "priceCurrency": "USD",
     "category": "OneTimePurchase",
     "url": "https://apps.apple.com/app/apple-store/id6771007097"
@@ -81,9 +83,12 @@
     "Yearly heatmap of listening history, plus weekly and monthly breakdowns",
     "Bookmarks with one-tap jump back for long-form content",
     "Per-album notes with timestamp markers, auto-saved while listening",
+    "Export notes as Markdown or a shareable long image",
+    "Global search across albums, tracks, notes, and listening dates",
+    "Direct Wi-Fi transfer from a browser on the same local network, with folder import and retry support",
     "Variable playback speed",
     "Share Sheet import from Messages, Mail, Files",
-    "No network connection required, fully offline",
+    "Playback, notes, and listening statistics work fully offline",
     "No account, no sign-in",
     "No data collection, no third-party SDKs, no ads, no tracking"
   ],
@@ -101,7 +106,7 @@
       "name": "What is EarMemo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo does not connect to any server and does not require an account."
+        "text": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo has no external server and does not require an account."
       }
     },
     {
@@ -109,7 +114,7 @@
       "name": "Is EarMemo the same as the AI study or memorization app with a similar name?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. EarMemo is an offline, local-first audio player for iPhone and iPad, made by Fan YANG, for playing podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, no account, and never connects to a server."
+        "text": "No. EarMemo is an offline, local-first audio player for iPhone and iPad, made by Fan YANG, for playing podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, no account, and no cloud service."
       }
     },
     {
@@ -125,7 +130,15 @@
       "name": "Does EarMemo work offline?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. EarMemo is local-first: it never connects to any server. All playback, statistics, and notes work without an internet connection. The app functions identically in airplane mode."
+        "text": "Yes. Playback, statistics, notes, bookmarks, and search work without an internet connection, including in airplane mode. Wi-Fi Transfer is optional and only uses the local network when you explicitly open it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Wi-Fi Transfer upload my files to an EarMemo server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. When you open Wi-Fi Transfer, EarMemo starts a temporary local web service on your iPhone or iPad. A browser on the same Wi-Fi network connects directly to your device; files do not pass through an EarMemo server or cloud service. Closing the transfer screen stops the local service."
       }
     },
     {
@@ -274,7 +287,7 @@ p{margin:0 0 12px;}
   <section class="hero" id="hero"><div class="container">
     <div>
       <h1>Listen to what you already own.</h1>
-      <p class="lead">A local-first iOS player for podcasts, audiobooks, lectures, and voice recordings. Nothing leaves your phone — no network, no account, no tracking.</p>
+      <p class="lead">A local-first iOS player for podcasts, audiobooks, lectures, and voice recordings. No cloud service, no account, no tracking — your library stays yours.</p>
       <div class="cta">
         <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download on the App Store</a>
         <a class="btn secondary" href="#features">See features</a>
@@ -285,9 +298,9 @@ p{margin:0 0 12px;}
 
   <section class="trust"><div class="container">
     <span><b>✓</b> No account</span>
-    <span><b>✓</b> No network</span>
+    <span><b>✓</b> No cloud</span>
     <span><b>✓</b> No tracking</span>
-    <span><b>✓</b> One-time $4.99</span>
+    <span><b>✓</b> One-time $5.99</span>
     <span><b>✓</b> iPhone &amp; iPad</span>
   </div></section>
 
@@ -370,7 +383,7 @@ p{margin:0 0 12px;}
   <section class="section privacy" id="privacy"><div class="container">
     <p class="eyebrow">Privacy</p>
     <h2>Private by architecture, not by promise</h2>
-    <p class="lead">EarMemo never connects to a server. Settings, playback progress, notes, bookmarks, and statistics all stay on your device — and follow your own iCloud backup if you have iCloud enabled.</p>
+    <p class="lead">EarMemo has no external server. Settings, playback progress, notes, bookmarks, and statistics stay on your device. Optional Wi-Fi Transfer connects your browser directly to EarMemo on the same local network; files never pass through our servers or cloud.</p>
     <ul class="checklist">
       <li>No data collection</li>
       <li>No third-party SDKs</li>
@@ -383,7 +396,7 @@ p{margin:0 0 12px;}
   <section class="section center" id="pricing"><div class="container">
     <p class="eyebrow">Pricing</p>
     <h2>One price. Yours to keep.</h2>
-    <p class="lead">One-time US$4.99. No subscription, no in-app purchases. Family Sharing supported.</p>
+    <p class="lead">One-time US$5.99. No subscription, no in-app purchases. Family Sharing supported.</p>
   </div></section>
 
   <section class="section cta-final center"><div class="container">
@@ -398,11 +411,11 @@ p{margin:0 0 12px;}
 
     <details>
       <summary>What is EarMemo?</summary>
-      <p>EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo does not connect to any server and does not require an account.</p>
+      <p>EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo has no external server and does not require an account.</p>
     </details>
     <details>
       <summary>Is EarMemo related to the AI study app with a similar name?</summary>
-      <p>No. EarMemo is an offline audio player for iPhone and iPad, made by Fan YANG, for podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, no account, and never connects to a server.</p>
+      <p>No. EarMemo is an offline audio player for iPhone and iPad, made by Fan YANG, for podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, no account, and no cloud service.</p>
     </details>
     <details>
       <summary>How is EarMemo different from Apple Podcasts or Spotify?</summary>
@@ -410,7 +423,11 @@ p{margin:0 0 12px;}
     </details>
     <details>
       <summary>Does EarMemo work offline?</summary>
-      <p>Yes. EarMemo is local-first: it never connects to any server. All playback, statistics, and notes work without an internet connection. The app functions identically in airplane mode.</p>
+      <p>Yes. Playback, statistics, notes, bookmarks, and search work without an internet connection, including in airplane mode. Wi-Fi Transfer is optional and only uses the local network when you explicitly open it.</p>
+    </details>
+    <details>
+      <summary>Does Wi-Fi Transfer upload my files to an EarMemo server?</summary>
+      <p>No. When you open Wi-Fi Transfer, EarMemo starts a temporary local web service on your iPhone or iPad. A browser on the same Wi-Fi network connects directly to your device; files do not pass through an EarMemo server or cloud service. Closing the transfer screen stops the local service.</p>
     </details>
     <details>
       <summary>Which audio and video formats does EarMemo support?</summary>
