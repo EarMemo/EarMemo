@@ -4,7 +4,7 @@ Marketing site for **EarMemo** — a private, offline-first iOS player for podca
 
 Live at:
 - **Canonical:** <https://earmemo.app/> — Cloudflare Pages (apex domain)
-- **Mirror:** <https://earmemo.github.io/EarMemo/> — GitHub Pages (kept alive; every page's canonical points at earmemo.app, so search/AI consolidate on the apex)
+- **Redirect shell:** <https://earmemo.github.io/EarMemo/> — GitHub Pages serves only redirects to earmemo.app (see Hosting)
 
 ## Contents
 
@@ -33,13 +33,11 @@ Marketing copy is **never baked into images** — every headline is real HTML te
 The same files are served from two places, out of one repo (`EarMemo/EarMemo`):
 
 - **Cloudflare Pages → https://earmemo.app/** — the canonical site (apex domain). DNS for earmemo.app is on Cloudflare; the custom domain is set in the Cloudflare Pages dashboard (not via a repo file).
-- **GitHub Pages → https://earmemo.github.io/EarMemo/** — a live mirror at the project subpath. There is **no `CNAME` file** on purpose: a CNAME file would make GitHub Pages seize earmemo.app and redirect the github.io URL, which we don't want.
+- **GitHub Pages → https://earmemo.github.io/EarMemo/** — a **redirect shell**, not a mirror. The github.io URL ranked first for the brand term before earmemo.app existed (bought 2026-06-17); serving redirects moves that weight to the apex instead of splitting it. `.github/workflows/pages.yml` runs `.github/build-redirects.py`, which turns every `*.html` into a 0-second `<meta refresh>` + canonical stub pointing at the **clean** apex URL (Cloudflare strips `.html`), writes one-line pointers for `llms.txt` / `pricing.md`, a minimal `robots.txt` with no sitemap, and a `404.html` that JS-redirects any other path. Images and `sitemap.xml` are not published there. Requires repo Settings → Pages → Source = **GitHub Actions**. There is **no `CNAME` file** on purpose: a CNAME file would make GitHub Pages seize earmemo.app.
 
-Why one codebase works at both a subpath and the root:
-- All asset/navigation links are **relative** (`./icon.png`, `../privacy.html`, `./zh/`), so they resolve at both `/` and `/EarMemo/`.
-- Every page's `canonical`, Open Graph, and JSON-LD URLs are absolute and point at **earmemo.app**, so the github.io mirror declares itself a duplicate of the apex — search and AI consolidate on earmemo.app, and the mirror is not a duplicate-content problem.
+All asset/navigation links are **relative** (`./icon.png`, `../privacy.html`, `./zh/`), and every page's `canonical`, Open Graph, and JSON-LD URLs are absolute and point at **earmemo.app**.
 
-Deploy (publishes to both at once): `tools/sync-marketing-site.sh "<msg>"` pushes `site/` to the `EarMemo/EarMemo` repo; GitHub Pages rebuilds and Cloudflare Pages auto-deploys from the same push.
+Deploy: `tools/sync-marketing-site.sh "<msg>"` pushes `site/` (including `.github/`) to the `EarMemo/EarMemo` repo; Cloudflare Pages deploys the real site from that push and the workflow rebuilds the redirect shell on GitHub Pages.
 
 ## Contact
 
