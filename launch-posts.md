@@ -175,7 +175,7 @@ A few non-obvious decisions I'd be interested in feedback on:
    wanted to look at.
 
 Site: https://earmemo.app/
-Privacy policy: https://earmemo.app/privacy.html
+Privacy policy: https://earmemo.app/privacy
 App Store: submitting this week.
 
 Happy to answer technical questions. Particularly interested in:
@@ -486,7 +486,7 @@ m4v），按专辑组织，提供长内容场景常用的播控（跳跃、变�
    就是我自己想看一下而已。
 
 网站：https://earmemo.app/
-隐私政策：https://earmemo.app/zh/privacy.html
+隐私政策：https://earmemo.app/zh/privacy
 App Store：本周提交。
 
 技术问题欢迎。特别想听：

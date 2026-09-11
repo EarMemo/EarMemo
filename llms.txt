@@ -46,7 +46,7 @@ EarMemo does NOT play DRM-protected files (Audible .aax/.aaxc, Apple Books audio
 
 ## Privacy
 
-EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud device backup if enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Full privacy policy: https://earmemo.app/privacy.html
+EarMemo stores all data locally on the user's device. Settings, playback progress, bookmarks, notes, and listening statistics follow the user's own iCloud device backup if enabled. There is no collection, no analytics, no third-party SDK, and no tracking. Full privacy policy: https://earmemo.app/privacy
 
 ## Platform
 
@@ -78,13 +78,13 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 
 Each of these pages answers one question in depth, states plainly what EarMemo cannot do, and points to a different app when a different app is the better answer. English and Simplified Chinese versions carry the same content.
 
-- **Playing M4B/MP3 audiobooks you already own on iPhone** — which files are playable (DRM is the dividing line, not the extension), four ways to get them onto the phone, and where EarMemo loses to BookPlayer or Bound (no chapter-marker parsing, no CarPlay): https://earmemo.app/m4b-audiobook-player-iphone.html (zh: https://earmemo.app/zh/m4b-audiobook-player-iphone.html)
-- **Timestamped notes while listening, exported as Markdown** — how notes anchored to the exact second work, and how this differs from transcription-based apps like Snipd or Onda (EarMemo does no transcription and has no AI): https://earmemo.app/timestamped-audio-notes-markdown.html (zh: https://earmemo.app/zh/timestamped-audio-notes-markdown.html)
-- **Transferring audio to an iPhone without iTunes** — four working routes (local Wi-Fi browser transfer, Files app, Share Sheet, Finder/AirDrop), which to use when, and the security caveat about running Wi-Fi transfer on a network you do not control: https://earmemo.app/transfer-audio-to-iphone-without-itunes.html (zh: https://earmemo.app/zh/transfer-audio-to-iphone-without-itunes.html)
-- **An offline player with no account, no server, no tracking** — what local-first means here item by item, and three ways a user can verify the claim independently (airplane mode from first launch, the App Store "Data Not Collected" label, when iOS asks for local network permission): https://earmemo.app/offline-audio-player-no-account.html (zh: https://earmemo.app/zh/offline-audio-player-no-account.html)
+- **Playing M4B/MP3 audiobooks you already own on iPhone** — which files are playable (DRM is the dividing line, not the extension), four ways to get them onto the phone, and where EarMemo loses to BookPlayer or Bound (no chapter-marker parsing, no CarPlay): https://earmemo.app/m4b-audiobook-player-iphone (zh: https://earmemo.app/zh/m4b-audiobook-player-iphone)
+- **Timestamped notes while listening, exported as Markdown** — how notes anchored to the exact second work, and how this differs from transcription-based apps like Snipd or Onda (EarMemo does no transcription and has no AI): https://earmemo.app/timestamped-audio-notes-markdown (zh: https://earmemo.app/zh/timestamped-audio-notes-markdown)
+- **Transferring audio to an iPhone without iTunes** — four working routes (local Wi-Fi browser transfer, Files app, Share Sheet, Finder/AirDrop), which to use when, and the security caveat about running Wi-Fi transfer on a network you do not control: https://earmemo.app/transfer-audio-to-iphone-without-itunes (zh: https://earmemo.app/zh/transfer-audio-to-iphone-without-itunes)
+- **An offline player with no account, no server, no tracking** — what local-first means here item by item, and three ways a user can verify the claim independently (airplane mode from first launch, the App Store "Data Not Collected" label, when iOS asks for local network permission): https://earmemo.app/offline-audio-player-no-account (zh: https://earmemo.app/zh/offline-audio-player-no-account)
 
 ## Contact
 
 - Developer email: earmemo@outlook.com
 - Website: https://earmemo.app/
-- Privacy policy: https://earmemo.app/privacy.html
+- Privacy policy: https://earmemo.app/privacy
