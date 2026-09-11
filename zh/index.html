@@ -75,7 +75,7 @@
     "https://github.com/EarMemo"
   ],
   "featureList": [
-    "Import local audio and video files (mp3, m4a, flac, aac, wav, mp4, mov, m4v)",
+    "Import local audio and video files (mp3, m4a, m4b, flac, aac, wav, mp4, mov, m4v)",
     "Background playback with Lock Screen and Control Center controls",
     "Sleep timer with Live Activity countdown on Dynamic Island and Lock Screen",
     "Yearly heatmap of listening history, plus weekly and monthly breakdowns",
@@ -133,7 +133,7 @@
       "name": "耳记支持哪些音视频格式？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "耳记支持常见的音频格式：mp3、m4a、aac、flac、wav。视频文件（mp4、mov、m4v）会按音频播放，所以你可以只听不看。"
+        "text": "耳记支持常见的音频格式：mp3、m4a、m4b（有声书常用封装）、aac、flac、wav。视频文件（mp4、mov、m4v）会按音频播放，所以你可以只听不看。Apple Books、Audible 等带 DRM 的购买内容无法导入。"
       }
     },
     {
@@ -348,7 +348,7 @@ p{margin:0 0 12px;}
         <ul>
           <li>WiFi 无线传输，浏览器拖拽即传</li>
           <li>分享表单导入，来自 信息、邮件、文件</li>
-          <li>mp3、m4a、flac、aac、wav，mp4 / mov 仅听声音</li>
+          <li>mp3、m4a、m4b、flac、aac、wav，mp4 / mov 仅听声音</li>
         </ul>
       </div>
       <div class="device"><div class="screen"><img src="../img/zh/wifi.webp" alt="耳记 Wi-Fi 传输界面，显示二维码与上传列表" width="900" height="1956" loading="lazy" decoding="async"></div></div>
@@ -363,7 +363,7 @@ p{margin:0 0 12px;}
       <div class="card"><div class="ic">⏩</div><h3>变速播放</h3><p>加速或放慢，声音不会变调走样。</p></div>
       <div class="card"><div class="ic">⚑</div><h3>书签</h3><p>一键跳回标记的地方，听长音频很需要。</p></div>
       <div class="card"><div class="ic">⇪</div><h3>系统分享导入</h3><p>从 信息、邮件、文件，或任何能分享的 App 直接送进来。</p></div>
-      <div class="card"><div class="ic">♫</div><h3>广泛格式支持</h3><p>mp3 · m4a · flac · aac · wav；mp4 / mov / m4v 只取音轨来听。</p></div>
+      <div class="card"><div class="ic">♫</div><h3>广泛格式支持</h3><p>mp3 · m4a · m4b · flac · aac · wav；mp4 / mov / m4v 只取音轨来听。</p></div>
     </div>
   </div></section>
 
@@ -414,7 +414,7 @@ p{margin:0 0 12px;}
     </details>
     <details>
       <summary>耳记支持哪些音视频格式？</summary>
-      <p>耳记支持常见的音频格式：mp3、m4a、aac、flac、wav。视频文件（mp4、mov、m4v）会按音频播放，所以你可以只听不看。</p>
+      <p>耳记支持常见的音频格式：mp3、m4a、m4b（有声书常用封装）、aac、flac、wav。视频文件（mp4、mov、m4v）会按音频播放，所以你可以只听不看。Apple Books、Audible 等带 DRM 的购买内容无法导入。</p>
     </details>
     <details>
       <summary>耳记会收集数据吗？</summary>
@@ -437,6 +437,18 @@ p{margin:0 0 12px;}
       <p>不用。更新到最新版本即自动解锁完整版，无需任何操作，也不需要再次付费。</p>
     </details>
   </div></section>
+
+  <section class="section" id="answers"><div class="container" style="max-width:820px">
+    <p class="eyebrow">延伸</p>
+    <h2>具体问题的详细解答</h2>
+    <p class="lead">针对大家真正会搜的问题写的长文，每一篇都直说耳记做不到什么。</p>
+    <ul class="checklist" style="display:block;margin-top:22px">
+      <li><a href="./m4b-audiobook-player-iphone.html" style="color:var(--accent-ink);text-decoration:none;font-weight:600">听自己已有的 m4b / mp3 有声书</a><br><span style="color:var(--ink-3);font-size:15px">哪些文件真的能播、怎么传进手机，以及什么时候别的播放器更合适。</span></li>
+      <li><a href="./timestamped-audio-notes-markdown.html" style="color:var(--accent-ink);text-decoration:none;font-weight:600">边听边记时间戳笔记，导出 Markdown</a><br><span style="color:var(--ink-3);font-size:15px">笔记钉在确切那一秒，以及它跟转写类 App 的区别。</span></li>
+      <li><a href="./transfer-audio-to-iphone-without-itunes.html" style="color:var(--accent-ink);text-decoration:none;font-weight:600">不用 iTunes 把音频传进 iPhone</a><br><span style="color:var(--ink-3);font-size:15px">Wi-Fi 浏览器传输、「文件」App、系统分享——什么时候走哪条。</span></li>
+      <li><a href="./offline-audio-player-no-account.html" style="color:var(--accent-ink);text-decoration:none;font-weight:600">不联网、不要账号、不追踪</a><br><span style="color:var(--ink-3);font-size:15px">「本地优先」在这里具体指什么，以及三个你能自己验的办法。</span></li>
+    </ul>
+  </div></section>
 </main>
 
 <footer class="site-footer"><div class="container">
@@ -446,6 +458,7 @@ p{margin:0 0 12px;}
       <p style="color:var(--ink-3);font-size:14px;margin-top:12px;max-width:30ch">一款 iOS 本地音频播放器，所有数据只在你的设备上。</p>
     </div>
     <div><h4>产品</h4><ul><li><a href="#features">功能</a></li><li><a href="#privacy">隐私</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+    <div><h4>问题解答</h4><ul><li><a href="./m4b-audiobook-player-iphone.html">听自己已有的 m4b / mp3 有声书</a></li><li><a href="./timestamped-audio-notes-markdown.html">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes.html">不用 iTunes 把音频传进 iPhone</a></li><li><a href="./offline-audio-player-no-account.html">不联网、不要账号、不追踪</a></li></ul></div>
     <div><h4>法律</h4><ul><li><a href="./privacy.html">隐私政策</a></li></ul></div>
     <div><h4>联系</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="./">中文</a> · <a href="../">EN</a></li></ul></div>
   </div>

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iPhone 怎么听自己的 m4b / mp3 有声书 — 耳记</title>
+<meta name="description" content="手上已经有 m4b、mp3、flac 有声书文件，怎么在 iPhone 上听？不用 iTunes、不用订阅的做法，以及什么情况下别的播放器更适合你。">
+<link rel="canonical" href="https://earmemo.app/zh/m4b-audiobook-player-iphone.html">
+<link rel="alternate" hreflang="en" href="https://earmemo.app/m4b-audiobook-player-iphone.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/m4b-audiobook-player-iphone.html">
+<link rel="alternate" hreflang="x-default" href="https://earmemo.app/m4b-audiobook-player-iphone.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iPhone 怎么听自己的 m4b / mp3 有声书 — 耳记">
+<meta property="og:description" content="手上已经有 m4b、mp3、flac 有声书文件，怎么在 iPhone 上听？不用 iTunes、不用订阅的做法，以及什么情况下别的播放器更适合你。">
+<meta property="og:url" content="https://earmemo.app/zh/m4b-audiobook-player-iphone.html">
+<meta property="og:image" content="https://earmemo.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="iPhone 怎么听自己的 m4b / mp3 有声书 — 耳记">
+<meta name="twitter:description" content="手上已经有 m4b、mp3、flac 有声书文件，怎么在 iPhone 上听？不用 iTunes、不用订阅的做法，以及什么情况下别的播放器更适合你。">
+<meta name="twitter:image" content="https://earmemo.app/og.png">
+<meta name="author" content="Fan YANG">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="stylesheet" href="../answer.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "手上已经有的 m4b / mp3 有声书，怎么在 iPhone 上听",
+  "description": "手上已经有 m4b、mp3、flac 有声书文件，怎么在 iPhone 上听？不用 iTunes、不用订阅的做法，以及什么情况下别的播放器更适合你。",
+  "inLanguage": "zh-Hans",
+  "url": "https://earmemo.app/zh/m4b-audiobook-player-iphone.html",
+  "dateModified": "2026-09-10",
+  "author": {
+    "@type": "Person",
+    "name": "Fan YANG",
+    "email": "earmemo@outlook.com",
+    "description": "独立 iOS 开发者，耳记作者"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Fan YANG"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "EarMemo",
+    "operatingSystem": "iOS 17, iPadOS 17",
+    "applicationCategory": "MultimediaApplication",
+    "url": "https://earmemo.app/"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EarMemo",
+    "url": "https://earmemo.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-Hans",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "iPhone 能播 m4b 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能，用第三方播放器。iOS 自己不会把一个散装 m4b 文件加进「图书」App（除非是商店买的），但耳记、BookPlayer、Bound 这类 App 可以直接在自己的书库里播 m4b。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "耳记能读 m4b 的章节吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能。耳记能播 m4b 文件，但目前不解析文件里嵌的章节标记，所以没有章节列表。在耳记里，长文件靠书签和时间戳笔记来导航。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Audible 买的书能在耳记里听吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能。Audible 的 .aax / .aaxc 带 DRM，只能在 Audible 自己的 App 里播。这是授权限制，不是任何第三方开发者能绕开的技术问题。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "必须用 iTunes 或者电脑才能把有声书传进 iPhone 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不用。耳记的 Wi-Fi 传输可以让你在同一局域网的任意浏览器里把文件拖进来；iOS 的「文件」App 也能从 iCloud 云盘、SMB 共享或插在手机上的 U 盘导入。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "要订阅吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不要。耳记免费下载，免费额度长期有效，完整版是一次买断。没有订阅、没有广告、不需要账号。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "能同时记住好几本书听到哪儿吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能。播放进度按书分别保存，十几本书都听到一半也各自回到各自的位置。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "耳记 EarMemo",
+      "item": "https://earmemo.app/zh/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "手上已经有的 m4b / mp3 有声书，怎么在 iPhone 上听",
+      "item": "https://earmemo.app/zh/m4b-audiobook-player-iphone.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "把 m4b / mp3 有声书传进 iPhone 并播放",
+  "inLanguage": "zh-Hans",
+  "totalTime": "PT5M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "iOS 17 以上的 iPhone 或 iPad"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "耳记 EarMemo"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "无 DRM 的有声书文件"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "确认文件没有 DRM",
+      "text": "Libro.fm、LibriVox、Downpour 或自己抓的文件，任何播放器都能播；Audible 的 .aax 和 Apple Books 的购买内容不行。",
+      "url": "https://earmemo.app/zh/m4b-audiobook-player-iphone.html#transfer"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "打开耳记，启动 Wi-Fi 传输",
+      "text": "耳记会显示一个局域网地址。不上传到互联网，传输只在你自己的网络内完成。",
+      "url": "https://earmemo.app/zh/m4b-audiobook-player-iphone.html#transfer"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "在电脑浏览器打开那个地址，把文件拖进去",
+      "text": "整个文件夹拖进去，多文件的书会保持为一本。",
+      "url": "https://earmemo.app/zh/m4b-audiobook-player-iphone.html#transfer"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "在耳记书库里播放",
+      "text": "调速度、设定时，遇到想留住的地方按个书签或写一条时间戳笔记。",
+      "url": "https://earmemo.app/zh/m4b-audiobook-player-iphone.html#transfer"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+  <a class="brand" href="./"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b>EarMemo</b></a>
+  <nav class="nav">
+    <a href="./#features">功能</a>
+    <a href="./#privacy">隐私</a>
+    <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">下载</a>
+    <a href="https://earmemo.app/m4b-audiobook-player-iphone.html">EN</a>
+  </nav>
+</div></header>
+
+<main><div class="container">
+  <p class="crumb"><a href="./">耳记 EarMemo</a> › iPhone 有声书播放器</p>
+  <h1>手上已经有的 m4b / mp3 有声书，怎么在 iPhone 上听</h1>
+  <div class="answer"><p>把文件传进 iPhone，用一个本地播放器打开就行。<b>耳记</b>直接播放 m4b、mp3、m4a、aac、flac、wav，按书分别记住听到哪儿，不需要账号、全程不联网。它打不开 Audible 和 Apple Books 买的带 DRM 的书——任何第三方播放器都打不开。</p></div>
+  <p class="meta">最后更新 2026-09-10 · 作者：Fan YANG（耳记开发者）</p>
+
+  <h2>哪些文件真的能播</h2>
+  <p>分界线不是后缀名，是 DRM。没有 DRM 的文件，用什么播放器都能播；有 DRM 的购买内容，按设计只能在商店自己的 App 里播。</p>
+  <div class="tablewrap"><table><thead><tr><th>文件来源</th><th>格式</th><th>第三方播放器能播吗</th></tr></thead><tbody><tr><td>Libro.fm、Downpour 等标明 DRM-free 的商店</td><td>m4b / mp3</td><td>能</td></tr><tr><td>LibriVox 等公版有声书站</td><td>mp3 / m4b</td><td>能</td></tr><tr><td>自己抓的 CD、自己录的音</td><td>flac / m4a / wav</td><td>能</td></tr><tr><td>Audible</td><td>.aax / .aaxc</td><td>不能 —— 有 DRM，只能用 Audible App</td></tr><tr><td>Apple Books 买的有声书</td><td>受保护的 m4b</td><td>不能 —— 有 DRM，只能用图书 App</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">2026-09-10 核对。只要商店标了「DRM-free」，文件就能播。</p>
+  <h2>怎么把书传进手机</h2>
+  <p>耳记有四条路，都不需要 iTunes：</p>
+  <ol class="steps"><li><b>Wi-Fi 传输。</b>在耳记里打开，把它显示的地址输入电脑浏览器，直接把文件拖进去。同一个局域网内完成，不走云、不出网关。</li><li><b>「文件」App 导入。</b>iCloud 云盘、坚果云、SMB 共享、插在手机上的 U 盘都行。会保留文件夹层级——一本拆成 40 个文件的书，进来还是一本书。</li><li><b>系统分享。</b>微信、邮件里收到的音频，分享 → 耳记。</li><li><b>数据线。</b>用访达/Finder 拖进 App 的文稿目录，老办法也留着。</li></ol>
+  <h2>跟别的播放器比，包括它输在哪</h2>
+  <p>iOS 上不错的本地有声书播放器有好几个，各自的取舍不同。按你真正需要的那一条选，别按功能数量选。</p>
+  <div class="tablewrap"><table><thead><tr><th>你最看重的如果是……</th><th>那就用</th><th>为什么</th></tr></thead><tbody><tr><td>笔记钉在具体那一秒，还能导出 Markdown</td><td>耳记</td><td>边听边写，点一下标记跳回那一刻，导出就是普通 .md 文件</td></tr><tr><td>彻底不联网</td><td>耳记</td><td>没有账号、没有服务器、没有统计、没有第三方 SDK</td></tr><tr><td>能读出 m4b 里的章节列表</td><td>BookPlayer 或 Bound</td><td>耳记能播 m4b，但读不出里面的章节标记，没有章节列表</td></tr><tr><td>CarPlay</td><td>Bound 或 BookPlayer</td><td>耳记不支持 CarPlay</td></tr><tr><td>从 Dropbox 或 NAS 流式播放整个书库</td><td>Bound，或 Audiobookshelf 客户端</td><td>耳记只播已经在设备上的文件</td></tr><tr><td>开源</td><td>BookPlayer</td><td>耳记不开源</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">其他 App 的说明取自其开发者公开描述，2026-09-10 核对。</p>
+  <h2>书开始播之后，耳记多给了什么</h2>
+  <ul><li>0.5×–3.5× 变速，不变调，预设 0.8× 1.0× 1.2× 1.5× 1.8× 2.0× 2.5× 3.0×</li><li>睡眠定时，锁屏和灵动岛上有实时倒计时</li><li>书签，一键跳回</li><li>边听边写的时间戳笔记 —— 见<a href="./timestamped-audio-notes-markdown.html">边听边记笔记那一页</a></li><li>按书分别记进度，十几本书同时听到一半也不会乱</li><li>后台播放，锁屏和控制中心完整控制</li></ul>
+
+  <div class="honest">
+    <h3>什么情况下不该选耳记</h3>
+    <ul><li><b>你的书是在 Audible 或 Apple Books 买的。</b>那些文件带 DRM，任何第三方播放器都打不开，耳记也不会假装能打开。</li><li><b>你需要章节列表。</b>耳记能正常播 m4b，但目前读不出文件里的章节标记。如果你一直靠章节跳转，BookPlayer 或 Bound 更合适。</li><li><b>你需要 CarPlay。</b>没有。</li><li><b>你想从 NAS 或 Audiobookshelf 服务器流式听。</b>耳记只播本地文件，这是它的整个设计前提，也确实是个限制。</li></ul>
+  </div>
+
+  <h2>常见问题</h2>
+  <details><summary>iPhone 能播 m4b 吗？</summary><p>能，用第三方播放器。iOS 自己不会把一个散装 m4b 文件加进「图书」App（除非是商店买的），但耳记、BookPlayer、Bound 这类 App 可以直接在自己的书库里播 m4b。</p></details>
+  <details><summary>耳记能读 m4b 的章节吗？</summary><p>不能。耳记能播 m4b 文件，但目前不解析文件里嵌的章节标记，所以没有章节列表。在耳记里，长文件靠书签和时间戳笔记来导航。</p></details>
+  <details><summary>Audible 买的书能在耳记里听吗？</summary><p>不能。Audible 的 .aax / .aaxc 带 DRM，只能在 Audible 自己的 App 里播。这是授权限制，不是任何第三方开发者能绕开的技术问题。</p></details>
+  <details><summary>必须用 iTunes 或者电脑才能把有声书传进 iPhone 吗？</summary><p>不用。耳记的 Wi-Fi 传输可以让你在同一局域网的任意浏览器里把文件拖进来；iOS 的「文件」App 也能从 iCloud 云盘、SMB 共享或插在手机上的 U 盘导入。</p></details>
+  <details><summary>要订阅吗？</summary><p>不要。耳记免费下载，免费额度长期有效，完整版是一次买断。没有订阅、没有广告、不需要账号。</p></details>
+  <details><summary>能同时记住好几本书听到哪儿吗？</summary><p>能。播放进度按书分别保存，十几本书都听到一半也各自回到各自的位置。</p></details>
+
+  <div class="cta-box">
+    <h2>用你自己的文件试试</h2>
+    <p>耳记免费下载，免费额度内可以一直用下去。完整版是一次买断——没有订阅、没有广告、不需要账号。</p>
+    <p style="margin-top:18px"><a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">App Store 下载</a></p>
+    <p style="font-size:14px;margin-top:14px"><a href="../pricing.md">完整价格说明（纯文本）</a></p>
+  </div>
+
+  <div class="related">
+    <h3>相关问题</h3>
+    <ul><li><a href="./timestamped-audio-notes-markdown.html">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes.html">不用 iTunes 把音频传进 iPhone</a></li><li><a href="./offline-audio-player-no-account.html">不联网、不要账号的播放器</a></li></ul>
+  </div>
+</div></main>
+
+<footer class="site-footer"><div class="container">
+  <div class="foot-cols">
+    <div>
+      <a class="brand" href="./" style="color:var(--cream)"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b style="color:var(--cream)">EarMemo</b></a>
+      <p style="color:var(--ink-3);font-size:14px;margin-top:12px;max-width:30ch">一个本地优先的 iOS 音频播放器。所有数据都留在你的设备上。</p>
+    </div>
+    <div><h4>产品</h4><ul><li><a href="./#features">功能</a></li><li><a href="./#privacy">隐私</a></li><li><a href="./#faq">常见问题</a></li></ul></div>
+    <div><h4>问题解答</h4><ul><li><a href="./timestamped-audio-notes-markdown.html">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes.html">不用 iTunes 把音频传进 iPhone</a></li><li><a href="./offline-audio-player-no-account.html">不联网、不要账号的播放器</a></li></ul></div>
+    <div><h4>联系</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="../privacy.html">隐私政策</a></li></ul></div>
+  </div>
+  <div class="foot-bottom">© 2026 EarMemo. 所有数据都留在你的设备上。</div>
+</div></footer>
+</body>
+</html>

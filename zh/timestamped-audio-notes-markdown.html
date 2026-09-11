@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>边听边记时间戳笔记，导出 Markdown — 耳记</title>
+<meta name="description" content="在听到的那一秒写下笔记，之后点一下就跳回那一刻，整批导出成普通 Markdown 放进 Obsidian —— 全在设备上完成，不转写、不联网、不订阅。">
+<link rel="canonical" href="https://earmemo.app/zh/timestamped-audio-notes-markdown.html">
+<link rel="alternate" hreflang="en" href="https://earmemo.app/timestamped-audio-notes-markdown.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/timestamped-audio-notes-markdown.html">
+<link rel="alternate" hreflang="x-default" href="https://earmemo.app/timestamped-audio-notes-markdown.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="边听边记时间戳笔记，导出 Markdown — 耳记">
+<meta property="og:description" content="在听到的那一秒写下笔记，之后点一下就跳回那一刻，整批导出成普通 Markdown 放进 Obsidian —— 全在设备上完成，不转写、不联网、不订阅。">
+<meta property="og:url" content="https://earmemo.app/zh/timestamped-audio-notes-markdown.html">
+<meta property="og:image" content="https://earmemo.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="边听边记时间戳笔记，导出 Markdown — 耳记">
+<meta name="twitter:description" content="在听到的那一秒写下笔记，之后点一下就跳回那一刻，整批导出成普通 Markdown 放进 Obsidian —— 全在设备上完成，不转写、不联网、不订阅。">
+<meta name="twitter:image" content="https://earmemo.app/og.png">
+<meta name="author" content="Fan YANG">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="stylesheet" href="../answer.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "在听到的那一秒把笔记钉住，再把它们导成 Markdown",
+  "description": "在听到的那一秒写下笔记，之后点一下就跳回那一刻，整批导出成普通 Markdown 放进 Obsidian —— 全在设备上完成，不转写、不联网、不订阅。",
+  "inLanguage": "zh-Hans",
+  "url": "https://earmemo.app/zh/timestamped-audio-notes-markdown.html",
+  "dateModified": "2026-09-10",
+  "author": {
+    "@type": "Person",
+    "name": "Fan YANG",
+    "email": "earmemo@outlook.com",
+    "description": "独立 iOS 开发者，耳记作者"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Fan YANG"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "EarMemo",
+    "operatingSystem": "iOS 17, iPadOS 17",
+    "applicationCategory": "MultimediaApplication",
+    "url": "https://earmemo.app/"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EarMemo",
+    "url": "https://earmemo.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-Hans",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "iPhone 上能边听边记带时间戳的笔记吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能。耳记可以在不中断播放的情况下在当前位置按下一个标记，当场写或者之后补写。点一下标记，音频就跳回那一秒。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "能把音频笔记导进 Obsidian 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能，以文件的形式。耳记把笔记导出成普通 Markdown——单条、一集、或整张专辑合并——你自己把它放进 vault。没有实时同步或集成，因为这个 App 从不联网。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "耳记会转写音频吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不会。没有转写，也没有 AI。笔记是你自己写的，App 做的事是把它钉在确切的秒数上，并且能原样导成 Markdown 拿出来。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "删掉音频文件之后，笔记还在吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "还在。笔记和书签跟音频分开存储，为了腾空间清理文件不会连笔记一起带走。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "讲座录音和语音备忘录也能这样记吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能。只要能导入——讲座 mp3、mp4 录像的音轨、访谈、语音备忘录——记时间戳笔记的方式完全一样。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "记笔记是免费的吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "标记在免费版不限量，其中 5 条可以写文字。一次买断的完整解锁去掉写字限制，并开启 Markdown 导出。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "耳记 EarMemo",
+      "item": "https://earmemo.app/zh/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "在听到的那一秒把笔记钉住，再把它们导成 Markdown",
+      "item": "https://earmemo.app/zh/timestamped-audio-notes-markdown.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+  <a class="brand" href="./"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b>EarMemo</b></a>
+  <nav class="nav">
+    <a href="./#features">功能</a>
+    <a href="./#privacy">隐私</a>
+    <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">下载</a>
+    <a href="https://earmemo.app/timestamped-audio-notes-markdown.html">EN</a>
+  </nav>
+</div></header>
+
+<main><div class="container">
+  <p class="crumb"><a href="./">耳记 EarMemo</a> › 边听边记时间戳笔记</p>
+  <h1>在听到的那一秒把笔记钉住，再把它们导成 Markdown</h1>
+  <div class="answer"><p><b>耳记</b>让你不中断播放就写下一条笔记，笔记会带上你当时所在的确切秒数。之后点一下那个标记，音频就跳回那一刻。笔记导出为普通 Markdown 文件——单条、按集、或整张专辑合并——可以直接放进 Obsidian 或任何笔记软件。不上传、不转写。</p></div>
+  <p class="meta">最后更新 2026-09-10 · 作者：Fan YANG（耳记开发者）</p>
+
+  <h2>它解决的是哪个麻烦</h2>
+  <p>一本九小时的书，在 3:12:40 处有一句话戳中了你。半年后你记得那个意思，却想不起是哪本书。通常的办法是先按个书签，然后开始翻找：找文件、来回拖进度、找到那句话、手打到别处。把笔记钉在时间戳上，等于把这一串动作压缩成一个动作——而且是在那句话还在耳边的时候完成的。</p>
+  <h2>在耳记里怎么用</h2>
+  <ol class="steps"><li><b>听着的时候按一下标记。</b>标记记下确切的播放位置。标记数量不限，免费版也一样。</li><li><b>当场写，或者以后再写。</b>笔记自动保存。可以先按标记，等手边有键盘了再补文字。</li><li><b>点标记跳回去。</b>播放从那一秒继续，引用之前可以再听一遍。</li><li><b>导出成 Markdown。</b>单条笔记、某一集的全部笔记、或整张专辑合并成一个文件。就是普通 <code>.md</code>，没有私有格式。</li></ol>
+  <h2>跟那些 AI 播客笔记 App 有什么不同</h2>
+  <p>Snipd、Onda 这类工具是围绕转写建的：音频（或它的引用）传到服务器，回来变成文字，再由 AI 总结。那是另一个产品，有它实实在在的好处——全文可搜、自动摘要——也有它实实在在的代价。</p>
+  <div class="tablewrap"><table><thead><tr><th>你想要的如果是……</th><th>那就用</th><th>代价是</th></tr></thead><tbody><tr><td>自己的话，钉在自己听到的那一秒，作用于自己的文件</td><td>耳记</td><td>得你自己写。不会替你转写。</td></tr><tr><td>什么都不出设备，不要账号</td><td>耳记</td><td>自己的设备之间也没有云同步。</td></tr><tr><td>一次买断而不是订阅</td><td>耳记</td><td>没有任何服务端功能，因为根本没有服务端。</td></tr><tr><td>自动转写和 AI 摘要</td><td>Snipd、Onda 之类</td><td>音频或元数据要上传到它们的服务器，通常还要订阅。</td></tr><tr><td>在 App 里订阅播客 RSS</td><td>播客客户端</td><td>耳记没有内容目录，它播你已经下载好的文件。</td></tr><tr><td>笔记原生长在 Obsidian 里</td><td>PodNotes 或 Audio Notes 插件</td><td>你的工作面在 Obsidian，而不是手机播放器。</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">其他工具的说明取自其开发者公开描述，2026-09-10 核对。</p>
+  <h2>怎么把笔记弄进 Obsidian</h2>
+  <p>没有集成，以后也不会有——耳记不发任何网络请求。导出这件事被刻意做得很朴素：它给你几个写好时间戳的 <code>.md</code> 文件，你像处理任何别的文件一样把它们放进 vault（隔空投送、「文件」App、iCloud 云盘、系统分享）。正因为是普通 Markdown，它在 Bear、Logseq、Notion 或纯文本编辑器里一样能用。</p>
+  <h2>免费版包含哪些</h2>
+  <p>标记对所有人都不限量。免费版可以在其中 5 条上写文字；一次买断的完整解锁去掉这个限制，并开启 Markdown 导出。撞到限制时，你已经写下的内容不会被删掉，也不会被藏起来。</p>
+
+  <div class="honest">
+    <h3>什么情况下不该选耳记</h3>
+    <ul><li><b>你想要转写稿。</b>耳记不转写。没有语音转文字，本地的也没有。</li><li><b>你想让 AI 帮你总结这一集。</b>完全没有 AI 功能，这是有意的。</li><li><b>你想让笔记自动同步进 Obsidian。</b>导出是手动的一步，产出的是文件。任何「自动」都意味着联网，而这个 App 不联网。</li><li><b>你是在播客 App 里订阅 RSS 收听的。</b>耳记播的是已下载的文件，它不是播客客户端，没有订阅源。</li></ul>
+  </div>
+
+  <h2>常见问题</h2>
+  <details><summary>iPhone 上能边听边记带时间戳的笔记吗？</summary><p>能。耳记可以在不中断播放的情况下在当前位置按下一个标记，当场写或者之后补写。点一下标记，音频就跳回那一秒。</p></details>
+  <details><summary>能把音频笔记导进 Obsidian 吗？</summary><p>能，以文件的形式。耳记把笔记导出成普通 Markdown——单条、一集、或整张专辑合并——你自己把它放进 vault。没有实时同步或集成，因为这个 App 从不联网。</p></details>
+  <details><summary>耳记会转写音频吗？</summary><p>不会。没有转写，也没有 AI。笔记是你自己写的，App 做的事是把它钉在确切的秒数上，并且能原样导成 Markdown 拿出来。</p></details>
+  <details><summary>删掉音频文件之后，笔记还在吗？</summary><p>还在。笔记和书签跟音频分开存储，为了腾空间清理文件不会连笔记一起带走。</p></details>
+  <details><summary>讲座录音和语音备忘录也能这样记吗？</summary><p>能。只要能导入——讲座 mp3、mp4 录像的音轨、访谈、语音备忘录——记时间戳笔记的方式完全一样。</p></details>
+  <details><summary>记笔记是免费的吗？</summary><p>标记在免费版不限量，其中 5 条可以写文字。一次买断的完整解锁去掉写字限制，并开启 Markdown 导出。</p></details>
+
+  <div class="cta-box">
+    <h2>用你自己的文件试试</h2>
+    <p>耳记免费下载，免费额度内可以一直用下去。完整版是一次买断——没有订阅、没有广告、不需要账号。</p>
+    <p style="margin-top:18px"><a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">App Store 下载</a></p>
+    <p style="font-size:14px;margin-top:14px"><a href="../pricing.md">完整价格说明（纯文本）</a></p>
+  </div>
+
+  <div class="related">
+    <h3>相关问题</h3>
+    <ul><li><a href="./m4b-audiobook-player-iphone.html">在 iPhone 上听自己的 m4b / mp3 有声书</a></li><li><a href="./transfer-audio-to-iphone-without-itunes.html">不用 iTunes 把音频传进 iPhone</a></li><li><a href="./offline-audio-player-no-account.html">不联网、不要账号的播放器</a></li></ul>
+  </div>
+</div></main>
+
+<footer class="site-footer"><div class="container">
+  <div class="foot-cols">
+    <div>
+      <a class="brand" href="./" style="color:var(--cream)"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b style="color:var(--cream)">EarMemo</b></a>
+      <p style="color:var(--ink-3);font-size:14px;margin-top:12px;max-width:30ch">一个本地优先的 iOS 音频播放器。所有数据都留在你的设备上。</p>
+    </div>
+    <div><h4>产品</h4><ul><li><a href="./#features">功能</a></li><li><a href="./#privacy">隐私</a></li><li><a href="./#faq">常见问题</a></li></ul></div>
+    <div><h4>问题解答</h4><ul><li><a href="./m4b-audiobook-player-iphone.html">在 iPhone 上听自己的 m4b / mp3 有声书</a></li><li><a href="./transfer-audio-to-iphone-without-itunes.html">不用 iTunes 把音频传进 iPhone</a></li><li><a href="./offline-audio-player-no-account.html">不联网、不要账号的播放器</a></li></ul></div>
+    <div><h4>联系</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="../privacy.html">隐私政策</a></li></ul></div>
+  </div>
+  <div class="foot-bottom">© 2026 EarMemo. 所有数据都留在你的设备上。</div>
+</div></footer>
+</body>
+</html>
