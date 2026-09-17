@@ -30,7 +30,7 @@
   "description": "在听到的那一秒写下笔记，之后点一下就跳回那一刻，整批导出成普通 Markdown 放进 Obsidian —— 全在设备上完成，不转写、不联网、不订阅。",
   "inLanguage": "zh-Hans",
   "url": "https://earmemo.app/zh/timestamped-audio-notes-markdown",
-  "dateModified": "2026-09-10",
+  "dateModified": "2026-09-17",
   "author": {
     "@type": "Person",
     "name": "Fan YANG",
@@ -74,7 +74,15 @@
       "name": "能把音频笔记导进 Obsidian 吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "能，以文件的形式。耳记把笔记导出成普通 Markdown——单条、一集、或整张专辑合并——你自己把它放进 vault。没有实时同步或集成，因为这个 App 从不联网。"
+        "text": "能，以文件的形式。耳记把笔记导出成普通 Markdown——单条、一集、或整张专辑合并——在 iOS 分享面板里直接「存储到“文件”」，存进 vault 所在的文件夹（iCloud 云盘 › Obsidian › 你的 vault，或者「我的 iPhone › Obsidian」）。Obsidian 下次启动就能看到。没有实时同步或集成，因为这个 App 从不联网。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "在 Obsidian 里点时间码能跳回音频吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能。导出文件里的时间码是纯文本，比如 `1:03:55`，Obsidian 够不到你手机上的音频。跳回去这件事发生在耳记里：点一下标记，播放就从那一秒继续。文件给你的是出处，App 给你的是播放。"
       }
     },
     {
@@ -148,7 +156,7 @@
   <p class="crumb"><a href="./">耳记 EarMemo</a> › 边听边记时间戳笔记</p>
   <h1>在听到的那一秒把笔记钉住，再把它们导成 Markdown</h1>
   <div class="answer"><p><b>耳记</b>让你不中断播放就写下一条笔记，笔记会带上你当时所在的确切秒数。之后点一下那个标记，音频就跳回那一刻。笔记导出为普通 Markdown 文件——单条、按集、或整张专辑合并——可以直接放进 Obsidian 或任何笔记软件。不上传、不转写。</p></div>
-  <p class="meta">最后更新 2026-09-10 · 作者：Fan YANG（耳记开发者）</p>
+  <p class="meta">最后更新 2026-09-17 · 作者：Fan YANG（耳记开发者）</p>
 
   <h2>它解决的是哪个麻烦</h2>
   <p>一本九小时的书，在 3:12:40 处有一句话戳中了你。半年后你记得那个意思，却想不起是哪本书。通常的办法是先按个书签，然后开始翻找：找文件、来回拖进度、找到那句话、手打到别处。把笔记钉在时间戳上，等于把这一串动作压缩成一个动作——而且是在那句话还在耳边的时候完成的。</p>
@@ -157,8 +165,32 @@
   <h2>跟那些 AI 播客笔记 App 有什么不同</h2>
   <p>Snipd、Onda 这类工具是围绕转写建的：音频（或它的引用）传到服务器，回来变成文字，再由 AI 总结。那是另一个产品，有它实实在在的好处——全文可搜、自动摘要——也有它实实在在的代价。</p>
   <div class="tablewrap"><table><thead><tr><th>你想要的如果是……</th><th>那就用</th><th>代价是</th></tr></thead><tbody><tr><td>自己的话，钉在自己听到的那一秒，作用于自己的文件</td><td>耳记</td><td>得你自己写。不会替你转写。</td></tr><tr><td>什么都不出设备，不要账号</td><td>耳记</td><td>自己的设备之间也没有云同步。</td></tr><tr><td>一次买断而不是订阅</td><td>耳记</td><td>没有任何服务端功能，因为根本没有服务端。</td></tr><tr><td>自动转写和 AI 摘要</td><td>Snipd、Onda 之类</td><td>音频或元数据要上传到它们的服务器，通常还要订阅。</td></tr><tr><td>在 App 里订阅播客 RSS</td><td>播客客户端</td><td>耳记没有内容目录，它播你已经下载好的文件。</td></tr><tr><td>笔记原生长在 Obsidian 里</td><td>PodNotes 或 Audio Notes 插件</td><td>你的工作面在 Obsidian，而不是手机播放器。</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">其他工具的说明取自其开发者公开描述，2026-09-10 核对。</p>
-  <h2>怎么把笔记弄进 Obsidian</h2>
-  <p>没有集成，以后也不会有——耳记不发任何网络请求。导出这件事被刻意做得很朴素：它给你几个写好时间戳的 <code>.md</code> 文件，你像处理任何别的文件一样把它们放进 vault（隔空投送、「文件」App、iCloud 云盘、系统分享）。正因为是普通 Markdown，它在 Bear、Logseq、Notion 或纯文本编辑器里一样能用。</p>
+  <h2>怎么把这些笔记弄进 Obsidian？</h2>
+  <p>以文件的形式，三步。没有集成，以后也不会有——耳记不发任何网络请求——所以导出这件事被刻意做得很朴素：它给你几个写好时间戳的 <code>.md</code> 文件，你像处理任何别的文件一样把它们放进 vault。</p>
+  <ol class="steps"><li><b>从耳记导出。</b>打开一张专辑的笔记（或「我的笔记」），点「导出」→ Markdown。可以选一条笔记一个文件、一个单集一个文件、或每张专辑合并成一个文件。iOS 分享面板弹出，附带这些 <code>.md</code> 文件。</li><li><b>存进 vault 所在的文件夹。</b>选「存储到“文件”」，找到 vault：走 iCloud 同步的在 <code>iCloud 云盘 › Obsidian › 你的 vault</code>，本地 vault 在 <code>我的 iPhone › Obsidian › 你的 vault</code>。建一个 <code>音频笔记/</code> 子文件夹把它们放一起。隔空投送到 Mac 再拖进 vault 也是一样的。</li><li><b>打开 Obsidian。</b>下次启动它就会看到新文件。每一集的 <code>##</code> 标题会出现在大纲里，时间码显示为行内代码；标签、双链、front matter 你自己加——它就是纯文本，没有什么拦着你。</li></ol>
+  <h3>导出的 Markdown 长什么样？</h3>
+  <p>一张专辑合并导出的样子。每条笔记是一个带时间码的 <code>###</code> 标题，所以不管你之后怎么重排文字，出处的位置都还在：</p>
+  <pre><code># 统计学导论 · 秋季讲座
+
+3 条笔记 · 导出于 2026年9月17日 21:40
+
+## 第 07 讲 —— 置信区间
+
+*统计学导论 · 秋季讲座*
+
+### `0:41:12` —— 为什么 95% 不是「均值有 95% 的概率在这里面」
+
+区间是随机的，参数不是。做作业前回来重听：他紧接着就讲了抛硬币的版本。
+
+### `1:03:55`
+
+例题从这里开始。样本量 40，标准误写在黑板上。
+
+### `1:19:30` —— 宽度和 n 的关系
+
+宽度减半要付出四倍样本。他说这是整节课唯一要记住的一句。
+</code></pre>
+  <p>文件里的时间码是一个引用，不是链接：Obsidian 够不到你手机上的音频。想再听一遍那句话，回耳记点那个标记——文件告诉你在哪，App 把你带过去。正因为是普通 Markdown，它在 Bear、Logseq、Notion 或纯文本编辑器里一样能用。</p>
   <h2>免费版包含哪些</h2>
   <p>标记对所有人都不限量。免费版可以在其中 5 条上写文字；一次买断的完整解锁去掉这个限制，并开启 Markdown 导出。撞到限制时，你已经写下的内容不会被删掉，也不会被藏起来。</p>
 
@@ -169,7 +201,8 @@
 
   <h2>常见问题</h2>
   <details><summary>iPhone 上能边听边记带时间戳的笔记吗？</summary><p>能。耳记可以在不中断播放的情况下在当前位置按下一个标记，当场写或者之后补写。点一下标记，音频就跳回那一秒。</p></details>
-  <details><summary>能把音频笔记导进 Obsidian 吗？</summary><p>能，以文件的形式。耳记把笔记导出成普通 Markdown——单条、一集、或整张专辑合并——你自己把它放进 vault。没有实时同步或集成，因为这个 App 从不联网。</p></details>
+  <details><summary>能把音频笔记导进 Obsidian 吗？</summary><p>能，以文件的形式。耳记把笔记导出成普通 Markdown——单条、一集、或整张专辑合并——在 iOS 分享面板里直接「存储到“文件”」，存进 vault 所在的文件夹（iCloud 云盘 › Obsidian › 你的 vault，或者「我的 iPhone › Obsidian」）。Obsidian 下次启动就能看到。没有实时同步或集成，因为这个 App 从不联网。</p></details>
+  <details><summary>在 Obsidian 里点时间码能跳回音频吗？</summary><p>不能。导出文件里的时间码是纯文本，比如 `1:03:55`，Obsidian 够不到你手机上的音频。跳回去这件事发生在耳记里：点一下标记，播放就从那一秒继续。文件给你的是出处，App 给你的是播放。</p></details>
   <details><summary>耳记会转写音频吗？</summary><p>不会。没有转写，也没有 AI。笔记是你自己写的，App 做的事是把它钉在确切的秒数上，并且能原样导成 Markdown 拿出来。</p></details>
   <details><summary>删掉音频文件之后，笔记还在吗？</summary><p>还在。笔记和书签跟音频分开存储，为了腾空间清理文件不会连笔记一起带走。</p></details>
   <details><summary>讲座录音和语音备忘录也能这样记吗？</summary><p>能。只要能导入——讲座 mp3、mp4 录像的音轨、访谈、语音备忘录——记时间戳笔记的方式完全一样。</p></details>

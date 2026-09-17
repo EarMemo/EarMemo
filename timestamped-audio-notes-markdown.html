@@ -30,7 +30,7 @@
   "description": "Write a note at the exact second you heard it, tap to jump back, export as plain Markdown for Obsidian. On device, no transcription, no subscription.",
   "inLanguage": "en",
   "url": "https://earmemo.app/timestamped-audio-notes-markdown",
-  "dateModified": "2026-09-10",
+  "dateModified": "2026-09-17",
   "author": {
     "@type": "Person",
     "name": "Fan YANG",
@@ -74,7 +74,15 @@
       "name": "Can I export audio notes to Obsidian?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, as files. EarMemo exports notes as plain Markdown — a single note, one episode, or a whole album merged — which you move into your vault yourself. There is no live sync or integration, because the app never connects to a network."
+        "text": "Yes, as files. EarMemo exports notes as plain Markdown — a single note, one episode, or a whole album merged — and the iOS share sheet lets you save them straight into the vault folder (iCloud Drive › Obsidian › your vault, or On My iPhone › Obsidian). Obsidian picks them up on the next launch. There is no live sync or integration, because the app never connects to a network."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I click the timestamp in Obsidian to jump back to the audio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. In the exported file the timecode is plain text, such as `1:03:55`, and Obsidian has no way to reach the audio on your phone. Jumping back happens inside EarMemo, where tapping the marker resumes playback at that exact second. The file gives you the reference; the app gives you the playback."
       }
     },
     {
@@ -148,7 +156,7 @@
   <p class="crumb"><a href="./">EarMemo</a> › Timestamped notes while listening</p>
   <h1>Take notes at the exact timestamp while listening — and get them out as Markdown</h1>
   <div class="answer"><p><b>EarMemo</b> lets you write a note without leaving playback, stamped with the exact second you were at. Tap the marker later and the audio jumps back to that moment. Notes export as plain Markdown — one note, one episode, or a whole album merged — so they drop straight into Obsidian. Nothing is uploaded or transcribed.</p></div>
-  <p class="meta">Last updated 2026-09-10 · Written by Fan YANG, the developer of EarMemo.</p>
+  <p class="meta">Last updated 2026-09-17 · Written by Fan YANG, the developer of EarMemo.</p>
 
   <h2>The problem this solves</h2>
   <p>You hear one good sentence at 3:12:40 of a nine-hour book. Six months later you remember the idea and not the book. The usual workaround is a bookmark plus a scavenger hunt: find the file, scrub around, find the sentence, retype it somewhere. A timestamp-anchored note collapses that into one action taken while the sentence is still in your ear.</p>
@@ -157,8 +165,32 @@
   <h2>How this differs from the AI podcast-note apps</h2>
   <p>Tools like Snipd and Onda are built around transcription: your audio (or a reference to it) goes to a server, comes back as text, and AI summarises it. That is a genuinely different product with real advantages — searchable transcripts, automatic summaries — and real costs.</p>
   <div class="tablewrap"><table><thead><tr><th>If you want…</th><th>Reach for</th><th>The trade</th></tr></thead><tbody><tr><td>Your own words, at the second you heard it, on files you own</td><td>EarMemo</td><td>You do the writing. Nothing is transcribed for you.</td></tr><tr><td>Nothing leaving the device, no account</td><td>EarMemo</td><td>No cloud sync between your own devices either.</td></tr><tr><td>A one-time purchase instead of a subscription</td><td>EarMemo</td><td>No server-side features, because there is no server.</td></tr><tr><td>Automatic transcripts and AI summaries</td><td>Snipd, Onda, or similar</td><td>Audio or metadata goes to their servers; usually a subscription.</td></tr><tr><td>Subscribing to podcast RSS feeds inside the app</td><td>A podcast client</td><td>EarMemo has no feed catalogue — it plays files you already downloaded.</td></tr><tr><td>Notes living natively inside Obsidian</td><td>PodNotes or Audio Notes plugin</td><td>You work inside Obsidian rather than a phone player.</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">Alternatives described from their developers' published descriptions, checked 2026-09-10.</p>
-  <h2>Getting notes into Obsidian</h2>
-  <p>There is no integration and there will not be one — EarMemo makes no network requests. The export is deliberately boring: it hands you <code>.md</code> files with the timestamps written in, and you put them in your vault the way you would any other file (AirDrop, Files, iCloud Drive, the share sheet). Because they are plain Markdown, they also work in Bear, Logseq, Notion, or a text editor.</p>
+  <h2>How do I get these notes into Obsidian?</h2>
+  <p>As files, in three steps. There is no integration and there will not be one — EarMemo makes no network requests — so the export is deliberately boring: it hands you <code>.md</code> files with the timestamps written in, and you put them in your vault the way you would any other file.</p>
+  <ol class="steps"><li><b>Export from EarMemo.</b> Open an album's notes (or My Notes) and tap Export → Markdown. Choose one file per note, one per episode, or one merged file per album. The iOS share sheet opens with the <code>.md</code> files attached.</li><li><b>Save into the vault folder.</b> Pick <em>Save to Files</em> and navigate to the vault: <code>iCloud Drive › Obsidian › &lt;your vault&gt;</code> if the vault syncs through iCloud, or <code>On My iPhone › Obsidian › &lt;your vault&gt;</code> for a local one. A subfolder such as <code>Audio notes/</code> keeps them together. AirDrop to a Mac and dropping the files into the vault there works the same way.</li><li><b>Open Obsidian.</b> It picks the new files up on the next launch. The per-episode <code>##</code> headings show in the outline, the timecodes render as inline code, and you add tags, links, or front matter yourself — it is plain text, so nothing stops you.</li></ol>
+  <h3>What does the exported Markdown look like?</h3>
+  <p>A merged export of one album. Every note is a <code>###</code> heading carrying its timecode, so the source position survives however you later reorganise the text:</p>
+  <pre><code># Intro to Statistics — fall lectures
+
+3 notes · exported Sep 17, 2026 at 9:40 PM
+
+## Lecture 07 — Confidence intervals
+
+*Intro to Statistics — fall lectures*
+
+### `0:41:12` — Why 95% is not "95% chance the mean is in here"
+
+The interval is random, the parameter is not. Re-listen before the problem set: he gives the coin-flip version right after this.
+
+### `1:03:55`
+
+Worked example starts here. Sample size 40, standard error on the board.
+
+### `1:19:30` — Width vs. n
+
+Halving the width costs four times the sample. He says this is the one line to remember from the whole lecture.
+</code></pre>
+  <p>The timecode in the file is a reference, not a link: Obsidian cannot reach the audio on your phone. To hear the sentence again you open EarMemo and tap the marker — the file tells you where, the app takes you there. Because the files are plain Markdown they also work in Bear, Logseq, Notion, or a text editor.</p>
   <h2>What the free version includes</h2>
   <p>Markers are unlimited for everyone. The free version lets you write text on five of them; the one-time Full Unlock removes that limit and enables Markdown export. Nothing you wrote is ever deleted or hidden by hitting a limit.</p>
 
@@ -169,7 +201,8 @@
 
   <h2>Questions people actually ask</h2>
   <details><summary>Can I take notes with timestamps while listening on iPhone?</summary><p>Yes. EarMemo lets you drop a marker at the exact playback position without stopping playback, then write on it immediately or later. Tapping the marker jumps the audio back to that second.</p></details>
-  <details><summary>Can I export audio notes to Obsidian?</summary><p>Yes, as files. EarMemo exports notes as plain Markdown — a single note, one episode, or a whole album merged — which you move into your vault yourself. There is no live sync or integration, because the app never connects to a network.</p></details>
+  <details><summary>Can I export audio notes to Obsidian?</summary><p>Yes, as files. EarMemo exports notes as plain Markdown — a single note, one episode, or a whole album merged — and the iOS share sheet lets you save them straight into the vault folder (iCloud Drive › Obsidian › your vault, or On My iPhone › Obsidian). Obsidian picks them up on the next launch. There is no live sync or integration, because the app never connects to a network.</p></details>
+  <details><summary>Can I click the timestamp in Obsidian to jump back to the audio?</summary><p>No. In the exported file the timecode is plain text, such as `1:03:55`, and Obsidian has no way to reach the audio on your phone. Jumping back happens inside EarMemo, where tapping the marker resumes playback at that exact second. The file gives you the reference; the app gives you the playback.</p></details>
   <details><summary>Does EarMemo transcribe audio?</summary><p>No. There is no transcription and no AI. The notes are the ones you write yourself; the app's contribution is anchoring them to the exact second and getting them back out as Markdown.</p></details>
   <details><summary>Do the notes survive if I delete the audio file?</summary><p>Yes. Notes and bookmarks are stored separately from the audio, so clearing files to save space does not take your notes with it.</p></details>
   <details><summary>Does it work for lectures and voice memos too?</summary><p>Yes. Anything you can import — lecture mp3s, the audio track of an mp4 recording, interviews, voice memos — takes timestamped notes the same way.</p></details>

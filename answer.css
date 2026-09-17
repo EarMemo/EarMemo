@@ -52,6 +52,9 @@ tbody tr:first-child td{background:rgba(247,116,40,.06);}
 .steps li{counter-increment:s;position:relative;padding-left:38px;margin-bottom:14px;}
 .steps li::before{content:counter(s);position:absolute;left:0;top:1px;width:25px;height:25px;border-radius:50%;background:var(--accent);color:#fff;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;font-family:var(--sans);}
 .steps b{color:var(--ink);}
+code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.92em;background:var(--cream-2);padding:1px 5px;border-radius:5px;}
+pre{background:var(--cream-3);border:1px solid var(--rule);border-radius:12px;padding:16px 18px;margin:14px 0 22px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14.5px;line-height:1.55;color:var(--ink-2);}
+pre code{background:none;padding:0;font-size:inherit;}
 details{border-top:1px solid var(--rule);padding:15px 0;}
 details:last-of-type{border-bottom:1px solid var(--rule);}
 summary{cursor:pointer;font-weight:500;list-style:none;position:relative;padding-right:28px;}

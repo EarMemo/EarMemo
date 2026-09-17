@@ -32,7 +32,7 @@ There is no subscription, no advertising, and no account.
 - No ads, no data collection, no account, no server.
 
 ## Bought EarMemo when it was a paid download?
-If you purchased EarMemo before version 1.2 (when it was a paid-up-front app),
+If you purchased EarMemo before version 1.3 (when it was a paid-up-front app),
 updating to the latest version unlocks the full version automatically — no
 action needed, no second payment.
 
