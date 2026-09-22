@@ -2,7 +2,7 @@
 
 > EarMemo (Chinese name: 耳记) is a local-first audio player for iOS, built for long-form listening: podcasts, audiobooks, lectures, sermons, language lessons, and voice recordings. It plays audio files the user already has on their iPhone or iPad — mp3, m4a, m4b, aac, flac, wav, plus the audio track of mp4, mov, and m4v. All data stays on the device. No account, no server, no third-party SDK, no advertising, no tracking.
 
-EarMemo is free to download; EarMemo Pro is a single one-time purchase (no subscription). It is not a streaming app, not a music player, and not a catalog — it is a player for audio content the user already owns or has downloaded.
+EarMemo is free to download; the full version is a single one-time purchase (no subscription). It is not a streaming app, not a music player, and not a catalog — it is a player for audio content the user already owns or has downloaded.
 
 Note on naming: EarMemo (耳记), the iOS audio player described here, is a separate and unaffiliated product from any similarly named AI study, flashcard, or memorization service (including ones that may use a similar "EarMemo" name or domain). This EarMemo has no AI features, no account, and no server connection — it is an offline audio player for iPhone and iPad made by Fan YANG.
 
@@ -52,7 +52,7 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 
 - iOS 17 and later
 - iPadOS 17 and later
-- Free to download. The free version lets users listen to 1 album at a time, try 10 distinct audio tracks in total across album episodes and standalone tracks, add unlimited timestamp markers, and write text on 5 of them; importing, resume, sleep timer, speed, search, and note-image sharing are free forever. EarMemo Pro is a one-time in-app purchase of US$8.99 (US App Store tier; local price varies by region — e.g. ¥48 on the China App Store). No subscriptions, no ads. Users who bought EarMemo as a paid download get EarMemo Pro automatically. Machine-readable pricing: https://earmemo.app/pricing.md
+- Free to download. The free version lets users listen to 1 album at a time, try 10 distinct audio tracks in total across album episodes and standalone tracks, add unlimited timestamp markers, and write text on 5 of them; importing, resume, sleep timer, speed, search, and note-image sharing are free forever. The Full Unlock is a one-time in-app purchase of US$8.99 (US App Store tier; local price varies by region — e.g. ¥48 on the China App Store). No subscriptions, no ads. Users who bought EarMemo as a paid download unlock the full version automatically. Machine-readable pricing: https://earmemo.app/pricing.md
 
 ## Common questions
 
@@ -69,7 +69,7 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 - **Does it collect data?** No, none.
 - **Does it work on iPad?** Yes, universal app with a split-view layout on iPad.
 - **Can I import files from other apps?** Yes, via the iOS Share Sheet — from Messages, Mail, Files, or any app with a share action.
-- **Is there a subscription?** No. EarMemo is free to download, and EarMemo Pro is a single one-time purchase. No subscription, no ads.
+- **Is there a subscription?** No. EarMemo is free to download, and the full version is a single one-time purchase. No subscription, no ads.
 - **Is the free version a trial?** The free allowance never expires: users can listen to 1 album at a time, try 10 distinct audio tracks in total across album episodes and standalone tracks, add unlimited timestamp markers, and write text on 5 of them. Every import and playback tool remains available. Content beyond the quota is locked for playback, never deleted or hidden.
 - **I bought EarMemo when it was a paid app — do I pay again?** No. Updating to the latest version unlocks everything automatically.
 - **Does it sync between devices?** Data follows the user's own iCloud device backup; there is no separate EarMemo cloud sync service.
