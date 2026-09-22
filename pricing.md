@@ -1,6 +1,6 @@
 # Pricing — EarMemo (耳记)
 
-EarMemo is free to download. The full version is a single one-time purchase.
+EarMemo is free to download. EarMemo Pro is a single one-time purchase.
 There is no subscription, no advertising, and no account.
 
 ## Free version (free forever, not a time-limited trial)
@@ -14,15 +14,15 @@ There is no subscription, no advertising, and no account.
 - Nothing is ever deleted or hidden: content beyond the free quota stays
   visible, movable, and deletable; it is only locked for playback.
 
-## Full Unlock (one-time purchase)
+## EarMemo Pro (one-time purchase)
 - Price: US$8.99 (US App Store tier; local price varies by region — e.g. ¥48
   on the China App Store). A limited-time launch offer (US$6.99 / ¥38) applies
   for the first weeks after the free version ships.
 - Unlocks: unlimited albums and tracks, unlimited notes, and Markdown export.
 - Billing: Pay once on the App Store. No recurring charges, ever. Includes all
   future updates to the app.
-- A Supporter edition (US$19.99 / ¥128) unlocks exactly the same features — it
-  exists only for people who want to give the developer extra support.
+- EarMemo Pro · Supporter (US$19.99 / ¥128) unlocks exactly the same features —
+  it exists only for people who want to give the developer extra support.
 - Platforms: iPhone and iPad (universal app); also runs on Apple Silicon Macs.
 - Requirements: iOS 17 / iPadOS 17 or later.
 - Family Sharing: not currently offered.
@@ -33,7 +33,7 @@ There is no subscription, no advertising, and no account.
 
 ## Bought EarMemo when it was a paid download?
 If you purchased EarMemo before version 1.3 (when it was a paid-up-front app),
-updating to the latest version unlocks the full version automatically — no
+updating to the latest version unlocks EarMemo Pro automatically — no
 action needed, no second payment.
 
 ## Where to buy
