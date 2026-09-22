@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://earmemo.app/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/"/>
@@ -12,12 +12,30 @@
   </url>
   <url>
     <loc>https://earmemo.app/zh/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/how-to-remember-audiobooks</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/how-to-remember-audiobooks"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/zh/how-to-remember-audiobooks</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/how-to-remember-audiobooks"/>
   </url>
   <url>
     <loc>https://earmemo.app/m4b-audiobook-player-iphone</loc>
@@ -39,7 +57,7 @@
   </url>
   <url>
     <loc>https://earmemo.app/timestamped-audio-notes-markdown</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/timestamped-audio-notes-markdown"/>
@@ -48,7 +66,7 @@
   </url>
   <url>
     <loc>https://earmemo.app/zh/timestamped-audio-notes-markdown</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/timestamped-audio-notes-markdown"/>
