@@ -41,9 +41,9 @@
   "image": "https://earmemo.app/icon.png",
   "screenshot": [
     "https://earmemo.app/img/en/player.webp",
-    "https://earmemo.app/img/en/privacy.webp",
+    "https://earmemo.app/img/en/home.webp",
     "https://earmemo.app/img/en/notes.webp",
-    "https://earmemo.app/img/en/stats.webp",
+    "https://earmemo.app/img/en/history.webp",
     "https://earmemo.app/img/en/wifi.webp"
   ],
   "author": {
@@ -164,76 +164,106 @@
 </script>
 
 <style>
+/* Tokens mirror the app's Cocoa palette (DESIGN.md §2, Sources/Views/CocoaTheme.swift):
+   cold-grey paper, graphite ink, burnt-orange accent. Names follow the app's
+   (`cream` is kept as the name; the colour is the 1.4+ cold-grey paper). */
 :root{
-  --cream:#f7f1e6; --cream-2:#efe7d6; --cream-3:#fff8ee;
-  --ink:#2d2418; --ink-2:#5b4f3d; --ink-3:#8a7c66;
-  --accent:#f77428; --accent-ink:#a14d18;
-  --rule:rgba(45,36,24,0.12);
+  --cream:#eeeff1; --cream-2:#e5e6e9; --cream-3:#fafafb;
+  --ink:#242527; --ink-2:#5c5e61; --ink-3:#696a6d;
+  --accent:#c9531a; --accent-ink:#ae4816;
+  --rule:#d6d8db;
+  --foot-muted:#9a9ca0;
   --maxw:1080px;
-  --serif:ui-serif,Georgia,"Iowan Old Style","Apple Garamond",serif;
+  --serif:ui-serif,"New York",Georgia,"Iowan Old Style","Apple Garamond",serif;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --time:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{background:var(--cream);background-image:linear-gradient(180deg,#ffe9d6 0%,var(--cream) 700px);background-repeat:no-repeat;color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 img{max-width:100%;display:block;}
 a{color:inherit;}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
-.section{padding:72px 0;}
+.section{padding:80px 0;}
+.section + .section{border-top:1px solid var(--rule);}
 h1,h2,h3{font-family:var(--serif);letter-spacing:-0.01em;font-weight:600;margin:0;}
-h2{font-size:28px;line-height:1.2;margin-bottom:14px;}
-h3{font-size:18px;font-family:var(--sans);font-weight:600;margin:0 0 4px;}
+h2{font-size:30px;line-height:1.22;margin-bottom:14px;}
+h3{font-size:17px;font-weight:600;margin:0 0 4px;}
 p{margin:0 0 12px;}
-.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);font-weight:600;margin-bottom:10px;}
+.eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:12px;}
 .lead{color:var(--ink-2);font-size:18px;}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:var(--ink);color:var(--cream);text-decoration:none;font-size:15px;font-weight:500;}
+.more{color:var(--accent-ink);text-decoration:none;font-weight:600;}
+.more:hover{text-decoration:underline;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:var(--ink);color:var(--cream);text-decoration:none;font-size:15px;font-weight:600;}
 .btn.accent{background:var(--accent);color:#fff;}
-.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--rule);}
-.site-header{position:sticky;top:0;z-index:50;background:rgba(247,241,230,.85);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s;}
+.btn.accent:hover{background:var(--accent-ink);}
+.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--rule);font-weight:500;}
+.btn.secondary:hover{border-color:var(--ink-3);}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(238,239,241,.86);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s;}
 .site-header.scrolled{border-bottom-color:var(--rule);}
 .site-header .container{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);}
-.brand img{width:34px;height:34px;border-radius:8px;}
-.brand b{font-family:var(--serif);font-size:19px;font-weight:600;}
+.brand img{width:34px;height:34px;border-radius:7.6px;}
+.brand b{font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:-0.02em;}
 .brand span{color:var(--ink-3);font-size:13px;}
 .nav{display:flex;align-items:center;gap:22px;font-size:15px;}
 .nav a{text-decoration:none;color:var(--ink-2);}
-.nav .btn{color:#fff;}
-.hero{background:transparent;}
-.hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:80px;}
-.hero h1{font-size:44px;line-height:1.1;margin-bottom:18px;}
-.hero .lead{margin-bottom:28px;max-width:32ch;}
+.nav a:hover{color:var(--ink);}
+.nav .btn{color:#fff;padding:9px 16px;}
+
+/* Hero. The listening axis (DESIGN "The Line / The Mark / The Timecode") runs
+   the full width of the page, is cut by the phone, and carries on past it. */
+.hero{position:relative;overflow:hidden;}
+.hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:88px;}
+.hero h1{font-size:48px;line-height:1.08;letter-spacing:-0.02em;margin-bottom:18px;}
+.hero .lead{margin-bottom:28px;max-width:34ch;}
 .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
-.trust .container{display:flex;flex-wrap:wrap;gap:10px 12px;justify-content:center;padding-top:10px;padding-bottom:10px;font-size:13.5px;}
-.trust span{display:inline-flex;align-items:center;gap:7px;padding:7px 15px;background:var(--cream-3);border:1px solid var(--rule);border-radius:999px;color:var(--ink-2);}
-.trust b{color:var(--accent);font-weight:700;}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.axis{position:relative;margin-top:56px;height:44px;}
+.axis::before{content:"";position:absolute;left:-100vw;right:-100vw;top:30px;height:1px;background:var(--rule);}
+.axis .mark{position:absolute;top:0;display:flex;flex-direction:column;align-items:center;gap:8px;transform:translateX(-50%);}
+.axis .mark span{font-family:var(--time);font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--accent-ink);line-height:1;}
+.axis .mark i{display:block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:4px;}
+.hero .device{position:relative;z-index:1;}
+
+.trust{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.trust .container{display:flex;flex-wrap:wrap;gap:6px 0;justify-content:center;padding-top:16px;padding-bottom:16px;font-size:14px;color:var(--ink-2);}
+.trust span{display:inline-flex;align-items:center;padding:0 18px;}
+.trust span + span{border-left:1px solid var(--rule);}
+
+.why .container > *{max-width:820px;}
+#features{border-top:1px solid var(--rule);}
+.why h2{font-size:34px;}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
 .split.reverse .copy{order:2;}
-.copy ul{padding-left:20px;margin:14px 0 0;}
-.copy li{margin-bottom:6px;color:var(--ink-2);}
-.device{width:min(178px,54%);min-width:0;margin:0 auto;background:#1c1712;border-radius:34px;padding:8px;box-shadow:0 20px 46px rgba(45,36,24,.16);}
-.hero .device{width:min(248px,84%);}
-.device .screen{border-radius:32px;overflow:hidden;background:#f4ecdd;line-height:0;}
+.copy ul{list-style:none;padding:0;margin:20px 0 0;border-top:1px solid var(--rule);}
+.copy li{padding:10px 0;border-bottom:1px solid var(--rule);color:var(--ink-2);font-size:16px;}
+.device{width:min(260px,72%);min-width:0;margin:0 auto;background:#1b1c1e;border-radius:40px;padding:9px;box-shadow:0 24px 48px -20px rgba(36,37,39,.32);}
+.hero .device{width:min(290px,84%);}
+.device .screen{border-radius:31px;overflow:hidden;background:var(--cream);line-height:0;}
 .device .screen img{width:100%;height:auto;}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px;}
-.card{background:var(--cream-3);border:1px solid var(--rule);border-radius:16px;padding:22px;}
-.card .ic{width:42px;height:42px;border-radius:11px;background:rgba(247,116,40,.12);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:13px;}
-.card p{font-size:15px;color:var(--ink-2);margin:0;}
-.privacy{background:transparent;}
-.privacy .container{max-width:760px;text-align:center;}
-.checklist{list-style:none;padding:0;margin:18px auto 0;display:inline-block;text-align:left;}
-.checklist li{padding-left:28px;position:relative;margin-bottom:10px;color:var(--ink-2);font-size:17px;}
-.checklist li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700;}
+
+/* "Everything else": margin-note rows, not an icon grid (DESIGN §10). */
+.extras{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;margin-top:28px;}
+.extras div{display:grid;grid-template-columns:11em 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--rule);}
+.extras h3{font-size:16px;}
+.extras p{font-size:15px;color:var(--ink-2);margin:0;}
+
+.privacy .checklist{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule);}
+.checklist li{padding:14px 0 14px 30px;position:relative;border-bottom:1px solid var(--rule);color:var(--ink);font-size:17px;}
+.checklist li::before{content:"✓";position:absolute;left:2px;color:var(--ink-3);font-weight:600;}
+.answers{list-style:none;padding:0;margin:24px 0 0;border-top:1px solid var(--rule);}
+.answers li{padding:14px 0;border-bottom:1px solid var(--rule);}
+.answers li span{display:block;color:var(--ink-3);font-size:15px;margin-top:2px;}
 .center{text-align:center;}
 .center .lead{max-width:46ch;margin-left:auto;margin-right:auto;}
-.cta-final{background:transparent;}
-.faq{border-bottom:1px solid var(--rule);}
-.faq .container{max-width:820px;}
+.narrow > *{max-width:760px;}
+.faq .container > *{max-width:820px;}
 .faq details{border-top:1px solid var(--rule);padding:16px 0;}
+.faq details:last-of-type{border-bottom:1px solid var(--rule);}
 .faq summary{cursor:pointer;font-weight:500;list-style:none;position:relative;padding-right:28px;}
 .faq summary::-webkit-details-marker{display:none;}
-.faq summary::after{content:"+";position:absolute;right:0;top:0;font-size:20px;color:var(--ink-2);}
+.faq summary::after{content:"+";position:absolute;right:0;top:0;font-size:20px;color:var(--ink-3);}
 .faq details[open] summary::after{content:"−";}
 .faq details[open] summary{margin-bottom:8px;}
 .faq p{color:var(--ink-2);}
@@ -241,19 +271,30 @@ p{margin:0 0 12px;}
 .site-footer a{color:var(--cream);text-decoration:none;opacity:.85;}
 .site-footer a:hover{opacity:1;}
 .foot-cols{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;}
-.foot-cols h4{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);margin:0 0 10px;}
+.foot-cols h4{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--foot-muted);margin:0 0 10px;font-weight:500;}
 .foot-cols li{list-style:none;margin-bottom:7px;font-size:15px;}
 .foot-cols ul{padding:0;margin:0;}
-.foot-brand img{width:30px;height:30px;border-radius:7px;}
-.foot-bottom{margin-top:36px;padding-top:18px;border-top:1px solid rgba(247,241,230,.15);font-size:13px;color:var(--ink-3);}
+.foot-brand img{width:30px;height:30px;border-radius:6.7px;}
+.foot-note{color:var(--foot-muted);font-size:14px;margin-top:12px;max-width:30ch;}
+.foot-bottom{margin-top:36px;padding-top:18px;border-top:1px solid rgba(238,239,241,.14);font-size:13px;color:var(--foot-muted);}
+@media(max-width:860px){
+  .extras{grid-template-columns:1fr;}
+}
 @media(max-width:760px){
+  .container{padding:0 16px;}
   .section{padding:56px 0;}
-  .hero .container,.split{grid-template-columns:1fr;gap:32px;}
-  .hero h1{font-size:34px;}
+  .hero .container,.split{grid-template-columns:1fr;gap:36px;}
+  .hero .container{padding-top:40px;padding-bottom:56px;}
+  .hero h1{font-size:36px;}
+  .why h2{font-size:28px;}
+  h2{font-size:26px;}
   .hero .device{order:-1;}
   .split.reverse .copy{order:0;}
-  .nav a:not(.btn){display:none;}
-  .grid{grid-template-columns:1fr;}
+  .nav{gap:16px;}
+  .nav a:not(.btn):not([lang]){display:none;}
+  .extras div{grid-template-columns:1fr;gap:2px;}
+  .trust span{padding:0 12px;}
+  .axis{margin-top:40px;}
 }
 </style>
 </head>
@@ -265,7 +306,7 @@ p{margin:0 0 12px;}
     <a href="#privacy">Privacy</a>
     <a href="#faq">FAQ</a>
     <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download</a>
-    <a href="./zh/" aria-label="切换到中文">中文</a>
+    <a href="./zh/" lang="zh-Hans" hreflang="zh-Hans" aria-label="切换到中文">中文</a>
   </nav>
 </div></header>
 
@@ -278,19 +319,25 @@ p{margin:0 0 12px;}
         <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download on the App Store</a>
         <a class="btn secondary" href="#features">See features</a>
       </div>
+      <div class="axis" aria-hidden="true">
+        <div class="mark" style="left:19.6%"><span>3:32</span><i></i></div>
+        <div class="mark" style="left:37.5%"><span>6:45</span><i></i></div>
+        <div class="mark" style="left:61.9%"><span>11:08</span><i></i></div>
+        <div class="mark" style="left:76.9%"><span>13:50</span><i></i></div>
+      </div>
     </div>
-    <div class="device"><div class="screen"><img src="./img/en/player.webp" alt="EarMemo Now Playing screen with playback controls, bookmark, and notes" width="900" height="1956" loading="eager" decoding="async"></div></div>
+    <div class="device"><div class="screen"><img src="./img/en/player.webp" alt="EarMemo Now Playing: a chapter of Pride and Prejudice, with note marks on the progress axis" width="900" height="1956" loading="eager" decoding="async"></div></div>
   </div></section>
 
   <section class="trust"><div class="container">
-    <span><b>✓</b> No account</span>
-    <span><b>✓</b> No network</span>
-    <span><b>✓</b> No tracking</span>
-    <span><b>✓</b> No subscription</span>
-    <span><b>✓</b> iPhone &amp; iPad</span>
+    <span>No account</span>
+    <span>No network</span>
+    <span>No tracking</span>
+    <span>No subscription</span>
+    <span>iPhone &amp; iPad</span>
   </div></section>
 
-  <section class="section center" id="why"><div class="container">
+  <section class="section why" id="why"><div class="container">
     <p class="eyebrow">Why EarMemo</p>
     <h2>Every other player fights for your attention.<br>EarMemo does the opposite.</h2>
     <p class="lead">No recommendation feed, no autoplay into the next episode, no list you can never finish. EarMemo keeps the long things you've downloaded — the ones nobody else organizes for you — quietly in one place. Stop on the sentence you want to keep; come back tomorrow, and you're still on it.</p>
@@ -308,10 +355,10 @@ p{margin:0 0 12px;}
           <li>A "today's listening" figure right at the top</li>
         </ul>
       </div>
-      <div class="device"><div class="screen"><img src="./img/en/privacy.webp" alt="EarMemo home library with Continue Listening and Recently Added" width="900" height="1956" loading="lazy" decoding="async"></div></div>
+      <div class="device"><div class="screen"><img src="./img/en/home.webp" alt="EarMemo home: Continue Listening, with the time left on each audiobook, lecture, and recording" width="900" height="1956" loading="lazy" decoding="async"></div></div>
     </div></section>
 
-    <section class="section alt"><div class="container split reverse">
+    <section class="section"><div class="container split reverse">
       <div class="copy">
         <p class="eyebrow">Notes</p>
         <h2>Notes that jump back</h2>
@@ -321,9 +368,9 @@ p{margin:0 0 12px;}
           <li>Grouped per album and episode, easy to review</li>
           <li>Export any time, into your own notes app</li>
         </ul>
-        <p style="margin-top:18px"><a href="./how-to-remember-audiobooks" style="color:var(--accent-ink);text-decoration:none;font-weight:600">How to remember what you hear →</a></p>
+        <p style="margin-top:20px"><a class="more" href="./how-to-remember-audiobooks">How to remember what you hear →</a></p>
       </div>
-      <div class="device"><div class="screen"><img src="./img/en/notes.webp" alt="EarMemo per-album note with a tappable timestamp marker" width="900" height="1956" loading="lazy" decoding="async"></div></div>
+      <div class="device"><div class="screen"><img src="./img/en/notes.webp" alt="EarMemo episode notes: each note sits on the timeline at its timestamp, with a play button to hear that second again" width="900" height="1956" loading="lazy" decoding="async"></div></div>
     </div></section>
 
     <section class="section"><div class="container split">
@@ -337,10 +384,10 @@ p{margin:0 0 12px;}
           <li>All on-device — never uploaded, never analyzed</li>
         </ul>
       </div>
-      <div class="device"><div class="screen"><img src="./img/en/stats.webp" alt="EarMemo yearly listening heatmap and statistics" width="900" height="1956" loading="lazy" decoding="async"></div></div>
+      <div class="device"><div class="screen"><img src="./img/en/history.webp" alt="EarMemo listening history: a yearly heatmap, total hours, and most-played albums" width="900" height="1956" loading="lazy" decoding="async"></div></div>
     </div></section>
 
-    <section class="section alt"><div class="container split reverse">
+    <section class="section"><div class="container split reverse">
       <div class="copy">
         <p class="eyebrow">Import</p>
         <h2>Get your files in, fast</h2>
@@ -351,42 +398,44 @@ p{margin:0 0 12px;}
           <li>mp3 · m4a · flac · aac · wav, plus mp4 / mov audio-only</li>
         </ul>
       </div>
-      <div class="device"><div class="screen"><img src="./img/en/wifi.webp" alt="EarMemo Wi-Fi transfer screen with a QR code and upload list" width="900" height="1956" loading="lazy" decoding="async"></div></div>
+      <div class="device"><div class="screen"><img src="./img/en/wifi.webp" alt="EarMemo Wi-Fi Transfer: a QR code and a local address to open in a computer browser" width="900" height="1956" loading="lazy" decoding="async"></div></div>
     </div></section>
   </div>
 
-  <section class="section alt"><div class="container">
-    <h2 class="center" style="margin-bottom:32px">Everything else you'd want</h2>
-    <div class="grid">
-      <div class="card"><div class="ic">☾</div><h3>Sleep timer</h3><p>Live Activity countdown on the Dynamic Island and Lock Screen.</p></div>
-      <div class="card"><div class="ic">▶</div><h3>Background &amp; Lock Screen</h3><p>Full transport controls from Control Center and the Lock Screen.</p></div>
-      <div class="card"><div class="ic">⏩</div><h3>Variable speed</h3><p>Speed up or slow down without the audio turning to chipmunks.</p></div>
-      <div class="card"><div class="ic">⚑</div><h3>Bookmarks</h3><p>One-tap jump back to any saved point — essential for long content.</p></div>
-      <div class="card"><div class="ic">⇪</div><h3>Share Sheet import</h3><p>Send files in from Messages, Mail, Files, or any app with a share action.</p></div>
-      <div class="card"><div class="ic">♫</div><h3>Wide format support</h3><p>mp3 · m4a · flac · aac · wav, plus mp4 / mov / m4v played audio-only.</p></div>
+  <section class="section"><div class="container">
+    <h2>Everything else you'd want</h2>
+    <div class="extras">
+      <div><h3>Sleep timer</h3><p>Live Activity countdown on the Dynamic Island and Lock Screen.</p></div>
+      <div><h3>Background &amp; Lock Screen</h3><p>Full transport controls from Control Center and the Lock Screen.</p></div>
+      <div><h3>Variable speed</h3><p>Speed up or slow down without the audio turning to chipmunks.</p></div>
+      <div><h3>Bookmarks</h3><p>One-tap jump back to any saved point — essential for long content.</p></div>
+      <div><h3>Share Sheet import</h3><p>Send files in from Messages, Mail, Files, or any app with a share action.</p></div>
+      <div><h3>Wide format support</h3><p>mp3 · m4a · flac · aac · wav, plus mp4 / mov / m4v played audio-only.</p></div>
     </div>
   </div></section>
 
-  <section class="section privacy" id="privacy"><div class="container">
+  <section class="section privacy" id="privacy"><div class="container split">
+    <div>
     <p class="eyebrow">Privacy</p>
     <h2>Private by architecture, not by promise</h2>
     <p class="lead">EarMemo never connects to a server. Settings, playback progress, notes, bookmarks, and statistics all stay on your device — and follow your own iCloud backup if you have iCloud enabled.</p>
+    <p style="margin-top:22px"><a class="more" href="./privacy">Read the full privacy policy →</a></p>
+    </div>
     <ul class="checklist">
       <li>No data collection</li>
       <li>No third-party SDKs</li>
       <li>No ads, no tracking</li>
       <li>No account, no sign-in</li>
     </ul>
-    <p style="margin-top:22px"><a href="./privacy">Read the full privacy policy →</a></p>
   </div></section>
 
-  <section class="section center" id="pricing"><div class="container">
+  <section class="section" id="pricing"><div class="container narrow">
     <p class="eyebrow">Pricing</p>
     <h2>Free to download. One-time purchase to unlock everything.</h2>
     <p class="lead">Download free and listen at your own pace: listen to 1 album at a time; try 10 audio tracks total across album episodes and standalone tracks; add unlimited timestamp markers and write on 5 of them. Every import and playback tool is included. When it fits, a single one-time purchase unlocks everything. No subscription, no ads.</p>
   </div></section>
 
-  <section class="section cta-final center"><div class="container">
+  <section class="section center"><div class="container">
     <h2>Your library, finally in one focused player.</h2>
     <div class="cta" style="justify-content:center;margin-top:20px">
       <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download on the App Store</a>
@@ -438,16 +487,16 @@ p{margin:0 0 12px;}
     </details>
   </div></section>
 
-  <section class="section" id="answers"><div class="container" style="max-width:820px">
+  <section class="section" id="answers"><div class="container narrow">
     <p class="eyebrow">In depth</p>
     <h2>Answers to specific questions</h2>
     <p class="lead">Longer write-ups for the questions people actually search for — each one says plainly what EarMemo cannot do.</p>
-    <ul class="checklist" style="display:block;margin-top:22px">
-      <li><a href="./how-to-remember-audiobooks" style="color:var(--accent-ink);text-decoration:none;font-weight:600">Remember what you hear in audiobooks</a><br><span style="color:var(--ink-3);font-size:15px">Mark the moment, keep listening, add your own words later — without turning a book into homework.</span></li>
-      <li><a href="./m4b-audiobook-player-iphone" style="color:var(--accent-ink);text-decoration:none;font-weight:600">Play M4B and MP3 audiobooks you already own</a><br><span style="color:var(--ink-3);font-size:15px">Which files are playable, four ways to get them on the phone, and where another player suits you better.</span></li>
-      <li><a href="./timestamped-audio-notes-markdown" style="color:var(--accent-ink);text-decoration:none;font-weight:600">Take timestamped notes, export as Markdown</a><br><span style="color:var(--ink-3);font-size:15px">Notes anchored to the exact second, and how this differs from transcription apps.</span></li>
-      <li><a href="./transfer-audio-to-iphone-without-itunes" style="color:var(--accent-ink);text-decoration:none;font-weight:600">Transfer audio to iPhone without iTunes</a><br><span style="color:var(--ink-3);font-size:15px">Wi-Fi browser transfer, the Files app, the Share Sheet — and when to use which.</span></li>
-      <li><a href="./offline-audio-player-no-account" style="color:var(--accent-ink);text-decoration:none;font-weight:600">No account, no server, no tracking</a><br><span style="color:var(--ink-3);font-size:15px">What local-first means here, and three ways to verify it yourself.</span></li>
+    <ul class="answers">
+      <li><a href="./how-to-remember-audiobooks" class="more">Remember what you hear in audiobooks</a><span>Mark the moment, keep listening, add your own words later — without turning a book into homework.</span></li>
+      <li><a href="./m4b-audiobook-player-iphone" class="more">Play M4B and MP3 audiobooks you already own</a><span>Which files are playable, four ways to get them on the phone, and where another player suits you better.</span></li>
+      <li><a href="./timestamped-audio-notes-markdown" class="more">Take timestamped notes, export as Markdown</a><span>Notes anchored to the exact second, and how this differs from transcription apps.</span></li>
+      <li><a href="./transfer-audio-to-iphone-without-itunes" class="more">Transfer audio to iPhone without iTunes</a><span>Wi-Fi browser transfer, the Files app, the Share Sheet — and when to use which.</span></li>
+      <li><a href="./offline-audio-player-no-account" class="more">No account, no server, no tracking</a><span>What local-first means here, and three ways to verify it yourself.</span></li>
     </ul>
   </div></section>
 </main>
@@ -456,7 +505,7 @@ p{margin:0 0 12px;}
   <div class="foot-cols">
     <div>
       <a class="brand foot-brand" href="./" style="color:var(--cream)"><img src="./icon.png" alt="" onerror="this.style.display='none'"><b style="color:var(--cream)">EarMemo</b></a>
-      <p style="color:var(--ink-3);font-size:14px;margin-top:12px;max-width:30ch">A local-first audio player for iOS. All data stays on your device.</p>
+      <p class="foot-note">A local-first audio player for iOS. All data stays on your device.</p>
     </div>
     <div><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#faq">FAQ</a></li></ul></div>
     <div><h4>Answers</h4><ul><li><a href="./how-to-remember-audiobooks">Remember what you hear in audiobooks</a></li><li><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks you already own</a></li><li><a href="./timestamped-audio-notes-markdown">Take timestamped notes, export as Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">Transfer audio to iPhone without iTunes</a></li><li><a href="./offline-audio-player-no-account">No account, no server, no tracking</a></li></ul></div>
