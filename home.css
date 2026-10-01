@@ -404,7 +404,8 @@ html[lang="en"] .d-sec{text-transform:uppercase;}
 .demo-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;}
 .demo-title{font-family:var(--serif);font-size:15px;font-weight:600;}
 .demo-k{font-size:12px;color:var(--ink-3);white-space:nowrap;}
-.demo-bar{position:relative;height:26px;margin-top:6px;cursor:pointer;}
+.demo-bar{position:relative;height:26px;margin-top:6px;cursor:pointer;touch-action:pan-y;user-select:none;-webkit-user-select:none;}
+.demo-bar.is-drag{cursor:grabbing;}
 .demo-bar .rail,.demo-bar .fill{position:absolute;left:0;top:11px;height:3px;border-radius:2px;}
 .demo-bar .rail{right:0;background:var(--rule);}
 .demo-bar .fill{background:var(--ink-3);width:0;}

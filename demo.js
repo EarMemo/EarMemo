@@ -38,6 +38,7 @@
     t: +D.start || 0,
     playing: !reduceMotion,
     visible: false,
+    dragging: false,
     marks: D.seedT ? [{ t: +D.seedT, text: D.seedTx || '' }] : []
   };
 
@@ -101,10 +102,24 @@
     if (m.input && finePointer) m.input.focus({ preventScroll: true });
   });
   pp.addEventListener('click', function () { st.playing = !st.playing; renderPP(); });
-  bar.addEventListener('click', function (e) {
+  // Seek: tap anywhere on the bar; drag to scrub (playhead holds while dragging).
+  function seekAt(clientX) {
     var r = bar.getBoundingClientRect();
-    st.t = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * TOTAL;
+    st.t = Math.max(0, Math.min(1, (clientX - r.left) / r.width)) * TOTAL;
     renderHead();
+  }
+  bar.addEventListener('pointerdown', function (e) {
+    if (e.button > 0) return;
+    st.dragging = true;
+    bar.classList.add('is-drag');
+    try { bar.setPointerCapture(e.pointerId); } catch (err) {}
+    seekAt(e.clientX);
+  });
+  bar.addEventListener('pointermove', function (e) {
+    if (st.dragging) seekAt(e.clientX);
+  });
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(function (ev) {
+    bar.addEventListener(ev, function () { st.dragging = false; bar.classList.remove('is-drag'); });
   });
 
   // Ten simulated seconds per real second, only while the card is on screen.
@@ -114,7 +129,7 @@
     st.visible = true;
   }
   setInterval(function () {
-    if (!st.playing || !st.visible || doc.hidden) return;
+    if (!st.playing || !st.visible || st.dragging || doc.hidden) return;
     st.t = st.t + 1 >= TOTAL ? 0 : st.t + 1;
     renderHead();
   }, 100);
