@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="home">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -163,373 +163,237 @@
 }
 </script>
 
-<style>
-/* Tokens mirror the app's Cocoa palette (DESIGN.md §2, Sources/Views/CocoaTheme.swift):
-   cold-grey paper, graphite ink, burnt-orange accent. Names follow the app's
-   (`cream` is kept as the name; the colour is the 1.4+ cold-grey paper). */
-:root{
-  --cream:#eeeff1; --cream-2:#e5e6e9; --cream-3:#fafafb;
-  --ink:#242527; --ink-2:#5c5e61; --ink-3:#696a6d;
-  --accent:#c9531a; --accent-ink:#ae4816;
-  --rule:#d6d8db;
-  --foot-muted:#9a9ca0;
-  --maxw:1080px;
-  --serif:ui-serif,"New York",Georgia,"Iowan Old Style","Apple Garamond",serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --time:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-img{max-width:100%;display:block;}
-a{color:inherit;}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
-.section{padding:80px 0;}
-.section + .section{border-top:1px solid var(--rule);}
-h1,h2,h3{font-family:var(--serif);letter-spacing:-0.01em;font-weight:600;margin:0;}
-h2{font-size:30px;line-height:1.22;margin-bottom:14px;}
-h3{font-size:17px;font-weight:600;margin:0 0 4px;}
-p{margin:0 0 12px;}
-.eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:12px;}
-.lead{color:var(--ink-2);font-size:18px;}
-.more{color:var(--accent-ink);text-decoration:none;font-weight:600;}
-.more:hover{text-decoration:underline;}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:var(--ink);color:var(--cream);text-decoration:none;font-size:15px;font-weight:600;}
-.btn.accent{background:var(--accent);color:#fff;}
-.btn.accent:hover{background:var(--accent-ink);}
-.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--rule);font-weight:500;}
-.btn.secondary:hover{border-color:var(--ink-3);}
-.site-header{position:sticky;top:0;z-index:50;background:rgba(238,239,241,.86);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s;}
-.site-header.scrolled{border-bottom-color:var(--rule);}
-.site-header .container{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);}
-.brand img{width:34px;height:34px;border-radius:7.6px;}
-.brand b{font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:-0.02em;}
-.brand span{color:var(--ink-3);font-size:13px;}
-.nav{display:flex;align-items:center;gap:22px;font-size:15px;}
-.nav a{text-decoration:none;color:var(--ink-2);}
-.nav a:hover{color:var(--ink);}
-.nav .btn{color:#fff;padding:9px 16px;}
-
-/* Hero. The listening axis (DESIGN "The Line / The Mark / The Timecode") runs
-   the full width of the page, is cut by the phone, and carries on past it. */
-.hero{position:relative;overflow:hidden;}
-.hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:88px;}
-.hero h1{font-size:48px;line-height:1.08;letter-spacing:-0.02em;margin-bottom:18px;}
-.hero .lead{margin-bottom:28px;max-width:34ch;}
-.cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
-.axis{position:relative;margin-top:56px;height:44px;}
-.axis::before{content:"";position:absolute;left:-100vw;right:-100vw;top:30px;height:1px;background:var(--rule);}
-.axis .mark{position:absolute;top:0;display:flex;flex-direction:column;align-items:center;gap:8px;transform:translateX(-50%);}
-.axis .mark span{font-family:var(--time);font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--accent-ink);line-height:1;}
-.axis .mark i{display:block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:4px;}
-.hero .device{position:relative;z-index:1;}
-
-.trust{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
-.trust .container{display:flex;flex-wrap:wrap;gap:6px 0;justify-content:center;padding-top:16px;padding-bottom:16px;font-size:14px;color:var(--ink-2);}
-.trust span{display:inline-flex;align-items:center;padding:0 18px;}
-.trust span + span{border-left:1px solid var(--rule);}
-
-.why .container > *{max-width:820px;}
-#features{border-top:1px solid var(--rule);}
-.why h2{font-size:34px;}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-.split.reverse .copy{order:2;}
-.copy ul{list-style:none;padding:0;margin:20px 0 0;border-top:1px solid var(--rule);}
-.copy li{padding:10px 0;border-bottom:1px solid var(--rule);color:var(--ink-2);font-size:16px;}
-.device{width:min(260px,72%);min-width:0;margin:0 auto;background:#1b1c1e;border-radius:40px;padding:9px;box-shadow:0 24px 48px -20px rgba(36,37,39,.32);}
-.hero .device{width:min(290px,84%);}
-.device .screen{border-radius:31px;overflow:hidden;background:var(--cream);line-height:0;}
-.device .screen img{width:100%;height:auto;}
-
-/* "Everything else": margin-note rows, not an icon grid (DESIGN §10). */
-.extras{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;margin-top:28px;}
-.extras div{display:grid;grid-template-columns:11em 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--rule);}
-.extras h3{font-size:16px;}
-.extras p{font-size:15px;color:var(--ink-2);margin:0;}
-
-.privacy .checklist{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule);}
-.checklist li{padding:14px 0 14px 30px;position:relative;border-bottom:1px solid var(--rule);color:var(--ink);font-size:17px;}
-.checklist li::before{content:"✓";position:absolute;left:2px;color:var(--ink-3);font-weight:600;}
-.answers{list-style:none;padding:0;margin:24px 0 0;border-top:1px solid var(--rule);}
-.answers li{padding:14px 0;border-bottom:1px solid var(--rule);}
-.answers li span{display:block;color:var(--ink-3);font-size:15px;margin-top:2px;}
-.center{text-align:center;}
-.center .lead{max-width:46ch;margin-left:auto;margin-right:auto;}
-.narrow > *{max-width:760px;}
-.faq .container > *{max-width:820px;}
-.faq details{border-top:1px solid var(--rule);padding:16px 0;}
-.faq details:last-of-type{border-bottom:1px solid var(--rule);}
-.faq summary{cursor:pointer;font-weight:500;list-style:none;position:relative;padding-right:28px;}
-.faq summary::-webkit-details-marker{display:none;}
-.faq summary::after{content:"+";position:absolute;right:0;top:0;font-size:20px;color:var(--ink-3);}
-.faq details[open] summary::after{content:"−";}
-.faq details[open] summary{margin-bottom:8px;}
-.faq p{color:var(--ink-2);}
-.site-footer{background:var(--ink);color:var(--cream);padding:48px 0 36px;}
-.site-footer a{color:var(--cream);text-decoration:none;opacity:.85;}
-.site-footer a:hover{opacity:1;}
-.foot-cols{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;}
-.foot-cols h4{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--foot-muted);margin:0 0 10px;font-weight:500;}
-.foot-cols li{list-style:none;margin-bottom:7px;font-size:15px;}
-.foot-cols ul{padding:0;margin:0;}
-.foot-brand img{width:30px;height:30px;border-radius:6.7px;}
-.foot-note{color:var(--foot-muted);font-size:14px;margin-top:12px;max-width:30ch;}
-.foot-bottom{margin-top:36px;padding-top:18px;border-top:1px solid rgba(238,239,241,.14);font-size:13px;color:var(--foot-muted);}
-@media(max-width:860px){
-  .extras{grid-template-columns:1fr;}
-}
-@media(max-width:760px){
-  .container{padding:0 16px;}
-  .section{padding:56px 0;}
-  .hero .container,.split{grid-template-columns:1fr;gap:36px;}
-  .hero .container{padding-top:40px;padding-bottom:56px;}
-  .hero h1{font-size:36px;}
-  .why h2{font-size:28px;}
-  h2{font-size:26px;}
-  .hero .device{order:-1;}
-  .split.reverse .copy{order:0;}
-  .nav{gap:16px;}
-  .nav a:not(.btn):not([lang]){display:none;}
-  .extras div{grid-template-columns:1fr;gap:2px;}
-  .trust span{padding:0 12px;}
-  .axis{margin-top:40px;}
-}
-</style>
+<link rel="stylesheet" href="./home.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<header class="site-header"><div class="container">
-  <a class="brand" href="./"><img src="./icon.png" alt="" onerror="this.style.display='none'"><b>EarMemo</b></a>
+<header class="site-header"><div class="in">
+  <a class="brand" href="./"><img src="./icon.png" alt="" width="32" height="32"><b>EarMemo</b></a>
   <nav class="nav">
-    <a href="#features">Features</a>
-    <a href="#privacy">Privacy</a>
-    <a href="#faq">FAQ</a>
-    <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download</a>
+    <a class="nl" href="#features">Features</a>
+    <a class="nl" href="#privacy">Privacy</a>
+    <a class="nl" href="#faq">FAQ</a>
+    <a class="btn" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download</a>
     <a href="./zh/" lang="zh-Hans" hreflang="zh-Hans" aria-label="切换到中文">中文</a>
   </nav>
 </div></header>
 
-<main>
-  <section class="hero" id="hero"><div class="container">
-    <div>
-      <h1>Listen to what you already own.</h1>
-      <p class="lead">A local-first iOS player for podcasts, audiobooks, lectures, and voice recordings. Nothing leaves your phone — no network, no account, no tracking.</p>
-      <div class="cta">
-        <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download on the App Store</a>
-        <a class="btn secondary" href="#features">See features</a>
+<div class="page">
+<main class="wrap">
+
+  <section class="ch hero" id="hero">
+    <div class="ch-body">
+      <div class="hero-copy">
+        <h1>Listen to what you already own.</h1>
+        <p class="lead">A local-first iOS player for podcasts, audiobooks, lectures, and voice recordings. Nothing leaves your phone — no network, no account, no tracking.</p>
+        <div class="cta">
+          <a class="btn" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download free on the App Store</a>
+          <a class="btn ghost" href="#features">See what it does</a>
+        </div>
+        <p class="cta-note">No subscription · One-time Pro unlock</p>
       </div>
-      <div class="axis" aria-hidden="true">
-        <div class="mark" style="left:19.6%"><span>3:32</span><i></i></div>
-        <div class="mark" style="left:37.5%"><span>6:45</span><i></i></div>
-        <div class="mark" style="left:61.9%"><span>11:08</span><i></i></div>
-        <div class="mark" style="left:76.9%"><span>13:50</span><i></i></div>
+      <div class="hero-stage">
+        <div class="device back"><img src="./img/en/notes.webp" alt="EarMemo episode notes: each note sits on the timeline at its timestamp, with a play button to hear that second again" width="900" height="1956" loading="eager" decoding="async"></div>
+        <div class="device front"><img src="./img/en/player.webp" alt="EarMemo Now Playing: a chapter of Pride and Prejudice, with note marks on the progress axis" width="900" height="1956" loading="eager" decoding="async"></div>
       </div>
     </div>
-    <div class="device"><div class="screen"><img src="./img/en/player.webp" alt="EarMemo Now Playing: a chapter of Pride and Prejudice, with note marks on the progress axis" width="900" height="1956" loading="eager" decoding="async"></div></div>
-  </div></section>
+  </section>
 
-  <section class="trust"><div class="container">
-    <span>No account</span>
-    <span>No network</span>
-    <span>No tracking</span>
-    <span>No subscription</span>
-    <span>iPhone &amp; iPad</span>
-  </div></section>
+  <div class="trust"><span>No account</span><span>No network</span><span>No tracking</span><span>No subscription</span><span>iPhone &amp; iPad</span></div>
 
-  <section class="section why" id="why"><div class="container">
-    <p class="eyebrow">Why EarMemo</p>
-    <h2>Every other player fights for your attention.<br>EarMemo does the opposite.</h2>
-    <p class="lead">No recommendation feed, no autoplay into the next episode, no list you can never finish. EarMemo keeps the long things you've downloaded — the ones nobody else organizes for you — quietly in one place. Stop on the sentence you want to keep; come back tomorrow, and you're still on it.</p>
-  </div></section>
+  <section class="ch" id="why">
+    <div class="ch-body narrow">
+      <p class="eyebrow">Why EarMemo</p>
+      <h2>Every other player fights for your attention.<br>EarMemo does the opposite.</h2>
+      <p class="lead slow">No recommendation feed, no autoplay into the next episode, no list you can never finish. EarMemo keeps the long things you've downloaded — the ones nobody else organizes for you — quietly in one place. Stop on the sentence you want to keep; come back tomorrow, and you're still on it.</p>
+    </div>
+  </section>
 
-  <div id="features">
-    <section class="section"><div class="container split">
+  <section class="ch" id="features">
+    <div class="ch-body split">
       <div class="copy">
         <p class="eyebrow">Your library</p>
         <h2>Everything you're listening to, in one place</h2>
-        <p class="lead">One screen for the few things you're in the middle of. Each one remembers its progress and what's left — press it and you're back, no hunting, no "where was I?"</p>
-        <ul>
+        <p class="lead slow">One screen for the few things you're in the middle of. Each one remembers its progress and what's left — press it and you're back, no hunting, no "where was I?"</p>
+        <ul class="slow">
           <li>Continue Listening resumes to the exact second</li>
           <li>Files group into albums you can browse and reorder</li>
           <li>A "today's listening" figure right at the top</li>
         </ul>
       </div>
-      <div class="device"><div class="screen"><img src="./img/en/home.webp" alt="EarMemo home: Continue Listening, with the time left on each audiobook, lecture, and recording" width="900" height="1956" loading="lazy" decoding="async"></div></div>
-    </div></section>
+      <div class="device"><img src="./img/en/home.webp" alt="EarMemo home: Continue Listening, with the time left on each audiobook, lecture, and recording" width="900" height="1956" loading="lazy" decoding="async"></div>
+    </div>
+  </section>
 
-    <section class="section"><div class="container split reverse">
+  <section class="ch" id="notes">
+    <div class="ch-body split">
+      <div class="device"><img src="./img/en/notes.webp" alt="EarMemo episode notes: each note sits on the timeline at its timestamp, with a play button to hear that second again" width="900" height="1956" loading="lazy" decoding="async"></div>
       <div class="copy">
         <p class="eyebrow">Notes</p>
         <h2>Notes that jump back</h2>
-        <p class="lead">Hear something worth keeping? Tap once and keep listening — write the line now or later. Every note is anchored to a timestamp marker — tap it later and you scrub straight back to that second. What you heard finally stays.</p>
-        <ul>
+        <p class="lead slow">Hear something worth keeping? Tap once and keep listening — write the line now or later. Every note is anchored to a timestamp marker — tap it later and you scrub straight back to that second. What you heard finally stays.</p>
+        <div class="demo js-only" data-demo data-total="2520" data-start="750" data-ph="Write a line (or don't)" data-jump="Jump to {t}" data-rm="Remove this mark" data-play="Play" data-pause="Pause" data-seed-t="496" data-seed-tx="Tap now, keep listening; add the words later.">
+          <div class="demo-top"><span class="demo-title">A 42-minute lecture</span><span class="demo-k">Silent demo</span></div>
+          <div class="demo-bar" role="presentation"><span class="rail"></span><span class="fill"></span><span class="dots"></span><span class="head"></span></div>
+          <div class="demo-ctl"><button type="button" class="demo-pp" aria-label="Pause"></button><span class="tc demo-cur">12:30</span><span class="tc demo-tot">/ 42:00</span><button type="button" class="demo-mark">Mark</button></div>
+          <div class="demo-list"></div>
+          <p class="demo-hint">Press Mark while it plays. Tap a timestamp to jump back to it.</p>
+        </div>
+        <a class="more" href="./tour">Try it on a whole page →</a>
+        <ul class="slow">
           <li>Timestamped notes — one tap jumps to the line</li>
           <li>Grouped per album and episode, easy to review</li>
           <li>Export any time, into your own notes app</li>
         </ul>
-        <p style="margin-top:20px"><a class="more" href="./how-to-remember-audiobooks">How to remember what you hear →</a></p>
+        <a class="more slow" href="./how-to-remember-audiobooks">How to remember what you hear →</a>
       </div>
-      <div class="device"><div class="screen"><img src="./img/en/notes.webp" alt="EarMemo episode notes: each note sits on the timeline at its timestamp, with a play button to hear that second again" width="900" height="1956" loading="lazy" decoding="async"></div></div>
-    </div></section>
+    </div>
+  </section>
 
-    <section class="section"><div class="container split">
+  <section class="ch" id="history">
+    <div class="ch-body split">
       <div class="copy">
         <p class="eyebrow">Listening history</p>
         <h2>See your whole year of listening</h2>
-        <p class="lead">Today, this week, this year — EarMemo counts every minute you spend on long-form audio. Not to compete with anyone; just to turn "I feel like I'm always listening" into a number you can actually see.</p>
-        <ul>
+        <p class="lead slow">Today, this week, this year — EarMemo counts every minute you spend on long-form audio. Not to compete with anyone; just to turn "I feel like I'm always listening" into a number you can actually see.</p>
+        <ul class="slow">
           <li>A yearly heatmap — a year of listening at a glance</li>
           <li>Daily, weekly, monthly + cumulative hours</li>
           <li>All on-device — never uploaded, never analyzed</li>
         </ul>
       </div>
-      <div class="device"><div class="screen"><img src="./img/en/history.webp" alt="EarMemo listening history: a yearly heatmap, total hours, and most-played albums" width="900" height="1956" loading="lazy" decoding="async"></div></div>
-    </div></section>
+      <div class="device"><img src="./img/en/history.webp" alt="EarMemo listening history: a yearly heatmap, total hours, and most-played albums" width="900" height="1956" loading="lazy" decoding="async"></div>
+    </div>
+  </section>
 
-    <section class="section"><div class="container split reverse">
+  <section class="ch" id="import">
+    <div class="ch-body split">
+      <div class="device"><img src="./img/en/wifi.webp" alt="EarMemo Wi-Fi Transfer: a QR code and a local address to open in a computer browser" width="900" height="1956" loading="lazy" decoding="async"></div>
       <div class="copy">
         <p class="eyebrow">Import</p>
         <h2>Get your files in, fast</h2>
-        <p class="lead">Open a web address on your computer and drag audio straight into EarMemo over local Wi-Fi — no cable, no cloud. Or send files in from Messages, Mail, and Files with the iOS Share Sheet.</p>
-        <ul>
+        <p class="lead slow">Open a web address on your computer and drag audio straight into EarMemo over local Wi-Fi — no cable, no cloud. Or send files in from Messages, Mail, and Files with the iOS Share Sheet.</p>
+        <ul class="slow">
           <li>Wi-Fi transfer from any browser — no cable or cloud</li>
           <li>Share Sheet from Messages, Mail, Files</li>
           <li>mp3 · m4a · flac · aac · wav, plus mp4 / mov audio-only</li>
         </ul>
       </div>
-      <div class="device"><div class="screen"><img src="./img/en/wifi.webp" alt="EarMemo Wi-Fi Transfer: a QR code and a local address to open in a computer browser" width="900" height="1956" loading="lazy" decoding="async"></div></div>
-    </div></section>
-  </div>
-
-  <section class="section"><div class="container">
-    <h2>Everything else you'd want</h2>
-    <div class="extras">
-      <div><h3>Sleep timer</h3><p>Live Activity countdown on the Dynamic Island and Lock Screen.</p></div>
-      <div><h3>Background &amp; Lock Screen</h3><p>Full transport controls from Control Center and the Lock Screen.</p></div>
-      <div><h3>Variable speed</h3><p>Speed up or slow down without the audio turning to chipmunks.</p></div>
-      <div><h3>Bookmarks</h3><p>One-tap jump back to any saved point — essential for long content.</p></div>
-      <div><h3>Share Sheet import</h3><p>Send files in from Messages, Mail, Files, or any app with a share action.</p></div>
-      <div><h3>Wide format support</h3><p>mp3 · m4a · flac · aac · wav, plus mp4 / mov / m4v played audio-only.</p></div>
     </div>
-  </div></section>
+  </section>
 
-  <section class="section privacy" id="privacy"><div class="container split">
-    <div>
-    <p class="eyebrow">Privacy</p>
-    <h2>Private by architecture, not by promise</h2>
-    <p class="lead">EarMemo never connects to a server. Settings, playback progress, notes, bookmarks, and statistics all stay on your device — and follow your own iCloud backup if you have iCloud enabled.</p>
-    <p style="margin-top:22px"><a class="more" href="./privacy">Read the full privacy policy →</a></p>
+  <section class="ch" id="extras">
+    <div class="ch-body">
+      <h2 style="margin-bottom:22px">Everything else you'd want</h2>
+      <div class="extras slow">
+        <div><h3>Sleep timer</h3><p>Live Activity countdown on the Dynamic Island and Lock Screen.</p></div>
+        <div><h3>Background &amp; Lock Screen</h3><p>Full transport controls from Control Center and the Lock Screen.</p></div>
+        <div><h3>Variable speed</h3><p>Speed up or slow down without the audio turning to chipmunks.</p></div>
+        <div><h3>Bookmarks</h3><p>One-tap jump back to any saved point — essential for long content.</p></div>
+        <div><h3>Share Sheet import</h3><p>Send files in from Messages, Mail, Files, or any app with a share action.</p></div>
+        <div><h3>Wide format support</h3><p>mp3 · m4a · flac · aac · wav, plus mp4 / mov / m4v played audio-only.</p></div>
+      </div>
     </div>
-    <ul class="checklist">
-      <li>No data collection</li>
-      <li>No third-party SDKs</li>
-      <li>No ads, no tracking</li>
-      <li>No account, no sign-in</li>
-    </ul>
-  </div></section>
+  </section>
 
-  <section class="section" id="pricing"><div class="container narrow">
-    <p class="eyebrow">Pricing</p>
-    <h2>Free to download. One-time purchase to unlock everything.</h2>
-    <p class="lead">Download free and listen at your own pace: listen to 1 album at a time; try 10 audio tracks total across album episodes and standalone tracks; add unlimited timestamp markers and write on 5 of them. Every import and playback tool is included. When it fits, a single one-time purchase unlocks everything. No subscription, no ads.</p>
-  </div></section>
-
-  <section class="section center"><div class="container">
-    <h2>Your library, finally in one focused player.</h2>
-    <div class="cta" style="justify-content:center;margin-top:20px">
-      <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download on the App Store</a>
+  <section class="ch privacy" id="privacy">
+    <div class="ch-body">
+      <div>
+        <p class="eyebrow">Privacy</p>
+        <h2>Private by architecture, not by promise</h2>
+        <p class="lead slow">EarMemo never connects to a server. Settings, playback progress, notes, bookmarks, and statistics all stay on your device — and follow your own iCloud backup if you have iCloud enabled.</p>
+        <a class="more slow" href="./privacy">Read the full privacy policy →</a>
+      </div>
+      <ul class="checklist">
+        <li>No data collection</li>
+        <li>No third-party SDKs</li>
+        <li>No ads, no tracking</li>
+        <li>No account, no sign-in</li>
+      </ul>
     </div>
-  </div></section>
+  </section>
 
-  <section class="section faq" id="faq"><div class="container">
-    <h2>FAQ</h2>
+  <section class="ch" id="pricing">
+    <div class="ch-body narrow">
+      <p class="eyebrow">Pricing</p>
+      <h2>Free to download. One-time purchase to unlock everything.</h2>
+      <p class="lead">Download free and listen at your own pace: listen to 1 album at a time; try 10 audio tracks total across album episodes and standalone tracks; add unlimited timestamp markers and write on 5 of them. Every import and playback tool is included. When it fits, a single one-time purchase unlocks everything. No subscription, no ads.</p>
+    </div>
+  </section>
 
-    <details>
-      <summary>What is EarMemo?</summary>
-      <p>EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo does not connect to any server and does not require an account.</p>
-    </details>
-    <details>
-      <summary>Is EarMemo related to the AI study app with a similar name?</summary>
-      <p>No. EarMemo is an offline audio player for iPhone and iPad, made by Fan YANG, for podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, no account, and never connects to a server.</p>
-    </details>
-    <details>
-      <summary>How is EarMemo different from Apple Podcasts or Spotify?</summary>
-      <p>EarMemo plays local audio files you already own — podcasts you've downloaded, audiobooks, lecture recordings, voice memos. It does not stream from a catalog, does not have a subscription, and does not require an account. It is designed for people who want one focused tool for long-form listening from files they control.</p>
-    </details>
-    <details>
-      <summary>Does EarMemo work offline?</summary>
-      <p>Yes. EarMemo is local-first: it never connects to any server. All playback, statistics, and notes work without an internet connection. The app functions identically in airplane mode.</p>
-    </details>
-    <details>
-      <summary>Which audio and video formats does EarMemo support?</summary>
-      <p>EarMemo supports common audio formats including mp3, m4a, m4b (the standard audiobook container), aac, flac, and wav. Video files (mp4, mov, m4v) are played audio-only, so you can listen to the soundtrack of a video without watching it. DRM-protected purchases from Apple Books or Audible cannot be imported.</p>
-    </details>
-    <details>
-      <summary>Does EarMemo collect any data?</summary>
-      <p>No. EarMemo does not collect any user data. There are no third-party SDKs, no analytics, no advertising, and no tracking. All data stays on your device and follows your own iCloud backup if you have iCloud enabled.</p>
-    </details>
-    <details>
-      <summary>Does EarMemo work on iPad?</summary>
-      <p>Yes. EarMemo is a universal iOS app that runs on both iPhone and iPad, with a split-view layout adapted for the larger iPad screen.</p>
-    </details>
-    <details>
-      <summary>Can EarMemo import files from other apps?</summary>
-      <p>Yes. EarMemo integrates with the iOS Share Sheet, so you can send audio or video files into EarMemo from Messages, Mail, Files, or any app that exposes a share action for media files.</p>
-    </details>
-    <details>
-      <summary>Is the free version a trial?</summary>
-      <p>The free allowance never expires: listen to 1 album at a time; try 10 audio tracks total across album episodes and standalone tracks; add unlimited timestamp markers and write on 5 of them. Every import and playback tool remains available. Anything beyond the quota stays visible and deletable — it is only locked for playback until a one-time purchase of EarMemo Pro unlocks it.</p>
-    </details>
-    <details>
-      <summary>I bought EarMemo when it was a paid download. Do I pay again?</summary>
-      <p>No. Update to the latest version and EarMemo Pro unlocks automatically — no action needed, no second payment.</p>
-    </details>
-  </div></section>
+  <section class="ch faq" id="faq">
+    <div class="ch-body">
+      <h2 style="margin-bottom:8px">FAQ</h2>
+      <details>
+        <summary>What is EarMemo?</summary>
+        <p>EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo does not connect to any server and does not require an account.</p>
+      </details>
+      <details>
+        <summary>Is EarMemo related to the AI study app with a similar name?</summary>
+        <p>No. EarMemo is an offline audio player for iPhone and iPad, made by Fan YANG, for podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, no account, and never connects to a server.</p>
+      </details>
+      <details>
+        <summary>How is EarMemo different from Apple Podcasts or Spotify?</summary>
+        <p>EarMemo plays local audio files you already own — podcasts you've downloaded, audiobooks, lecture recordings, voice memos. It does not stream from a catalog, does not have a subscription, and does not require an account. It is designed for people who want one focused tool for long-form listening from files they control.</p>
+      </details>
+      <details open>
+        <summary>Does EarMemo work offline?</summary>
+        <p>Yes. EarMemo is local-first: it never connects to any server. All playback, statistics, and notes work without an internet connection. The app functions identically in airplane mode.</p>
+      </details>
+      <details>
+        <summary>Which audio and video formats does EarMemo support?</summary>
+        <p>EarMemo supports common audio formats including mp3, m4a, m4b (the standard audiobook container), aac, flac, and wav. Video files (mp4, mov, m4v) are played audio-only, so you can listen to the soundtrack of a video without watching it. DRM-protected purchases from Apple Books or Audible cannot be imported.</p>
+      </details>
+      <details>
+        <summary>Does EarMemo collect any data?</summary>
+        <p>No. EarMemo does not collect any user data. There are no third-party SDKs, no analytics, no advertising, and no tracking. All data stays on your device and follows your own iCloud backup if you have iCloud enabled.</p>
+      </details>
+      <details>
+        <summary>Does EarMemo work on iPad?</summary>
+        <p>Yes. EarMemo is a universal iOS app that runs on both iPhone and iPad, with a split-view layout adapted for the larger iPad screen.</p>
+      </details>
+      <details>
+        <summary>Can EarMemo import files from other apps?</summary>
+        <p>Yes. EarMemo integrates with the iOS Share Sheet, so you can send audio or video files into EarMemo from Messages, Mail, Files, or any app that exposes a share action for media files.</p>
+      </details>
+      <details>
+        <summary>Is the free version a trial?</summary>
+        <p>The free allowance never expires: listen to 1 album at a time; try 10 audio tracks total across album episodes and standalone tracks; add unlimited timestamp markers and write on 5 of them. Every import and playback tool remains available. Anything beyond the quota stays visible and deletable — it is only locked for playback until a one-time purchase of EarMemo Pro unlocks it.</p>
+      </details>
+      <details>
+        <summary>I bought EarMemo when it was a paid download. Do I pay again?</summary>
+        <p>No. Update to the latest version and EarMemo Pro unlocks automatically — no action needed, no second payment.</p>
+      </details>
+    </div>
+  </section>
 
-  <section class="section" id="answers"><div class="container narrow">
-    <p class="eyebrow">In depth</p>
-    <h2>Answers to specific questions</h2>
-    <p class="lead">Longer write-ups for the questions people actually search for — each one says plainly what EarMemo cannot do.</p>
-    <ul class="answers">
-      <li><a href="./how-to-remember-audiobooks" class="more">Remember what you hear in audiobooks</a><span>Mark the moment, keep listening, add your own words later — without turning a book into homework.</span></li>
-      <li><a href="./m4b-audiobook-player-iphone" class="more">Play M4B and MP3 audiobooks you already own</a><span>Which files are playable, four ways to get them on the phone, and where another player suits you better.</span></li>
-      <li><a href="./timestamped-audio-notes-markdown" class="more">Take timestamped notes, export as Markdown</a><span>Notes anchored to the exact second, and how this differs from transcription apps.</span></li>
-      <li><a href="./transfer-audio-to-iphone-without-itunes" class="more">Transfer audio to iPhone without iTunes</a><span>Wi-Fi browser transfer, the Files app, the Share Sheet — and when to use which.</span></li>
-      <li><a href="./offline-audio-player-no-account" class="more">No account, no server, no tracking</a><span>What local-first means here, and three ways to verify it yourself.</span></li>
-    </ul>
-  </div></section>
+  <section class="ch end" id="end">
+    <div class="ch-body">
+      <h2>Your library, finally in one focused player.</h2>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download on the App Store</a>
+      </div>
+      <div class="episodes plain" id="answers">
+        <p class="eyebrow" style="display:block">Further reading</p>
+        <ol>
+          <li><span><a href="./how-to-remember-audiobooks">Remember what you hear in audiobooks</a><span class="ep-d">Mark the moment, keep listening, add your own words later — without turning a book into homework.</span></span></li>
+          <li><span><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks you already own</a><span class="ep-d">Which files are playable, four ways to get them on the phone, and where another player suits you better.</span></span></li>
+          <li><span><a href="./timestamped-audio-notes-markdown">Take timestamped notes, export as Markdown</a><span class="ep-d">Notes anchored to the exact second, and how this differs from transcription apps.</span></span></li>
+          <li><span><a href="./transfer-audio-to-iphone-without-itunes">Transfer audio to iPhone without iTunes</a><span class="ep-d">Wi-Fi browser transfer, the Files app, the Share Sheet — and when to use which.</span></span></li>
+          <li><span><a href="./offline-audio-player-no-account">No account, no server, no tracking</a><span class="ep-d">What local-first means here, and three ways to verify it yourself.</span></span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<footer class="site-footer"><div class="container">
-  <div class="foot-cols">
-    <div>
-      <a class="brand foot-brand" href="./" style="color:var(--cream)"><img src="./icon.png" alt="" onerror="this.style.display='none'"><b style="color:var(--cream)">EarMemo</b></a>
-      <p class="foot-note">A local-first audio player for iOS. All data stays on your device.</p>
-    </div>
-    <div><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-    <div><h4>Answers</h4><ul><li><a href="./how-to-remember-audiobooks">Remember what you hear in audiobooks</a></li><li><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks you already own</a></li><li><a href="./timestamped-audio-notes-markdown">Take timestamped notes, export as Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">Transfer audio to iPhone without iTunes</a></li><li><a href="./offline-audio-player-no-account">No account, no server, no tracking</a></li></ul></div>
-    <div><h4>Legal</h4><ul><li><a href="./privacy">Privacy policy</a></li></ul></div>
-    <div><h4>Contact</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="./zh/">中文</a> · <a href="./">EN</a></li></ul></div>
-  </div>
-  <div class="foot-bottom">© <span id="year"></span> EarMemo. All data stays on your device.</div>
+<footer class="site-footer"><div class="in">
+  <span>© <span id="year">2026</span> EarMemo. All data stays on your device.</span>
+  <span><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a> · <a href="./privacy">Privacy policy</a> · <a href="./zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a> / <a href="./">EN</a></span>
 </div></footer>
+</div>
 
-<script>
-(function(){
-  var h=document.querySelector('.site-header');
-  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>8);};
-  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click',function(e){
-      var id=a.getAttribute('href').slice(1);if(!id)return;
-      var t=document.getElementById(id);if(!t)return;
-      e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});
-      history.replaceState(null,'','#'+id);
-    });
-  });
-  var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();
-})();
-</script>
+<script src="./demo.js" defer></script>
 </body>
 </html>

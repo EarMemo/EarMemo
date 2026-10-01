@@ -12,6 +12,9 @@ Live at:
 |---|---|
 | `index.html` | English landing page with SoftwareApplication + FAQPage JSON-LD |
 | `zh/index.html` | Simplified-Chinese landing page (mirror of `index.html`, identical layout/CSS) |
+| `home.css` | Shared stylesheet for the landing pages and the tour pages. Rules under `.home` strip the playback layer for `index.html` / `zh/index.html`. |
+| `demo.js` | The landing pages' only interactive piece: a silent mini player in the Notes section (mark, jump back). Nothing is stored or sent. |
+| `tour.html`, `zh/tour.html`, `home.js` | Opt-in "this page is a piece of audio" experience, linked from the Notes section (timecode gutter, player bar, notes drawer / phone sheet, resume card, 2× skim, Markdown export, `#t=MM:SS` deep links). Per-locale copy lives in each page's `#em-cfg` JSON; marks stay in `localStorage`. `noindex` (same content as the home page) and not in `sitemap.xml`. |
 | `privacy.html`, `zh/privacy.html` | Privacy policy (EN / 简体中文) |
 | `img/en/*.webp`, `img/zh/*.webp` | Real-UI device screenshots per locale (`player`, `home`, `notes`, `history`, `wifi`) |
 | `icon.png` | App icon (favicon + apple-touch-icon) |
