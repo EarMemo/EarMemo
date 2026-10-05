@@ -111,20 +111,46 @@
   </url>
   <url>
     <loc>https://earmemo.app/privacy</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/privacy"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/privacy"/>
   </url>
   <url>
     <loc>https://earmemo.app/zh/privacy</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/privacy"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/privacy"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/ja/privacy</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/privacy"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/privacy"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/de/privacy</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/privacy"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/privacy"/>
   </url>
 </urlset>
