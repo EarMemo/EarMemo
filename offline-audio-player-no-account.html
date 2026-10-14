@@ -4,33 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Offline iOS audio player with no account or tracking — EarMemo</title>
-<meta name="description" content="A local-first iPhone audio player that makes no network requests: no account, no server, no analytics — and three ways to verify that claim yourself.">
+<meta name="description" content="An iPhone player with offline playback, no account or analytics. Your files and notes stay on-device; optional Wi-Fi transfer stays on your local network.">
 <link rel="canonical" href="https://earmemo.app/offline-audio-player-no-account">
 <link rel="alternate" hreflang="en" href="https://earmemo.app/offline-audio-player-no-account">
 <link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/offline-audio-player-no-account">
 <link rel="alternate" hreflang="x-default" href="https://earmemo.app/offline-audio-player-no-account">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Offline iOS audio player with no account or tracking — EarMemo">
-<meta property="og:description" content="A local-first iPhone audio player that makes no network requests: no account, no server, no analytics — and three ways to verify that claim yourself.">
+<meta property="og:description" content="An iPhone player with offline playback, no account or analytics. Your files and notes stay on-device; optional Wi-Fi transfer stays on your local network.">
 <meta property="og:url" content="https://earmemo.app/offline-audio-player-no-account">
 <meta property="og:image" content="https://earmemo.app/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Offline iOS audio player with no account or tracking — EarMemo">
-<meta name="twitter:description" content="A local-first iPhone audio player that makes no network requests: no account, no server, no analytics — and three ways to verify that claim yourself.">
+<meta name="twitter:description" content="An iPhone player with offline playback, no account or analytics. Your files and notes stay on-device; optional Wi-Fi transfer stays on your local network.">
 <meta name="twitter:image" content="https://earmemo.app/og.png">
 <meta name="author" content="Fan YANG">
 <link rel="icon" type="image/png" href="./icon.png">
 <link rel="apple-touch-icon" href="./icon.png">
 <link rel="stylesheet" href="./answer.css">
+<script src="./attribution.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "An offline audio player for iPhone with no account, no server, and no tracking",
-  "description": "A local-first iPhone audio player that makes no network requests: no account, no server, no analytics — and three ways to verify that claim yourself.",
+  "description": "An iPhone player with offline playback, no account or analytics. Your files and notes stay on-device; optional Wi-Fi transfer stays on your local network.",
   "inLanguage": "en",
   "url": "https://earmemo.app/offline-audio-player-no-account",
-  "dateModified": "2026-09-10",
+  "dateModified": "2026-10-10",
   "author": {
     "@type": "Person",
     "name": "Fan YANG",
@@ -66,7 +67,7 @@
       "name": "Is there an iPhone audio player that works completely offline?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. EarMemo plays audio stored on the device and makes no network requests at all, including on first launch. It has no account, no server, no analytics and no third-party SDKs. Optional Wi-Fi transfer is the only networking, and it stays inside your local network."
+        "text": "Yes. EarMemo plays audio stored on the device without internet access, including on first launch. It has no account, app server, analytics or third-party SDKs. Optional Wi-Fi transfer stays on the local network; Apple StoreKit handles purchases and restores."
       }
     },
     {
@@ -90,7 +91,7 @@
       "name": "How can I check the app really is offline?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enable airplane mode before you first open it and use it normally — import, play, take notes, read your listening stats. Everything works, because nothing in the app depends on a network."
+        "text": "Enable airplane mode before you first open it, then import a local file, play, take notes and read your stats. These features work offline; Wi-Fi transfer and purchases require connectivity."
       }
     },
     {
@@ -147,8 +148,8 @@
 <main><div class="container">
   <p class="crumb"><a href="./">EarMemo</a> › Offline player, no account</p>
   <h1>An offline audio player for iPhone with no account, no server, and no tracking</h1>
-  <div class="answer"><p><b>EarMemo</b> plays audio files stored on your device and makes no network requests — not on first launch, not ever. There is no account, no server to hold one, no analytics, no crash reporting, and no third-party SDK. The only network feature is optional Wi-Fi transfer, which you switch on yourself and which never leaves your local network.</p></div>
-  <p class="meta">Last updated 2026-09-10 · Written by Fan YANG, the developer of EarMemo.</p>
+  <div class="answer"><p><b>EarMemo</b> plays audio files stored on your device without internet access, including on first launch. There is no account, no server to hold one, no analytics, no crash reporting, and no third-party SDK. Optional Wi-Fi transfer stays on your local network; Apple StoreKit handles purchases and restores.</p></div>
+  <p class="meta">Last updated 2026-10-10 · Written by Fan YANG, the developer of EarMemo.</p>
 
   <h2>What "local-first" means here, specifically</h2>
   <p>The phrase is used loosely. In EarMemo it means every one of these is true at once:</p>
@@ -156,24 +157,25 @@
   <h2>How to verify it yourself, without trusting the marketing</h2>
   <p>A privacy claim you cannot check is just a nicer-sounding promise. Three checks anyone can run in a few minutes:</p>
   <ol class="steps"><li><b>Airplane mode.</b> Turn it on before the first launch and use the app normally — import, play, take notes, read your stats. Everything works. An app that phones home tends to break or nag in airplane mode.</li><li><b>The App Store privacy label.</b> Open EarMemo's App Store page and look at App Privacy. It reads <i>Data Not Collected</i>. That label is a declaration Apple holds developers to.</li><li><b>iOS network permission.</b> EarMemo asks for local network access only when you turn on Wi-Fi transfer — because that genuinely needs it. If an app that claims to be offline asks for network access at launch, that tells you something.</li></ol>
-  <h2>The one network feature, described honestly</h2>
+  <figure class="shot"><div class="shot-frame"><img src="./img/en/offline.webp" alt="EarMemo&#x27;s player with no cellular service and no Wi-Fi connection in the status bar, Chapter 3 open at 14:54 with its note marks on the timeline" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>No signal, no difference: the audio, your position and your notes are all on the phone.</figcaption></figure>
+  <h2>Optional local network transfer, described honestly</h2>
   <p>Wi-Fi transfer starts a small web server on your phone so you can drag files in from a desktop browser, and announces it over Bonjour so the computer can find it. Two things follow from that, and both are worth knowing: while it is on, other devices on the same network can open the page and see the file list; and nothing it does crosses your router. Use it on a network you control, turn it off afterwards. Details in <a href="./transfer-audio-to-iphone-without-itunes">transferring audio without iTunes</a>.</p>
   <h2>Where EarMemo sits among the privacy-minded players</h2>
   <p>Several iOS audio apps lead with privacy, and they mean different things by it. The useful question is what kind of listening you do.</p>
-  <div class="tablewrap"><table><thead><tr><th>If you listen to…</th><th>You want</th><th>Because</th></tr></thead><tbody><tr><td>Files you already downloaded or own</td><td>EarMemo</td><td>It plays local files only, with no catalogue and no network at all.</td></tr><tr><td>Podcasts you subscribe to by RSS</td><td>A private podcast client</td><td>Fetching a feed requires a network connection. EarMemo has no feed subscriptions.</td></tr><tr><td>A library you want mirrored across Apple devices</td><td>An iCloud-syncing player</td><td>EarMemo has no cross-device sync of its own.</td></tr><tr><td>A self-hosted server library</td><td>An Audiobookshelf or Plex client</td><td>EarMemo does not connect to servers, self-hosted ones included.</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">Checked 2026-09-10.</p>
+  <div class="tablewrap"><table><thead><tr><th>If you listen to…</th><th>You want</th><th>Because</th></tr></thead><tbody><tr><td>Files you already downloaded or own</td><td>EarMemo</td><td>It plays local files only, with no catalogue; optional Wi-Fi transfer uses the local network.</td></tr><tr><td>Podcasts you subscribe to by RSS</td><td>A private podcast client</td><td>Fetching a feed requires a network connection. EarMemo has no feed subscriptions.</td></tr><tr><td>A library you want mirrored across Apple devices</td><td>An iCloud-syncing player</td><td>EarMemo has no cross-device sync of its own.</td></tr><tr><td>A self-hosted server library</td><td>An Audiobookshelf or Plex client</td><td>EarMemo does not connect to servers, self-hosted ones included.</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">Checked 2026-09-10.</p>
   <h2>Why the app is built this way</h2>
   <p>Once an app has a server, it acquires an appetite: an account to identify you, analytics to justify the roadmap, a subscription to pay for the servers, and a recommendation feed to raise engagement. EarMemo is a one-time purchase with no server precisely so none of that machinery ever gets a reason to exist. The absence of features here is the product, not a stage it has not reached yet.</p>
 
   <div class="honest">
     <h3>When EarMemo is the wrong choice</h3>
-    <ul><li><b>You want your library on every device.</b> There is no cross-device sync. Your data rides along with Apple's own device backup, and that is all.</li><li><b>You want to subscribe to podcasts inside the app.</b> RSS needs a network connection; EarMemo has no feed catalogue and plays files you downloaded elsewhere.</li><li><b>You want to audit the source.</b> EarMemo is not open source. The airplane-mode test and the App Store privacy label are what you can check from outside.</li><li><b>You want a streaming or self-hosted-server client.</b> Not this app — it connects to nothing, by design.</li></ul>
+    <ul><li><b>You want your library on every device.</b> There is no cross-device sync. Your data rides along with Apple's own device backup, and that is all.</li><li><b>You want to subscribe to podcasts inside the app.</b> RSS needs a network connection; EarMemo has no feed catalogue and plays files you downloaded elsewhere.</li><li><b>You want to audit the source.</b> EarMemo is not open source. The airplane-mode test and the App Store privacy label are what you can check from outside.</li><li><b>You want a streaming or self-hosted-server client.</b> Not this app — it does not connect to media servers.</li></ul>
   </div>
 
   <h2>Questions people actually ask</h2>
-  <details><summary>Is there an iPhone audio player that works completely offline?</summary><p>Yes. EarMemo plays audio stored on the device and makes no network requests at all, including on first launch. It has no account, no server, no analytics and no third-party SDKs. Optional Wi-Fi transfer is the only networking, and it stays inside your local network.</p></details>
+  <details><summary>Is there an iPhone audio player that works completely offline?</summary><p>Yes. EarMemo plays audio stored on the device without internet access, including on first launch. It has no account, app server, analytics or third-party SDKs. Optional Wi-Fi transfer stays on the local network; Apple StoreKit handles purchases and restores.</p></details>
   <details><summary>Does EarMemo require an account?</summary><p>No. There is no sign-in and no account system. You install the app and use it; nothing identifies you to the developer.</p></details>
   <details><summary>Does EarMemo collect any data?</summary><p>No. Its App Store privacy label reads Data Not Collected. There is no telemetry, no crash reporting, no remote configuration and no advertising.</p></details>
-  <details><summary>How can I check the app really is offline?</summary><p>Enable airplane mode before you first open it and use it normally — import, play, take notes, read your listening stats. Everything works, because nothing in the app depends on a network.</p></details>
+  <details><summary>How can I check the app really is offline?</summary><p>Enable airplane mode before you first open it, then import a local file, play, take notes and read your stats. These features work offline; Wi-Fi transfer and purchases require connectivity.</p></details>
   <details><summary>Does it sync my library between iPhone and iPad?</summary><p>No. There is no EarMemo cloud sync. Your data is included in your own iCloud device backup if you have that enabled, but there is no service keeping two devices in step.</p></details>
   <details><summary>Is it free?</summary><p>It is free to download and free to keep using within a permanent quota. EarMemo Pro is a single one-time purchase — no subscription, no ads, no account.</p></details>
 

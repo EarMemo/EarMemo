@@ -3,34 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>不联网、不要账号、不追踪的 iOS 播放器 — 耳记</title>
-<meta name="description" content="一个完全不发网络请求的 iPhone 本地播放器：没有账号、没有服务器、没有统计、没有第三方 SDK —— 以及三个你可以自己动手验证的办法。">
+<title>离线播放、不要账号、不追踪的 iOS 播放器 — 耳记</title>
+<meta name="description" content="一个无需互联网即可播放、不要账号或统计的 iPhone 本地播放器。文件和笔记留在设备上；可选 Wi-Fi 传输只在局域网内运行。">
 <link rel="canonical" href="https://earmemo.app/zh/offline-audio-player-no-account">
 <link rel="alternate" hreflang="en" href="https://earmemo.app/offline-audio-player-no-account">
 <link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/offline-audio-player-no-account">
 <link rel="alternate" hreflang="x-default" href="https://earmemo.app/offline-audio-player-no-account">
 <meta property="og:type" content="article">
-<meta property="og:title" content="不联网、不要账号、不追踪的 iOS 播放器 — 耳记">
-<meta property="og:description" content="一个完全不发网络请求的 iPhone 本地播放器：没有账号、没有服务器、没有统计、没有第三方 SDK —— 以及三个你可以自己动手验证的办法。">
+<meta property="og:title" content="离线播放、不要账号、不追踪的 iOS 播放器 — 耳记">
+<meta property="og:description" content="一个无需互联网即可播放、不要账号或统计的 iPhone 本地播放器。文件和笔记留在设备上；可选 Wi-Fi 传输只在局域网内运行。">
 <meta property="og:url" content="https://earmemo.app/zh/offline-audio-player-no-account">
 <meta property="og:image" content="https://earmemo.app/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="不联网、不要账号、不追踪的 iOS 播放器 — 耳记">
-<meta name="twitter:description" content="一个完全不发网络请求的 iPhone 本地播放器：没有账号、没有服务器、没有统计、没有第三方 SDK —— 以及三个你可以自己动手验证的办法。">
+<meta name="twitter:title" content="离线播放、不要账号、不追踪的 iOS 播放器 — 耳记">
+<meta name="twitter:description" content="一个无需互联网即可播放、不要账号或统计的 iPhone 本地播放器。文件和笔记留在设备上；可选 Wi-Fi 传输只在局域网内运行。">
 <meta name="twitter:image" content="https://earmemo.app/og.png">
 <meta name="author" content="Fan YANG">
 <link rel="icon" type="image/png" href="../icon.png">
 <link rel="apple-touch-icon" href="../icon.png">
 <link rel="stylesheet" href="../answer.css">
+<script src="../attribution.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "一个不联网、不要账号、不追踪的 iPhone 音频播放器",
-  "description": "一个完全不发网络请求的 iPhone 本地播放器：没有账号、没有服务器、没有统计、没有第三方 SDK —— 以及三个你可以自己动手验证的办法。",
+  "headline": "一个能离线播放、不要账号、不追踪的 iPhone 音频播放器",
+  "description": "一个无需互联网即可播放、不要账号或统计的 iPhone 本地播放器。文件和笔记留在设备上；可选 Wi-Fi 传输只在局域网内运行。",
   "inLanguage": "zh-Hans",
   "url": "https://earmemo.app/zh/offline-audio-player-no-account",
-  "dateModified": "2026-09-10",
+  "dateModified": "2026-10-10",
   "author": {
     "@type": "Person",
     "name": "Fan YANG",
@@ -66,7 +67,7 @@
       "name": "有完全离线的 iPhone 音频播放器吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "有。耳记播放设备上的音频，完全不发网络请求，首次启动也不发。没有账号、没有服务器、没有统计、没有第三方 SDK。可选的 Wi-Fi 传输是唯一的网络行为，且只在局域网内。"
+        "text": "有。耳记无需互联网即可播放设备上的音频，首次启动也一样。没有账号、App 服务器、统计或第三方 SDK。可选 Wi-Fi 传输只在局域网内；内购和恢复购买由 Apple StoreKit 处理。"
       }
     },
     {
@@ -87,10 +88,10 @@
     },
     {
       "@type": "Question",
-      "name": "我怎么确认它真的不联网？",
+      "name": "我怎么确认离线播放与笔记可用？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "第一次打开之前先开飞行模式，然后正常使用——导入、播放、记笔记、看收听统计。全都正常，因为 App 里没有任何东西依赖网络。"
+        "text": "第一次打开之前先开飞行模式，再导入本地文件、播放、记笔记、看统计。这些功能无需互联网；Wi-Fi 传输和内购需要连接。"
       }
     },
     {
@@ -126,7 +127,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "一个不联网、不要账号、不追踪的 iPhone 音频播放器",
+      "name": "一个能离线播放、不要账号、不追踪的 iPhone 音频播放器",
       "item": "https://earmemo.app/zh/offline-audio-player-no-account"
     }
   ]
@@ -145,10 +146,10 @@
 </div></header>
 
 <main><div class="container">
-  <p class="crumb"><a href="./">耳记 EarMemo</a> › 不联网、不要账号</p>
-  <h1>一个不联网、不要账号、不追踪的 iPhone 音频播放器</h1>
-  <div class="answer"><p><b>耳记</b>播放存在你设备上的音频文件，不发任何网络请求——首次启动不发，之后也不发。没有账号，也没有能存账号的服务器，没有统计、没有崩溃上报、没有第三方 SDK。唯一的网络功能是可选的 Wi-Fi 传输，由你自己打开，而且从不出局域网。</p></div>
-  <p class="meta">最后更新 2026-09-10 · 作者：Fan YANG（耳记开发者）</p>
+  <p class="crumb"><a href="./">耳记 EarMemo</a> › 离线播放、不要账号</p>
+  <h1>一个能离线播放、不要账号、不追踪的 iPhone 音频播放器</h1>
+  <div class="answer"><p><b>耳记</b>无需互联网即可播放设备上的音频文件，首次启动也一样。没有账号，也没有能存账号的服务器，没有统计、没有崩溃上报、没有第三方 SDK。可选的 Wi-Fi 传输只在局域网内运行；内购和恢复购买由 Apple StoreKit 处理。</p></div>
+  <p class="meta">最后更新 2026-10-10 · 作者：Fan YANG（耳记开发者）</p>
 
   <h2>「本地优先」在这里具体指什么</h2>
   <p>这个词被用得很松。在耳记这里，它指下面这些同时成立：</p>
@@ -156,24 +157,25 @@
   <h2>不用相信宣传，你自己怎么验</h2>
   <p>一个你没法核查的隐私声明，只是措辞好听一点的承诺。三个几分钟就能跑完的检查：</p>
   <ol class="steps"><li><b>飞行模式。</b>第一次打开之前就把飞行模式开上，然后正常用——导入、播放、记笔记、看统计。全都能用。会偷偷回连的 App 在飞行模式下往往会出问题或者不停提示。</li><li><b>App Store 隐私标签。</b>打开耳记的 App Store 页面看「App 隐私」，写的是<i>未收集数据</i>。这个标签是开发者向苹果作出的声明，苹果会追责。</li><li><b>iOS 的网络权限。</b>耳记只在你打开 Wi-Fi 传输时才申请本地网络权限——因为那件事确实需要。一个自称离线的 App 如果一启动就要网络权限，这本身就说明了点什么。</li></ol>
-  <h2>唯一那个网络功能，如实说明</h2>
+  <figure class="shot"><div class="shot-frame"><img src="../img/zh/offline.webp" alt="状态栏没有蜂窝信号、也没连 Wi-Fi 的耳记播放页：《Day 12 · 在机场》停在 5:00，时间轴上有笔记标记" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>没有网络也一样：音频、进度和笔记都在手机上。</figcaption></figure>
+  <h2>可选的局域网传输，如实说明</h2>
   <p>Wi-Fi 传输会在手机上开一个小网页服务，好让你从电脑浏览器拖文件进来，并通过 Bonjour 广播自己，好让电脑找得到。由此推出两件事，都值得知道：它开着的时候，同一网络里的其他设备可以打开那个页面、看到文件列表；以及它做的任何事都不越过你的路由器。在你自己控制的网络里用，用完关掉。细节见<a href="./transfer-audio-to-iphone-without-itunes">不用 iTunes 传音频那一页</a>。</p>
   <h2>在一堆讲隐私的播放器里，耳记站在哪</h2>
   <p>iOS 上有好几个把隐私放在最前面的音频 App，但它们说的隐私不是一回事。有用的问题是：你听的到底是什么。</p>
-  <div class="tablewrap"><table><thead><tr><th>你听的如果是……</th><th>你要的是</th><th>因为</th></tr></thead><tbody><tr><td>自己已经下载好、或本来就拥有的文件</td><td>耳记</td><td>它只播本地文件，没有内容目录，完全不联网。</td></tr><tr><td>靠 RSS 订阅的播客</td><td>一个注重隐私的播客客户端</td><td>拉订阅源必须联网。耳记没有订阅功能。</td></tr><tr><td>希望在多台苹果设备间同步的书库</td><td>带 iCloud 同步的播放器</td><td>耳记没有自己的跨设备同步。</td></tr><tr><td>自建服务器上的书库</td><td>Audiobookshelf 或 Plex 客户端</td><td>耳记不连任何服务器，自建的也不连。</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">2026-09-10 核对。</p>
+  <div class="tablewrap"><table><thead><tr><th>你听的如果是……</th><th>你要的是</th><th>因为</th></tr></thead><tbody><tr><td>自己已经下载好、或本来就拥有的文件</td><td>耳记</td><td>它只播本地文件，没有内容目录；可选的 Wi-Fi 传输仅在局域网内。</td></tr><tr><td>靠 RSS 订阅的播客</td><td>一个注重隐私的播客客户端</td><td>拉订阅源必须联网。耳记没有订阅功能。</td></tr><tr><td>希望在多台苹果设备间同步的书库</td><td>带 iCloud 同步的播放器</td><td>耳记没有自己的跨设备同步。</td></tr><tr><td>自建服务器上的书库</td><td>Audiobookshelf 或 Plex 客户端</td><td>耳记不连任何服务器，自建的也不连。</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">2026-09-10 核对。</p>
   <h2>为什么要做成这样</h2>
   <p>一个 App 一旦有了服务器，就会长出胃口：要账号来识别你，要埋点来给路线图找理由，要订阅来付服务器的钱，还要一个推荐流来把使用时长做上去。耳记做成一次买断、没有服务器，正是为了让这套机器永远找不到存在的理由。这里的「没有某某功能」是产品本身，不是还没做到的阶段。</p>
 
   <div class="honest">
     <h3>什么情况下不该选耳记</h3>
-    <ul><li><b>你想让书库出现在每台设备上。</b>没有跨设备同步。你的数据只是跟着苹果自己的设备备份走，仅此而已。</li><li><b>你想在 App 里订阅播客。</b>RSS 需要联网；耳记没有内容目录，播的是你在别处下载好的文件。</li><li><b>你想审计源码。</b>耳记不开源。从外部能核查的是飞行模式测试和 App Store 隐私标签。</li><li><b>你想要一个流媒体或自建服务器的客户端。</b>不是这个 App——它按设计什么都不连。</li></ul>
+    <ul><li><b>你想让书库出现在每台设备上。</b>没有跨设备同步。你的数据只是跟着苹果自己的设备备份走，仅此而已。</li><li><b>你想在 App 里订阅播客。</b>RSS 需要联网；耳记没有内容目录，播的是你在别处下载好的文件。</li><li><b>你想审计源码。</b>耳记不开源。从外部能核查的是飞行模式测试和 App Store 隐私标签。</li><li><b>你想要一个流媒体或自建服务器的客户端。</b>不是这个 App——它不连接媒体服务器。</li></ul>
   </div>
 
   <h2>常见问题</h2>
-  <details><summary>有完全离线的 iPhone 音频播放器吗？</summary><p>有。耳记播放设备上的音频，完全不发网络请求，首次启动也不发。没有账号、没有服务器、没有统计、没有第三方 SDK。可选的 Wi-Fi 传输是唯一的网络行为，且只在局域网内。</p></details>
+  <details><summary>有完全离线的 iPhone 音频播放器吗？</summary><p>有。耳记无需互联网即可播放设备上的音频，首次启动也一样。没有账号、App 服务器、统计或第三方 SDK。可选 Wi-Fi 传输只在局域网内；内购和恢复购买由 Apple StoreKit 处理。</p></details>
   <details><summary>耳记需要注册账号吗？</summary><p>不需要。没有登录，也没有账号系统。装上就能用，开发者这边没有任何东西能识别你。</p></details>
   <details><summary>耳记会收集数据吗？</summary><p>不会。它的 App Store 隐私标签是「未收集数据」。没有遥测、没有崩溃上报、没有远端配置、没有广告。</p></details>
-  <details><summary>我怎么确认它真的不联网？</summary><p>第一次打开之前先开飞行模式，然后正常使用——导入、播放、记笔记、看收听统计。全都正常，因为 App 里没有任何东西依赖网络。</p></details>
+  <details><summary>我怎么确认离线播放与笔记可用？</summary><p>第一次打开之前先开飞行模式，再导入本地文件、播放、记笔记、看统计。这些功能无需互联网；Wi-Fi 传输和内购需要连接。</p></details>
   <details><summary>iPhone 和 iPad 之间会同步书库吗？</summary><p>不会。耳记没有云同步。如果你开着 iCloud 备份，数据会包含在你自己的设备备份里，但没有一个服务在让两台设备保持一致。</p></details>
   <details><summary>是免费的吗？</summary><p>免费下载，在长期有效的免费额度内可以一直用。耳记 Pro 是一次买断——没有订阅、没有广告、不需要账号。</p></details>
 

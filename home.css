@@ -126,6 +126,22 @@ html[lang="en"] .eyebrow{font-size:12px;text-transform:uppercase;}
 .more{display:inline-block;margin-top:16px;font-weight:600;text-decoration:none;}
 .more:hover{text-decoration:underline;}
 
+/* Headphones: three set-up steps, the chime button, and a ring on the
+   Headphone Controls card in the real Settings shot (an overlay, so no copy
+   is baked into the image). --hl-top is the card's top as a share of that
+   locale's image height. */
+.hp-steps{list-style:none;counter-reset:hp;padding:0;margin:22px 0 0;display:grid;gap:10px;max-width:460px;}
+.copy .hp-steps li{counter-increment:hp;display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:baseline;padding:0;border:0;font-size:15px;color:var(--ink-2);}
+.hp-steps li::before{content:counter(hp);width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:600;display:grid;place-items:center;align-self:start;margin-top:1px;}
+.hp-steps b{color:var(--ink);font-weight:600;}
+.hp-chime{margin-left:6px;height:28px;padding:0 12px;border-radius:999px;border:1px solid var(--accent);background:transparent;color:var(--accent-ink);font-size:13px;font-weight:600;cursor:pointer;vertical-align:1px;}
+.hp-chime:hover{background:var(--accent);color:#fff;}
+.hp-chime.ring{animation:hp-ring .5s ease-out;}
+@keyframes hp-ring{0%{box-shadow:0 0 0 0 rgba(201,83,26,.45);}100%{box-shadow:0 0 0 12px rgba(201,83,26,0);}}
+.hp-shot{position:relative;display:block;}
+.hp-shot img{display:block;}
+.hp-hl{position:absolute;left:3%;right:3%;top:calc(var(--hl-top) - .7%);height:13.6%;border:2px solid var(--accent);border-radius:12px;box-shadow:0 0 0 4px rgba(201,83,26,.14);pointer-events:none;}
+
 /* Everything else: margin-note rows, not an icon grid (DESIGN §10) */
 .extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px;}
 .extras > div{display:grid;grid-template-columns:7em minmax(0,1fr);gap:14px;padding:14px 0;border-top:1px solid var(--rule);}
@@ -366,6 +382,7 @@ html[lang="en"] .d-sec{text-transform:uppercase;}
   .export{top:64px;}
 }
 @media (prefers-reduced-motion:reduce){
+  .hp-chime.ring{animation:none;}
   .page,.gm-dot,.faq summary::after{transition:none;}
 }
 

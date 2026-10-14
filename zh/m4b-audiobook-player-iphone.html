@@ -22,6 +22,7 @@
 <link rel="icon" type="image/png" href="../icon.png">
 <link rel="apple-touch-icon" href="../icon.png">
 <link rel="stylesheet" href="../answer.css">
+<script src="../attribution.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,7 +31,7 @@
   "description": "手上已经有 m4b、mp3、flac 有声书文件，怎么在 iPhone 上听？不用 iTunes、不用订阅的做法，以及什么情况下别的播放器更适合你。",
   "inLanguage": "zh-Hans",
   "url": "https://earmemo.app/zh/m4b-audiobook-player-iphone",
-  "dateModified": "2026-09-10",
+  "dateModified": "2026-10-10",
   "author": {
     "@type": "Person",
     "name": "Fan YANG",
@@ -200,8 +201,8 @@
 <main><div class="container">
   <p class="crumb"><a href="./">耳记 EarMemo</a> › iPhone 有声书播放器</p>
   <h1>手上已经有的 m4b / mp3 有声书，怎么在 iPhone 上听</h1>
-  <div class="answer"><p>把文件传进 iPhone，用一个本地播放器打开就行。<b>耳记</b>直接播放 m4b、mp3、m4a、aac、flac、wav，按书分别记住听到哪儿，不需要账号、全程不联网。它打不开 Audible 和 Apple Books 买的带 DRM 的书——任何第三方播放器都打不开。</p></div>
-  <p class="meta">最后更新 2026-09-10 · 作者：Fan YANG（耳记开发者）</p>
+  <div class="answer"><p>把文件传进 iPhone，用一个本地播放器打开就行。<b>耳记</b>直接播放 m4b、mp3、m4a、aac、flac、wav，按书分别记住听到哪儿，不需要账号、播放无需互联网。它打不开 Audible 和 Apple Books 买的带 DRM 的书——任何第三方播放器都打不开。</p></div>
+  <p class="meta">最后更新 2026-10-10 · 作者：Fan YANG（耳记开发者）</p>
 
   <h2>哪些文件真的能播</h2>
   <p>分界线不是后缀名，是 DRM。没有 DRM 的文件，用什么播放器都能播；有 DRM 的购买内容，按设计只能在商店自己的 App 里播。</p>
@@ -211,9 +212,11 @@
   <ol class="steps"><li><b>Wi-Fi 传输。</b>在耳记里打开，把它显示的地址输入电脑浏览器，直接把文件拖进去。同一个局域网内完成，不走云、不出网关。</li><li><b>「文件」App 导入。</b>iCloud 云盘、坚果云、SMB 共享、插在手机上的 U 盘都行。会保留文件夹层级——一本拆成 40 个文件的书，进来还是一本书。</li><li><b>系统分享。</b>微信、邮件里收到的音频，分享 → 耳记。</li><li><b>数据线。</b>用访达/Finder 拖进 App 的文稿目录，老办法也留着。</li></ol>
   <h2>跟别的播放器比，包括它输在哪</h2>
   <p>iOS 上不错的本地有声书播放器有好几个，各自的取舍不同。按你真正需要的那一条选，别按功能数量选。</p>
-  <div class="tablewrap"><table><thead><tr><th>你最看重的如果是……</th><th>那就用</th><th>为什么</th></tr></thead><tbody><tr><td>笔记钉在具体那一秒，还能导出 Markdown</td><td>耳记</td><td>边听边写，点一下标记跳回那一刻，导出就是普通 .md 文件</td></tr><tr><td>彻底不联网</td><td>耳记</td><td>没有账号、没有服务器、没有统计、没有第三方 SDK</td></tr><tr><td>能读出 m4b 里的章节列表</td><td>BookPlayer 或 Bound</td><td>耳记能播 m4b，但读不出里面的章节标记，没有章节列表</td></tr><tr><td>CarPlay</td><td>Bound 或 BookPlayer</td><td>耳记不支持 CarPlay</td></tr><tr><td>从 Dropbox 或 NAS 流式播放整个书库</td><td>Bound，或 Audiobookshelf 客户端</td><td>耳记只播已经在设备上的文件</td></tr><tr><td>开源</td><td>BookPlayer</td><td>耳记不开源</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">其他 App 的说明取自其开发者公开描述，2026-09-10 核对。</p>
+  <div class="tablewrap"><table><thead><tr><th>你最看重的如果是……</th><th>那就用</th><th>为什么</th></tr></thead><tbody><tr><td>笔记钉在具体那一秒，还能导出 Markdown</td><td>耳记</td><td>边听边写，点一下标记跳回那一刻，Pro 可导出普通 .md 文件</td></tr><tr><td>离线播放和记笔记，不要账号</td><td>耳记</td><td>没有 App 服务器或统计；可选的 Wi-Fi 传输只在局域网内进行</td></tr><tr><td>能读出 m4b 里的章节列表</td><td>BookPlayer 或 Bound</td><td>耳记能播 m4b，但读不出里面的章节标记，没有章节列表</td></tr><tr><td>CarPlay</td><td>Bound 或 BookPlayer</td><td>耳记不支持 CarPlay</td></tr><tr><td>从 Dropbox 或 OneDrive 导入有声书</td><td>Bound</td><td>Bound 可从这些服务下载；耳记只播已存进设备的文件</td></tr><tr><td>开源</td><td>BookPlayer</td><td>耳记不开源</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">其他 App 的说明取自其开发者公开描述，2026-10-10 核对。</p>
+  <p>需要章节导航或 CarPlay，可看 <a href="https://apps.apple.com/us/app/bookplayer/id1138219998">BookPlayer</a> 与 <a href="https://apps.apple.com/us/app/bound-audiobook-player/id1041727137">Bound</a> 的 App Store 官方说明。</p>
   <h2>书开始播之后，耳记多给了什么</h2>
   <ul><li>0.5×–3.5× 变速，不变调，预设 0.8× 1.0× 1.2× 1.5× 1.8× 2.0× 2.5× 3.0×</li><li>睡眠定时，锁屏和灵动岛上有实时倒计时</li><li>书签，一键跳回</li><li>边听边写的时间戳笔记 —— 见<a href="./timestamped-audio-notes-markdown">边听边记笔记那一页</a></li><li>按书分别记进度，十几本书同时听到一半也不会乱</li><li>后台播放，锁屏和控制中心完整控制</li></ul>
+  <div class="shot-row"><figure class="shot"><div class="shot-frame"><img src="../img/zh/m4b-home.webp" alt="耳记首页：单个 52 小时的 m4b 文件《西游记（全本）》排在「继续收听」第一位，显示还剩 29 小时 6 分" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>52 小时的 m4b 就是一个文件、一行，标着还剩多久。</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../img/zh/m4b-player.webp" alt="耳记播放页重新打开《西游记（全本）》，停在 23:12:09，还剩 29:06:31" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>点开就从上次停下的那一秒接着播。</figcaption></figure></div>
 
   <div class="honest">
     <h3>什么情况下不该选耳记</h3>
@@ -237,7 +240,7 @@
 
   <div class="related">
     <h3>相关问题</h3>
-    <ul><li><a href="./how-to-remember-audiobooks">有声书听完就忘，怎么记住</a></li><li><a href="./timestamped-audio-notes-markdown">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">不用 iTunes 把音频传进 iPhone</a></li><li><a href="./offline-audio-player-no-account">不联网、不要账号的播放器</a></li></ul>
+    <ul><li><a href="./how-to-remember-audiobooks">有声书听完就忘，怎么记住</a></li><li><a href="./timestamped-audio-notes-markdown">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">不用 iTunes 把音频传进 iPhone</a></li><li><a href="./offline-audio-player-no-account">离线播放、不要账号的播放器</a></li></ul>
   </div>
 </div></main>
 
@@ -248,7 +251,7 @@
       <p style="color:var(--foot-muted);font-size:14px;margin-top:12px;max-width:30ch">一个本地优先的 iOS 音频播放器。所有数据都留在你的设备上。</p>
     </div>
     <div><h4>产品</h4><ul><li><a href="./#features">功能</a></li><li><a href="./#privacy">隐私</a></li><li><a href="./#faq">常见问题</a></li></ul></div>
-    <div><h4>问题解答</h4><ul><li><a href="./how-to-remember-audiobooks">有声书听完就忘，怎么记住</a></li><li><a href="./timestamped-audio-notes-markdown">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">不用 iTunes 把音频传进 iPhone</a></li><li><a href="./offline-audio-player-no-account">不联网、不要账号的播放器</a></li></ul></div>
+    <div><h4>问题解答</h4><ul><li><a href="./how-to-remember-audiobooks">有声书听完就忘，怎么记住</a></li><li><a href="./timestamped-audio-notes-markdown">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">不用 iTunes 把音频传进 iPhone</a></li><li><a href="./offline-audio-player-no-account">离线播放、不要账号的播放器</a></li></ul></div>
     <div><h4>联系</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="../privacy">隐私政策</a></li></ul></div>
   </div>
   <div class="foot-bottom">© 2026 EarMemo. 所有数据都留在你的设备上。</div>

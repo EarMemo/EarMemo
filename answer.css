@@ -55,6 +55,8 @@ table.custom-hl tbody tr.hl td{background:rgba(201,83,26,.06);}
 .shot-frame{border-radius:40px;padding:9px;background:#1b1c1e;box-shadow:0 24px 48px -20px rgba(36,37,39,.32);}
 .shot-frame img{border-radius:31px;width:100%;height:auto;}
 .shot figcaption{font-size:14px;color:var(--ink-3);margin-top:12px;line-height:1.5;}
+.shot-row{display:flex;flex-wrap:wrap;justify-content:center;gap:0 28px;margin:26px 0;}
+.shot-row .shot{flex:1 1 220px;max-width:250px;margin:0 0 18px;}
 .honest{background:var(--cream-2);border-radius:12px;padding:20px 22px;margin:22px 0;}
 .honest h3{margin-top:0;}
 .honest ul{margin-bottom:0;}

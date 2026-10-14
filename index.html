@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>EarMemo — local-first audio player for iOS</title>
-<meta name="description" content="A local-first audio player for iOS built for long-form listening: podcasts, audiobooks, lectures, voice recordings. No network, no account, no tracking.">
+<title>EarMemo — Local MP3 &amp; M4B Player with Timestamped Notes</title>
+<meta name="description" content="Play your own MP3 and M4B files on iPhone, resume long audio, and save timestamped notes. Local playback, no account; Markdown export with Pro.">
 <link rel="canonical" href="https://earmemo.app/">
 <link rel="alternate" hreflang="en" href="https://earmemo.app/">
 <link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/">
@@ -14,14 +14,14 @@
 <!-- <meta name="msvalidate.01" content="PASTE_FROM_BING"> -->
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="EarMemo — local-first audio player for iOS">
-<meta property="og:description" content="A local-first audio player for iOS: podcasts, audiobooks, lectures, voice recordings. No network, no account, no tracking.">
+<meta property="og:title" content="EarMemo — Local MP3 &amp; M4B Player with Timestamped Notes">
+<meta property="og:description" content="Play your own MP3 and M4B files on iPhone, resume long audio, and save timestamped notes. Markdown export with Pro.">
 <meta property="og:url" content="https://earmemo.app/">
 <meta property="og:image" content="https://earmemo.app/og.png">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="EarMemo — local-first audio player for iOS">
-<meta name="twitter:description" content="Podcasts, audiobooks, lectures, voice recordings — all local. No account, no tracking.">
+<meta name="twitter:title" content="EarMemo — Local MP3 &amp; M4B Player with Timestamped Notes">
+<meta name="twitter:description" content="Play your own MP3 and M4B files, resume long audio, and save timestamped notes on iPhone.">
 <meta name="twitter:image" content="https://earmemo.app/og.png">
 
 <link rel="icon" type="image/png" href="./icon.png">
@@ -33,7 +33,7 @@
   "@type": "SoftwareApplication",
   "name": "EarMemo",
   "alternateName": ["EarMemo App"],
-  "description": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All data stays on the user's device. No network connection, no account, no tracking, no third-party SDKs.",
+  "description": "EarMemo plays your own MP3 and M4B files locally on iOS, remembers your place, and saves timestamped notes. No account, tracking, or app server. Optional Wi-Fi transfer stays on your local network; Apple StoreKit handles purchases.",
   "applicationCategory": "MultimediaApplication",
   "applicationSubCategory": "Audio Player",
   "operatingSystem": "iOS 17, iPadOS 17",
@@ -74,15 +74,17 @@
     "https://github.com/EarMemo"
   ],
   "featureList": [
-    "Import local audio and video files (mp3, m4a, flac, aac, wav, mp4, mov, m4v)",
+    "Import local audio and video files (mp3, m4a, m4b, flac, aac, wav, mp4, mov, m4v)",
     "Background playback with Lock Screen and Control Center controls",
     "Sleep timer with Live Activity countdown on Dynamic Island and Lock Screen",
     "Yearly heatmap of listening history, plus weekly and monthly breakdowns",
     "Bookmarks with one-tap jump back for long-form content",
+    "Bookmark from headphones: AirPods Pro press twice or three times, confirmed by a short chime",
     "Per-album notes with timestamp markers, auto-saved while listening",
+    "Markdown note export with EarMemo Pro",
     "Variable playback speed",
     "Share Sheet import from Messages, Mail, Files",
-    "No network connection required, fully offline",
+    "Offline playback and notes without an internet connection",
     "No account, no sign-in",
     "No data collection, no third-party SDKs, no ads, no tracking"
   ],
@@ -100,15 +102,15 @@
       "name": "What is EarMemo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo does not connect to any server and does not require an account."
+        "text": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo has no server of its own, uploads nothing to the developer, and does not require an account."
       }
     },
     {
       "@type": "Question",
-      "name": "Is EarMemo the same as the AI study or memorization app with a similar name?",
+      "name": "Is EarMemo related to the AI study app with a similar name?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. EarMemo is an offline, local-first audio player for iPhone and iPad, made by Fan YANG, for playing podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, no account, and never connects to a server."
+        "text": "No. EarMemo is a local audio player for iPhone and iPad, made by Fan YANG, for recordings you already own. It is separate from similarly named AI study services. EarMemo has no AI features, account, or app server."
       }
     },
     {
@@ -124,7 +126,15 @@
       "name": "Does EarMemo work offline?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. EarMemo is local-first: it never connects to any server. All playback, statistics, and notes work without an internet connection. The app functions identically in airplane mode."
+        "text": "Yes. Playback, statistics, and notes work without an internet connection, including in airplane mode. Optional Wi-Fi file transfer needs Wi-Fi switched on and a local network."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I bookmark with my AirPods or other headphones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. In Settings → Headphone Controls, set Next or Previous to Bookmark Here. Pressing twice (Next) or three times (Previous) on AirPods Pro then marks the current second with a short chime, without taking out your phone. Other headphones use whichever button sends Next or Previous track, and car steering-wheel buttons follow the same setting. Marks are unlimited in the free version."
       }
     },
     {
@@ -164,6 +174,7 @@
 </script>
 
 <link rel="stylesheet" href="./home.css">
+<script src="./attribution.js" defer></script>
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -185,7 +196,7 @@
     <div class="ch-body">
       <div class="hero-copy">
         <h1>Listen to what you already own.</h1>
-        <p class="lead">A local-first iOS player for podcasts, audiobooks, lectures, and voice recordings. Nothing leaves your phone — no network, no account, no tracking.</p>
+        <p class="lead">Play your own MP3 and M4B audiobooks, lectures, and recordings on iPhone. EarMemo remembers your place and anchors notes to the exact second — a press on your AirPods is enough to mark one. Playback needs no account or internet connection.</p>
         <div class="cta">
           <a class="btn" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">Download free on the App Store</a>
           <a class="btn ghost" href="#features">See what it does</a>
@@ -199,7 +210,7 @@
     </div>
   </section>
 
-  <div class="trust"><span>No account</span><span>No network</span><span>No tracking</span><span>No subscription</span><span>iPhone &amp; iPad</span></div>
+  <div class="trust"><span>No account</span><span>No internet needed</span><span>No tracking</span><span>No subscription</span><span>iPhone &amp; iPad</span></div>
 
   <section class="ch" id="why">
     <div class="ch-body narrow">
@@ -210,22 +221,6 @@
   </section>
 
   <section class="ch" id="features">
-    <div class="ch-body split">
-      <div class="copy">
-        <p class="eyebrow">Your library</p>
-        <h2>Everything you're listening to, in one place</h2>
-        <p class="lead slow">One screen for the few things you're in the middle of. Each one remembers its progress and what's left — press it and you're back, no hunting, no "where was I?"</p>
-        <ul class="slow">
-          <li>Continue Listening resumes to the exact second</li>
-          <li>Files group into albums you can browse and reorder</li>
-          <li>A "today's listening" figure right at the top</li>
-        </ul>
-      </div>
-      <div class="device"><img src="./img/en/home.webp" alt="EarMemo home: Continue Listening, with the time left on each audiobook, lecture, and recording" width="900" height="1956" loading="lazy" decoding="async"></div>
-    </div>
-  </section>
-
-  <section class="ch" id="notes">
     <div class="ch-body split">
       <div class="device"><img src="./img/en/notes.webp" alt="EarMemo episode notes: each note sits on the timeline at its timestamp, with a play button to hear that second again" width="900" height="1956" loading="lazy" decoding="async"></div>
       <div class="copy">
@@ -243,12 +238,49 @@
         <ul class="slow">
           <li>Timestamped notes — one tap jumps to the line</li>
           <li>Grouped per album and episode, easy to review</li>
-          <li>Export any time, into your own notes app</li>
+          <li>Export notes as Markdown with a one-time Pro unlock</li>
         </ul>
         <a class="more slow" href="./how-to-remember-audiobooks">How to remember what you hear →</a>
       </div>
     </div>
   </section>
+
+  <section class="ch" id="headphones">
+    <div class="ch-body split">
+      <div class="copy">
+        <p class="eyebrow">Headphones</p>
+        <h2>Mark it without taking out your phone</h2>
+        <p class="lead slow">Phone in your pocket, hands busy, and the line you want is going by. Press your AirPods twice: a short chime, and that second is saved — two seconds early, so it catches the start of the sentence. The words can come later.</p>
+        <ol class="hp-steps">
+          <li><span><b>Set it once.</b> Settings → Headphone Controls → Next: <i>Bookmark Here</i></span></li>
+          <li><span><b>Press twice</b> on AirPods Pro (three times if you set Previous)</span></li>
+          <li><span><b>Hear the chime.</b> The mark is in your notes.<button type="button" class="hp-chime js-only">▶ Play it</button></span></li>
+        </ol>
+        <ul class="slow">
+          <li>Every press is its own mark — unlimited, free version included</li>
+          <li>Car steering-wheel buttons follow the same setting</li>
+        </ul>
+      </div>
+      <div class="device"><span class="hp-shot" style="--hl-top:45.2%"><img src="./img/en/headphones.webp" alt="EarMemo Settings, Headphone Controls: Next set to Bookmark Here, Previous left as Previous Episode" width="900" height="1956" loading="lazy" decoding="async"><span class="hp-hl" aria-hidden="true"></span></span></div>
+    </div>
+  </section>
+
+  <section class="ch" id="library">
+    <div class="ch-body split">
+      <div class="device"><img src="./img/en/home.webp" alt="EarMemo home: Continue Listening, with the time left on each audiobook, lecture, and recording" width="900" height="1956" loading="lazy" decoding="async"></div>
+      <div class="copy">
+        <p class="eyebrow">Your library</p>
+        <h2>Everything you're listening to, in one place</h2>
+        <p class="lead slow">One screen for the few things you're in the middle of. Each one remembers its progress and what's left — press it and you're back, no hunting, no "where was I?"</p>
+        <ul class="slow">
+          <li>Continue Listening resumes to the exact second</li>
+          <li>Files group into albums you can browse and reorder</li>
+          <li>A "today's listening" figure right at the top</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
 
   <section class="ch" id="history">
     <div class="ch-body split">
@@ -276,7 +308,7 @@
         <ul class="slow">
           <li>Wi-Fi transfer from any browser — no cable or cloud</li>
           <li>Share Sheet from Messages, Mail, Files</li>
-          <li>mp3 · m4a · flac · aac · wav, plus mp4 / mov audio-only</li>
+          <li>mp3 · m4a · m4b · flac · aac · wav, plus mp4 / mov audio-only</li>
         </ul>
       </div>
     </div>
@@ -289,9 +321,9 @@
         <div><h3>Sleep timer</h3><p>Live Activity countdown on the Dynamic Island and Lock Screen.</p></div>
         <div><h3>Background &amp; Lock Screen</h3><p>Full transport controls from Control Center and the Lock Screen.</p></div>
         <div><h3>Variable speed</h3><p>Speed up or slow down without the audio turning to chipmunks.</p></div>
-        <div><h3>Bookmarks</h3><p>One-tap jump back to any saved point — essential for long content.</p></div>
+        <div><h3>Siri &amp; Shortcuts</h3><p>Play, pause, skip, or bookmark the moment by voice.</p></div>
         <div><h3>Share Sheet import</h3><p>Send files in from Messages, Mail, Files, or any app with a share action.</p></div>
-        <div><h3>Wide format support</h3><p>mp3 · m4a · flac · aac · wav, plus mp4 / mov / m4v played audio-only.</p></div>
+        <div><h3>Wide format support</h3><p>mp3 · m4a · m4b · flac · aac · wav, plus mp4 / mov / m4v played audio-only. M4B chapter lists are not supported.</p></div>
       </div>
     </div>
   </section>
@@ -301,7 +333,7 @@
       <div>
         <p class="eyebrow">Privacy</p>
         <h2>Private by architecture, not by promise</h2>
-        <p class="lead slow">EarMemo never connects to a server. Settings, playback progress, notes, bookmarks, and statistics all stay on your device — and follow your own iCloud backup if you have iCloud enabled.</p>
+        <p class="lead slow">EarMemo has no app server. Settings, playback progress, notes, bookmarks, and statistics stay on your device and in your own iCloud backup if enabled. Optional Wi-Fi transfer stays on your local network; Apple StoreKit handles purchases.</p>
         <a class="more slow" href="./privacy">Read the full privacy policy →</a>
       </div>
       <ul class="checklist">
@@ -326,11 +358,11 @@
       <h2 style="margin-bottom:8px">FAQ</h2>
       <details>
         <summary>What is EarMemo?</summary>
-        <p>EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo does not connect to any server and does not require an account.</p>
+        <p>EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All of your data — settings, playback progress, bookmarks, notes, and listening statistics — stays on your device. EarMemo has no server of its own, uploads nothing to the developer, and does not require an account.</p>
       </details>
       <details>
         <summary>Is EarMemo related to the AI study app with a similar name?</summary>
-        <p>No. EarMemo is an offline audio player for iPhone and iPad, made by Fan YANG, for podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, no account, and never connects to a server.</p>
+        <p>No. EarMemo is an offline audio player for iPhone and iPad, made by Fan YANG, for podcasts, audiobooks, lectures, and voice recordings you already own. It is a separate, unaffiliated product from any similarly named AI study, flashcard, or memorization service. EarMemo has no AI features, account, or app server.</p>
       </details>
       <details>
         <summary>How is EarMemo different from Apple Podcasts or Spotify?</summary>
@@ -338,7 +370,11 @@
       </details>
       <details open>
         <summary>Does EarMemo work offline?</summary>
-        <p>Yes. EarMemo is local-first: it never connects to any server. All playback, statistics, and notes work without an internet connection. The app functions identically in airplane mode.</p>
+        <p>Yes. Playback, statistics, and notes work without an internet connection, including in airplane mode. Optional Wi-Fi file transfer needs Wi-Fi switched on and a local network.</p>
+      </details>
+      <details>
+        <summary>Can I bookmark with my AirPods or other headphones?</summary>
+        <p>Yes. In Settings → Headphone Controls, set Next or Previous to Bookmark Here. Pressing twice (Next) or three times (Previous) on AirPods Pro then marks the current second with a short chime, without taking out your phone. Other headphones use whichever button sends Next or Previous track, and car steering-wheel buttons follow the same setting. Marks are unlimited in the free version.</p>
       </details>
       <details>
         <summary>Which audio and video formats does EarMemo support?</summary>
@@ -395,5 +431,6 @@
 </div>
 
 <script src="./demo.js" defer></script>
+<script src="./chime.js" defer></script>
 </body>
 </html>

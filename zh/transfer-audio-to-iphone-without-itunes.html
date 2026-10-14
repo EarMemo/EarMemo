@@ -22,6 +22,7 @@
 <link rel="icon" type="image/png" href="../icon.png">
 <link rel="apple-touch-icon" href="../icon.png">
 <link rel="stylesheet" href="../answer.css">
+<script src="../attribution.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,7 +31,7 @@
   "description": "把 mp3、m4b、flac 传进 iPhone 的四条路：在电脑浏览器里隔着自家 Wi-Fi 拖进去、「文件」App 导入、系统分享、数据线。不需要 iTunes，也不需要云账号。",
   "inLanguage": "zh-Hans",
   "url": "https://earmemo.app/zh/transfer-audio-to-iphone-without-itunes",
-  "dateModified": "2026-09-10",
+  "dateModified": "2026-10-10",
   "author": {
     "@type": "Person",
     "name": "Fan YANG",
@@ -201,17 +202,19 @@
   <p class="crumb"><a href="./">耳记 EarMemo</a> › 不用 iTunes 传音频</p>
   <h1>不用 iTunes，怎么把音频文件传进 iPhone</h1>
   <div class="answer"><p>这件事已经不需要 iTunes 了。四条能走通的路是：在电脑浏览器里隔着局域网 Wi-Fi 把文件拖进去；用 iOS 的<b>「文件」</b>App 导入（iCloud 云盘、SMB 共享、或者插在手机上的 U 盘）；用<b>系统分享</b>发进去；或者从 Mac 隔空投送。四条路都是把文件送进播放器 App，而不是送进「音乐」。</p></div>
-  <p class="meta">最后更新 2026-09-10 · 作者：Fan YANG（耳记开发者）</p>
+  <p class="meta">最后更新 2026-10-10 · 作者：Fan YANG（耳记开发者）</p>
 
   <h2>为什么 iTunes 同步不再是标准答案</h2>
   <p>苹果在 macOS Catalina 拆掉了 iTunes，同步搬进了访达，有声书和音乐还走了不同的路。与此同时 iOS 有了真正的「文件」App，App 也可以拥有自己的文稿目录。结果就是：一个现代的本地播放器可以直接接收文件，中间不再需要一个曲库数据库。</p>
   <h2>路线一 —— 在电脑浏览器里拖进去（不用线，不过云）</h2>
   <p>批量传的时候这条最快，也是 VLC 当年带火的那种方式。耳记是一样的做法：</p>
   <ol class="steps"><li><b>让两台设备连同一个 Wi-Fi。</b>用你自己的家里或办公室网络——公共网络的注意事项见下面。</li><li><b>在耳记里打开 Wi-Fi 传输。</b>它会显示一个局域网地址，形如 <code>http://192.168.1.23:8080</code>。</li><li><b>把这个地址输进电脑浏览器。</b>Chrome、Safari、Firefox 都行，Windows 和 Mac 都行，电脑上不用装任何东西。</li><li><b>把文件或整个文件夹拖到页面上。</b>文件夹层级会保留，拆成 40 个文件的一本书进来还是一本书。全程不出局域网。</li></ol>
+  <figure class="shot"><div class="shot-frame"><img src="../img/zh/wifi.webp" alt="耳记的 Wi-Fi 文件传输页：服务已启动，显示二维码和一个在电脑浏览器里打开的局域网地址" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>电脑上要打开的地址和二维码。点「关闭服务」页面就关掉。</figcaption></figure>
   <h2>路线二 —— 「文件」App</h2>
   <p>「文件」App 能看到的都行：iCloud 云盘、坚果云、Dropbox、SMB 网络共享，或者通过 USB-C / 闪电口插在手机上的 U 盘。打开文件夹，选中音频，分享给播放器。文件本来就在你自己的云盘里时，走这条最省事。</p>
   <h2>路线三 —— 系统分享</h2>
   <p>适合零星的单个文件：微信、邮件里收到的，或者刚下载的。在文件上点分享，选播放器。耳记注册为音频和视频文件的分享目标。</p>
+  <figure class="shot"><div class="shot-frame"><img src="../img/zh/import-sheet.webp" alt="耳记的「导入到耳记」面板：文件《西游记（全本）.m4b》可以存为单曲、新建专辑，或放进已有专辑" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>从「文件」里选的、或分享给耳记的文件会落到这里：存成单曲，或放进专辑。</figcaption></figure>
   <h2>路线四 —— 访达或隔空投送</h2>
   <p>用线连上 Mac，打开访达，进「文件」标签页，拖进 App 的文稿目录。或者从 Mac 隔空投送，iOS 问你用什么打开时选播放器。几个文件挺好，一百个文件会很烦。</p>
   <h2>什么情况走哪条</h2>
@@ -241,7 +244,7 @@
 
   <div class="related">
     <h3>相关问题</h3>
-    <ul><li><a href="./how-to-remember-audiobooks">有声书听完就忘，怎么记住</a></li><li><a href="./m4b-audiobook-player-iphone">在 iPhone 上听自己的 m4b / mp3 有声书</a></li><li><a href="./timestamped-audio-notes-markdown">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./offline-audio-player-no-account">不联网、不要账号的播放器</a></li></ul>
+    <ul><li><a href="./how-to-remember-audiobooks">有声书听完就忘，怎么记住</a></li><li><a href="./m4b-audiobook-player-iphone">在 iPhone 上听自己的 m4b / mp3 有声书</a></li><li><a href="./timestamped-audio-notes-markdown">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./offline-audio-player-no-account">离线播放、不要账号的播放器</a></li></ul>
   </div>
 </div></main>
 
@@ -252,7 +255,7 @@
       <p style="color:var(--foot-muted);font-size:14px;margin-top:12px;max-width:30ch">一个本地优先的 iOS 音频播放器。所有数据都留在你的设备上。</p>
     </div>
     <div><h4>产品</h4><ul><li><a href="./#features">功能</a></li><li><a href="./#privacy">隐私</a></li><li><a href="./#faq">常见问题</a></li></ul></div>
-    <div><h4>问题解答</h4><ul><li><a href="./how-to-remember-audiobooks">有声书听完就忘，怎么记住</a></li><li><a href="./m4b-audiobook-player-iphone">在 iPhone 上听自己的 m4b / mp3 有声书</a></li><li><a href="./timestamped-audio-notes-markdown">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./offline-audio-player-no-account">不联网、不要账号的播放器</a></li></ul></div>
+    <div><h4>问题解答</h4><ul><li><a href="./how-to-remember-audiobooks">有声书听完就忘，怎么记住</a></li><li><a href="./m4b-audiobook-player-iphone">在 iPhone 上听自己的 m4b / mp3 有声书</a></li><li><a href="./timestamped-audio-notes-markdown">边听边记时间戳笔记，导出 Markdown</a></li><li><a href="./offline-audio-player-no-account">离线播放、不要账号的播放器</a></li></ul></div>
     <div><h4>联系</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="../privacy">隐私政策</a></li></ul></div>
   </div>
   <div class="foot-bottom">© 2026 EarMemo. 所有数据都留在你的设备上。</div>

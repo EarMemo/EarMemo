@@ -19,7 +19,8 @@ from pathlib import Path
 
 APEX = "https://earmemo.app"
 TEXT_STUBS = {"llms.txt", "pricing.md"}
-SKIP = {"README.md", "launch-posts.md", "sitemap.xml"}
+# 404.html is the apex site's own error page; the mirror writes its own below.
+SKIP = {"README.md", "launch-posts.md", "sitemap.xml", "404.html"}
 
 
 def html_stub(target: str) -> str:

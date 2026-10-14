@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>耳记 EarMemo — iOS 本地音频播放器</title>
-<meta name="description" content="耳记（EarMemo）是一款 iOS 本地音频播放器，专为播客、有声书、公开课、讲座与对话录音而设计。不联网、不要账号、不追踪，所有数据只在你的设备上。">
+<title>耳记 EarMemo — 本地音频播放器：MP3/M4B 断点续听与时间戳笔记</title>
+<meta name="description" content="在 iPhone 播放自己的有声书、播客、讲座等 MP3、M4B 长音频，记住断点，写可跳回原声的时间戳笔记。无需账号；Pro 可导出 Markdown。">
 <link rel="canonical" href="https://earmemo.app/zh/">
 <link rel="alternate" hreflang="en" href="https://earmemo.app/">
 <link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/">
@@ -13,16 +13,16 @@
 <meta name="google-site-verification" content="fUE5HJX5kVsMPYY8MkXd8C9hNxO8Nb_dxYLIqj54Yzw">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="耳记 EarMemo — iOS 本地音频播放器">
-<meta property="og:description" content="iOS 本地音频播放器：播客、有声书、讲座、录音都在本地。不联网、不要账号、不追踪。">
+<meta property="og:title" content="耳记 EarMemo — 本地音频播放器：MP3/M4B 断点续听与时间戳笔记">
+<meta property="og:description" content="播放自己的 MP3、M4B 长音频，记住断点，写可跳回原声的时间戳笔记。Pro 可导出 Markdown。">
 <meta property="og:url" content="https://earmemo.app/zh/">
 <meta property="og:image" content="https://earmemo.app/og.png">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:locale:alternate" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="耳记 EarMemo — iOS 本地音频播放器">
-<meta name="twitter:description" content="播客、有声书、讲座、录音——全部在本地。不要账号，不追踪。">
+<meta name="twitter:title" content="耳记 EarMemo — 本地音频播放器：MP3/M4B 断点续听与时间戳笔记">
+<meta name="twitter:description" content="播放自己的长音频，记住断点，写可跳回原声的时间戳笔记。">
 <meta name="twitter:image" content="https://earmemo.app/og.png">
 
 <link rel="icon" type="image/png" href="../icon.png">
@@ -34,7 +34,7 @@
   "@type": "SoftwareApplication",
   "name": "EarMemo",
   "alternateName": ["耳记", "EarMemo App"],
-  "description": "EarMemo is a local-first audio player for iOS, designed for long-form listening: podcasts, audiobooks, lectures, and voice recordings. All data stays on the user's device. No network connection, no account, no tracking, no third-party SDKs.",
+  "description": "EarMemo plays your own MP3 and M4B files locally on iOS, remembers your place, and saves timestamped notes. No account, tracking, or app server. Optional Wi-Fi transfer stays on your local network; Apple StoreKit handles purchases.",
   "applicationCategory": "MultimediaApplication",
   "applicationSubCategory": "Audio Player",
   "operatingSystem": "iOS 17, iPadOS 17",
@@ -80,10 +80,12 @@
     "Sleep timer with Live Activity countdown on Dynamic Island and Lock Screen",
     "Yearly heatmap of listening history, plus weekly and monthly breakdowns",
     "Bookmarks with one-tap jump back for long-form content",
+    "Bookmark from headphones: AirPods Pro press twice or three times, confirmed by a short chime",
     "Per-album notes with timestamp markers, auto-saved while listening",
+    "Markdown note export with EarMemo Pro",
     "Variable playback speed",
     "Share Sheet import from Messages, Mail, Files",
-    "No network connection required, fully offline",
+    "Offline playback and notes without an internet connection",
     "No account, no sign-in",
     "No data collection, no third-party SDKs, no ads, no tracking"
   ],
@@ -101,7 +103,7 @@
       "name": "耳记是什么？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "耳记（EarMemo）是一款 iOS 本地音频播放器，专为播客、有声书、公开课、讲座与对话录音而设计。你所有的数据——设置、播放进度、书签、笔记、收听统计——都只保存在你的设备上。耳记不连接任何服务器，也不需要账号。"
+        "text": "耳记（EarMemo）是一款 iOS 本地音频播放器，专为播客、有声书、公开课、讲座与对话录音而设计。你所有的数据——设置、播放进度、书签、笔记、收听统计——都只保存在你的设备上。耳记没有自己的服务器，不向开发者上传任何数据，也不需要账号。"
       }
     },
     {
@@ -109,7 +111,7 @@
       "name": "耳记和那个名字相近的 AI 背书 / 记忆 App 是同一个吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不是。耳记（EarMemo）是一款 iPhone / iPad 上的本地音频播放器，由 Fan YANG 开发，用来播放你已经拥有的播客、有声书、讲座和录音。它和任何名字相近的 AI 学习 / 记忆 / 背单词产品都是不同的、互不关联的产品。耳记没有任何 AI 功能、不需要账号，也从不连接服务器。"
+        "text": "不是。耳记（EarMemo）是一款 iPhone / iPad 上的本地音频播放器，由 Fan YANG 开发，用来播放你已经拥有的播客、有声书、讲座和录音。它和名字相近的 AI 学习产品互不关联。耳记没有 AI 功能、账号或自己的外部服务器。"
       }
     },
     {
@@ -125,7 +127,15 @@
       "name": "耳记可以离线使用吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "可以。耳记本地优先——从不连接任何服务器。播放、统计、笔记都不依赖网络。飞行模式下打开 App，所有功能完全正常。"
+        "text": "可以。播放、统计和笔记无需互联网，飞行模式下仍可使用。可选的 Wi-Fi 文件传输需要打开 Wi-Fi 并连上局域网。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "能用 AirPods 或其他耳机打点吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能。在「设置 → 耳机按键」里把「下一首」或「上一首」改成「收藏此处」，之后在 AirPods Pro 上按两下（下一首）或按三下（上一首），就会在当前这一秒记下一个标记，并响一声短提示音，不用掏出手机。其他耳机用发送「下一首 / 上一首」的那个键，车载方向盘按键也跟这个设置走。免费版标记不限数量。"
       }
     },
     {
@@ -165,6 +175,7 @@
 </script>
 
 <link rel="stylesheet" href="../home.css">
+<script src="../attribution.js" defer></script>
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -186,7 +197,7 @@
     <div class="ch-body">
       <div class="hero-copy">
         <h1>把本地音频，当成一本书来听。</h1>
-        <p class="lead">耳记是一款 iOS 本地音频播放器，专门用来听你已经存进手机的长音频——播客、有声书、公开课、采访录音。所有内容都只留在设备上，不联网、不要账号、不追踪。</p>
+        <p class="lead">在 iPhone 播放自己的 MP3、M4B 有声书、讲座和录音。耳记会记住每个文件的断点，也让笔记钉在可重听的那一秒——按一下耳机就能记。播放不用账号或互联网。</p>
         <div class="cta">
           <a class="btn" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">在 App Store 免费下载</a>
           <a class="btn ghost" href="#features">看看能做什么</a>
@@ -200,7 +211,7 @@
     </div>
   </section>
 
-  <div class="trust"><span>不要账号</span><span>不联网</span><span>不追踪</span><span>无订阅</span><span>iPhone 与 iPad</span></div>
+  <div class="trust"><span>不要账号</span><span>无需联网</span><span>不追踪</span><span>无订阅</span><span>iPhone 与 iPad</span></div>
 
   <section class="ch" id="why">
     <div class="ch-body narrow">
@@ -211,22 +222,6 @@
   </section>
 
   <section class="ch" id="features">
-    <div class="ch-body split">
-      <div class="copy">
-        <p class="eyebrow">继续收听</p>
-        <h2>打开，就回到昨天停下的地方</h2>
-        <p class="lead slow">首页只有一件事：你正在听的几段。每一条都记着进度与剩余时长，按下就接着播——不必翻找，不必想起"我听到哪了"。</p>
-        <ul class="slow">
-          <li>精确续播到秒，关掉再开毫不走样</li>
-          <li>播客、有声书、课程分类清楚，一眼分辨</li>
-          <li>顶部一枚"今日已听"，看得见自己的节奏</li>
-        </ul>
-      </div>
-      <div class="device"><img src="../img/zh/home.webp" alt="耳记首页：继续收听，每一条都写着还剩多久" width="900" height="1956" loading="lazy" decoding="async"></div>
-    </div>
-  </section>
-
-  <section class="ch" id="notes">
     <div class="ch-body split">
       <div class="device"><img src="../img/zh/notes.webp" alt="耳记本集笔记：每条笔记按时间戳落在时间轴上，点播放即回到那一秒" width="900" height="1956" loading="lazy" decoding="async"></div>
       <div class="copy">
@@ -244,12 +239,49 @@
         <ul class="slow">
           <li>时间戳笔记，一点即跳回原句</li>
           <li>按节目、按集数归拢成册，回看清晰</li>
-          <li>随手导出，带去你的笔记软件</li>
+          <li>Pro 一次买断后，可导出 Markdown 到自己的笔记软件</li>
         </ul>
         <a class="more slow" href="./how-to-remember-audiobooks">有声书听完就忘，怎么记住 →</a>
       </div>
     </div>
   </section>
+
+  <section class="ch" id="headphones">
+    <div class="ch-body split">
+      <div class="copy">
+        <p class="eyebrow">耳机收藏</p>
+        <h2>手机不用掏出来，按一下耳机就记下</h2>
+        <p class="lead slow">手机在兜里，手上正忙，想留的那句话正在过去。在 AirPods Pro 上按两下，「叮」一声，这一秒就记下了——自动往前留 2 秒，抓得住那句话的开头。要写的话，以后再补。</p>
+        <ol class="hp-steps">
+          <li><span><b>设一次。</b>设置 → 耳机按键 → 把「下一首」改成「收藏此处」</span></li>
+          <li><span><b>按两下</b> AirPods Pro（设的是「上一首」就按三下）</span></li>
+          <li><span><b>听到提示音</b>，标记已经在笔记里了。<button type="button" class="hp-chime js-only">▶ 听一下</button></span></li>
+        </ol>
+        <ul class="slow">
+          <li>每按一下记一条，免费版也不限数量</li>
+          <li>车上方向盘的「下一首」键也跟这个设置走</li>
+        </ul>
+      </div>
+      <div class="device"><span class="hp-shot" style="--hl-top:46.2%"><img src="../img/zh/headphones.webp" alt="耳记设置页的耳机按键：「下一首」设为收藏此处，「上一首」保持上一集" width="900" height="1956" loading="lazy" decoding="async"><span class="hp-hl" aria-hidden="true"></span></span></div>
+    </div>
+  </section>
+
+  <section class="ch" id="library">
+    <div class="ch-body split">
+      <div class="device"><img src="../img/zh/home.webp" alt="耳记首页：继续收听，每一条都写着还剩多久" width="900" height="1956" loading="lazy" decoding="async"></div>
+      <div class="copy">
+        <p class="eyebrow">继续收听</p>
+        <h2>打开，就回到昨天停下的地方</h2>
+        <p class="lead slow">首页只有一件事：你正在听的几段。每一条都记着进度与剩余时长，按下就接着播——不必翻找，不必想起"我听到哪了"。</p>
+        <ul class="slow">
+          <li>精确续播到秒，关掉再开毫不走样</li>
+          <li>播客、有声书、课程分类清楚，一眼分辨</li>
+          <li>顶部一枚"今日已听"，看得见自己的节奏</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
 
   <section class="ch" id="history">
     <div class="ch-body split">
@@ -290,9 +322,9 @@
         <div><h3>睡眠定时</h3><p>灵动岛和锁屏上实时倒数，告诉你今晚还能听多久。</p></div>
         <div><h3>后台与锁屏</h3><p>锁屏和控制中心里就能控制播放，屏幕不用一直亮着。</p></div>
         <div><h3>变速播放</h3><p>加速或放慢，声音不会变调走样。</p></div>
-        <div><h3>书签</h3><p>一键跳回标记的地方，听长音频很需要。</p></div>
+        <div><h3>Siri 与快捷指令</h3><p>播放、暂停、快进快退、标记当前时刻，说一句就行。</p></div>
         <div><h3>系统分享导入</h3><p>从 信息、邮件、文件，或任何能分享的 App 直接送进来。</p></div>
-        <div><h3>广泛格式支持</h3><p>mp3 · m4a · m4b · flac · aac · wav；mp4 / mov / m4v 只取音轨来听。</p></div>
+        <div><h3>广泛格式支持</h3><p>mp3 · m4a · m4b · flac · aac · wav；mp4 / mov / m4v 只取音轨来听。暂不支持读取 M4B 内嵌章节列表。</p></div>
       </div>
     </div>
   </section>
@@ -302,7 +334,7 @@
       <div>
         <p class="eyebrow">隐私</p>
         <h2>隐私来自它的结构，不是来自承诺</h2>
-        <p class="lead slow">耳记从不连接任何服务器。设置、播放进度、笔记、书签和统计都只保存在你的设备上——如果你开启了 iCloud，会跟随你自己的 iCloud 备份。</p>
+        <p class="lead slow">耳记没有自己的外部服务器。设置、播放进度、笔记、书签和统计留在设备上；开启 iCloud 备份后会随系统备份。可选 Wi-Fi 传输只在局域网内运行，内购由 Apple StoreKit 处理。</p>
         <a class="more slow" href="./privacy">阅读完整隐私政策 →</a>
       </div>
       <ul class="checklist">
@@ -327,11 +359,11 @@
       <h2 style="margin-bottom:8px">常见问题</h2>
       <details>
         <summary>耳记是什么？</summary>
-        <p>耳记（EarMemo）是一款 iOS 本地音频播放器，专为播客、有声书、公开课、讲座与对话录音而设计。你所有的数据——设置、播放进度、书签、笔记、收听统计——都只保存在你的设备上。耳记不连接任何服务器，也不需要账号。</p>
+        <p>耳记（EarMemo）是一款 iOS 本地音频播放器，专为播客、有声书、公开课、讲座与对话录音而设计。你所有的数据——设置、播放进度、书签、笔记、收听统计——都只保存在你的设备上。耳记没有自己的服务器，不向开发者上传任何数据，也不需要账号。</p>
       </details>
       <details>
         <summary>耳记和那个名字相近的 AI 背书 / 记忆 App 是同一个吗？</summary>
-        <p>不是。耳记（EarMemo）是一款 iPhone / iPad 上的本地音频播放器，由 Fan YANG 开发，用来播放你已经拥有的播客、有声书、讲座和录音。它和任何名字相近的 AI 学习 / 记忆 / 背单词产品都是不同的、互不关联的产品。耳记没有任何 AI 功能、不需要账号，也从不连接服务器。</p>
+        <p>不是。耳记（EarMemo）是一款 iPhone / iPad 上的本地音频播放器，由 Fan YANG 开发，用来播放你已经拥有的播客、有声书、讲座和录音。它和任何名字相近的 AI 学习 / 记忆 / 背单词产品都是不同的、互不关联的产品。耳记没有 AI 功能、账号或自己的外部服务器。</p>
       </details>
       <details>
         <summary>耳记和 Apple Podcasts、Spotify 有什么不同？</summary>
@@ -339,7 +371,11 @@
       </details>
       <details open>
         <summary>耳记可以离线使用吗？</summary>
-        <p>可以。耳记本地优先——从不连接任何服务器。播放、统计、笔记都不依赖网络。飞行模式下打开 App，所有功能完全正常。</p>
+        <p>可以。播放、统计和笔记无需互联网，飞行模式下仍可使用。可选的 Wi-Fi 文件传输需要打开 Wi-Fi 并连上局域网。</p>
+      </details>
+      <details>
+        <summary>能用 AirPods 或其他耳机打点吗？</summary>
+        <p>能。在「设置 → 耳机按键」里把「下一首」或「上一首」改成「收藏此处」，之后在 AirPods Pro 上按两下（下一首）或按三下（上一首），就会在当前这一秒记下一个标记，并响一声短提示音，不用掏出手机。其他耳机用发送「下一首 / 上一首」的那个键，车载方向盘按键也跟这个设置走。免费版标记不限数量。</p>
       </details>
       <details>
         <summary>耳记支持哪些音视频格式？</summary>
@@ -381,7 +417,7 @@
           <li><span><a href="./m4b-audiobook-player-iphone">听自己已有的 m4b / mp3 有声书</a><span class="ep-d">哪些文件真的能播、怎么传进手机，以及什么时候别的播放器更合适。</span></span></li>
           <li><span><a href="./timestamped-audio-notes-markdown">边听边记时间戳笔记，导出 Markdown</a><span class="ep-d">笔记钉在确切那一秒，以及它跟转写类 App 的区别。</span></span></li>
           <li><span><a href="./transfer-audio-to-iphone-without-itunes">不用 iTunes 把音频传进 iPhone</a><span class="ep-d">Wi-Fi 浏览器传输、「文件」App、系统分享——什么时候走哪条。</span></span></li>
-          <li><span><a href="./offline-audio-player-no-account">不联网、不要账号、不追踪</a><span class="ep-d">「本地优先」在这里具体指什么，以及三个你能自己验的办法。</span></span></li>
+          <li><span><a href="./offline-audio-player-no-account">离线播放、不要账号、不追踪</a><span class="ep-d">「本地优先」在这里具体指什么，以及三个你能自己验的办法。</span></span></li>
         </ol>
       </div>
     </div>
@@ -396,5 +432,6 @@
 </div>
 
 <script src="../demo.js" defer></script>
+<script src="../chime.js" defer></script>
 </body>
 </html>

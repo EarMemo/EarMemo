@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacy Policy — EarMemo</title>
-<meta name="description" content="EarMemo collects, transmits and shares no personal data, and talks to no external server. The only networking is optional Wi-Fi Transfer, on your own network.">
+<meta name="description" content="EarMemo collects no personal data and has no server of its own. Purchases use Apple StoreKit; optional Wi-Fi Transfer stays on your local network.">
 <link rel="canonical" href="https://earmemo.app/privacy">
 <link rel="alternate" hreflang="en" href="https://earmemo.app/privacy">
 <link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/privacy">
@@ -93,26 +93,29 @@ footer a { color: var(--ink-2); }
   </div>
 
   <h1 class="title">Privacy Policy</h1>
-  <p class="updated">Last updated: 2026-07-18</p>
+  <p class="updated">Last updated: 2026-10-10</p>
 
-  <p class="lede">EarMemo does not collect, transmit, or share any personal data, and it does not communicate with any external server. Your data stays only on your device. The one exception is the optional Wi-Fi Transfer feature: when you turn it on yourself, files move directly between devices within your own local network.</p>
+  <p class="lede">EarMemo does not collect, transmit, or share any personal data. Your data stays only on your device. EarMemo has no external server of its own; the network activity involving the app is limited to Apple's StoreKit system service for purchases and restores, and the optional Wi-Fi Transfer feature, which stays within your local network.</p>
 
   <h2>What stays on your device</h2>
   <p>Everything you do in EarMemo — imported audio, playback progress, listening stats, notes, bookmarks, and settings — stays on your device. If you have iCloud Backup enabled in iOS Settings, this data is included in your own iCloud backup as part of the standard system backup. EarMemo itself never initiates any sync or reads or writes any remote service.</p>
 
   <h2>What EarMemo does not do</h2>
   <ul>
-    <li>Makes no network requests to any external server.</li>
+    <li>Makes no requests to any external server; purchases and restores are handled by Apple's StoreKit system service.</li>
     <li>Includes no third-party analytics, advertising, or tracking SDKs.</li>
-    <li>Requests no access to your contacts, location, photos, microphone, or notifications.</li>
+    <li>Does not read your photo library or request access to your contacts, location, microphone, or notifications; it only requests “add to photos” access when you explicitly export a long note image (write-only, never read).</li>
     <li>Has no account system; no sign-in is required.</li>
   </ul>
 
   <h2>Wi-Fi Transfer</h2>
-  <p>To make it easy to bring in audio from a computer or another device, EarMemo offers an optional Wi-Fi Transfer feature. When it is on, EarMemo temporarily starts a local web service on your Wi-Fi network so devices on the same network can send files to it. The transfer happens entirely within your local network — nothing passes through any external server, and your data never leaves your network. The service stops the moment you close the page or leave the screen. When you are not using this feature, EarMemo makes no network connections at all.</p>
+  <p>To make it easy to bring in audio from a computer or another device, EarMemo offers an optional Wi-Fi Transfer feature. When it is on, EarMemo temporarily starts a local web service on your Wi-Fi network so devices on the same network can send files to it. The transfer happens entirely within your local network — nothing passes through any external server, and your data never leaves your network. The service stops the moment you close the page or leave the screen. When you are not using this feature, EarMemo makes no network connections of its own; Apple's StoreKit system service may still connect to Apple when you purchase or restore a purchase.</p>
+
+  <h2>Purchases and restores</h2>
+  <p>Purchases and restore purchases are handled by Apple's StoreKit. EarMemo never sees or stores payment information; it receives only the entitlement result from the system: purchased or not purchased.</p>
 
   <h2>System APIs used</h2>
-  <p>EarMemo uses only standard local iOS APIs: UserDefaults (for settings and listening data), file modification timestamps (for sorting by date), background audio playback, and Live Activities (for the sleep-timer display). None of these APIs involve a network connection or any third party.</p>
+  <p>EarMemo uses standard iOS APIs: UserDefaults (for settings and listening data), file modification timestamps (for sorting by date), background audio playback, Live Activities (for the sleep-timer display), Apple's StoreKit (for purchases and restore purchases), and the add-only Photos API (for saving exported long images). StoreKit handles payment; EarMemo receives only the entitlement result and never reads the photo library. No other third-party service is used.</p>
 
   <h2>Children's privacy</h2>
   <p>EarMemo is rated 4+ and is safe for children. The zero-collection policy applies to every user regardless of age.</p>

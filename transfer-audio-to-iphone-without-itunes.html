@@ -22,6 +22,7 @@
 <link rel="icon" type="image/png" href="./icon.png">
 <link rel="apple-touch-icon" href="./icon.png">
 <link rel="stylesheet" href="./answer.css">
+<script src="./attribution.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,7 +31,7 @@
   "description": "Four ways to get mp3, m4b or flac files onto an iPhone without iTunes, a cable, or a cloud account — including dragging them in from a desktop browser.",
   "inLanguage": "en",
   "url": "https://earmemo.app/transfer-audio-to-iphone-without-itunes",
-  "dateModified": "2026-09-10",
+  "dateModified": "2026-10-10",
   "author": {
     "@type": "Person",
     "name": "Fan YANG",
@@ -201,17 +202,19 @@
   <p class="crumb"><a href="./">EarMemo</a> › Transfer audio without iTunes</p>
   <h1>How to transfer audio files to an iPhone without iTunes</h1>
   <div class="answer"><p>iTunes is no longer needed. Four routes work: drag files in from a desktop browser over your local Wi-Fi, import through the iOS <b>Files</b> app (iCloud Drive, SMB share, or a USB drive), send them via the <b>Share Sheet</b>, or AirDrop from a Mac. All four land the files in a player app, not Apple Music.</p></div>
-  <p class="meta">Last updated 2026-09-10 · Written by Fan YANG, the developer of EarMemo.</p>
+  <p class="meta">Last updated 2026-10-10 · Written by Fan YANG, the developer of EarMemo.</p>
 
   <h2>Why iTunes syncing stopped being the answer</h2>
   <p>Apple split iTunes up in macOS Catalina; syncing moved into Finder, and audiobooks and music took different paths. Meanwhile iOS gained a real filesystem through the Files app, and apps gained the right to own a document folder. The result is that a modern local player can take files directly — no library database in the middle.</p>
   <h2>Route 1 — drag files in from a desktop browser (no cable, no cloud)</h2>
   <p>This is the fastest route for a large batch, and it is the one VLC popularised. EarMemo works the same way:</p>
   <ol class="steps"><li><b>Put both devices on the same Wi-Fi network.</b> Your own home or office network — see the caution below about shared networks.</li><li><b>Turn on Wi-Fi transfer in EarMemo.</b> It shows a local address such as <code>http://192.168.1.23:8080</code>.</li><li><b>Type that address into any desktop browser.</b> Chrome, Safari, Firefox, Windows or Mac — no software to install on the computer.</li><li><b>Drag the files or a whole folder onto the page.</b> Folder structure is preserved, so a book split across 40 files arrives as one book. Nothing leaves your local network at any point.</li></ol>
+  <figure class="shot"><div class="shot-frame"><img src="./img/en/wifi.webp" alt="EarMemo&#x27;s Wi-Fi Transfer screen: service running, a QR code, and a local address to open in a desktop browser" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>The address and QR code to open on the computer. Stop Service turns the page off.</figcaption></figure>
   <h2>Route 2 — the Files app</h2>
   <p>Works with anything the Files app can see: iCloud Drive, Dropbox, Google Drive, an SMB network share, or a USB stick plugged into the phone through the USB-C or Lightning port. Open the folder, select the audio, share it into your player. This is the route to use when the files are already in cloud storage you own.</p>
   <h2>Route 3 — the Share Sheet</h2>
   <p>For one-off files that arrive in Mail, Messages, or a download. Tap Share on the file and pick the player. EarMemo registers as a share target for audio and video files.</p>
+  <figure class="shot"><div class="shot-frame"><img src="./img/en/import-sheet.webp" alt="EarMemo&#x27;s Import sheet for Middlemarch.m4b: keep it Standalone, make a New Album, or add it to an existing album" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>A file picked in Files or shared to EarMemo lands here: keep it standalone or put it in an album.</figcaption></figure>
   <h2>Route 4 — Finder or AirDrop</h2>
   <p>Plug the phone into a Mac, open Finder, go to the Files tab, and drag into the app's document folder. Or AirDrop from a Mac and pick the player when iOS asks where to open it. Both are fine for a handful of files and tedious for a hundred.</p>
   <h2>Which route for which situation</h2>

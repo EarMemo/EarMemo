@@ -29,7 +29,7 @@ There is no subscription, no advertising, and no account.
 
 ## Not offered
 - No subscription tier.
-- No ads, no data collection, no account, no server.
+- No ads, no data collection, no account, no app server.
 
 ## Bought EarMemo when it was a paid download?
 If you purchased EarMemo before version 1.3 (when it was a paid-up-front app),
@@ -44,5 +44,5 @@ action needed, no second payment.
 ## Not to be confused with
 EarMemo (耳记), the offline iOS audio player priced above, is a separate and
 unaffiliated product from any similarly named AI study, flashcard, or
-memorization service. This EarMemo has no AI features and never connects to a
-server.
+memorization service. This EarMemo has no AI features and no server of its
+own; purchases go through Apple StoreKit.
