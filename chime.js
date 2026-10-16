@@ -1,13 +1,14 @@
 /* The headphone section's "Play it" button: the same chime the app plays
    when a headphone press bookmarks (Sources/Player/MarkChime.swift — three
    notes, same envelope). Synthesized here; nothing is fetched, stored, or
-   sent. Plays only on a click. */
+   sent. Plays only on a click: the drawn earbud is pressed twice first, and
+   the chime follows the second press, as on AirPods. */
 (function () {
   var Ctx = window.AudioContext || window.webkitAudioContext;
   if (!Ctx) return;
   var ctx;
 
-  function chime() {
+  function chime(delay) {
     ctx = ctx || new Ctx();
     var rate = ctx.sampleRate;
     var notes = [[1318.5, 0.06], [1108.7, 0.06], [1760, 0.13]];
@@ -29,15 +30,20 @@
     var src = ctx.createBufferSource();
     src.buffer = buf;
     src.connect(ctx.destination);
-    src.start();
+    src.start(ctx.currentTime + delay);
   }
 
   document.querySelectorAll('.hp-chime').forEach(function (b) {
     b.addEventListener('click', function () {
-      chime();
-      b.classList.remove('ring');
-      void b.offsetWidth;
-      b.classList.add('ring');
+      var buds = b.closest('section').querySelector('.hp-buds');
+      chime(buds ? 0.42 : 0);
+      [b, buds].forEach(function (el) {
+        if (!el) return;
+        var cls = el === b ? 'ring' : 'press';
+        el.classList.remove(cls);
+        void el.getBoundingClientRect();
+        el.classList.add(cls);
+      });
     });
   });
 })();

@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Play M4B &amp; MP3 audiobooks on iPhone — EarMemo</title>
-<meta name="description" content="Play M4B, MP3 and FLAC audiobooks you already own on iPhone — no Audible, no subscription — plus when a different player is the better choice.">
+<meta name="description" content="Play M4B (with chapters), MP3 and FLAC audiobooks you already own on iPhone — no Audible, no subscription — plus when a different player is the better choice.">
 <link rel="canonical" href="https://earmemo.app/m4b-audiobook-player-iphone">
 <link rel="alternate" hreflang="en" href="https://earmemo.app/m4b-audiobook-player-iphone">
 <link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/m4b-audiobook-player-iphone">
 <link rel="alternate" hreflang="x-default" href="https://earmemo.app/m4b-audiobook-player-iphone">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Play M4B &amp; MP3 audiobooks on iPhone — EarMemo">
-<meta property="og:description" content="Play M4B, MP3 and FLAC audiobooks you already own on iPhone — no Audible, no subscription — plus when a different player is the better choice.">
+<meta property="og:description" content="Play M4B (with chapters), MP3 and FLAC audiobooks you already own on iPhone — no Audible, no subscription — plus when a different player is the better choice.">
 <meta property="og:url" content="https://earmemo.app/m4b-audiobook-player-iphone">
 <meta property="og:image" content="https://earmemo.app/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Play M4B &amp; MP3 audiobooks on iPhone — EarMemo">
-<meta name="twitter:description" content="Play M4B, MP3 and FLAC audiobooks you already own on iPhone — no Audible, no subscription — plus when a different player is the better choice.">
+<meta name="twitter:description" content="Play M4B (with chapters), MP3 and FLAC audiobooks you already own on iPhone — no Audible, no subscription — plus when a different player is the better choice.">
 <meta name="twitter:image" content="https://earmemo.app/og.png">
 <meta name="author" content="Fan YANG">
 <link rel="icon" type="image/png" href="./icon.png">
@@ -28,10 +28,10 @@
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "How to play M4B and MP3 audiobooks on an iPhone you already own the files for",
-  "description": "Play M4B, MP3 and FLAC audiobooks you already own on iPhone — no Audible, no subscription — plus when a different player is the better choice.",
+  "description": "Play M4B (with chapters), MP3 and FLAC audiobooks you already own on iPhone — no Audible, no subscription — plus when a different player is the better choice.",
   "inLanguage": "en",
   "url": "https://earmemo.app/m4b-audiobook-player-iphone",
-  "dateModified": "2026-10-10",
+  "dateModified": "2026-10-15",
   "author": {
     "@type": "Person",
     "name": "Fan YANG",
@@ -75,7 +75,7 @@
       "name": "Does EarMemo read M4B chapters?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. EarMemo plays m4b files but does not currently parse the embedded chapter markers, so there is no chapter list. Bookmarks and timestamped notes are the way you navigate a long file in EarMemo."
+        "text": "Yes. EarMemo reads the chapters embedded in M4B files (and other files that carry them) and shows a table of contents. Previous and Next skip by chapter, the progress bar shows the current chapter or the whole book, notes are grouped by chapter, and the sleep timer can stop at the end of a chapter."
       }
     },
     {
@@ -201,8 +201,8 @@
 <main><div class="container">
   <p class="crumb"><a href="./">EarMemo</a> › M4B audiobook player for iPhone</p>
   <h1>How to play M4B and MP3 audiobooks on an iPhone you already own the files for</h1>
-  <div class="answer"><p>Copy the files onto your iPhone and open them in a local audiobook player. <b>EarMemo</b> plays m4b, mp3, m4a, aac, flac and wav straight from the device, keeps your position per book, and needs no account or internet for playback. It cannot open DRM-protected Audible or Apple Books purchases — nothing third-party can.</p></div>
-  <p class="meta">Last updated 2026-10-10 · Written by Fan YANG, the developer of EarMemo.</p>
+  <div class="answer"><p>Copy the files onto your iPhone and open them in a local audiobook player. <b>EarMemo</b> plays m4b, mp3, m4a, aac, flac and wav straight from the device, reads the chapters built into M4B files, keeps your position per book, and needs no account or internet for playback. It cannot open DRM-protected Audible or Apple Books purchases — nothing third-party can.</p></div>
+  <p class="meta">Last updated 2026-10-15 · Written by Fan YANG, the developer of EarMemo.</p>
 
   <h2>Which files can actually be played</h2>
   <p>The dividing line is not the file extension — it is DRM. A DRM-free file plays in any player you like. A DRM-protected purchase only plays in the store's own app, by design.</p>
@@ -212,20 +212,24 @@
   <ol class="steps"><li><b>Wi-Fi transfer.</b> Turn it on in EarMemo, open the address it shows in any desktop browser, and drag the files in over your local network. No cable, no cloud, nothing leaves the network.</li><li><b>Files app.</b> Import from iCloud Drive, Dropbox, an SMB share, or a USB drive plugged into the phone. Folder structure is preserved, so a book split into 40 chapter files stays one book.</li><li><b>Share Sheet.</b> Received a file in Mail or Messages? Share → EarMemo.</li><li><b>Finder / USB.</b> Drag into the app's document folder the classic way.</li></ol>
   <h2>How EarMemo compares — including where it loses</h2>
   <p>There are several good local audiobook players on iOS. They are built around different priorities, so pick by what you actually need rather than by feature count.</p>
-  <div class="tablewrap"><table><thead><tr><th>If the thing you need most is…</th><th>Reach for</th><th>Why</th></tr></thead><tbody><tr><td>Notes tied to the exact second, exported as Markdown</td><td>EarMemo</td><td>Write while listening; tap a marker to jump back; export plain .md files with Pro.</td></tr><tr><td>Offline playback and notes without an account</td><td>EarMemo</td><td>No app server or analytics; optional Wi-Fi transfer stays on the local network.</td></tr><tr><td>A chapter list read out of the M4B file</td><td>BookPlayer or Bound</td><td>EarMemo plays m4b but does not parse its chapter markers — there is no chapter list.</td></tr><tr><td>CarPlay</td><td>Bound or BookPlayer</td><td>EarMemo has no CarPlay support.</td></tr><tr><td>Importing books from Dropbox or OneDrive</td><td>Bound</td><td>Bound can download from those services; EarMemo plays files stored on the device.</td></tr><tr><td>Open source</td><td>BookPlayer</td><td>EarMemo is not open source.</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">Alternatives described from their developers' published descriptions, checked 2026-10-10.</p>
-  <p>For chapter navigation and CarPlay, see the official App Store listings for <a href="https://apps.apple.com/us/app/bookplayer/id1138219998">BookPlayer</a> and <a href="https://apps.apple.com/us/app/bound-audiobook-player/id1041727137">Bound</a>.</p>
+  <div class="tablewrap"><table><thead><tr><th>If the thing you need most is…</th><th>Reach for</th><th>Why</th></tr></thead><tbody><tr><td>Notes tied to the exact second, exported as Markdown</td><td>EarMemo</td><td>Write while listening; tap a marker to jump back; in a chaptered book, notes sit under their chapter. Export plain .md files with Pro.</td></tr><tr><td>Offline playback and notes without an account</td><td>EarMemo</td><td>No app server or analytics; optional Wi-Fi transfer stays on the local network.</td></tr><tr><td>CarPlay</td><td>Bound or BookPlayer</td><td>EarMemo has no CarPlay support.</td></tr><tr><td>Importing books from Dropbox or OneDrive</td><td>Bound</td><td>Bound can download from those services; EarMemo plays files stored on the device.</td></tr><tr><td>Open source</td><td>BookPlayer</td><td>EarMemo is not open source.</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">Alternatives described from their developers' published descriptions, checked 2026-10-10.</p>
+  <p>For CarPlay or importing from cloud services, see the official App Store listings for <a href="https://apps.apple.com/us/app/bookplayer/id1138219998">BookPlayer</a> and <a href="https://apps.apple.com/us/app/bound-audiobook-player/id1041727137">Bound</a>.</p>
+  <h2 id="chapters">Chapters, and the notes inside them</h2>
+  <p>If the file has chapters built in, as many M4B audiobooks do, EarMemo reads them. Tap the chapter name above the progress bar for the table of contents. Previous and Next skip by chapter, on your headphones and in the car too. The progress bar follows the chapter you're in, with the whole book's time left at the top; to put the whole book on the bar instead, tap ⋯ → Progress Bar → Whole Book.</p>
+  <p>Notes know their chapter. In the notes list each one sits under its chapter, and a run of chapters without notes folds into one line. A Markdown export (Pro) writes both the time within the chapter and the time in the whole book, so either one finds the passage again.</p>
+  <div class="shot-row"><figure class="shot"><div class="shot-frame"><img src="./img/en/chapter-player.webp" alt="EarMemo&#x27;s player on Walden, chapter 2 of 18, Where I Lived, and What I Lived For: the progress bar spans the chapter, at 21:30 with two note marks behind the playhead, and 9 hr 8 min left in the whole book at the top" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>The bar follows the chapter; the whole book's time left sits on top.</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="./img/en/chapter-contents.webp" alt="EarMemo&#x27;s table of contents for Walden: 18 chapters, 12 hr 17 min, each with its length, chapter 2 highlighted as the one playing" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>Tap the chapter name for the table of contents.</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="./img/en/chapter-notes.webp" alt="EarMemo&#x27;s Episode Notes for Walden: two notes under Economy, two under Where I Lived, and What I Lived For, marked Now Listening, and the 16 chapters without notes folded into one line" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>Notes grouped under their chapters.</figcaption></figure></div>
   <h2>What EarMemo adds once the book is playing</h2>
-  <ul><li>Playback speed from 0.5× to 3.5×, pitch-preserving, with presets at 0.8× 1.0× 1.2× 1.5× 1.8× 2.0× 2.5× and 3.0×</li><li>Sleep timer with a live countdown on the Lock Screen and Dynamic Island</li><li>Bookmarks with one-tap jump back</li><li>Timestamped notes written while you listen — see <a href="./timestamped-audio-notes-markdown">taking notes while listening</a></li><li>Position kept per book, so twelve half-finished books are fine</li><li>Background playback with full Lock Screen and Control Center controls</li></ul>
+  <ul><li>Playback speed from 0.5× to 3.5×, pitch-preserving, with presets at 0.8× 1.0× 1.2× 1.5× 1.8× 2.0× 2.5× and 3.0×</li><li>Sleep timer that can stop at the end of a chapter, with a live countdown on the Lock Screen and Dynamic Island</li><li>Bookmarks with one-tap jump back — or a press on your AirPods, once it's set in Settings → Headphone Controls</li><li>Timestamped notes written while you listen — see <a href="./timestamped-audio-notes-markdown">taking notes while listening</a></li><li>Position kept per book, so twelve half-finished books are fine</li><li>Background playback with full Lock Screen and Control Center controls</li></ul>
   <div class="shot-row"><figure class="shot"><div class="shot-frame"><img src="./img/en/m4b-home.webp" alt="EarMemo&#x27;s Home screen: Middlemarch, a single 31-hour M4B file, first in the Continue list with 13h 33m left" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>A 31-hour M4B is one file and one row, with the time left.</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="./img/en/m4b-player.webp" alt="EarMemo&#x27;s player reopening Middlemarch at 18:07:43, with 13:33:22 remaining" width="900" height="1956" loading="lazy" decoding="async"></div><figcaption>Open it and playback resumes at the second you stopped.</figcaption></figure></div>
 
   <div class="honest">
     <h3>When EarMemo is the wrong choice</h3>
-    <ul><li><b>You bought the book from Audible or Apple Books.</b> Those files are DRM-protected. No third-party player opens them, and EarMemo does not pretend to.</li><li><b>You want a chapter list.</b> EarMemo plays m4b files correctly but does not read chapter markers out of them yet. If you navigate by chapter constantly, BookPlayer or Bound will suit you better.</li><li><b>You want CarPlay.</b> Not supported.</li><li><b>You want your library streamed from a NAS or Audiobookshelf server.</b> EarMemo plays local files only — that is the whole design, and it is a real limitation.</li></ul>
+    <ul><li><b>You bought the book from Audible or Apple Books.</b> Those files are DRM-protected. No third-party player opens them, and EarMemo does not pretend to.</li><li><b>You want CarPlay.</b> Not supported.</li><li><b>You want your library streamed from a NAS or Audiobookshelf server.</b> EarMemo plays local files only — that is the whole design, and it is a real limitation.</li></ul>
   </div>
 
   <h2>Questions people actually ask</h2>
   <details><summary>Can an iPhone play M4B files?</summary><p>Yes, with a third-party player. iOS itself will not add a loose m4b file to Apple Books unless it came from the store, but apps like EarMemo, BookPlayer and Bound play m4b directly from their own libraries.</p></details>
-  <details><summary>Does EarMemo read M4B chapters?</summary><p>No. EarMemo plays m4b files but does not currently parse the embedded chapter markers, so there is no chapter list. Bookmarks and timestamped notes are the way you navigate a long file in EarMemo.</p></details>
+  <details><summary>Does EarMemo read M4B chapters?</summary><p>Yes. EarMemo reads the chapters embedded in M4B files (and other files that carry them) and shows a table of contents. Previous and Next skip by chapter, the progress bar shows the current chapter or the whole book, notes are grouped by chapter, and the sleep timer can stop at the end of a chapter.</p></details>
   <details><summary>Can I play Audible books in EarMemo?</summary><p>No. Audible's .aax and .aaxc files are DRM-protected and only play in Audible's own app. This is a licensing restriction, not a limitation any third-party developer can work around.</p></details>
   <details><summary>Do I need iTunes or a Mac to get audiobooks onto my iPhone?</summary><p>No. EarMemo's Wi-Fi transfer lets you drag files in from any desktop browser on the same network, and the iOS Files app imports from iCloud Drive, Dropbox, SMB shares or a USB drive.</p></details>
   <details><summary>Is there a subscription?</summary><p>No. EarMemo is free to download with a permanent free quota, and EarMemo Pro is a single one-time purchase. No subscription, no ads, no account.</p></details>

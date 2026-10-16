@@ -42,6 +42,7 @@
   "image": "https://earmemo.app/icon.png",
   "screenshot": [
     "https://earmemo.app/img/zh/player.webp",
+    "https://earmemo.app/img/zh/chapter-player.webp",
     "https://earmemo.app/img/zh/home.webp",
     "https://earmemo.app/img/zh/notes.webp",
     "https://earmemo.app/img/zh/history.webp",
@@ -77,12 +78,13 @@
   "featureList": [
     "Import local audio and video files (mp3, m4a, m4b, flac, aac, wav, mp4, mov, m4v)",
     "Background playback with Lock Screen and Control Center controls",
-    "Sleep timer with Live Activity countdown on Dynamic Island and Lock Screen",
+    "Audiobook chapters (M4B and other files with embedded chapters): table of contents, skip by chapter, progress and time left for the chapter or the whole book",
+    "Sleep timer, including end of chapter, with Live Activity countdown on Dynamic Island and Lock Screen",
     "Yearly heatmap of listening history, plus weekly and monthly breakdowns",
     "Bookmarks with one-tap jump back for long-form content",
     "Bookmark from headphones: AirPods Pro press twice or three times, confirmed by a short chime",
-    "Per-album notes with timestamp markers, auto-saved while listening",
-    "Markdown note export with EarMemo Pro",
+    "Per-album notes with timestamp markers, auto-saved while listening, grouped by chapter in audiobooks",
+    "Markdown note export with EarMemo Pro, with chapter and whole-book times for chaptered audiobooks",
     "Variable playback speed",
     "Share Sheet import from Messages, Mail, Files",
     "Offline playback and notes without an internet connection",
@@ -144,6 +146,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "耳记支持常见的音频格式：mp3、m4a、m4b（有声书常用封装）、aac、flac、wav。视频文件（mp4、mov、m4v）会按音频播放，所以你可以只听不看。Apple Books、Audible 等带 DRM 的购买内容无法导入。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "耳记支持 m4b 章节吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "支持。自带章节的有声书（M4B 等）会显示目录，上一章 / 下一章按章跳；进度条可以按本章或全书显示，顶部写着全书还剩多久。笔记按章节分段，睡眠定时也可以设在本章结束时停。"
       }
     },
     {
@@ -238,7 +248,7 @@
         <a class="more" href="./tour">在一整页上完整体验 →</a>
         <ul class="slow">
           <li>时间戳笔记，一点即跳回原句</li>
-          <li>按节目、按集数归拢成册，回看清晰</li>
+          <li>按节目、按集数归拢成册，有声书再按章节分段</li>
           <li>Pro 一次买断后，可导出 Markdown 到自己的笔记软件</li>
         </ul>
         <a class="more slow" href="./how-to-remember-audiobooks">有声书听完就忘，怎么记住 →</a>
@@ -252,11 +262,14 @@
         <p class="eyebrow">耳机收藏</p>
         <h2>手机不用掏出来，按一下耳机就记下</h2>
         <p class="lead slow">手机在兜里，手上正忙，想留的那句话正在过去。在 AirPods Pro 上按两下，「叮」一声，这一秒就记下了——自动往前留 2 秒，抓得住那句话的开头。要写的话，以后再补。</p>
-        <ol class="hp-steps">
-          <li><span><b>设一次。</b>设置 → 耳机按键 → 把「下一首」改成「收藏此处」</span></li>
-          <li><span><b>按两下</b> AirPods Pro（设的是「上一首」就按三下）</span></li>
-          <li><span><b>听到提示音</b>，标记已经在笔记里了。<button type="button" class="hp-chime js-only">▶ 听一下</button></span></li>
-        </ol>
+        <div class="hp-how">
+          <ol class="hp-steps">
+            <li><span><b>设一次。</b>设置 → 耳机按键 → 把「下一首」改成「收藏此处」</span></li>
+            <li><span><b>按两下</b> AirPods Pro（设的是「上一首」就按三下）</span></li>
+            <li><span><b>听到提示音</b>，标记已经在笔记里了。<button type="button" class="hp-chime js-only">▶ 听一下</button></span></li>
+          </ol>
+          <svg class="hp-buds" viewBox="8 12 290 206" aria-hidden="true" focusable="false"><g class="hp-bud"><rect x="76" y="79" width="30" height="129" rx="15"/><ellipse cx="71.5" cy="67" rx="53.5" ry="45"/></g><g class="hp-bud"><rect x="238" y="79" width="30" height="129" rx="15"/><ellipse cx="233.5" cy="67" rx="53.5" ry="45"/></g><ellipse class="hp-port" cx="35.5" cy="63.5" rx="9.5" ry="16.5"/><ellipse class="hp-port" cx="262.5" cy="63.5" rx="9.5" ry="16.5"/><path class="hp-mic" d="M87 181h9M249 181h9"/><circle class="hp-wave" cx="91.5" cy="160.5" r="27.5"/><circle class="hp-wave" cx="91.5" cy="160.5" r="27.5"/><circle class="hp-ring" cx="91.5" cy="160.5" r="27.5"/><circle class="hp-dot" cx="91.5" cy="160.5" r="8.5"/><text class="hp-x2" x="128" y="171">×2</text></svg>
+        </div>
         <ul class="slow">
           <li>每按一下记一条，免费版也不限数量</li>
           <li>车上方向盘的「下一首」键也跟这个设置走</li>
@@ -282,9 +295,26 @@
     </div>
   </section>
 
+  <section class="ch" id="chapters">
+    <div class="ch-body split">
+      <div class="copy">
+        <p class="eyebrow">有声书</p>
+        <h2>按章听，也看得见整本</h2>
+        <p class="lead slow">自带章节的有声书（M4B 等）直接显示目录。进度条默认走本章，上方写着全书还剩多久；想看整本，把进度条切到全书就行。笔记也知道自己在哪一章。</p>
+        <ul class="slow">
+          <li>目录一点就到；上一章 / 下一章按章跳，耳机和车载按键也一样</li>
+          <li>笔记按章节分段；Pro 导出的 Markdown 同时写章节时间和全书时间</li>
+          <li>睡眠定时可以设在本章结束时停</li>
+        </ul>
+        <a class="more slow" href="./m4b-audiobook-player-iphone">在 iPhone 上听 m4b 有声书 →</a>
+      </div>
+      <div class="device"><img src="../img/zh/chapter-player.webp" alt="耳记播放页：《呐喊》第 9 / 15 章《故乡》，进度条只走本章，轴上标着笔记，顶部写着全书剩 3 小时 37 分" width="900" height="1956" loading="lazy" decoding="async"></div>
+    </div>
+  </section>
 
   <section class="ch" id="history">
     <div class="ch-body split">
+      <div class="device"><img src="../img/zh/history.webp" alt="耳记收听历史：年度热力图、累计小时与最常听的专辑" width="900" height="1956" loading="lazy" decoding="async"></div>
       <div class="copy">
         <p class="eyebrow">收听记录</p>
         <h2>你听了多久，清清楚楚</h2>
@@ -295,13 +325,11 @@
           <li>数据全在本地，不上传、不分析你</li>
         </ul>
       </div>
-      <div class="device"><img src="../img/zh/history.webp" alt="耳记收听历史：年度热力图、累计小时与最常听的专辑" width="900" height="1956" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
   <section class="ch" id="import">
     <div class="ch-body split">
-      <div class="device"><img src="../img/zh/wifi.webp" alt="耳记 Wi-Fi 传输页：二维码和一个在电脑浏览器里打开的局域网地址" width="900" height="1956" loading="lazy" decoding="async"></div>
       <div class="copy">
         <p class="eyebrow">导入</p>
         <h2>把文件搬进来，不用线</h2>
@@ -312,6 +340,7 @@
           <li>mp3、m4a、m4b、flac、aac、wav，mp4 / mov 仅听声音</li>
         </ul>
       </div>
+      <div class="device"><img src="../img/zh/wifi.webp" alt="耳记 Wi-Fi 传输页：二维码和一个在电脑浏览器里打开的局域网地址" width="900" height="1956" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
@@ -324,7 +353,7 @@
         <div><h3>变速播放</h3><p>加速或放慢，声音不会变调走样。</p></div>
         <div><h3>Siri 与快捷指令</h3><p>播放、暂停、快进快退、标记当前时刻，说一句就行。</p></div>
         <div><h3>系统分享导入</h3><p>从 信息、邮件、文件，或任何能分享的 App 直接送进来。</p></div>
-        <div><h3>广泛格式支持</h3><p>mp3 · m4a · m4b · flac · aac · wav；mp4 / mov / m4v 只取音轨来听。暂不支持读取 M4B 内嵌章节列表。</p></div>
+        <div><h3>广泛格式支持</h3><p>mp3 · m4a · m4b · flac · aac · wav；mp4 / mov / m4v 只取音轨来听。M4B 内嵌章节也能读出来。</p></div>
       </div>
     </div>
   </section>
@@ -380,6 +409,10 @@
       <details>
         <summary>耳记支持哪些音视频格式？</summary>
         <p>耳记支持常见的音频格式：mp3、m4a、m4b（有声书常用封装）、aac、flac、wav。视频文件（mp4、mov、m4v）会按音频播放，所以你可以只听不看。Apple Books、Audible 等带 DRM 的购买内容无法导入。</p>
+      </details>
+      <details>
+        <summary>耳记支持 m4b 章节吗？</summary>
+        <p>支持。自带章节的有声书（M4B 等）会显示目录，上一章 / 下一章按章跳；进度条可以按本章或全书显示，顶部写着全书还剩多久。笔记按章节分段，睡眠定时也可以设在本章结束时停。</p>
       </details>
       <details>
         <summary>耳记会收集数据吗？</summary>

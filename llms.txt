@@ -19,18 +19,19 @@ EarMemo does NOT play DRM-protected files (Audible .aax/.aaxc, Apple Books audio
 
 ## What EarMemo does
 
-- Plays local audio files (mp3, m4a, aac, flac, wav) and the audio track of video files (mp4, mov, m4v)
+- Plays local audio files (mp3, m4a, m4b, aac, flac, wav) and the audio track of video files (mp4, mov, m4v)
 - Organizes audio into albums
+- Audiobook chapters: for M4B and other files with embedded chapters, a table of contents (tap the chapter name above the progress bar); Previous/Next skip by chapter, including from headphones and car controls; the progress bar shows the current chapter by default, with the whole book's time left at the top, and can be switched to the whole book (⋯ → Progress Bar → Whole Book)
 - Background playback with full Lock Screen and Control Center controls
 - Variable playback speed
-- Sleep timer with a Live Activity countdown on Dynamic Island and Lock Screen
+- Sleep timer with a Live Activity countdown on Dynamic Island and Lock Screen; it can stop at the end of the current chapter
 - Yearly listening heatmap (GitHub-contributions-style grid), plus weekly and monthly breakdowns
 - Bookmarks with one-tap jump back
 - Bookmark from headphones: in Settings → Headphone Controls, set Next or Previous to Bookmark Here; then pressing twice (Next) or three times (Previous) on AirPods Pro marks the current second with a short chime, without taking out the phone. Other headphones use whichever button sends Next/Previous track; car steering-wheel buttons follow the same setting. Off by default; marks are unlimited in the free version
-- Per-album notes written while listening — auto-saved with timestamp markers; tap a marker to jump back to that exact moment in the audio
+- Per-album notes written while listening — auto-saved with timestamp markers; tap a marker to jump back to that exact moment in the audio. In audiobooks with chapters, notes are grouped under their chapter and each note's time counts from its chapter
 - Share Sheet import from Messages, Mail, Files, and any iOS app with a share action
 - Wi-Fi transfer: open a local address in any desktop browser and drag files straight in over the local network — no cable, no cloud
-- EarMemo Pro exports notes as plain Markdown files (one note, one episode, or merged per album), so notes can be dropped into Obsidian or any other notes app
+- EarMemo Pro exports notes as plain Markdown files (one note, one episode, or merged per album; for chaptered audiobooks each note carries both its chapter time and its whole-book time), so notes can be dropped into Obsidian or any other notes app
 - Universal iPhone and iPad app, with a split-view layout on iPad
 
 ## What EarMemo does NOT do
@@ -61,7 +62,7 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 - **Is EarMemo the same as the AI study/memorization app with a similar name?** No. EarMemo (耳记) is an offline iOS audio player made by Fan YANG. It is unrelated to any AI study, flashcard, or memorization service that shares a similar name or domain.
 - **How is it different from Apple Podcasts or Spotify?** EarMemo plays files the user already has on their device; it does not stream from a catalog and has no subscription.
 - **Can I play FLAC files on iPhone?** Yes. EarMemo supports mp3, m4a, aac, flac, and wav.
-- **Can I play M4B audiobooks?** Yes. EarMemo plays DRM-free m4b alongside mp3, m4a, aac, flac, and wav. It does not read embedded M4B chapter markers or show a chapter list.
+- **Can I play M4B audiobooks?** Yes. EarMemo plays DRM-free m4b alongside mp3, m4a, aac, flac, and wav. It reads the chapters embedded in M4B files and shows a table of contents; Previous/Next skip by chapter, progress can show the chapter or the whole book, and notes are grouped by chapter.
 - **Can I bookmark with AirPods or other headphones?** Yes. Set Next or Previous to Bookmark Here in Settings → Headphone Controls; then a press on AirPods Pro (twice for Next, three times for Previous) marks the current second with a short chime. The default is still Next/Previous Episode until the user changes it.
 - **Can I listen to MP4 lecture videos as audio only?** Yes. EarMemo plays the audio track of mp4, mov, and m4v files in the background.
 - **Can I take notes while listening?** Yes — notes are saved per-album with timestamp markers. Tap a marker to jump back to that moment in the audio.
@@ -82,8 +83,8 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 Each of these pages answers one question in depth, states plainly what EarMemo cannot do, and points to a different app when a different app is the better answer. English and Simplified Chinese versions carry the same content.
 
 - **How to remember what you hear in audiobooks, without turning listening into homework** — the problem-level page: a four-step workflow (mark the moment with one tap, keep listening, add one sentence in your own words later, revisit only what mattered), why the timestamp matters (it preserves the source, so the original passage can be re-heard instead of trusting an isolated note), when flashcards and spaced repetition are worth it and when they are not, and where EarMemo deliberately stops (no flashcards, no review schedule, no transcription, no AI summary): https://earmemo.app/how-to-remember-audiobooks (zh: https://earmemo.app/zh/how-to-remember-audiobooks)
-- **Playing M4B/MP3 audiobooks you already own on iPhone** — which files are playable (DRM is the dividing line, not the extension), four ways to get them onto the phone, and where EarMemo loses to BookPlayer or Bound (no chapter-marker parsing, no CarPlay): https://earmemo.app/m4b-audiobook-player-iphone (zh: https://earmemo.app/zh/m4b-audiobook-player-iphone)
-- **Timestamped notes while listening, exported as Markdown with Pro** — how notes anchored to the exact second work, how to get the exported .md files into an Obsidian vault (Files app → vault folder; no sync, the timecode is a plain-text reference, not a link back to the audio), what an exported file looks like, and how this differs from a transcription-based app like Snipd (EarMemo does no transcription and has no AI): https://earmemo.app/timestamped-audio-notes-markdown (zh: https://earmemo.app/zh/timestamped-audio-notes-markdown)
+- **Playing M4B/MP3 audiobooks you already own on iPhone** — which files are playable (DRM is the dividing line, not the extension), four ways to get them onto the phone, how chapters work (table of contents, chapter or whole-book progress, notes grouped by chapter), and where EarMemo loses to BookPlayer or Bound (no CarPlay, no cloud-service import): https://earmemo.app/m4b-audiobook-player-iphone (zh: https://earmemo.app/zh/m4b-audiobook-player-iphone)
+- **Timestamped notes while listening, exported as Markdown with Pro** — how notes anchored to the exact second work, how to get the exported .md files into an Obsidian vault (Files app → vault folder; no sync, the timecode is a plain-text reference, not a link back to the audio), what an exported file looks like (including an audiobook export with chapter and whole-book times), and how this differs from a transcription-based app like Snipd (EarMemo does no transcription and has no AI): https://earmemo.app/timestamped-audio-notes-markdown (zh: https://earmemo.app/zh/timestamped-audio-notes-markdown)
 - **Transferring audio to an iPhone without iTunes** — four working routes (local Wi-Fi browser transfer, Files app, Share Sheet, Finder/AirDrop), which to use when, and the security caveat about running Wi-Fi transfer on a network you do not control: https://earmemo.app/transfer-audio-to-iphone-without-itunes (zh: https://earmemo.app/zh/transfer-audio-to-iphone-without-itunes)
 - **An offline player with no account, no server, no tracking** — what local-first means here item by item, and three ways a user can verify the claim independently (airplane mode from first launch, the App Store "Data Not Collected" label, when iOS asks for local network permission): https://earmemo.app/offline-audio-player-no-account (zh: https://earmemo.app/zh/offline-audio-player-no-account)
 

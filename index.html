@@ -41,6 +41,7 @@
   "image": "https://earmemo.app/icon.png",
   "screenshot": [
     "https://earmemo.app/img/en/player.webp",
+    "https://earmemo.app/img/en/chapter-player.webp",
     "https://earmemo.app/img/en/home.webp",
     "https://earmemo.app/img/en/notes.webp",
     "https://earmemo.app/img/en/history.webp",
@@ -76,12 +77,13 @@
   "featureList": [
     "Import local audio and video files (mp3, m4a, m4b, flac, aac, wav, mp4, mov, m4v)",
     "Background playback with Lock Screen and Control Center controls",
-    "Sleep timer with Live Activity countdown on Dynamic Island and Lock Screen",
+    "Audiobook chapters (M4B and other files with embedded chapters): table of contents, skip by chapter, progress and time left for the chapter or the whole book",
+    "Sleep timer, including end of chapter, with Live Activity countdown on Dynamic Island and Lock Screen",
     "Yearly heatmap of listening history, plus weekly and monthly breakdowns",
     "Bookmarks with one-tap jump back for long-form content",
     "Bookmark from headphones: AirPods Pro press twice or three times, confirmed by a short chime",
-    "Per-album notes with timestamp markers, auto-saved while listening",
-    "Markdown note export with EarMemo Pro",
+    "Per-album notes with timestamp markers, auto-saved while listening, grouped by chapter in audiobooks",
+    "Markdown note export with EarMemo Pro, with chapter and whole-book times for chaptered audiobooks",
     "Variable playback speed",
     "Share Sheet import from Messages, Mail, Files",
     "Offline playback and notes without an internet connection",
@@ -143,6 +145,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "EarMemo supports common audio formats including mp3, m4a, m4b (the standard audiobook container), aac, flac, and wav. Video files (mp4, mov, m4v) are played audio-only, so you can listen to the soundtrack of a video without watching it. DRM-protected purchases from Apple Books or Audible cannot be imported."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does EarMemo support M4B chapters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. For M4B and other audiobooks with embedded chapters, EarMemo shows the table of contents, Previous and Next skip by chapter, and the progress bar shows the current chapter or the whole book — your choice — with the whole book's time left at the top. Notes are grouped by chapter, and the sleep timer can stop at the end of a chapter."
       }
     },
     {
@@ -237,7 +247,7 @@
         <a class="more" href="./tour">Try it on a whole page →</a>
         <ul class="slow">
           <li>Timestamped notes — one tap jumps to the line</li>
-          <li>Grouped per album and episode, easy to review</li>
+          <li>Grouped by album and episode — and by chapter in audiobooks</li>
           <li>Export notes as Markdown with a one-time Pro unlock</li>
         </ul>
         <a class="more slow" href="./how-to-remember-audiobooks">How to remember what you hear →</a>
@@ -251,11 +261,14 @@
         <p class="eyebrow">Headphones</p>
         <h2>Mark it without taking out your phone</h2>
         <p class="lead slow">Phone in your pocket, hands busy, and the line you want is going by. Press your AirPods twice: a short chime, and that second is saved — two seconds early, so it catches the start of the sentence. The words can come later.</p>
-        <ol class="hp-steps">
-          <li><span><b>Set it once.</b> Settings → Headphone Controls → Next: <i>Bookmark Here</i></span></li>
-          <li><span><b>Press twice</b> on AirPods Pro (three times if you set Previous)</span></li>
-          <li><span><b>Hear the chime.</b> The mark is in your notes.<button type="button" class="hp-chime js-only">▶ Play it</button></span></li>
-        </ol>
+        <div class="hp-how">
+          <ol class="hp-steps">
+            <li><span><b>Set it once.</b> Settings → Headphone Controls → Next: <i>Bookmark Here</i></span></li>
+            <li><span><b>Press twice</b> on AirPods Pro (three times if you set Previous)</span></li>
+            <li><span><b>Hear the chime.</b> The mark is in your notes.<button type="button" class="hp-chime js-only">▶ Play it</button></span></li>
+          </ol>
+          <svg class="hp-buds" viewBox="8 12 290 206" aria-hidden="true" focusable="false"><g class="hp-bud"><rect x="76" y="79" width="30" height="129" rx="15"/><ellipse cx="71.5" cy="67" rx="53.5" ry="45"/></g><g class="hp-bud"><rect x="238" y="79" width="30" height="129" rx="15"/><ellipse cx="233.5" cy="67" rx="53.5" ry="45"/></g><ellipse class="hp-port" cx="35.5" cy="63.5" rx="9.5" ry="16.5"/><ellipse class="hp-port" cx="262.5" cy="63.5" rx="9.5" ry="16.5"/><path class="hp-mic" d="M87 181h9M249 181h9"/><circle class="hp-wave" cx="91.5" cy="160.5" r="27.5"/><circle class="hp-wave" cx="91.5" cy="160.5" r="27.5"/><circle class="hp-ring" cx="91.5" cy="160.5" r="27.5"/><circle class="hp-dot" cx="91.5" cy="160.5" r="8.5"/><text class="hp-x2" x="128" y="171">×2</text></svg>
+        </div>
         <ul class="slow">
           <li>Every press is its own mark — unlimited, free version included</li>
           <li>Car steering-wheel buttons follow the same setting</li>
@@ -281,9 +294,26 @@
     </div>
   </section>
 
+  <section class="ch" id="chapters">
+    <div class="ch-body split">
+      <div class="copy">
+        <p class="eyebrow">Audiobooks</p>
+        <h2>Listen by chapter, and still see the whole book</h2>
+        <p class="lead slow">Books with built-in chapters — M4B and more — open to their table of contents. The progress bar follows the chapter you're in, with the whole book's time left above it; switch the bar to the whole book whenever you like. Your notes know their chapter too.</p>
+        <ul class="slow">
+          <li>Table of contents; Previous and Next skip by chapter, on headphones and in the car too</li>
+          <li>Notes grouped by chapter; Markdown export (Pro) writes both the chapter and the book time</li>
+          <li>Sleep timer that stops at the end of the chapter</li>
+        </ul>
+        <a class="more slow" href="./m4b-audiobook-player-iphone">Playing M4B audiobooks on iPhone →</a>
+      </div>
+      <div class="device"><img src="./img/en/chapter-player.webp" alt="EarMemo Now Playing on Walden, chapter 2 of 18: the progress bar covers the chapter, with two note marks, and 9 hr 8 min left in the whole book at the top" width="900" height="1956" loading="lazy" decoding="async"></div>
+    </div>
+  </section>
 
   <section class="ch" id="history">
     <div class="ch-body split">
+      <div class="device"><img src="./img/en/history.webp" alt="EarMemo listening history: a yearly heatmap, total hours, and most-played albums" width="900" height="1956" loading="lazy" decoding="async"></div>
       <div class="copy">
         <p class="eyebrow">Listening history</p>
         <h2>See your whole year of listening</h2>
@@ -294,13 +324,11 @@
           <li>All on-device — never uploaded, never analyzed</li>
         </ul>
       </div>
-      <div class="device"><img src="./img/en/history.webp" alt="EarMemo listening history: a yearly heatmap, total hours, and most-played albums" width="900" height="1956" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
   <section class="ch" id="import">
     <div class="ch-body split">
-      <div class="device"><img src="./img/en/wifi.webp" alt="EarMemo Wi-Fi Transfer: a QR code and a local address to open in a computer browser" width="900" height="1956" loading="lazy" decoding="async"></div>
       <div class="copy">
         <p class="eyebrow">Import</p>
         <h2>Get your files in, fast</h2>
@@ -311,6 +339,7 @@
           <li>mp3 · m4a · m4b · flac · aac · wav, plus mp4 / mov audio-only</li>
         </ul>
       </div>
+      <div class="device"><img src="./img/en/wifi.webp" alt="EarMemo Wi-Fi Transfer: a QR code and a local address to open in a computer browser" width="900" height="1956" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
@@ -323,7 +352,7 @@
         <div><h3>Variable speed</h3><p>Speed up or slow down without the audio turning to chipmunks.</p></div>
         <div><h3>Siri &amp; Shortcuts</h3><p>Play, pause, skip, or bookmark the moment by voice.</p></div>
         <div><h3>Share Sheet import</h3><p>Send files in from Messages, Mail, Files, or any app with a share action.</p></div>
-        <div><h3>Wide format support</h3><p>mp3 · m4a · m4b · flac · aac · wav, plus mp4 / mov / m4v played audio-only. M4B chapter lists are not supported.</p></div>
+        <div><h3>Wide format support</h3><p>mp3 · m4a · m4b · flac · aac · wav, plus mp4 / mov / m4v played audio-only. M4B chapters are read too.</p></div>
       </div>
     </div>
   </section>
@@ -379,6 +408,10 @@
       <details>
         <summary>Which audio and video formats does EarMemo support?</summary>
         <p>EarMemo supports common audio formats including mp3, m4a, m4b (the standard audiobook container), aac, flac, and wav. Video files (mp4, mov, m4v) are played audio-only, so you can listen to the soundtrack of a video without watching it. DRM-protected purchases from Apple Books or Audible cannot be imported.</p>
+      </details>
+      <details>
+        <summary>Does EarMemo support M4B chapters?</summary>
+        <p>Yes. For M4B and other audiobooks with embedded chapters, EarMemo shows the table of contents, Previous and Next skip by chapter, and the progress bar shows the current chapter or the whole book — your choice — with the whole book's time left at the top. Notes are grouped by chapter, and the sleep timer can stop at the end of a chapter.</p>
       </details>
       <details>
         <summary>Does EarMemo collect any data?</summary>
