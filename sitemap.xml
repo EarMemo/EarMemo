@@ -8,6 +8,8 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/"/>
   </url>
   <url>
@@ -17,6 +19,30 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/ja/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/de/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/"/>
   </url>
   <url>
@@ -26,6 +52,8 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/how-to-remember-audiobooks"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/how-to-remember-audiobooks"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/how-to-remember-audiobooks"/>
   </url>
   <url>
@@ -35,6 +63,30 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/how-to-remember-audiobooks"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/how-to-remember-audiobooks"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/ja/how-to-remember-audiobooks</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/how-to-remember-audiobooks"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/de/how-to-remember-audiobooks</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/how-to-remember-audiobooks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/how-to-remember-audiobooks"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/how-to-remember-audiobooks"/>
   </url>
   <url>
@@ -44,6 +96,8 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/m4b-audiobook-player-iphone"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/m4b-audiobook-player-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/m4b-audiobook-player-iphone"/>
   </url>
   <url>
@@ -53,6 +107,30 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/m4b-audiobook-player-iphone"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/m4b-audiobook-player-iphone"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/ja/m4b-audiobook-player-iphone</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/m4b-audiobook-player-iphone"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/de/m4b-audiobook-player-iphone</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/m4b-audiobook-player-iphone"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/m4b-audiobook-player-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/m4b-audiobook-player-iphone"/>
   </url>
   <url>
@@ -62,6 +140,8 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/timestamped-audio-notes-markdown"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/timestamped-audio-notes-markdown"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/timestamped-audio-notes-markdown"/>
   </url>
   <url>
@@ -71,6 +151,30 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/timestamped-audio-notes-markdown"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/timestamped-audio-notes-markdown"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/ja/timestamped-audio-notes-markdown</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/timestamped-audio-notes-markdown"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/de/timestamped-audio-notes-markdown</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/timestamped-audio-notes-markdown"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/timestamped-audio-notes-markdown"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/timestamped-audio-notes-markdown"/>
   </url>
   <url>
@@ -80,6 +184,8 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/transfer-audio-to-iphone-without-itunes"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/transfer-audio-to-iphone-without-itunes"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/transfer-audio-to-iphone-without-itunes"/>
   </url>
   <url>
@@ -89,6 +195,30 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/transfer-audio-to-iphone-without-itunes"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/transfer-audio-to-iphone-without-itunes"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/ja/transfer-audio-to-iphone-without-itunes</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/transfer-audio-to-iphone-without-itunes"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/de/transfer-audio-to-iphone-without-itunes</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/transfer-audio-to-iphone-without-itunes"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/transfer-audio-to-iphone-without-itunes"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/transfer-audio-to-iphone-without-itunes"/>
   </url>
   <url>
@@ -98,6 +228,8 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/offline-audio-player-no-account"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/offline-audio-player-no-account"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/offline-audio-player-no-account"/>
   </url>
   <url>
@@ -107,6 +239,30 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/offline-audio-player-no-account"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/offline-audio-player-no-account"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/ja/offline-audio-player-no-account</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/offline-audio-player-no-account"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/de/offline-audio-player-no-account</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/offline-audio-player-no-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/offline-audio-player-no-account"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/offline-audio-player-no-account"/>
   </url>
   <url>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>アカウント不要のオフライン再生 — EarMemo</title>
+<meta name="description" content="EarMemo の再生・メモ・統計は端末内に。任意のローカル Wi-Fi 転送と Apple の購入処理、iCloud バックアップとの関係を説明。">
+<link rel="canonical" href="https://earmemo.app/ja/offline-audio-player-no-account">
+<link rel="alternate" hreflang="en" href="https://earmemo.app/offline-audio-player-no-account">
+<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/offline-audio-player-no-account">
+<link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/offline-audio-player-no-account">
+<link rel="alternate" hreflang="de" href="https://earmemo.app/de/offline-audio-player-no-account">
+<link rel="alternate" hreflang="x-default" href="https://earmemo.app/offline-audio-player-no-account">
+<meta property="og:type" content="article">
+<meta property="og:title" content="アカウント不要のオフライン再生 — EarMemo">
+<meta property="og:description" content="EarMemo の再生・メモ・統計は端末内に。任意のローカル Wi-Fi 転送と Apple の購入処理、iCloud バックアップとの関係を説明。">
+<meta property="og:url" content="https://earmemo.app/ja/offline-audio-player-no-account">
+<meta property="og:image" content="https://earmemo.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="アカウント不要のオフライン再生 — EarMemo">
+<meta name="twitter:description" content="EarMemo の再生・メモ・統計は端末内に。任意のローカル Wi-Fi 転送と Apple の購入処理、iCloud バックアップとの関係を説明。">
+<meta name="twitter:image" content="https://earmemo.app/og.png">
+<meta name="author" content="Fan YANG">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="stylesheet" href="../answer.css">
+<script src="../attribution.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "アカウント不要・トラッキングなしの iPhone 用音声プレーヤー",
+  "description": "EarMemo の再生・メモ・統計は端末内に。任意のローカル Wi-Fi 転送と Apple の購入処理、iCloud バックアップとの関係を説明。",
+  "inLanguage": "ja",
+  "url": "https://earmemo.app/ja/offline-audio-player-no-account",
+  "dateModified": "2026-10-15",
+  "author": {
+    "@type": "Person",
+    "name": "Fan YANG",
+    "email": "earmemo@outlook.com",
+    "description": "個人 iOS 開発者、EarMemo の作者"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Fan YANG"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "EarMemo",
+    "operatingSystem": "iOS 17, iPadOS 17",
+    "applicationCategory": "MultimediaApplication",
+    "url": "https://earmemo.app/"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EarMemo",
+    "url": "https://earmemo.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "アカウント登録は必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。EarMemo にアカウントやログインはありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "アプリは一切通信しないのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "再生、メモ、統計にインターネットは不要です。任意の Wi-Fi 転送はローカルネットワークを使い、購入と復元は Apple StoreKit が処理します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "iCloud にデータは保存されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iCloud バックアップを有効にしている場合、データはご自身のバックアップに含まれることがあります。EarMemo 独自のクラウド保存や端末間同期はありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "開発者は再生履歴を見られますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。再生履歴も統計も端末内に保存され、開発者には送信されません。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "EarMemo",
+      "item": "https://earmemo.app/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "アカウント不要・トラッキングなしの iPhone 用音声プレーヤー",
+      "item": "https://earmemo.app/ja/offline-audio-player-no-account"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+  <a class="brand" href="./"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b>EarMemo</b></a>
+  <nav class="nav">
+    <a href="./#features">機能</a>
+    <a href="./#privacy">プライバシー</a>
+    <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">ダウンロード</a>
+    <details class="language-menu"><summary aria-label="言語">日本語</summary><div><a href="../offline-audio-player-no-account" lang="en" hreflang="en">English</a><a href="../zh/offline-audio-player-no-account" lang="zh-Hans" hreflang="zh-Hans">中文</a><a href="../ja/offline-audio-player-no-account" lang="ja" hreflang="ja" aria-current="page">日本語</a><a href="../de/offline-audio-player-no-account" lang="de" hreflang="de">Deutsch</a></div></details>
+  </nav>
+</div></header>
+
+<main><div class="container">
+  <p class="crumb"><a href="./">EarMemo</a> › アカウント不要のオフライン再生</p>
+  <h1>アカウント不要・トラッキングなしの iPhone 用音声プレーヤー</h1>
+  <div class="answer"><p>EarMemo は、取り込み済みの音声をオフラインで再生する iPhone・iPad 用アプリです。アカウント、広告、アクセス解析、開発者のサーバーはありません。設定、再生位置、メモ、ブックマーク、統計は端末内に保存されます。任意の Wi-Fi 転送はローカルネットワーク内、購入処理は Apple StoreKit が担当します。</p></div>
+  <p class="meta">最終更新 2026年10月15日 · 著者：Fan YANG（EarMemo 開発者）</p>
+
+  <h2>端末内に保存するもの</h2>
+  <ul><li>再生位置、ライブラリの整理、設定。</li><li>タイムスタンプ付きメモ、ブックマーク、再生履歴と統計。</li><li>インターネット接続なしでの再生とメモ。</li></ul>
+  <h2>通信が関わる場面を区別する</h2>
+  <div class="tablewrap"><table><thead><tr><th>操作</th><th>データの行き先</th></tr></thead><tbody><tr><td>取り込み済み音声の再生・メモ</td><td>端末内</td></tr><tr><td>自分で開始する Wi-Fi 転送</td><td>ローカルネットワーク内のパソコンと iPhone</td></tr><tr><td>Pro の購入と購入の復元</td><td>Apple StoreKit</td></tr><tr><td>iCloud バックアップを有効にしている場合</td><td>自分の Apple アカウントのバックアップ</td></tr></tbody></table></div>
+  <p>iCloud バックアップは Apple が提供する端末のバックアップです。EarMemo 独自の同期機能ではなく、開発者がアクセスすることもありません。</p>
+  <h2 id="verify">自分で確かめる 3 つの方法</h2>
+  <ol class="steps"><li>音声を取り込んでから機内モードにし、再生、メモ、統計を試します。Wi-Fi 転送を試す場合は Wi-Fi をオンに戻します。</li><li>App Store のプライバシー表示と、アプリ内のプライバシーポリシーを確認します。</li><li>iOS の「App プライバシーレポート」で通信先を確認します。ローカル転送や Apple の購入処理は、通常の再生とは区別してください。</li></ol>
+  <h2>収集しないデータ</h2>
+  <p>テレメトリ、広告 ID、アクセス解析、クラッシュ報告、遠隔設定のための SDK はありません。再生統計は自分のために端末内で計算し、開発者へは送りません。詳細は<a href="./privacy">プライバシーポリシー</a>に記載しています。</p>
+
+  <div class="honest">
+    <h3>EarMemo が向いていない場合</h3>
+    <ul><li>端末間の自動同期や、開発者のサーバーからのデータ復元が必要な用途には向きません。</li><li>自分で管理していない配信カタログを検索・ストリーミングする機能はありません。</li><li>端末のバックアップや、必要なメモの書き出しはご自身で管理してください。</li></ul>
+  </div>
+
+  <h2>よくある質問</h2>
+  <details><summary>アカウント登録は必要ですか？</summary><p>いいえ。EarMemo にアカウントやログインはありません。</p></details>
+  <details><summary>アプリは一切通信しないのですか？</summary><p>再生、メモ、統計にインターネットは不要です。任意の Wi-Fi 転送はローカルネットワークを使い、購入と復元は Apple StoreKit が処理します。</p></details>
+  <details><summary>iCloud にデータは保存されますか？</summary><p>iCloud バックアップを有効にしている場合、データはご自身のバックアップに含まれることがあります。EarMemo 独自のクラウド保存や端末間同期はありません。</p></details>
+  <details><summary>開発者は再生履歴を見られますか？</summary><p>いいえ。再生履歴も統計も端末内に保存され、開発者には送信されません。</p></details>
+
+  <div class="cta-box">
+    <h2>自分のファイルで試してみる</h2>
+    <p>EarMemo は無料でダウンロードでき、無料枠に期限はありません。EarMemo Pro は買い切りです。サブスクリプション、広告、アカウントはありません。</p>
+    <p style="margin-top:18px"><a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">App Store からダウンロード</a></p>
+    <p style="font-size:14px;margin-top:14px"><a href="./pricing.md">料金の詳細（テキスト）</a></p>
+  </div>
+
+  <div class="related">
+    <h3>関連ガイド</h3>
+    <ul><li><a href="./how-to-remember-audiobooks">オーディオブックで聴いたことを覚えておく</a></li><li><a href="./m4b-audiobook-player-iphone">iPhone で M4B・MP3 を聴く</a></li><li><a href="./timestamped-audio-notes-markdown">タイムスタンプ付きメモと Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">iTunes なしで音声を転送</a></li></ul>
+  </div>
+</div></main>
+
+<footer class="site-footer"><div class="container">
+  <div class="foot-cols">
+    <div>
+      <a class="brand" href="./" style="color:var(--cream)"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b style="color:var(--cream)">EarMemo</b></a>
+      <p style="color:var(--foot-muted);font-size:14px;margin-top:12px;max-width:30ch">iOS 用のローカル音声プレーヤー。すべてのデータは端末内に保存されます。</p>
+    </div>
+    <div><h4>製品</h4><ul><li><a href="./#features">機能</a></li><li><a href="./#privacy">プライバシー</a></li><li><a href="./#faq">よくある質問</a></li></ul></div>
+    <div><h4>ガイド</h4><ul><li><a href="./how-to-remember-audiobooks">オーディオブックで聴いたことを覚えておく</a></li><li><a href="./m4b-audiobook-player-iphone">iPhone で M4B・MP3 を聴く</a></li><li><a href="./timestamped-audio-notes-markdown">タイムスタンプ付きメモと Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">iTunes なしで音声を転送</a></li></ul></div>
+    <div><h4>お問い合わせ</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="./privacy">プライバシーポリシー</a></li></ul></div>
+  </div>
+  <div class="foot-bottom">© 2026 EarMemo. すべてのデータはあなたの端末内に。</div>
+</div></footer>
+</body>
+</html>

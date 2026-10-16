@@ -95,5 +95,21 @@ details p{color:var(--ink-2);margin-bottom:0;}
   h1{font-size:29px;}
   h2{font-size:23px;}
   body{font-size:16.5px;}
-  .nav a:not(.btn){display:none;}
+  .nav > a:not(.btn){display:none;}
 }
+
+/* Native language menu works without JavaScript and keeps long locale names
+   from crowding the header on small screens. Shared with answer.css. */
+.language-menu{position:relative;flex-shrink:0;font-size:14px}
+.language-menu summary{cursor:pointer;list-style:none;padding:8px 4px;white-space:nowrap}
+.language-menu summary::-webkit-details-marker{display:none}
+.language-menu summary::after{content:" ▾";font-size:11px}
+.language-menu>div{position:absolute;right:0;top:100%;z-index:100;min-width:140px;padding:8px;background:var(--cream);border:1px solid var(--rule);border-radius:10px;box-shadow:0 8px 24px #24252718}
+.language-menu>div>a{display:block;padding:9px 12px;white-space:nowrap}
+.language-menu [aria-current="page"]{font-weight:700;text-decoration:underline}
+.language-menu summary:focus-visible,.language-menu a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* Undo the FAQ accordion's bare details/summary rules above for the menu. */
+details.language-menu{border:0;padding:0}
+.language-menu summary{position:static;font-weight:inherit}
+.language-menu summary::after,.language-menu[open] summary::after{content:" ▾";position:static;font-size:11px;color:inherit}
+.language-menu[open] summary{margin-bottom:0}

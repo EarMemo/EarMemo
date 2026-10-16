@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ja" class="home">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EarMemo — MP3・M4B のオフライン再生とタイムスタンプ付きメモ</title>
+<meta name="description" content="手元の MP3・M4B のオーディオブックや講義、録音を iPhone で再生。EarMemo は再生位置を覚え、メモを秒単位で音声に結びつけます。AirPods のボタン操作でもマークできます。再生にアカウントやインターネット接続は不要です。">
+<link rel="canonical" href="https://earmemo.app/ja/">
+<link rel="alternate" hreflang="en" href="https://earmemo.app/">
+<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/">
+<link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/">
+<link rel="alternate" hreflang="de" href="https://earmemo.app/de/">
+<link rel="alternate" hreflang="x-default" href="https://earmemo.app/">
+<meta name="google-site-verification" content="fUE5HJX5kVsMPYY8MkXd8C9hNxO8Nb_dxYLIqj54Yzw">
+<!-- <meta name="msvalidate.01" content="PASTE_FROM_BING"> -->
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="EarMemo — MP3・M4B のオフライン再生とタイムスタンプ付きメモ">
+<meta property="og:description" content="手元の MP3・M4B のオーディオブックや講義、録音を iPhone で再生。EarMemo は再生位置を覚え、メモを秒単位で音声に結びつけます。AirPods のボタン操作でもマークできます。再生にアカウントやインターネット接続は不要です。">
+<meta property="og:url" content="https://earmemo.app/ja/">
+<meta property="og:image" content="https://earmemo.app/og.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EarMemo — MP3・M4B のオフライン再生とタイムスタンプ付きメモ">
+<meta name="twitter:description" content="手元の MP3・M4B のオーディオブックや講義、録音を iPhone で再生。EarMemo は再生位置を覚え、メモを秒単位で音声に結びつけます。AirPods のボタン操作でもマークできます。再生にアカウントやインターネット接続は不要です。">
+<meta name="twitter:image" content="https://earmemo.app/og.png">
+
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "EarMemo",
+  "alternateName": [
+    "EarMemo App"
+  ],
+  "description": "手元の MP3・M4B のオーディオブックや講義、録音を iPhone で再生。EarMemo は再生位置を覚え、メモを秒単位で音声に結びつけます。AirPods のボタン操作でもマークできます。再生にアカウントやインターネット接続は不要です。",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Audio Player",
+  "operatingSystem": "iOS 17, iPadOS 17",
+  "url": "https://earmemo.app/ja/",
+  "image": "https://earmemo.app/icon.png",
+  "screenshot": [
+    "https://earmemo.app/img/ja/player.webp",
+    "https://earmemo.app/img/ja/chapter-player.webp",
+    "https://earmemo.app/img/ja/home.webp",
+    "https://earmemo.app/img/ja/notes.webp",
+    "https://earmemo.app/img/ja/history.webp",
+    "https://earmemo.app/img/ja/wifi.webp"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Fan YANG",
+    "alternateName": "yangfan",
+    "email": "earmemo@outlook.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Fan YANG"
+  },
+  "disambiguatingDescription": "いいえ。EarMemo は Fan YANG が開発した iPhone・iPad 用のオフライン音声プレーヤーです。手元の音声を聴くためのアプリで、似た名前の AI 学習・暗記サービスとは無関係です。AI 機能、アカウント、独自サーバーはありません。",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "url": "https://apps.apple.com/app/apple-store/id6771007097"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Apple App Store ID",
+    "value": "6771007097"
+  },
+  "downloadUrl": "https://apps.apple.com/app/apple-store/id6771007097",
+  "sameAs": [
+    "https://apps.apple.com/app/apple-store/id6771007097",
+    "https://github.com/EarMemo"
+  ],
+  "featureList": [
+    "その瞬間に戻れるメモ",
+    "章を聴きながら、本全体も見渡せる",
+    "スリープタイマー",
+    "1 年の「聴く」を見渡す",
+    "共有シートから読み込み",
+    "再生速度の変更",
+    "データ収集なし"
+  ],
+  "inLanguage": [
+    "en",
+    "zh-Hans",
+    "ja",
+    "de"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "EarMemo とは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EarMemo は、ポッドキャスト、オーディオブック、講義、録音など、長い音声のための iOS 用ローカルプレーヤーです。設定、再生位置、ブックマーク、メモ、再生統計はすべて端末内に保存。独自サーバーを持たず、開発者へのアップロードも、アカウント登録もありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "似た名前の AI 学習アプリと関係がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。EarMemo は Fan YANG が開発した iPhone・iPad 用のオフライン音声プレーヤーです。手元の音声を聴くためのアプリで、似た名前の AI 学習・暗記サービスとは無関係です。AI 機能、アカウント、独自サーバーはありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apple Podcasts や Spotify との違いは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EarMemo は、ダウンロード済みのポッドキャスト、オーディオブック、講義、ボイスメモなど、手元の音声ファイルを再生します。配信カタログやサブスクリプション、アカウントはありません。自分で管理する長い音声を、ひとつの道具でじっくり聴くために作りました。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "オフラインで使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。再生、統計、メモはインターネット接続なしで利用でき、機内モードでも動作します。任意で使える Wi-Fi ファイル転送には、Wi-Fi をオンにしてローカルネットワークに接続する必要があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AirPods などのヘッドフォンでブックマークできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。「設定 → ヘッドフォン操作」で「次へ」または「前へ」をブックマークに設定します。AirPods Pro を 2 回（次へ）または 3 回（前へ）押すと、短い確認音とともに現在位置をマーク。ほかのヘッドフォンは曲送り・曲戻しのボタンを使います。車のステアリングスイッチも同じ設定に従います。無料版でもマークは無制限です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "対応する音声・動画形式は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "mp3、m4a、m4b、aac、flac、wav などに対応しています。動画（mp4、mov、m4v）は音声のみを再生します。Apple Books や Audible で購入した DRM 保護付きファイルは読み込めません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "M4B の章に対応していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。M4B など章情報を持つ本では目次を表示し、「前へ」「次へ」で章を移動できます。進行バーは現在の章と本全体を切り替え可能。本全体の残り時間も表示します。メモは章ごとに整理され、スリープタイマーは章の終わりで停止できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "データを収集しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。ユーザーデータは収集しません。サードパーティ SDK、アクセス解析、広告、トラッキングもありません。すべてのデータは端末内に保存され、iCloud を有効にしている場合はご自身のバックアップに含まれます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "iPad でも使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。iPhone と iPad の両方に対応しています。iPad では広い画面に合わせた分割表示を利用できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ほかのアプリからファイルを読み込めますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。iOS の共有シートから、メッセージ、メール、ファイルなど、音声や動画を共有できるアプリのファイルを EarMemo に送れます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "無料版は期間限定のお試しですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "無料枠に期限はありません。再生できるアルバムは同時に 1 つ、試せる音声ファイルはアルバム内のエピソードと個別の音声を合わせて計 10 本。再生回数の制限ではありません。マークは無制限で、5 件にメモを書けます。読み込み・再生機能はすべて利用可能。枠を超えた項目も表示・削除でき、Pro の買い切り購入で再生ロックを解除できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "以前の有料版を購入しました。再購入は必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。最新版に更新すると EarMemo Pro が自動で有効になります。操作も追加の支払いも不要です。"
+      }
+    }
+  ],
+  "inLanguage": "ja"
+}
+</script>
+
+<link rel="stylesheet" href="../home.css">
+<script src="../attribution.js" defer></script>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<header class="site-header"><div class="in">
+  <a class="brand" href="./"><img src="../icon.png" alt="" width="32" height="32"><b>EarMemo</b></a>
+  <nav class="nav">
+    <a class="nl" href="#features">機能</a>
+    <a class="nl" href="#privacy">プライバシー</a>
+    <a class="nl" href="#faq">よくある質問</a>
+    <a class="btn" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">ダウンロード</a>
+    <details class="language-menu"><summary aria-label="言語">日本語</summary><div><a href="../" lang="en" hreflang="en">English</a><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a><a href="../ja/" lang="ja" hreflang="ja" aria-current="page">日本語</a><a href="../de/" lang="de" hreflang="de">Deutsch</a></div></details>
+  </nav>
+</div></header>
+
+<div class="page">
+<main class="wrap">
+
+  <section class="ch hero" id="hero">
+    <div class="ch-body">
+      <div class="hero-copy">
+        <h1>手元の音声を、じっくり聴く。</h1>
+        <p class="lead">手元の MP3・M4B のオーディオブックや講義、録音を iPhone で再生。EarMemo は再生位置を覚え、メモを秒単位で音声に結びつけます。AirPods のボタン操作でもマークできます。再生にアカウントやインターネット接続は不要です。</p>
+        <div class="cta">
+          <a class="btn" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">App Store から無料でダウンロード</a>
+          <a class="btn ghost" href="#features">機能を見る</a>
+        </div>
+        <p class="cta-note">サブスクリプションなし · Pro は買い切り</p>
+      </div>
+      <div class="hero-stage">
+        <div class="device back"><img src="../img/ja/notes.webp" alt="EarMemo のエピソードメモ：時間軸上の各メモから、その瞬間を再生できます" width="900" height="1956" loading="eager" decoding="async"></div>
+        <div class="device front"><img src="../img/ja/player.webp" alt="EarMemo の再生画面：「銀河鉄道の夜」の章と、進行バー上のメモのマーク" width="900" height="1956" loading="eager" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust"><span>アカウント不要</span><span>オフライン再生</span><span>トラッキングなし</span><span>サブスクリプションなし</span><span>iPhone &amp; iPad</span></div>
+
+  <section class="ch" id="why">
+    <div class="ch-body narrow">
+      <p class="eyebrow">EarMemo を作った理由</p>
+      <h2>聴きたい音声に、集中できる。<br>EarMemo は、聴く時間を邪魔しません。</h2>
+      <p class="lead slow">おすすめのフィードも、次のエピソードの自動再生も、終わらないリストもありません。ダウンロードした長い音声を、静かにひとつの場所へ。残しておきたい一文で止めれば、明日もその場所から聴き直せます。</p>
+    </div>
+  </section>
+
+  <section class="ch" id="features">
+    <div class="ch-body split">
+      <div class="device"><img src="../img/ja/notes.webp" alt="EarMemo のエピソードメモ：時間軸上の各メモから、その瞬間を再生できます" width="900" height="1956" loading="lazy" decoding="async"></div>
+      <div class="copy">
+        <p class="eyebrow">メモ</p>
+        <h2>その瞬間に戻れるメモ</h2>
+        <p class="lead slow">残したい言葉に出会ったら、ワンタップでマークして、そのまま聴き続けましょう。メモはその場でも、あとからでも書けます。各メモは音声の再生位置に結びついているので、タップすればその瞬間から聴き直せます。聴いたことを、手元に残せます。</p>
+        <div class="demo js-only" data-demo data-total="2520" data-start="750" data-ph="ひとこと書く（空欄でも大丈夫）" data-jump="{t} に移動" data-rm="このマークを削除" data-play="再生" data-pause="一時停止" data-seed-t="496" data-seed-tx="まずマークして聴き続ける。言葉はあとから。">
+          <div class="demo-top"><span class="demo-title">42 分の講義</span><span class="demo-k">音声なしのデモ</span></div>
+          <div class="demo-bar" role="presentation"><span class="rail"></span><span class="fill"></span><span class="dots"></span><span class="head"></span></div>
+          <div class="demo-ctl"><button type="button" class="demo-pp" aria-label="一時停止"></button><span class="tc demo-cur">12:30</span><span class="tc demo-tot">/ 42:00</span><button type="button" class="demo-mark">マーク</button></div>
+          <div class="demo-list"></div>
+          <p class="demo-hint">再生中に「マーク」を押してください。時間をタップすると、その位置に戻れます。</p>
+        </div>
+        <a class="more" href="./tour">ページ全体で試す →</a>
+        <ul class="slow">
+          <li>タイムスタンプ付きメモから、ワンタップで聴き直し</li>
+          <li>アルバム・エピソード別に整理。オーディオブックでは章ごとに表示</li>
+          <li>買い切りの Pro でメモを Markdown に書き出し</li>
+        </ul>
+        <a class="more slow" href="./how-to-remember-audiobooks">聴いたことを覚えておくには →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch" id="headphones">
+    <div class="ch-body split">
+      <div class="copy">
+        <p class="eyebrow">ヘッドフォン</p>
+        <h2>iPhone を取り出さずにマーク</h2>
+        <p class="lead slow">手がふさがっていても、残したい言葉を逃しません。AirPods を 2 回押すと短い音が鳴り、その位置を保存。文の始まりを拾えるよう、2 秒前にマークします。文章はあとから書けます。</p>
+        <div class="hp-how">
+          <ol class="hp-steps">
+            <li><span><b>最初に設定。</b> 設定 → ヘッドフォン操作 → 次へ： <i>ブックマーク</i></span></li>
+            <li><span><b>2 回押す</b> AirPods Pro で操作（「前へ」に設定した場合は 3 回）</span></li>
+            <li><span><b>確認音が鳴ります。</b> マークがメモに保存されました。<button type="button" class="hp-chime js-only">▶ 音を聴く</button></span></li>
+          </ol>
+          <svg class="hp-buds" viewBox="8 12 290 206" aria-hidden="true" focusable="false"><g class="hp-bud"><rect x="76" y="79" width="30" height="129" rx="15"/><ellipse cx="71.5" cy="67" rx="53.5" ry="45"/></g><g class="hp-bud"><rect x="238" y="79" width="30" height="129" rx="15"/><ellipse cx="233.5" cy="67" rx="53.5" ry="45"/></g><ellipse class="hp-port" cx="35.5" cy="63.5" rx="9.5" ry="16.5"/><ellipse class="hp-port" cx="262.5" cy="63.5" rx="9.5" ry="16.5"/><path class="hp-mic" d="M87 181h9M249 181h9"/><circle class="hp-wave" cx="91.5" cy="160.5" r="27.5"/><circle class="hp-wave" cx="91.5" cy="160.5" r="27.5"/><circle class="hp-ring" cx="91.5" cy="160.5" r="27.5"/><circle class="hp-dot" cx="91.5" cy="160.5" r="8.5"/><text class="hp-x2" x="128" y="171">×2</text></svg>
+        </div>
+        <ul class="slow">
+          <li>押すたびにひとつのマーク。無料版でも無制限</li>
+          <li>車のステアリングスイッチにも同じ設定が適用されます</li>
+        </ul>
+      </div>
+      <div class="device"><span class="hp-shot" style="--hl-top:46.2%"><img src="../img/ja/headphones.webp" alt="EarMemo のヘッドフォン操作設定：「次へ」をブックマークに、「前へ」を前のエピソードに設定" width="900" height="1956" loading="lazy" decoding="async"><span class="hp-hl" aria-hidden="true"></span></span></div>
+    </div>
+  </section>
+
+  <section class="ch" id="library">
+    <div class="ch-body split">
+      <div class="device"><img src="../img/ja/home.webp" alt="EarMemo のホーム画面：聴きかけのオーディオブック・講義・録音と残り時間" width="900" height="1956" loading="lazy" decoding="async"></div>
+      <div class="copy">
+        <p class="eyebrow">ライブラリ</p>
+        <h2>聴きかけの音声を、ひとつの場所に</h2>
+        <p class="lead slow">いま聴いているものが、ひとつの画面に。再生位置と残り時間を覚えているので、タップすればすぐ続きへ。「どこまで聴いた？」と探す必要はありません。</p>
+        <ul class="slow">
+          <li>「続きを聴く」で、止めた位置から秒単位で再開</li>
+          <li>ファイルをアルバムにまとめ、自由に並べ替え</li>
+          <li>今日の再生時間を画面上部に表示</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch" id="chapters">
+    <div class="ch-body split">
+      <div class="copy">
+        <p class="eyebrow">オーディオブック</p>
+        <h2>章を聴きながら、本全体も見渡せる</h2>
+        <p class="lead slow">M4B など、チャプター（章）情報が埋め込まれたオーディオブックでは目次を表示します。再生バーには現在の章の進み具合、その上には本全体の残り時間を表示。いつでも本全体の進行表示に切り替えられます。メモも章ごとにまとまります。</p>
+        <ul class="slow">
+          <li>目次から章を選択。「前へ」「次へ」で章移動。ヘッドフォンや車でも</li>
+          <li>メモは章ごとに整理。Pro の Markdown 書き出しには章内と本全体での再生位置を記載</li>
+          <li>章の終わりで止まるスリープタイマー</li>
+        </ul>
+        <a class="more slow" href="./m4b-audiobook-player-iphone">iPhone で M4B を聴く →</a>
+      </div>
+      <div class="device"><img src="../img/ja/chapter-player.webp" alt="EarMemo で「銀河鉄道の夜」を再生中：全 6 章の第 3 章「家」。進行バーには章内の再生位置、上部には本全体の残り時間を表示" width="900" height="1956" loading="lazy" decoding="async"></div>
+    </div>
+  </section>
+
+  <section class="ch" id="history">
+    <div class="ch-body split">
+      <div class="device"><img src="../img/ja/history.webp" alt="EarMemo の再生履歴：年間ヒートマップ、合計時間、よく聴くアルバム" width="900" height="1956" loading="lazy" decoding="async"></div>
+      <div class="copy">
+        <p class="eyebrow">再生履歴</p>
+        <h2>1 年の「聴く」を見渡す</h2>
+        <p class="lead slow">今日も、今週も、今年も。長い音声を聴いた時間を EarMemo が記録します。誰かと競うためではなく、「いつも聴いている気がする」を目に見える数字にするために。</p>
+        <ul class="slow">
+          <li>年間ヒートマップで、日々の再生をひと目で確認</li>
+          <li>日・週・月ごとと、累計の再生時間</li>
+          <li>記録は端末内だけ。アップロードも外部分析もありません</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch" id="import">
+    <div class="ch-body split">
+      <div class="copy">
+        <p class="eyebrow">読み込み</p>
+        <h2>手元のファイルを、すばやく取り込む</h2>
+        <p class="lead slow">パソコンのブラウザで指定のアドレスを開き、ローカル Wi-Fi で音声をドラッグ。ケーブルもクラウドも不要です。iOS の共有シートから、メッセージ・メール・ファイルの音声も取り込めます。</p>
+        <ul class="slow">
+          <li>ブラウザから Wi-Fi 転送。ケーブル・クラウド不要</li>
+          <li>メッセージ・メール・ファイルの共有シートから読み込み</li>
+          <li>mp3・m4a・m4b・flac・aac・wav に対応。mp4・mov は音声のみ再生</li>
+        </ul>
+      </div>
+      <div class="device"><img src="../img/ja/wifi.webp" alt="EarMemo の Wi-Fi 転送：パソコンのブラウザで開く QR コードとローカルアドレス" width="900" height="1956" loading="lazy" decoding="async"></div>
+    </div>
+  </section>
+
+  <section class="ch" id="extras">
+    <div class="ch-body">
+      <h2 style="margin-bottom:22px">ほかにも、聴くための機能を</h2>
+      <div class="extras slow">
+        <div><h3>スリープタイマー</h3><p>Dynamic Island とロック画面にライブアクティビティで残り時間を表示。</p></div>
+        <div><h3>バックグラウンド・ロック画面</h3><p>コントロールセンターとロック画面から再生を操作。</p></div>
+        <div><h3>再生速度の変更</h3><p>声の高さを変えずに、速くもゆっくりも。</p></div>
+        <div><h3>Siri とショートカット</h3><p>声で再生、一時停止、スキップ、ブックマークを操作。</p></div>
+        <div><h3>共有シートから読み込み</h3><p>メッセージ・メール・ファイルなど、共有できるアプリから音声を送れます。</p></div>
+        <div><h3>幅広い形式に対応</h3><p>mp3・m4a・m4b・flac・aac・wav に対応。mp4・mov・m4v は音声のみ再生。M4B の章情報も読み取ります。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch privacy" id="privacy">
+    <div class="ch-body">
+      <div>
+        <p class="eyebrow">プライバシー</p>
+        <h2>仕組みそのものが、プライバシーを守る</h2>
+        <p class="lead slow">EarMemo に独自のサーバーはありません。設定、再生位置、メモ、ブックマーク、統計は端末内と、有効にしている場合はご自身の iCloud バックアップに保存されます。Wi-Fi 転送はローカルネットワーク内だけ。購入は Apple StoreKit が処理します。</p>
+        <a class="more slow" href="./privacy">プライバシーポリシーを読む →</a>
+      </div>
+      <ul class="checklist">
+        <li>データ収集なし</li>
+        <li>サードパーティ SDK なし</li>
+        <li>広告・トラッキングなし</li>
+        <li>アカウント・ログイン不要</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ch" id="pricing">
+    <div class="ch-body narrow">
+      <p class="eyebrow">料金</p>
+      <h2>無料でダウンロード。すべての機能は買い切りで。</h2>
+      <p class="lead">無料でダウンロードして、自分のペースで。再生できるアルバムは同時に 1 つ、試せる音声ファイルはアルバム内のエピソードと個別の音声を合わせて計 10 本。再生回数の制限ではありません。マークは無制限で、そのうち 5 件にメモを書けます。読み込み・再生機能はすべて利用できます。EarMemo Pro は日本の App Store で1,300円の買い切り。すべての機能が使えます。サブスクリプションも広告もありません。</p>
+    </div>
+  </section>
+
+  <section class="ch faq" id="faq">
+    <div class="ch-body">
+      <h2 style="margin-bottom:8px">よくある質問</h2>
+      <details>
+        <summary>EarMemo とは？</summary>
+        <p>EarMemo は、ポッドキャスト、オーディオブック、講義、録音など、長い音声のための iOS 用ローカルプレーヤーです。設定、再生位置、ブックマーク、メモ、再生統計はすべて端末内に保存。独自サーバーを持たず、開発者へのアップロードも、アカウント登録もありません。</p>
+      </details>
+      <details>
+        <summary>似た名前の AI 学習アプリと関係がありますか？</summary>
+        <p>いいえ。EarMemo は Fan YANG が開発した iPhone・iPad 用のオフライン音声プレーヤーです。手元の音声を聴くためのアプリで、似た名前の AI 学習・暗記サービスとは無関係です。AI 機能、アカウント、独自サーバーはありません。</p>
+      </details>
+      <details>
+        <summary>Apple Podcasts や Spotify との違いは？</summary>
+        <p>EarMemo は、ダウンロード済みのポッドキャスト、オーディオブック、講義、ボイスメモなど、手元の音声ファイルを再生します。配信カタログやサブスクリプション、アカウントはありません。自分で管理する長い音声を、ひとつの道具でじっくり聴くために作りました。</p>
+      </details>
+      <details open>
+        <summary>オフラインで使えますか？</summary>
+        <p>はい。再生、統計、メモはインターネット接続なしで利用でき、機内モードでも動作します。任意で使える Wi-Fi ファイル転送には、Wi-Fi をオンにしてローカルネットワークに接続する必要があります。</p>
+      </details>
+      <details>
+        <summary>AirPods などのヘッドフォンでブックマークできますか？</summary>
+        <p>はい。「設定 → ヘッドフォン操作」で「次へ」または「前へ」をブックマークに設定します。AirPods Pro を 2 回（次へ）または 3 回（前へ）押すと、短い確認音とともに現在位置をマーク。ほかのヘッドフォンは曲送り・曲戻しのボタンを使います。車のステアリングスイッチも同じ設定に従います。無料版でもマークは無制限です。</p>
+      </details>
+      <details>
+        <summary>対応する音声・動画形式は？</summary>
+        <p>mp3、m4a、m4b、aac、flac、wav などに対応しています。動画（mp4、mov、m4v）は音声のみを再生します。Apple Books や Audible で購入した DRM 保護付きファイルは読み込めません。</p>
+      </details>
+      <details>
+        <summary>M4B の章に対応していますか？</summary>
+        <p>はい。M4B など章情報を持つ本では目次を表示し、「前へ」「次へ」で章を移動できます。進行バーは現在の章と本全体を切り替え可能。本全体の残り時間も表示します。メモは章ごとに整理され、スリープタイマーは章の終わりで停止できます。</p>
+      </details>
+      <details>
+        <summary>データを収集しますか？</summary>
+        <p>いいえ。ユーザーデータは収集しません。サードパーティ SDK、アクセス解析、広告、トラッキングもありません。すべてのデータは端末内に保存され、iCloud を有効にしている場合はご自身のバックアップに含まれます。</p>
+      </details>
+      <details>
+        <summary>iPad でも使えますか？</summary>
+        <p>はい。iPhone と iPad の両方に対応しています。iPad では広い画面に合わせた分割表示を利用できます。</p>
+      </details>
+      <details>
+        <summary>ほかのアプリからファイルを読み込めますか？</summary>
+        <p>はい。iOS の共有シートから、メッセージ、メール、ファイルなど、音声や動画を共有できるアプリのファイルを EarMemo に送れます。</p>
+      </details>
+      <details>
+        <summary>無料版は期間限定のお試しですか？</summary>
+        <p>無料枠に期限はありません。再生できるアルバムは同時に 1 つ、試せる音声ファイルはアルバム内のエピソードと個別の音声を合わせて計 10 本。再生回数の制限ではありません。マークは無制限で、5 件にメモを書けます。読み込み・再生機能はすべて利用可能。枠を超えた項目も表示・削除でき、Pro の買い切り購入で再生ロックを解除できます。</p>
+      </details>
+      <details>
+        <summary>以前の有料版を購入しました。再購入は必要ですか？</summary>
+        <p>いいえ。最新版に更新すると EarMemo Pro が自動で有効になります。操作も追加の支払いも不要です。</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="ch end" id="end">
+    <div class="ch-body">
+      <h2>聴きたい音声をひとつに。自分のペースで、じっくりと。</h2>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=officialsite&mt=8" target="_blank" rel="noopener">App Store からダウンロード</a>
+      </div>
+      <div class="episodes plain" id="answers">
+        <p class="eyebrow" style="display:block">もっと詳しく</p>
+        <ol>
+          <li><span><a href="./how-to-remember-audiobooks">オーディオブックで聴いたことを覚えておく</a><span class="ep-d">まずマークして聴き続け、あとから自分の言葉を添える。メモを負担にせず、聴いた内容を残す方法。</span></span></li>
+          <li><span><a href="./m4b-audiobook-player-iphone">手元の M4B・MP3 オーディオブックを聴く</a><span class="ep-d">対応ファイル、iPhone に取り込む 4 つの方法、ほかのプレーヤーが合う場合。</span></span></li>
+          <li><span><a href="./timestamped-audio-notes-markdown">タイムスタンプ付きメモを Markdown に書き出す</a><span class="ep-d">音声の再生位置と結びつくメモと、文字起こしアプリとの違い。</span></span></li>
+          <li><span><a href="./transfer-audio-to-iphone-without-itunes">iTunes を使わず iPhone に音声を転送</a><span class="ep-d">Wi-Fi、ファイル、共有シート。それぞれに向いている場面。</span></span></li>
+          <li><span><a href="./offline-audio-player-no-account">アカウントも独自サーバーも、トラッキングもなし</a><span class="ep-d">ローカル優先の意味と、自分で確かめる 3 つの方法。</span></span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer"><div class="in">
+  <span>© <span id="year">2026</span> EarMemo。すべてのデータはあなたの端末内に。</span>
+  <span><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a> · <a href="./privacy">プライバシーポリシー</a> · <a href="../" lang="en">English</a></span>
+</div></footer>
+</div>
+
+<script src="../demo.js" defer></script>
+<script src="../chime.js" defer></script>
+</body>
+</html>

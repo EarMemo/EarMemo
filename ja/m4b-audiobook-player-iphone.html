@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iPhone で M4B・MP3 を聴く — EarMemo</title>
+<meta name="description" content="DRM フリーの M4B・MP3・FLAC を iPhone で再生。章、続きから再生、ローカル転送、ほかのプレーヤーを選ぶ場合を説明します。">
+<link rel="canonical" href="https://earmemo.app/ja/m4b-audiobook-player-iphone">
+<link rel="alternate" hreflang="en" href="https://earmemo.app/m4b-audiobook-player-iphone">
+<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/m4b-audiobook-player-iphone">
+<link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/m4b-audiobook-player-iphone">
+<link rel="alternate" hreflang="de" href="https://earmemo.app/de/m4b-audiobook-player-iphone">
+<link rel="alternate" hreflang="x-default" href="https://earmemo.app/m4b-audiobook-player-iphone">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iPhone で M4B・MP3 を聴く — EarMemo">
+<meta property="og:description" content="DRM フリーの M4B・MP3・FLAC を iPhone で再生。章、続きから再生、ローカル転送、ほかのプレーヤーを選ぶ場合を説明します。">
+<meta property="og:url" content="https://earmemo.app/ja/m4b-audiobook-player-iphone">
+<meta property="og:image" content="https://earmemo.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="iPhone で M4B・MP3 を聴く — EarMemo">
+<meta name="twitter:description" content="DRM フリーの M4B・MP3・FLAC を iPhone で再生。章、続きから再生、ローカル転送、ほかのプレーヤーを選ぶ場合を説明します。">
+<meta name="twitter:image" content="https://earmemo.app/og.png">
+<meta name="author" content="Fan YANG">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="stylesheet" href="../answer.css">
+<script src="../attribution.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "手元の M4B・MP3 オーディオブックを iPhone で聴く方法",
+  "description": "DRM フリーの M4B・MP3・FLAC を iPhone で再生。章、続きから再生、ローカル転送、ほかのプレーヤーを選ぶ場合を説明します。",
+  "inLanguage": "ja",
+  "url": "https://earmemo.app/ja/m4b-audiobook-player-iphone",
+  "dateModified": "2026-10-15",
+  "author": {
+    "@type": "Person",
+    "name": "Fan YANG",
+    "email": "earmemo@outlook.com",
+    "description": "個人 iOS 開発者、EarMemo の作者"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Fan YANG"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "EarMemo",
+    "operatingSystem": "iOS 17, iPadOS 17",
+    "applicationCategory": "MultimediaApplication",
+    "url": "https://earmemo.app/"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EarMemo",
+    "url": "https://earmemo.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "M4B の章に対応していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。埋め込みの章情報を読み取り、目次、章移動、章ごとの進行表示とメモに対応します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "動画も読み込めますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "mp4、mov、m4v を読み込めますが、再生するのは音声だけです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "機内モードで聴けますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。取り込み済みのファイルはオフラインで再生できます。Wi-Fi 転送にはローカルネットワークが必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MP3 が複数ある本はまとめられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "フォルダ構成を保って読み込み、アルバムとして整理できます。ファイル自体に章情報がない場合、M4B のような埋め込み目次は表示されません。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "EarMemo",
+      "item": "https://earmemo.app/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "手元の M4B・MP3 オーディオブックを iPhone で聴く方法",
+      "item": "https://earmemo.app/ja/m4b-audiobook-player-iphone"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+  <a class="brand" href="./"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b>EarMemo</b></a>
+  <nav class="nav">
+    <a href="./#features">機能</a>
+    <a href="./#privacy">プライバシー</a>
+    <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">ダウンロード</a>
+    <details class="language-menu"><summary aria-label="言語">日本語</summary><div><a href="../m4b-audiobook-player-iphone" lang="en" hreflang="en">English</a><a href="../zh/m4b-audiobook-player-iphone" lang="zh-Hans" hreflang="zh-Hans">中文</a><a href="../ja/m4b-audiobook-player-iphone" lang="ja" hreflang="ja" aria-current="page">日本語</a><a href="../de/m4b-audiobook-player-iphone" lang="de" hreflang="de">Deutsch</a></div></details>
+  </nav>
+</div></header>
+
+<main><div class="container">
+  <p class="crumb"><a href="./">EarMemo</a> › iPhone で M4B・MP3 を聴く</p>
+  <h1>手元の M4B・MP3 オーディオブックを iPhone で聴く方法</h1>
+  <div class="answer"><p>自分の音声ファイルを iPhone にコピーして、ローカルプレーヤーで開きます。EarMemo は m4b、mp3、m4a、aac、flac、wav に対応し、M4B の章情報を読み取り、本ごとの再生位置を保存します。再生にアカウントやインターネットは不要です。Audible や Apple Books の DRM 保護付き購入品は開けません。</p></div>
+  <p class="meta">最終更新 2026年10月15日 · 著者：Fan YANG（EarMemo 開発者）</p>
+
+  <h2>拡張子よりも、DRM の有無を確認</h2>
+  <div class="tablewrap"><table><thead><tr><th>ファイルの入手元</th><th>形式</th><th>読み込み</th></tr></thead><tbody><tr><td>DRM フリーで販売された本</td><td>m4b / mp3</td><td>可能</td></tr><tr><td>LibriVox などのパブリックドメイン音声</td><td>mp3 / m4b</td><td>可能</td></tr><tr><td>自分の録音や CD から取り込んだ音声</td><td>flac / m4a / wav</td><td>可能</td></tr><tr><td>Audible の保護付き購入品</td><td>.aax / .aaxc</td><td>Audible アプリで再生</td></tr><tr><td>Apple Books の保護付き購入品</td><td>保護付き m4b</td><td>Apple Books で再生</td></tr></tbody></table></div>
+  <h2 id="import">iTunes を使わない 4 つの取り込み方</h2>
+  <ol class="steps"><li><b>Wi-Fi 転送：</b>EarMemo で転送を開始し、同じローカルネットワークのパソコンで表示されたアドレスを開いてファイルをドラッグします。</li><li><b>ファイル：</b>iCloud Drive、対応するファイルプロバイダ、SMB、接続した USB ドライブなどから読み込みます。フォルダ構成も保持します。</li><li><b>共有シート：</b>メールやメッセージで受け取ったファイルを共有して EarMemo を選びます。</li><li><b>Finder / USB：</b>Mac の Finder のファイル共有から、アプリの書類フォルダへコピーできます。</li></ol>
+  <h2>章と、本全体の進み具合</h2>
+  <p>章情報があれば目次を表示し、「前へ」「次へ」で章を移動できます。ヘッドフォンや車のボタンでも同様です。進行バーは章内と本全体を切り替えられ、本全体の残り時間も確認できます。メモは章ごとに整理され、スリープタイマーは章の終わりに設定できます。</p>
+  <h2>自分の用途でプレーヤーを選ぶ</h2>
+  <div class="tablewrap"><table><thead><tr><th>必要なこと</th><th>選ぶもの</th></tr></thead><tbody><tr><td>再生位置に結びつくメモと Markdown 書き出し</td><td>EarMemo（書き出しは Pro）</td></tr><tr><td>DRM 保護付き購入品の再生</td><td>購入したストアの公式アプリ</td></tr><tr><td>配信カタログや自動ダウンロード</td><td>対応する配信・ポッドキャストアプリ</td></tr><tr><td>複数端末間の同期</td><td>同期に対応する別のプレーヤー</td></tr></tbody></table></div>
+  <p>メモを残す流れは<a href="./how-to-remember-audiobooks">聴いたことを覚えておく方法</a>、転送の詳細は<a href="./transfer-audio-to-iphone-without-itunes">ファイル取り込みガイド</a>で紹介しています。</p>
+
+  <div class="honest">
+    <h3>EarMemo が向いていない場合</h3>
+    <ul><li>Audible や Apple Books の DRM を解除する機能はありません。</li><li>配信カタログ、RSS の購読、自動ダウンロードはありません。</li><li>端末間の自動同期はありません。データはそれぞれの端末内に保存されます。</li></ul>
+  </div>
+
+  <h2>よくある質問</h2>
+  <details><summary>M4B の章に対応していますか？</summary><p>はい。埋め込みの章情報を読み取り、目次、章移動、章ごとの進行表示とメモに対応します。</p></details>
+  <details><summary>動画も読み込めますか？</summary><p>mp4、mov、m4v を読み込めますが、再生するのは音声だけです。</p></details>
+  <details><summary>機内モードで聴けますか？</summary><p>はい。取り込み済みのファイルはオフラインで再生できます。Wi-Fi 転送にはローカルネットワークが必要です。</p></details>
+  <details><summary>MP3 が複数ある本はまとめられますか？</summary><p>フォルダ構成を保って読み込み、アルバムとして整理できます。ファイル自体に章情報がない場合、M4B のような埋め込み目次は表示されません。</p></details>
+
+  <div class="cta-box">
+    <h2>自分のファイルで試してみる</h2>
+    <p>EarMemo は無料でダウンロードでき、無料枠に期限はありません。EarMemo Pro は買い切りです。サブスクリプション、広告、アカウントはありません。</p>
+    <p style="margin-top:18px"><a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">App Store からダウンロード</a></p>
+    <p style="font-size:14px;margin-top:14px"><a href="./pricing.md">料金の詳細（テキスト）</a></p>
+  </div>
+
+  <div class="related">
+    <h3>関連ガイド</h3>
+    <ul><li><a href="./how-to-remember-audiobooks">オーディオブックで聴いたことを覚えておく</a></li><li><a href="./timestamped-audio-notes-markdown">タイムスタンプ付きメモと Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">iTunes なしで音声を転送</a></li><li><a href="./offline-audio-player-no-account">アカウント不要のオフライン再生</a></li></ul>
+  </div>
+</div></main>
+
+<footer class="site-footer"><div class="container">
+  <div class="foot-cols">
+    <div>
+      <a class="brand" href="./" style="color:var(--cream)"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b style="color:var(--cream)">EarMemo</b></a>
+      <p style="color:var(--foot-muted);font-size:14px;margin-top:12px;max-width:30ch">iOS 用のローカル音声プレーヤー。すべてのデータは端末内に保存されます。</p>
+    </div>
+    <div><h4>製品</h4><ul><li><a href="./#features">機能</a></li><li><a href="./#privacy">プライバシー</a></li><li><a href="./#faq">よくある質問</a></li></ul></div>
+    <div><h4>ガイド</h4><ul><li><a href="./how-to-remember-audiobooks">オーディオブックで聴いたことを覚えておく</a></li><li><a href="./timestamped-audio-notes-markdown">タイムスタンプ付きメモと Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">iTunes なしで音声を転送</a></li><li><a href="./offline-audio-player-no-account">アカウント不要のオフライン再生</a></li></ul></div>
+    <div><h4>お問い合わせ</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="./privacy">プライバシーポリシー</a></li></ul></div>
+  </div>
+  <div class="foot-bottom">© 2026 EarMemo. すべてのデータはあなたの端末内に。</div>
+</div></footer>
+</body>
+</html>

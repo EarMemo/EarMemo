@@ -15,14 +15,13 @@ There is no subscription, no advertising, and no account.
   visible, movable, and deletable; it is only locked for playback.
 
 ## EarMemo Pro (one-time purchase)
-- Price: US$8.99 (US App Store tier; local price varies by region — e.g. ¥48
-  on the China App Store). A limited-time launch offer (US$6.99 / ¥38) applies
-  for the first weeks after the free version ships.
+- Price: US$7.99 on the US App Store (local price varies by region — e.g. ¥48
+  on the China App Store, ¥1,300 in Japan, €8.99 in Germany). These are
+  limited-time launch prices; the App Store purchase sheet always shows the
+  current price.
 - Unlocks: unlimited albums and tracks, unlimited notes, and Markdown export.
 - Billing: Pay once on the App Store. No recurring charges, ever. Includes all
   future updates to the app.
-- EarMemo Pro · Supporter (US$19.99 / ¥128) unlocks exactly the same features —
-  it exists only for people who want to give the developer extra support.
 - Platforms: iPhone and iPad (universal app); also runs on Apple Silicon Macs.
 - Requirements: iOS 17 / iPadOS 17 or later.
 - Family Sharing: not currently offered.

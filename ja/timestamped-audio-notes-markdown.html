@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>タイムスタンプ付きメモと Markdown — EarMemo</title>
+<meta name="description" content="再生位置をマークし、あとから文章を添えて、その秒に戻る。EarMemo Pro の Markdown 書き出しと Obsidian への保存方法。">
+<link rel="canonical" href="https://earmemo.app/ja/timestamped-audio-notes-markdown">
+<link rel="alternate" hreflang="en" href="https://earmemo.app/timestamped-audio-notes-markdown">
+<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/timestamped-audio-notes-markdown">
+<link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/timestamped-audio-notes-markdown">
+<link rel="alternate" hreflang="de" href="https://earmemo.app/de/timestamped-audio-notes-markdown">
+<link rel="alternate" hreflang="x-default" href="https://earmemo.app/timestamped-audio-notes-markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="タイムスタンプ付きメモと Markdown — EarMemo">
+<meta property="og:description" content="再生位置をマークし、あとから文章を添えて、その秒に戻る。EarMemo Pro の Markdown 書き出しと Obsidian への保存方法。">
+<meta property="og:url" content="https://earmemo.app/ja/timestamped-audio-notes-markdown">
+<meta property="og:image" content="https://earmemo.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="タイムスタンプ付きメモと Markdown — EarMemo">
+<meta name="twitter:description" content="再生位置をマークし、あとから文章を添えて、その秒に戻る。EarMemo Pro の Markdown 書き出しと Obsidian への保存方法。">
+<meta name="twitter:image" content="https://earmemo.app/og.png">
+<meta name="author" content="Fan YANG">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="stylesheet" href="../answer.css">
+<script src="../attribution.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "音声にタイムスタンプ付きメモを残して、Markdown に書き出す",
+  "description": "再生位置をマークし、あとから文章を添えて、その秒に戻る。EarMemo Pro の Markdown 書き出しと Obsidian への保存方法。",
+  "inLanguage": "ja",
+  "url": "https://earmemo.app/ja/timestamped-audio-notes-markdown",
+  "dateModified": "2026-10-15",
+  "author": {
+    "@type": "Person",
+    "name": "Fan YANG",
+    "email": "earmemo@outlook.com",
+    "description": "個人 iOS 開発者、EarMemo の作者"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Fan YANG"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "EarMemo",
+    "operatingSystem": "iOS 17, iPadOS 17",
+    "applicationCategory": "MultimediaApplication",
+    "url": "https://earmemo.app/"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EarMemo",
+    "url": "https://earmemo.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "メモは自動保存されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。聴きながら書くメモは端末内に自動保存されます。アカウントは不要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Markdown 書き出しは無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。買い切りの EarMemo Pro で利用できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "マークに文章がなくても使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。時間だけでも保存でき、あとから文章を添えられます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Obsidian と同期しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "自動同期はしません。書き出した .md ファイルを、自分の保管庫へ保存します。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "EarMemo",
+      "item": "https://earmemo.app/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "音声にタイムスタンプ付きメモを残して、Markdown に書き出す",
+      "item": "https://earmemo.app/ja/timestamped-audio-notes-markdown"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+  <a class="brand" href="./"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b>EarMemo</b></a>
+  <nav class="nav">
+    <a href="./#features">機能</a>
+    <a href="./#privacy">プライバシー</a>
+    <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">ダウンロード</a>
+    <details class="language-menu"><summary aria-label="言語">日本語</summary><div><a href="../timestamped-audio-notes-markdown" lang="en" hreflang="en">English</a><a href="../zh/timestamped-audio-notes-markdown" lang="zh-Hans" hreflang="zh-Hans">中文</a><a href="../ja/timestamped-audio-notes-markdown" lang="ja" hreflang="ja" aria-current="page">日本語</a><a href="../de/timestamped-audio-notes-markdown" lang="de" hreflang="de">Deutsch</a></div></details>
+  </nav>
+</div></header>
+
+<main><div class="container">
+  <p class="crumb"><a href="./">EarMemo</a> › タイムスタンプ付きメモと Markdown</p>
+  <h1>音声にタイムスタンプ付きメモを残して、Markdown に書き出す</h1>
+  <div class="answer"><p>聴きながら再生位置をマークし、その場でもあとからでもメモを書けます。EarMemo のメモは音声の再生位置に結びつくので、タップして聴き直せます。買い切りの Pro では、1 件のメモ、エピソード、アルバムを Markdown ファイルに書き出し、自分のノートアプリへ保存できます。文字起こしや AI 要約ではありません。</p></div>
+  <p class="meta">最終更新 2026年10月15日 · 著者：Fan YANG（EarMemo 開発者）</p>
+
+  <h2 id="mark">まずマーク、文章はあとから</h2>
+  <ol class="steps"><li>再生画面でマークするか、設定済みのヘッドフォン操作や Siri を使います。</li><li>聴き続けて、あとから自分の言葉を添えます。</li><li>メモの時間をタップすると、その位置から再生できます。</li></ol>
+  <h2>章のある本のメモ</h2>
+  <p>章情報がある本ではメモを章ごとに表示します。Pro で書き出すと、章内と本全体での再生位置の両方が入ります。</p>
+  <h2 id="export">Markdown に書き出す</h2>
+  <ol class="steps"><li>書き出したいメモ、エピソード、またはアルバムの書き出しメニューを開きます。</li><li>Markdown を選びます。書き出しには EarMemo Pro が必要です。</li><li>共有シートで「ファイルに保存」を選び、保管先のフォルダへ保存します。</li></ol>
+  <h2>Obsidian に保存する</h2>
+  <p>iCloud Drive または「この iPhone 内」にある Obsidian の保管庫（Vault）フォルダへ .md ファイルを保存します。標準のテキストファイルなので、コピーや編集も自由です。EarMemo と Obsidian が自動同期するわけではありません。</p>
+  <h2>文字起こしとの違い</h2>
+  <div class="tablewrap"><table><thead><tr><th>方法</th><th>残るもの</th></tr></thead><tbody><tr><td>タイムスタンプ付きメモ</td><td>自分が選んだ瞬間と、自分の言葉</td></tr><tr><td>文字起こし</td><td>音声で話された内容の文章</td></tr><tr><td>AI 要約</td><td>AI が選んだ要点。EarMemo にはない機能</td></tr></tbody></table></div>
+  <p><a href="./tour">音声なしのページツアー</a>で、マーク、ジャンプ、Markdown 書き出しを試せます。</p>
+
+  <div class="honest">
+    <h3>EarMemo が向いていない場合</h3>
+    <ul><li>全文の文字起こしや AI 要約が必要なら、対応する別のアプリを使ってください。</li><li>書き出しは通常のファイルです。ノートアプリとの双方向同期はありません。</li><li>Markdown 書き出しは Pro の機能です。無料版ではマークは無制限、文章付きメモは 5 件までです。</li></ul>
+  </div>
+
+  <h2>よくある質問</h2>
+  <details><summary>メモは自動保存されますか？</summary><p>はい。聴きながら書くメモは端末内に自動保存されます。アカウントは不要です。</p></details>
+  <details><summary>Markdown 書き出しは無料ですか？</summary><p>いいえ。買い切りの EarMemo Pro で利用できます。</p></details>
+  <details><summary>マークに文章がなくても使えますか？</summary><p>はい。時間だけでも保存でき、あとから文章を添えられます。</p></details>
+  <details><summary>Obsidian と同期しますか？</summary><p>自動同期はしません。書き出した .md ファイルを、自分の保管庫へ保存します。</p></details>
+
+  <div class="cta-box">
+    <h2>自分のファイルで試してみる</h2>
+    <p>EarMemo は無料でダウンロードでき、無料枠に期限はありません。EarMemo Pro は買い切りです。サブスクリプション、広告、アカウントはありません。</p>
+    <p style="margin-top:18px"><a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">App Store からダウンロード</a></p>
+    <p style="font-size:14px;margin-top:14px"><a href="./pricing.md">料金の詳細（テキスト）</a></p>
+  </div>
+
+  <div class="related">
+    <h3>関連ガイド</h3>
+    <ul><li><a href="./how-to-remember-audiobooks">オーディオブックで聴いたことを覚えておく</a></li><li><a href="./m4b-audiobook-player-iphone">iPhone で M4B・MP3 を聴く</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">iTunes なしで音声を転送</a></li><li><a href="./offline-audio-player-no-account">アカウント不要のオフライン再生</a></li></ul>
+  </div>
+</div></main>
+
+<footer class="site-footer"><div class="container">
+  <div class="foot-cols">
+    <div>
+      <a class="brand" href="./" style="color:var(--cream)"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b style="color:var(--cream)">EarMemo</b></a>
+      <p style="color:var(--foot-muted);font-size:14px;margin-top:12px;max-width:30ch">iOS 用のローカル音声プレーヤー。すべてのデータは端末内に保存されます。</p>
+    </div>
+    <div><h4>製品</h4><ul><li><a href="./#features">機能</a></li><li><a href="./#privacy">プライバシー</a></li><li><a href="./#faq">よくある質問</a></li></ul></div>
+    <div><h4>ガイド</h4><ul><li><a href="./how-to-remember-audiobooks">オーディオブックで聴いたことを覚えておく</a></li><li><a href="./m4b-audiobook-player-iphone">iPhone で M4B・MP3 を聴く</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">iTunes なしで音声を転送</a></li><li><a href="./offline-audio-player-no-account">アカウント不要のオフライン再生</a></li></ul></div>
+    <div><h4>お問い合わせ</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="./privacy">プライバシーポリシー</a></li></ul></div>
+  </div>
+  <div class="foot-bottom">© 2026 EarMemo. すべてのデータはあなたの端末内に。</div>
+</div></footer>
+</body>
+</html>

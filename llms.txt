@@ -54,7 +54,7 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 
 - iOS 17 and later
 - iPadOS 17 and later
-- Free to download. The free version lets users listen to 1 album at a time, try 10 distinct audio tracks in total across album episodes and standalone tracks, add unlimited timestamp markers, and write text on 5 of them; importing, resume, sleep timer, speed, search, and note-image sharing are free forever. EarMemo Pro is a one-time in-app purchase of US$8.99 (US App Store tier; local price varies by region — e.g. ¥48 on the China App Store). No subscriptions, no ads. Users who bought EarMemo as a paid download get EarMemo Pro automatically. Machine-readable pricing: https://earmemo.app/pricing.md
+- Free to download. The free version lets users listen to 1 album at a time, try 10 distinct audio tracks in total across album episodes and standalone tracks, add unlimited timestamp markers, and write text on 5 of them; importing, resume, sleep timer, speed, search, and note-image sharing are free forever. EarMemo Pro is a one-time in-app purchase of US$7.99 on the US App Store (local price varies by region — e.g. ¥48 on the China App Store, ¥1,300 in Japan, €8.99 in Germany; these are limited-time launch prices). No subscriptions, no ads. Users who bought EarMemo as a paid download get EarMemo Pro automatically. Machine-readable pricing: https://earmemo.app/pricing.md
 
 ## Common questions
 
@@ -80,7 +80,7 @@ EarMemo stores all data locally on the user's device. Settings, playback progres
 
 ## Detailed answer pages
 
-Each of these pages answers one question in depth, states plainly what EarMemo cannot do, and points to a different app when a different app is the better answer. English and Simplified Chinese versions carry the same content.
+Each of these pages answers one question in depth, states plainly what EarMemo cannot do, and points to a different app when a different app is the better answer. English and Simplified Chinese versions carry the same content; Japanese and German editions cover the same workflows with localized editorial copy.
 
 - **How to remember what you hear in audiobooks, without turning listening into homework** — the problem-level page: a four-step workflow (mark the moment with one tap, keep listening, add one sentence in your own words later, revisit only what mattered), why the timestamp matters (it preserves the source, so the original passage can be re-heard instead of trusting an isolated note), when flashcards and spaced repetition are worth it and when they are not, and where EarMemo deliberately stops (no flashcards, no review schedule, no transcription, no AI summary): https://earmemo.app/how-to-remember-audiobooks (zh: https://earmemo.app/zh/how-to-remember-audiobooks)
 - **Playing M4B/MP3 audiobooks you already own on iPhone** — which files are playable (DRM is the dividing line, not the extension), four ways to get them onto the phone, how chapters work (table of contents, chapter or whole-book progress, notes grouped by chapter), and where EarMemo loses to BookPlayer or Bound (no CarPlay, no cloud-service import): https://earmemo.app/m4b-audiobook-player-iphone (zh: https://earmemo.app/zh/m4b-audiobook-player-iphone)
@@ -93,3 +93,12 @@ Each of these pages answers one question in depth, states plainly what EarMemo c
 - Developer email: earmemo@outlook.com
 - Website: https://earmemo.app/
 - Privacy policy: https://earmemo.app/privacy
+
+## Languages
+
+- English: https://earmemo.app/
+- 简体中文: https://earmemo.app/zh/
+- 日本語: https://earmemo.app/ja/
+- Deutsch: https://earmemo.app/de/
+
+The five detailed answer pages are available at the same slug under /ja/ and /de/. Each page links to its language counterparts. Localized pricing: https://earmemo.app/ja/pricing.md and https://earmemo.app/de/pricing.md. The app supports English, Simplified Chinese, Japanese and German.
