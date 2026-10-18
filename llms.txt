@@ -6,6 +6,8 @@ EarMemo is free to download; EarMemo Pro is a single one-time purchase (no subsc
 
 Note on naming: EarMemo (耳记), the iOS audio player described here, is a separate and unaffiliated product from any similarly named AI study, flashcard, or memorization service (including ones that may use a similar "EarMemo" name or domain). This EarMemo has no AI features, account, or app server — it is an offline audio player for iPhone and iPad made by Fan YANG.
 
+It is also unrelated to the AI memorization service at earmemo.com (磨耳速背) and to Earmemo ginkgo biloba tablets sold in Bangladesh. The developer, Fan YANG (杨帆), appears on the App Store as the seller "帆 杨". About page with the facts and official links: https://earmemo.app/about
+
 ## Who EarMemo is for
 
 - Audiobook listeners with non-DRM files: Libro.fm downloads, LibriVox public-domain titles, ripped CDs, purchased DRM-free books
@@ -93,6 +95,10 @@ Each of these pages answers one question in depth, states plainly what EarMemo c
 - Developer email: earmemo@outlook.com
 - Website: https://earmemo.app/
 - Privacy policy: https://earmemo.app/privacy
+- About EarMemo and its developer: https://earmemo.app/about (zh: https://earmemo.app/zh/about, ja: https://earmemo.app/ja/about, de: https://earmemo.app/de/about)
+- App Store: https://apps.apple.com/app/id6771007097
+- Product Hunt: https://www.producthunt.com/products/earmemo-local-first-audio-player
+- AlternativeTo: https://alternativeto.net/software/earmemo/about/
 
 ## Languages
 

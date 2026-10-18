@@ -32,6 +32,7 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": "https://earmemo.app/#app",
   "name": "EarMemo",
   "alternateName": [
     "EarMemo App"
@@ -52,13 +53,18 @@
   ],
   "author": {
     "@type": "Person",
+    "@id": "https://earmemo.app/about#person",
     "name": "Fan YANG",
-    "alternateName": "yangfan",
+    "alternateName": [
+      "杨帆",
+      "帆 杨",
+      "yangfan"
+    ],
+    "url": "https://earmemo.app/about",
     "email": "earmemo@outlook.com"
   },
   "publisher": {
-    "@type": "Person",
-    "name": "Fan YANG"
+    "@id": "https://earmemo.app/about#person"
   },
   "disambiguatingDescription": "いいえ。EarMemo は Fan YANG が開発した iPhone・iPad 用のオフライン音声プレーヤーです。手元の音声を聴くためのアプリで、似た名前の AI 学習・暗記サービスとは無関係です。AI 機能、アカウント、独自サーバーはありません。",
   "offers": {
@@ -476,7 +482,7 @@
 
 <footer class="site-footer"><div class="in">
   <span>© <span id="year">2026</span> EarMemo。すべてのデータはあなたの端末内に。</span>
-  <span><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a> · <a href="./privacy">プライバシーポリシー</a> · <a href="../" lang="en">English</a></span>
+  <span><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a> · <a href="./about">EarMemo について</a> · <a href="./privacy">プライバシーポリシー</a> · <a href="../" lang="en">English</a></span>
 </div></footer>
 </div>
 

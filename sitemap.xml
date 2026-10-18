@@ -266,6 +266,50 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/offline-audio-player-no-account"/>
   </url>
   <url>
+    <loc>https://earmemo.app/about</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/about"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/zh/about</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/about"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/ja/about</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/about"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/de/about</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/about"/>
+  </url>
+  <url>
     <loc>https://earmemo.app/privacy</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>yearly</changefreq>
