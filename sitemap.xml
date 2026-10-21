@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://earmemo.app/how-to-remember-audiobooks</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/how-to-remember-audiobooks"/>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://earmemo.app/zh/how-to-remember-audiobooks</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/how-to-remember-audiobooks"/>
@@ -69,7 +69,7 @@
   </url>
   <url>
     <loc>https://earmemo.app/ja/how-to-remember-audiobooks</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/how-to-remember-audiobooks"/>
@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://earmemo.app/de/how-to-remember-audiobooks</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/how-to-remember-audiobooks"/>
@@ -264,6 +264,50 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/offline-audio-player-no-account"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/offline-audio-player-no-account"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/offline-audio-player-no-account"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/does-earmemo-send-my-data</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/does-earmemo-send-my-data"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/zh/does-earmemo-send-my-data</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/does-earmemo-send-my-data"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/ja/does-earmemo-send-my-data</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/does-earmemo-send-my-data"/>
+  </url>
+  <url>
+    <loc>https://earmemo.app/de/does-earmemo-send-my-data</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://earmemo.app/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://earmemo.app/de/does-earmemo-send-my-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://earmemo.app/does-earmemo-send-my-data"/>
   </url>
   <url>
     <loc>https://earmemo.app/about</loc>

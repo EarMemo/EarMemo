@@ -48,7 +48,7 @@ namespace for each language. There is no automatic language redirect.
   the build so new copy cannot silently appear in English.
 - `tools/site-locales/home-{ja,de}.json` holds the home/tour copy keyed by
   English source text. `tour-{ja,de}.json` holds dynamic UI and export copy.
-- `tools/build-answer-pages.py` renders all five guides in all four languages.
+- `tools/build-answer-pages.py` renders all six guides in all four languages.
   Japanese/German editorial content is in `answers-{ja,de}.json`, and shared
   navigation/footer copy is in `ui-{ja,de}.json`.
 - Japanese/German home/tour screenshots use real localized app captures,

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EarMemo はデータを送信しますか？ 通信経路のすべて — EarMemo</title>
+<meta name="description" content="EarMemo の通信経路は3つだけ。任意のローカル Wi-Fi 転送、Apple StoreKit の購入、自身の App Store ページを開くこと。全部を一覧にし、アプリの外から自分で確かめる4つの方法を示します。">
+<link rel="canonical" href="https://earmemo.app/ja/does-earmemo-send-my-data">
+<link rel="alternate" hreflang="en" href="https://earmemo.app/does-earmemo-send-my-data">
+<link rel="alternate" hreflang="zh-Hans" href="https://earmemo.app/zh/does-earmemo-send-my-data">
+<link rel="alternate" hreflang="ja" href="https://earmemo.app/ja/does-earmemo-send-my-data">
+<link rel="alternate" hreflang="de" href="https://earmemo.app/de/does-earmemo-send-my-data">
+<link rel="alternate" hreflang="x-default" href="https://earmemo.app/does-earmemo-send-my-data">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EarMemo はデータを送信しますか？ 通信経路のすべて — EarMemo">
+<meta property="og:description" content="EarMemo の通信経路は3つだけ。任意のローカル Wi-Fi 転送、Apple StoreKit の購入、自身の App Store ページを開くこと。全部を一覧にし、アプリの外から自分で確かめる4つの方法を示します。">
+<meta property="og:url" content="https://earmemo.app/ja/does-earmemo-send-my-data">
+<meta property="og:image" content="https://earmemo.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EarMemo はデータを送信しますか？ 通信経路のすべて — EarMemo">
+<meta name="twitter:description" content="EarMemo の通信経路は3つだけ。任意のローカル Wi-Fi 転送、Apple StoreKit の購入、自身の App Store ページを開くこと。全部を一覧にし、アプリの外から自分で確かめる4つの方法を示します。">
+<meta name="twitter:image" content="https://earmemo.app/og.png">
+<meta name="author" content="Fan YANG">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="stylesheet" href="../answer.css">
+<script src="../attribution.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "EarMemo はデータをどこかに送信しますか？ 通信経路のすべて",
+  "description": "EarMemo の通信経路は3つだけ。任意のローカル Wi-Fi 転送、Apple StoreKit の購入、自身の App Store ページを開くこと。全部を一覧にし、アプリの外から自分で確かめる4つの方法を示します。",
+  "inLanguage": "ja",
+  "url": "https://earmemo.app/ja/does-earmemo-send-my-data",
+  "dateModified": "2026-10-15",
+  "author": {
+    "@type": "Person",
+    "@id": "https://earmemo.app/about#person",
+    "name": "Fan YANG",
+    "url": "https://earmemo.app/about",
+    "email": "earmemo@outlook.com",
+    "description": "個人 iOS 開発者、EarMemo の作者"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://earmemo.app/about#person",
+    "name": "Fan YANG"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "@id": "https://earmemo.app/#app",
+    "name": "EarMemo",
+    "operatingSystem": "iOS 17, iPadOS 17",
+    "applicationCategory": "MultimediaApplication",
+    "url": "https://earmemo.app/"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "EarMemo",
+    "url": "https://earmemo.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "EarMemo は音声やメモをアップロードしますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "しません。音声ファイル、メモ、ブックマーク、再生位置、統計は端末内にのみ書き込まれます。受け取る開発者のサーバーが存在しません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "EarMemo の通信経路はどれですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "3つです。任意のローカル Wi-Fi 転送、購入と復元のための Apple StoreKit、そして「EarMemo を評価」で App Store の URL を iOS に渡すこと。取り込み、再生、メモ、統計、書き出しはどれも使いません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "なぜ iOS がローカルネットワークの許可を求めるのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "必要なのは Wi-Fi 転送だけなので、起動時ではなくその画面を初めて開いたときに求めます。許可しなくても、ほかの機能に影響はありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "アプリが何に接続しているか、自分で見られますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "設定 → プライバシーとセキュリティ → App プライバシーレポートをオンにして数日使う、自分の DNS ログを見る、または Proxyman・Charles・mitmproxy などのプロキシ経由にする、のいずれかで見られます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "第三者 SDK は入っていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "入っていません。CocoaPods・Carthage・Swift Package Manager の依存ファイルがなく、リンクしているフレームワークはすべて Apple 製です。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "EarMemo",
+      "item": "https://earmemo.app/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "EarMemo はデータをどこかに送信しますか？ 通信経路のすべて",
+      "item": "https://earmemo.app/ja/does-earmemo-send-my-data"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container">
+  <a class="brand" href="./"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b>EarMemo</b></a>
+  <nav class="nav">
+    <a href="./#features">機能</a>
+    <a href="./#privacy">プライバシー</a>
+    <a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">ダウンロード</a>
+    <details class="language-menu"><summary aria-label="言語">日本語</summary><div><a href="../does-earmemo-send-my-data" lang="en" hreflang="en">English</a><a href="../zh/does-earmemo-send-my-data" lang="zh-Hans" hreflang="zh-Hans">中文</a><a href="../ja/does-earmemo-send-my-data" lang="ja" hreflang="ja" aria-current="page">日本語</a><a href="../de/does-earmemo-send-my-data" lang="de" hreflang="de">Deutsch</a></div></details>
+  </nav>
+</div></header>
+
+<main><div class="container">
+  <p class="crumb"><a href="./">EarMemo</a> › ネットワークに何を送るのか</p>
+  <h1>EarMemo はデータをどこかに送信しますか？ 通信経路のすべて</h1>
+  <div class="answer"><p>経路は3つ、どれもあなたのライブラリを運びません。任意の Wi-Fi 転送は iPhone 上に小さなウェブサーバーを立て、通信はご自身のネットワーク内で終わります。Pro の購入・購入の復元・評価シートは Apple StoreKit、つまり Apple のコードが Apple と通信します。設定の「EarMemo を評価」は URL を iOS に渡すだけで、開くのは App Store アプリです。取り込み、再生、メモ、統計、Markdown 書き出しは、この3つをどれも使いません。</p><p><b>EarMemo に開発者のサーバーはありません</b>。音声・メモ・再生履歴を送る宛先そのものが存在しません。以下に全部を並べ、そのあとに、私の言葉を信じずに確かめる方法を挙げます。</p></div>
+  <p class="meta">最終更新 2026年10月15日 · 著者：Fan YANG（EarMemo 開発者）</p>
+
+  <h2>アプリの通信経路は、この3つだけ</h2>
+  <p>ライブラリを端末内に置くプレーヤーでも、ネットワークに触れる仕事はいくつか残ります。ファイルを入れる、支払いを受ける、リンクを開く。それぞれが、いつ動き、どこへ向かうのかを示します。</p>
+  <div class="tablewrap"><table class="custom-hl"><thead><tr><th>経路</th><th>動くとき</th><th>通信の行き先</th></tr></thead><tbody><tr><td>Wi-Fi 転送（任意。画面を開くまで動きません）</td><td>Wi-Fi 転送の画面を開いている間だけ。画面を離れるとサーバーは停止します。</td><td>iPhone 上の素の HTTP リスナー（ポート 8080〜8090）。Bonjour で _earmemo-transfer._tcp として告知します。パソコンのブラウザから iPhone へ、ご自身のネットワーク内で完結し、ルーターの外には出ません。</td></tr><tr><td>Pro の購入、購入の復元、評価シート</td><td>あなたが操作したとき、または iOS が評価シートを出すと判断したとき。</td><td>Apple StoreKit、つまり Apple のフレームワークが Apple と通信します。アプリはカード番号を見ず、あなたを特定する情報も開発者には届きません。</td></tr><tr><td>設定の「EarMemo を評価」</td><td>そのボタンを押したときだけ。</td><td>apps.apple.com の URL を iOS に渡します。リクエストを出すのは App Store アプリで、EarMemo ではありません。</td></tr><tr class="hl"><td>それ以外すべて（取り込み、再生、チャプター、速度、スリープタイマー、ブックマーク、メモ、統計、Markdown 書き出し）</td><td>アプリを使っている間ずっと。</td><td>どこへも向かいません。端末内のファイルを読み書きするだけです。</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">各行は 2026-10-21 に公開中のソースと照合しました。</p>
+  <h2>アプリに入っていないもの</h2>
+  <ul><li>アカウントの仕組みがありません。サインインもなく、あなたを識別するものもありません。</li><li>アクセス解析、イベント記録、クラッシュレポートがありません。</li><li>リモート設定も、起動時に取得する機能フラグも、A/B 振り分けもありません。</li><li>広告も、計測（アトリビューション）SDK もありません。</li><li>第三者 SDK が一切ありません。CocoaPods・Carthage・Swift Package の依存ファイルを持たず、リンクしているフレームワークはすべて Apple 製です（AVFoundation、SwiftUI、StoreKit、WidgetKit、AppIntents、Network など）。</li><li>WebView がないため、アプリ内で外部のページが読み込まれることはありません。</li></ul>
+  <h2 id="verify">アプリの外から確かめる4つの方法</h2>
+  <p>自分で確かめられないプライバシーの説明は、言い方のうまい約束にすぎません。手間の少ない順に並べます。最初の方法は iPhone だけで足ります。</p>
+  <ol class="steps"><li><b>「App プライバシーレポート」をオンにする。</b>設定 → プライバシーとセキュリティ → App プライバシーレポート。以後 iOS が、アプリごとに接続したドメインを記録します。EarMemo を数日ふつうに使ってから、その項目を見てください。接続したドメインがあれば、そこに並びます。</li><li><b>自分の DNS ログを見る。</b>Pi-hole、NextDNS、あるいは問い合わせを記録するルーターがあれば、取り込み・再生・メモ・書き出しをしながら眺めてください。名前解決はサーバーに接続する前の最初の一歩で、自分のリゾルバからは隠しにくいものです。</li><li><b>端末をプロキシ経由にする。</b>パソコンの Proxyman、Charles、mitmproxy に向けて、アプリの機能をひと通り動かします。通信が見えるのは購入のときだけで、それは Apple の通信です。StoreKit はアプリのプロセスの外で動きます。</li><li><b>初回起動から機内モードで使う。</b>インストール後に機内モードにし、そのまま初めて開いて、「ファイル」から取り込み、再生、メモ、統計まで試します。サーバーに依存するアプリは初回起動でつまずくか、催促を出しがちです。この方法は<a href="./offline-audio-player-no-account">アカウント不要のオフライン再生のページ</a>で詳しく説明しています。</li></ol>
+  <p>証拠がもう2つ、私ではなく Apple 側にあります。EarMemo の App Store のプライバシー表示は<i>データを収集していません</i>で、アプリ内のプライバシーマニフェストはトラッキングを無効と宣言し、トラッキングドメインの一覧も収集するデータ種別の一覧も空です。どちらも開発者が Apple に対して行う宣言で、ウェブサイトの一文とは性質の違う証拠です。</p>
+  <h2>開発側で走っているチェック</h2>
+  <p>これはあなたには実行できません。ソースをお持ちでないからです。それでも、上の一覧が3つで止まっている理由はこれです。通信のコードを書く前にこの検索が空であること、それがこのプロジェクト自身の決まりで、私が従う指示書に書かれています。</p>
+  <pre><code>$ grep -rn "URLSession\|URLRequest\|dataTask" --include="*.swift" \
+    Sources ShareExtension SleepTimerWidget Shared
+$   # 一致なし — 2026-10-21</code></pre>
+  <p><code>URLSession</code> はこの種のアプリが自ら外へ要求を出す道ですが、プロジェクト内に1か所もありません。唯一の <code>import Network</code> は Wi-Fi 転送サーバーで、アプリが開く外部 URL は自身の App Store ページだけです（URL を iOS に渡す残りの3か所は、どれも iOS の「設定」を開きます）。</p>
+  <h2>Wi-Fi 転送サーバーの正体（都合の悪い部分も）</h2>
+  <p>iPhone 上の小さな HTTP リスナーで、8080〜8090 のいずれかのポートを使い、パソコンがアドレスを打たずに見つけられるよう Bonjour で <code>_earmemo-transfer._tcp</code> として告知します。Wi-Fi 転送の画面を開くと起動し、離れると停止します。動いている間は、同じネットワークにいる人がそのアドレスを開けばファイル一覧を見てアップロードできます。ページが持つ起動ごとのトークンが防ぐのは、ブラウザ内の無関係なページが API を呼ぶことで、ページを正しく開いた同じネットワークの人は防げません。ですから、自分が管理しているネットワークで使い、終わったら画面を離れてください。手順は<a href="./transfer-audio-to-iphone-without-itunes">iTunes なしで音声を転送するページ</a>にあります。</p>
+
+  <div class="honest">
+    <h3>EarMemo が向いていない場合</h3>
+    <ul><li><b>ソースを読みたい。</b>EarMemo はオープンソースではありません。上の確認はすべてアプリの外からできますが、コードの監査はできません。それが条件なら、<a href="./m4b-audiobook-player-iphone">BookPlayer</a> はオープンソースで妥当な答えです。</li><li><b>通信なしで購入まで済ませたい。</b>購入と復元には接続が必要です。StoreKit がそうだからです。すでに持っている機能は接続なしで動きます。</li><li><b>ライブラリを全端末に置きたい。</b>同期はありません。同期するためのサーバーがないからです。データは、有効にしていればご自身の iCloud バックアップに含まれます。</li><li><b>アプリ内でポッドキャストを購読したい。</b>フィードの取得には通信が必要です。EarMemo は取り込み済みのファイルを再生します。</li></ul>
+  </div>
+
+  <h2>よくある質問</h2>
+  <details><summary>EarMemo は音声やメモをアップロードしますか？</summary><p>しません。音声ファイル、メモ、ブックマーク、再生位置、統計は端末内にのみ書き込まれます。受け取る開発者のサーバーが存在しません。</p></details>
+  <details><summary>EarMemo の通信経路はどれですか？</summary><p>3つです。任意のローカル Wi-Fi 転送、購入と復元のための Apple StoreKit、そして「EarMemo を評価」で App Store の URL を iOS に渡すこと。取り込み、再生、メモ、統計、書き出しはどれも使いません。</p></details>
+  <details><summary>なぜ iOS がローカルネットワークの許可を求めるのですか？</summary><p>必要なのは Wi-Fi 転送だけなので、起動時ではなくその画面を初めて開いたときに求めます。許可しなくても、ほかの機能に影響はありません。</p></details>
+  <details><summary>アプリが何に接続しているか、自分で見られますか？</summary><p>設定 → プライバシーとセキュリティ → App プライバシーレポートをオンにして数日使う、自分の DNS ログを見る、または Proxyman・Charles・mitmproxy などのプロキシ経由にする、のいずれかで見られます。</p></details>
+  <details><summary>第三者 SDK は入っていますか？</summary><p>入っていません。CocoaPods・Carthage・Swift Package Manager の依存ファイルがなく、リンクしているフレームワークはすべて Apple 製です。</p></details>
+
+  <div class="cta-box">
+    <h2>自分のファイルで試してみる</h2>
+    <p>EarMemo は無料でダウンロードでき、無料枠に期限はありません。EarMemo Pro は買い切りです。サブスクリプション、広告、アカウントはありません。</p>
+    <p style="margin-top:18px"><a class="btn accent" href="https://apps.apple.com/app/apple-store/id6771007097?pt=128926686&ct=answerpage&mt=8" target="_blank" rel="noopener">App Store からダウンロード</a></p>
+    <p style="font-size:14px;margin-top:14px"><a href="./pricing.md">料金の詳細（テキスト）</a></p>
+  </div>
+
+  <div class="related">
+    <h3>関連ガイド</h3>
+    <ul><li><a href="./how-to-remember-audiobooks">オーディオブックで聴いたことを覚えておく</a></li><li><a href="./m4b-audiobook-player-iphone">iPhone で M4B・MP3 を聴く</a></li><li><a href="./timestamped-audio-notes-markdown">タイムスタンプ付きメモと Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">iTunes なしで音声を転送</a></li><li><a href="./offline-audio-player-no-account">アカウント不要のオフライン再生</a></li></ul>
+  </div>
+</div></main>
+
+<footer class="site-footer"><div class="container">
+  <div class="foot-cols">
+    <div>
+      <a class="brand" href="./" style="color:var(--cream)"><img src="../icon.png" alt="" onerror="this.style.display='none'"><b style="color:var(--cream)">EarMemo</b></a>
+      <p style="color:var(--foot-muted);font-size:14px;margin-top:12px;max-width:30ch">iOS 用のローカル音声プレーヤー。すべてのデータは端末内に保存されます。</p>
+    </div>
+    <div><h4>製品</h4><ul><li><a href="./#features">機能</a></li><li><a href="./#privacy">プライバシー</a></li><li><a href="./#faq">よくある質問</a></li></ul></div>
+    <div><h4>ガイド</h4><ul><li><a href="./how-to-remember-audiobooks">オーディオブックで聴いたことを覚えておく</a></li><li><a href="./m4b-audiobook-player-iphone">iPhone で M4B・MP3 を聴く</a></li><li><a href="./timestamped-audio-notes-markdown">タイムスタンプ付きメモと Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">iTunes なしで音声を転送</a></li><li><a href="./offline-audio-player-no-account">アカウント不要のオフライン再生</a></li></ul></div>
+    <div><h4>お問い合わせ</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="./about">EarMemo について</a></li><li><a href="./privacy">プライバシーポリシー</a></li></ul></div>
+  </div>
+  <div class="foot-bottom">© 2026 EarMemo. すべてのデータはあなたの端末内に。</div>
+</div></footer>
+</body>
+</html>
