@@ -91,6 +91,19 @@ Each of these pages answers one question in depth, states plainly what EarMemo c
 - **An offline player with no account, no server, no tracking** — what local-first means here item by item, and three ways a user can verify the claim independently (airplane mode from first launch, the App Store "Data Not Collected" label, when iOS asks for local network permission): https://earmemo.app/offline-audio-player-no-account (zh: https://earmemo.app/zh/offline-audio-player-no-account)
 - **Does EarMemo send my data anywhere?** — the trust page: all three network paths the app has (optional local Wi-Fi transfer on ports 8080–8090 announced over Bonjour, Apple StoreKit for purchases and restores, handing an App Store URL to iOS for the rating button), what is not in the binary (no account system, no analytics, no crash reporter, no remote config, no third-party SDK, no web view), four ways a reader can check from outside the app (iOS App Privacy Report, their own DNS log, a proxy such as Proxyman or mitmproxy, airplane mode from first launch), and an honest account of what the Wi-Fi transfer server exposes while it runs: https://earmemo.app/does-earmemo-send-my-data (zh: https://earmemo.app/zh/does-earmemo-send-my-data)
 
+## Guides for specific free audio sources
+
+Each page follows one source from its own download button to offline listening on an iPhone, with the source's exact link labels, its license, and when EarMemo is not needed. Each is written in one language only.
+
+- Gresham College lectures (Audio tab → Share → Download episode): https://earmemo.app/gresham-college-lectures-offline-iphone
+- Open Yale Courses (one mp3 per lecture, CC BY-NC-SA 3.0; keeping a course together as one album): https://earmemo.app/open-yale-courses-offline-iphone
+- LibriVox audiobooks (M4B vs zip of MP3s vs single chapters on an iPhone): https://earmemo.app/librivox-audiobooks-iphone
+- Old-time radio from the Old Time Radio Researchers on the Internet Archive (VBR MP3 episodes, large ZIP sets): https://earmemo.app/old-time-radio-otrr-offline-iphone
+- Dharma Seed talks (the route from Dharma Seed's own FAQ, then into a player): https://earmemo.app/dharma-seed-talks-offline-iphone
+- LearnOutLoud's free directory (finding Audio Download titles and saving them from their source): https://earmemo.app/learnoutloud-free-audio-iphone
+- German: ARD-Hörspiele aus ARD Sounds (früher ARD Audiothek) als MP3 offline hören: https://earmemo.app/de/ard-hoerspiele-offline-iphone
+- Japanese: LEC・TAC の講義音声ダウンロードを iPhone でオフライン・倍速再生: https://earmemo.app/ja/lec-tac-kogi-onsei-iphone
+
 ## Contact
 
 - Developer email: earmemo@outlook.com
