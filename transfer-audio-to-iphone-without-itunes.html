@@ -33,7 +33,7 @@
   "description": "Four ways to get mp3, m4b or flac files onto an iPhone without iTunes, a cable, or a cloud account — including dragging them in from a desktop browser.",
   "inLanguage": "en",
   "url": "https://earmemo.app/transfer-audio-to-iphone-without-itunes",
-  "dateModified": "2026-10-10",
+  "dateModified": "2026-11-05",
   "author": {
     "@type": "Person",
     "@id": "https://earmemo.app/about#person",
@@ -113,7 +113,7 @@
       "name": "Is there a file size or count limit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The limit is your device's free storage. The free version limits how much you can play, not how much you can import — imported files stay visible and deletable either way."
+        "text": "With Wi-Fi transfer, a single file can be up to 4 GB and one selection up to 2,000 files; beyond that, the limit is your device's free storage. The free version limits how much you can play, not how much you can import — imported files stay visible and deletable either way."
       }
     }
   ]
@@ -208,7 +208,7 @@
   <p class="crumb"><a href="./">EarMemo</a> › Transfer audio without iTunes</p>
   <h1>How to transfer audio files to an iPhone without iTunes</h1>
   <div class="answer"><p>iTunes is no longer needed. Four routes work: drag files in from a desktop browser over your local Wi-Fi, import through the iOS <b>Files</b> app (iCloud Drive, SMB share, or a USB drive), send them via the <b>Share Sheet</b>, or AirDrop from a Mac. All four land the files in a player app, not Apple Music.</p></div>
-  <p class="meta">Last updated 2026-10-10 · Written by Fan YANG, the developer of EarMemo.</p>
+  <p class="meta">Last updated 2026-11-05 · Written by Fan YANG, the developer of EarMemo.</p>
 
   <h2>Why iTunes syncing stopped being the answer</h2>
   <p>Apple split iTunes up in macOS Catalina; syncing moved into Finder, and audiobooks and music took different paths. Meanwhile iOS gained a real filesystem through the Files app, and apps gained the right to own a document folder. The result is that a modern local player can take files directly — no library database in the middle.</p>
@@ -226,7 +226,7 @@
   <h2>Which route for which situation</h2>
   <div class="tablewrap"><table><thead><tr><th>Your situation</th><th>Best route</th><th>Why</th></tr></thead><tbody><tr><td>A 40-file audiobook on your laptop</td><td>Wi-Fi browser transfer</td><td>One drag, folder structure kept, no cable.</td></tr><tr><td>Files already in iCloud Drive or Dropbox</td><td>Files app</td><td>No transfer at all — import in place.</td></tr><tr><td>A single episode someone emailed you</td><td>Share Sheet</td><td>Two taps.</td></tr><tr><td>A USB stick full of lectures</td><td>Files app</td><td>Plug it into the phone and import directly.</td></tr><tr><td>You are on public or office Wi-Fi</td><td>Files app or cable</td><td>Do not run a local web server on a network you do not control.</td></tr></tbody></table></div>
   <h2>A caution about Wi-Fi transfer that most apps do not print</h2>
-  <p>While Wi-Fi transfer is running, EarMemo is a small web server on your local network, and it announces itself over Bonjour. Anyone else on that same network can reach the page and see the file list while it is on. That is fine on your own home network and a bad idea on café, hotel, or open office Wi-Fi. Turn it off when the transfer is done — it does not run in the background, and it never reaches beyond your local network gateway.</p>
+  <p>While Wi-Fi transfer is running, EarMemo is a small web server on your local network, and it announces itself over Bonjour. Anyone else on that same network can open the page and upload files while it is on. The page does not show them what others uploaded, but someone technical can use the token in the page to read this session's file names and progress; files in your library cannot be seen or downloaded. That is fine on your own home network and a bad idea on café, hotel, or open office Wi-Fi. Turn it off when the transfer is done — it does not run in the background, and it never reaches beyond your local network gateway.</p>
 
   <h2 id="by-source">Step-by-step for specific free sources</h2>
   <p>Each source hands out its files differently. These guides follow one source from its download button to your iPhone:</p>
@@ -243,7 +243,7 @@
   <details><summary>Does Wi-Fi transfer upload my files to the internet?</summary><p>No. The transfer runs entirely inside your local network — the phone serves a page, the computer posts the file to it, and nothing crosses your router to the internet.</p></details>
   <details><summary>Will a multi-file audiobook stay as one book?</summary><p>Yes, if you transfer the whole folder. EarMemo preserves folder structure, so a book split into 40 chapter files arrives as one album rather than 40 loose tracks.</p></details>
   <details><summary>What formats can I transfer?</summary><p>EarMemo accepts mp3, m4a, m4b, aac, flac, wav, aif, aiff and caf, plus mp4, mov and m4v when you want to listen to a video's audio track.</p></details>
-  <details><summary>Is there a file size or count limit?</summary><p>The limit is your device's free storage. The free version limits how much you can play, not how much you can import — imported files stay visible and deletable either way.</p></details>
+  <details><summary>Is there a file size or count limit?</summary><p>With Wi-Fi transfer, a single file can be up to 4 GB and one selection up to 2,000 files; beyond that, the limit is your device's free storage. The free version limits how much you can play, not how much you can import — imported files stay visible and deletable either way.</p></details>
 
   <div class="cta-box">
     <h2>Try it with your own files</h2>
@@ -254,7 +254,7 @@
 
   <div class="related">
     <h3>Related answers</h3>
-    <ul><li><a href="./how-to-remember-audiobooks">How to remember what you hear in audiobooks</a></li><li><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks on iPhone</a></li><li><a href="./timestamped-audio-notes-markdown">Timestamped notes exported as Markdown</a></li><li><a href="./offline-audio-player-no-account">An offline player with no account, no server</a></li><li><a href="./does-earmemo-send-my-data">Every network path, and how to check it</a></li></ul>
+    <ul><li><a href="./how-to-remember-audiobooks">How to remember what you hear in audiobooks</a></li><li><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks on iPhone</a></li><li><a href="./timestamped-audio-notes-markdown">Timestamped notes exported as Markdown</a></li><li><a href="./offline-audio-player-no-account">An offline player with no account, no server</a></li><li><a href="./does-earmemo-send-my-data">Every network path, and how to check it</a></li><li><a href="./bookplayer-alternative-audiobook-notes">BookPlayer alternative for audiobook notes</a></li></ul>
   </div>
 </div></main>
 
@@ -265,7 +265,7 @@
       <p style="color:var(--foot-muted);font-size:14px;margin-top:12px;max-width:30ch">A local-first audio player for iOS. All data stays on your device.</p>
     </div>
     <div><h4>Product</h4><ul><li><a href="./#features">Features</a></li><li><a href="./#privacy">Privacy</a></li><li><a href="./#faq">FAQ</a></li></ul></div>
-    <div><h4>Answers</h4><ul><li><a href="./how-to-remember-audiobooks">How to remember what you hear in audiobooks</a></li><li><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks on iPhone</a></li><li><a href="./timestamped-audio-notes-markdown">Timestamped notes exported as Markdown</a></li><li><a href="./offline-audio-player-no-account">An offline player with no account, no server</a></li><li><a href="./does-earmemo-send-my-data">Every network path, and how to check it</a></li></ul></div>
+    <div><h4>Answers</h4><ul><li><a href="./how-to-remember-audiobooks">How to remember what you hear in audiobooks</a></li><li><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks on iPhone</a></li><li><a href="./timestamped-audio-notes-markdown">Timestamped notes exported as Markdown</a></li><li><a href="./offline-audio-player-no-account">An offline player with no account, no server</a></li><li><a href="./does-earmemo-send-my-data">Every network path, and how to check it</a></li><li><a href="./bookplayer-alternative-audiobook-notes">BookPlayer alternative for audiobook notes</a></li></ul></div>
     <div><h4>Contact</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="./about">About EarMemo</a></li><li><a href="./privacy">Privacy policy</a></li></ul></div>
   </div>
   <div class="foot-bottom">© 2026 EarMemo. All data stays on your device.</div>

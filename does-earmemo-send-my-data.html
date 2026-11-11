@@ -33,7 +33,7 @@
   "description": "EarMemo has three network paths: optional local Wi-Fi transfer, Apple StoreKit purchases, and opening its own App Store page. All three listed, plus four ways to check from outside the app.",
   "inLanguage": "en",
   "url": "https://earmemo.app/does-earmemo-send-my-data",
-  "dateModified": "2026-10-21",
+  "dateModified": "2026-11-05",
   "author": {
     "@type": "Person",
     "@id": "https://earmemo.app/about#person",
@@ -155,7 +155,7 @@
   <p class="crumb"><a href="./">EarMemo</a> › What it sends over the network</p>
   <h1>Does EarMemo send my data anywhere? Here is every network path it has</h1>
   <div class="answer"><p>Three paths, and none of them carries your library. Optional Wi-Fi transfer runs a small web server on the phone and stays inside your own network. Buying Pro, restoring a purchase and the rating sheet go through Apple StoreKit, which is Apple's code talking to Apple. The <i>Rate EarMemo</i> button hands a URL to iOS, and the App Store app opens it. Import, playback, notes, statistics and Markdown export use none of the three.</p><p><b>EarMemo has no server of its own</b>, so there is no address for your audio, notes or listening history to be sent to. Below is the full accounting, and then what you can check without taking my word for any of it.</p></div>
-  <p class="meta">Last updated 2026-10-21 · Written by Fan YANG, the developer of EarMemo.</p>
+  <p class="meta">Last updated 2026-11-05 · Written by Fan YANG, the developer of EarMemo.</p>
 
   <h2>Every network path in the app, all three of them</h2>
   <p>A player that keeps your library on the phone still has to do a few things that touch a network: get files in, take a payment, open a link. Here is each one, when it runs, and where the traffic ends up.</p>
@@ -173,7 +173,7 @@
 $   # no matches — 2026-10-21</code></pre>
   <p><code>URLSession</code> is how an app of this kind makes an outbound request of its own, and there is none in the project. The one <code>import Network</code> is the Wi-Fi transfer server, and the one outbound URL the app ever opens is its own App Store page — the other three places it hands a URL to iOS all open the iOS Settings app.</p>
   <h2>What the Wi-Fi transfer server is, including the uncomfortable part</h2>
-  <p>It is a small HTTP listener on the phone, bound to a port between 8080 and 8090, announced over Bonjour as <code>_earmemo-transfer._tcp</code> so your computer can find it without you typing an address. It starts when you open the Wi-Fi transfer screen and stops when you leave it. While it is running, anyone on the same network who opens that address can see the file list and upload — the per-launch token the page carries stops a random web page in your browser from calling the API, not a person on your network who loads the page properly. So: use it on a network you control, and leave the screen when you are done. The step-by-step is in <a href="./transfer-audio-to-iphone-without-itunes">transferring audio without iTunes</a>.</p>
+  <p>It is a small HTTP listener on the phone, bound to a port between 8080 and 8090, announced over Bonjour as <code>_earmemo-transfer._tcp</code> so your computer can find it without you typing an address. It starts when you open the Wi-Fi transfer screen and stops when you leave it. While it is running, anyone on the same network who opens that address can upload. The page does not show them what others uploaded, but someone technical can use the token in the page to read this session's file names and progress; files in your library cannot be seen or downloaded. The per-launch token the page carries stops a random web page in your browser from calling the API, not a person on your network who loads the page properly. So: use it on a network you control, and leave the screen when you are done. The step-by-step is in <a href="./transfer-audio-to-iphone-without-itunes">transferring audio without iTunes</a>.</p>
   <h2>Why this page lists paths instead of making a promise</h2>
   <p>An absolute denial would make the better slogan and the worse claim: the three paths above exist, so a sentence denying all network activity would simply be false. This site has a build check for that — a list of absolute network phrases that fails the build on sight, including the ones a page like this one is most tempted to use. What is left is an accounting you can go and check, which is worth more than a promise you cannot.</p>
 
@@ -199,7 +199,7 @@ $   # no matches — 2026-10-21</code></pre>
 
   <div class="related">
     <h3>Related answers</h3>
-    <ul><li><a href="./how-to-remember-audiobooks">How to remember what you hear in audiobooks</a></li><li><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks on iPhone</a></li><li><a href="./timestamped-audio-notes-markdown">Timestamped notes exported as Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">Transfer audio to iPhone without iTunes</a></li><li><a href="./offline-audio-player-no-account">An offline player with no account, no server</a></li></ul>
+    <ul><li><a href="./how-to-remember-audiobooks">How to remember what you hear in audiobooks</a></li><li><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks on iPhone</a></li><li><a href="./timestamped-audio-notes-markdown">Timestamped notes exported as Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">Transfer audio to iPhone without iTunes</a></li><li><a href="./offline-audio-player-no-account">An offline player with no account, no server</a></li><li><a href="./bookplayer-alternative-audiobook-notes">BookPlayer alternative for audiobook notes</a></li></ul>
   </div>
 </div></main>
 
@@ -210,7 +210,7 @@ $   # no matches — 2026-10-21</code></pre>
       <p style="color:var(--foot-muted);font-size:14px;margin-top:12px;max-width:30ch">A local-first audio player for iOS. All data stays on your device.</p>
     </div>
     <div><h4>Product</h4><ul><li><a href="./#features">Features</a></li><li><a href="./#privacy">Privacy</a></li><li><a href="./#faq">FAQ</a></li></ul></div>
-    <div><h4>Answers</h4><ul><li><a href="./how-to-remember-audiobooks">How to remember what you hear in audiobooks</a></li><li><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks on iPhone</a></li><li><a href="./timestamped-audio-notes-markdown">Timestamped notes exported as Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">Transfer audio to iPhone without iTunes</a></li><li><a href="./offline-audio-player-no-account">An offline player with no account, no server</a></li></ul></div>
+    <div><h4>Answers</h4><ul><li><a href="./how-to-remember-audiobooks">How to remember what you hear in audiobooks</a></li><li><a href="./m4b-audiobook-player-iphone">Play M4B and MP3 audiobooks on iPhone</a></li><li><a href="./timestamped-audio-notes-markdown">Timestamped notes exported as Markdown</a></li><li><a href="./transfer-audio-to-iphone-without-itunes">Transfer audio to iPhone without iTunes</a></li><li><a href="./offline-audio-player-no-account">An offline player with no account, no server</a></li><li><a href="./bookplayer-alternative-audiobook-notes">BookPlayer alternative for audiobook notes</a></li></ul></div>
     <div><h4>Contact</h4><ul><li><a href="mailto:earmemo@outlook.com">earmemo@outlook.com</a></li><li><a href="./about">About EarMemo</a></li><li><a href="./privacy">Privacy policy</a></li></ul></div>
   </div>
   <div class="foot-bottom">© 2026 EarMemo. All data stays on your device.</div>

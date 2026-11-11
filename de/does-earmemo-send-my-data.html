@@ -33,7 +33,7 @@
   "description": "EarMemo hat drei Netzwege: die optionale Wi-Fi-Übertragung im eigenen Netz, Käufe über Apple StoreKit und das Öffnen der eigenen App-Store-Seite. Alle drei aufgelistet, dazu vier Wege, das von außen zu prüfen.",
   "inLanguage": "de",
   "url": "https://earmemo.app/de/does-earmemo-send-my-data",
-  "dateModified": "2026-10-15",
+  "dateModified": "2026-11-05",
   "author": {
     "@type": "Person",
     "@id": "https://earmemo.app/about#person",
@@ -147,7 +147,7 @@
   <p class="crumb"><a href="./">EarMemo</a> › Was die App ins Netz sendet</p>
   <h1>Sendet EarMemo meine Daten irgendwohin? Hier sind alle Netzwege der App</h1>
   <div class="answer"><p>Drei Wege, und keiner trägt Ihre Bibliothek hinaus. Die optionale Wi-Fi-Übertragung startet einen kleinen Webserver auf dem iPhone und bleibt in Ihrem eigenen Netzwerk. Pro kaufen, Kauf wiederherstellen und das Bewertungsfenster laufen über Apple StoreKit, also Apples Code im Gespräch mit Apple. Die Taste <i>EarMemo bewerten</i> übergibt iOS eine URL, geöffnet wird sie von der App-Store-App. Import, Wiedergabe, Notizen, Statistik und Markdown-Export nutzen keinen dieser drei Wege.</p><p><b>EarMemo hat keinen eigenen Server</b>, es gibt also gar keine Adresse, an die Audio, Notizen oder Hörverlauf gehen könnten. Unten steht die vollständige Aufstellung, danach, was Sie prüfen können, ohne mir ein Wort zu glauben.</p></div>
-  <p class="meta">Aktualisiert am 15. Oktober 2026 · Von Fan YANG, dem Entwickler von EarMemo.</p>
+  <p class="meta">Aktualisiert am 5. November 2026 · Von Fan YANG, dem Entwickler von EarMemo.</p>
 
   <h2>Alle Netzwege der App, alle drei</h2>
   <p>Ein Player, der die Bibliothek auf dem Gerät hält, muss trotzdem ein paar Dinge tun, die ein Netzwerk berühren: Dateien hereinholen, eine Zahlung annehmen, einen Link öffnen. Hier jeder einzelne, wann er läuft und wo der Verkehr endet.</p>
@@ -165,7 +165,7 @@
 $   # keine Treffer – 21.10.2026</code></pre>
   <p><code>URLSession</code> ist der Weg, auf dem eine solche App von sich aus nach draußen fragt, und im Projekt steht sie an keiner Stelle. Das einzige <code>import Network</code> ist der Wi-Fi-Übertragungsserver, und die einzige externe URL, die die App öffnet, ist ihre eigene App-Store-Seite – die anderen drei Stellen, die iOS eine URL übergeben, öffnen alle die Einstellungen von iOS.</p>
   <h2>Was der Wi-Fi-Übertragungsserver ist, auch der unangenehme Teil</h2>
-  <p>Ein kleiner HTTP-Listener auf dem iPhone, gebunden an einen Port zwischen 8080 und 8090, per Bonjour als <code>_earmemo-transfer._tcp</code> angekündigt, damit Ihr Rechner ihn ohne eingetippte Adresse findet. Er startet, wenn Sie den Bildschirm für die Wi-Fi-Übertragung öffnen, und stoppt, wenn Sie ihn verlassen. Während er läuft, kann jeder im selben Netzwerk, der die Adresse öffnet, die Dateiliste sehen und hochladen. Das Token, das die Seite pro App-Start mitbringt, hält eine fremde Seite in Ihrem Browser davon ab, die API aufzurufen – nicht eine Person in Ihrem Netzwerk, die die Seite regulär öffnet. Also: in einem Netzwerk benutzen, das Sie kontrollieren, und den Bildschirm verlassen, wenn Sie fertig sind. Schritt für Schritt steht es auf der Seite <a href="./transfer-audio-to-iphone-without-itunes">Audio ohne iTunes übertragen</a>.</p>
+  <p>Ein kleiner HTTP-Listener auf dem iPhone, gebunden an einen Port zwischen 8080 und 8090, per Bonjour als <code>_earmemo-transfer._tcp</code> angekündigt, damit Ihr Rechner ihn ohne eingetippte Adresse findet. Er startet, wenn Sie den Bildschirm für die Wi-Fi-Übertragung öffnen, und stoppt, wenn Sie ihn verlassen. Während er läuft, kann jeder im selben Netzwerk, der die Adresse öffnet, Dateien hochladen. Auf der Seite sieht man nicht, was andere hochgeladen haben; wer sich auskennt, kann mit dem Token aus der Seite aber Dateinamen und Fortschritt der aktuellen Übertragung abrufen. Dateien in Ihrer Bibliothek lassen sich weder ansehen noch herunterladen. Das Token, das die Seite pro App-Start mitbringt, hält eine fremde Seite in Ihrem Browser davon ab, die API aufzurufen – nicht eine Person in Ihrem Netzwerk, die die Seite regulär öffnet. Also: in einem Netzwerk benutzen, das Sie kontrollieren, und den Bildschirm verlassen, wenn Sie fertig sind. Schritt für Schritt steht es auf der Seite <a href="./transfer-audio-to-iphone-without-itunes">Audio ohne iTunes übertragen</a>.</p>
 
   <div class="honest">
     <h3>Wann EarMemo nicht die richtige Wahl ist</h3>
