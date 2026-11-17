@@ -33,7 +33,7 @@
   "description": "手上已经有 m4b、mp3、flac 有声书文件，怎么在 iPhone 上听、按章节听？不用 iTunes、不用订阅的做法，以及什么情况下别的播放器更适合你。",
   "inLanguage": "zh-Hans",
   "url": "https://earmemo.app/zh/m4b-audiobook-player-iphone",
-  "dateModified": "2026-10-15",
+  "dateModified": "2026-11-17",
   "author": {
     "@type": "Person",
     "@id": "https://earmemo.app/about#person",
@@ -73,7 +73,7 @@
       "name": "iPhone 能播 m4b 吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "能，用第三方播放器。iOS 自己不会把一个散装 m4b 文件加进「图书」App（除非是商店买的），但耳记、BookPlayer、Bound 这类 App 可以直接在自己的书库里播 m4b。"
+        "text": "能。自己的、没有 DRM 的 m4b，系统自带的「图书」App 也能播，但散装文件一般要经过电脑：在 Mac 上把它加进「图书」App，再用访达同步到 iPhone（Windows 用 iTunes 或「Apple 设备」App）。不想经过电脑，可以用耳记、BookPlayer、Bound 这类播放器，从「文件」App 或通过 Wi-Fi 直接导入 m4b。"
       }
     },
     {
@@ -208,7 +208,7 @@
   <p class="crumb"><a href="./">耳记 EarMemo</a> › iPhone 有声书播放器</p>
   <h1>手上已经有的 m4b / mp3 有声书，怎么在 iPhone 上听</h1>
   <div class="answer"><p>把文件传进 iPhone，用一个本地播放器打开就行。<b>耳记</b>直接播放 m4b、mp3、m4a、aac、flac、wav，读得出 m4b 里自带的章节，按书分别记住听到哪儿，不需要账号、播放无需互联网。它打不开 Audible 和 Apple Books 买的带 DRM 的书——任何第三方播放器都打不开。</p></div>
-  <p class="meta">最后更新 2026-10-15 · 作者：Fan YANG（耳记开发者）</p>
+  <p class="meta">最后更新 2026-11-17 · 作者：Fan YANG（耳记开发者）</p>
 
   <h2>哪些文件真的能播</h2>
   <p>分界线不是后缀名，是 DRM。没有 DRM 的文件，用什么播放器都能播；有 DRM 的购买内容，按设计只能在商店自己的 App 里播。</p>
@@ -216,6 +216,7 @@
   <h2>怎么把书传进手机</h2>
   <p>耳记有四条路，都不需要 iTunes：</p>
   <ol class="steps"><li><b>Wi-Fi 传输。</b>在耳记里打开，把它显示的地址输入电脑浏览器，直接把文件拖进去。同一个局域网内完成，不走云、不出网关。</li><li><b>「文件」App 导入。</b>iCloud 云盘、坚果云、SMB 共享、插在手机上的 U 盘都行。会保留文件夹层级——一本拆成 40 个文件的书，进来还是一本书。</li><li><b>系统分享。</b>微信、邮件里收到的音频，分享 → 耳记。</li><li><b>数据线。</b>用访达/Finder 拖进 App 的文稿目录，老办法也留着。</li></ol>
+  <p>每条路怎么一步步走、什么情况该走哪条，见<a href="./transfer-audio-to-iphone-without-itunes">不用 iTunes 把音频传进 iPhone</a>。</p>
   <h2>跟别的播放器比，包括它输在哪</h2>
   <p>iOS 上不错的本地有声书播放器有好几个，各自的取舍不同。按你真正需要的那一条选，别按功能数量选。</p>
   <div class="tablewrap"><table><thead><tr><th>你最看重的如果是……</th><th>那就用</th><th>为什么</th></tr></thead><tbody><tr><td>笔记钉在具体那一秒，还能导出 Markdown</td><td>耳记</td><td>边听边写，点一下标记跳回那一刻；有章节的书，笔记归在各自的章节下。Pro 可导出普通 .md 文件</td></tr><tr><td>离线播放和记笔记，不要账号</td><td>耳记</td><td>没有 App 服务器或统计；可选的 Wi-Fi 传输只在局域网内进行</td></tr><tr><td>CarPlay</td><td>Bound 或 BookPlayer</td><td>耳记不支持 CarPlay</td></tr><tr><td>从 Dropbox 或 OneDrive 导入有声书</td><td>Bound</td><td>Bound 可从这些服务下载；耳记只播已存进设备的文件</td></tr><tr><td>开源</td><td>BookPlayer</td><td>耳记不开源</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">其他 App 的说明取自其开发者公开描述，2026-10-10 核对。</p>
@@ -234,7 +235,7 @@
   </div>
 
   <h2>常见问题</h2>
-  <details><summary>iPhone 能播 m4b 吗？</summary><p>能，用第三方播放器。iOS 自己不会把一个散装 m4b 文件加进「图书」App（除非是商店买的），但耳记、BookPlayer、Bound 这类 App 可以直接在自己的书库里播 m4b。</p></details>
+  <details><summary>iPhone 能播 m4b 吗？</summary><p>能。自己的、没有 DRM 的 m4b，系统自带的「图书」App 也能播，但散装文件一般要经过电脑：在 Mac 上把它加进「图书」App，再用访达同步到 iPhone（Windows 用 iTunes 或「Apple 设备」App）。不想经过电脑，可以用耳记、BookPlayer、Bound 这类播放器，从「文件」App 或通过 Wi-Fi 直接导入 m4b。</p></details>
   <details><summary>耳记能读 m4b 的章节吗？</summary><p>能。耳记读得出 m4b（以及其他带章节的文件）里嵌的章节，显示目录；上一章 / 下一章按章跳，进度条可以按本章或全书显示，笔记按章节分段，睡眠定时也能设在本章结束时停。</p></details>
   <details><summary>Audible 买的书能在耳记里听吗？</summary><p>不能。Audible 的 .aax / .aaxc 带 DRM，只能在 Audible 自己的 App 里播。这是授权限制，不是任何第三方开发者能绕开的技术问题。</p></details>
   <details><summary>必须用 iTunes 或者电脑才能把有声书传进 iPhone 吗？</summary><p>不用。耳记的 Wi-Fi 传输可以让你在同一局域网的任意浏览器里把文件拖进来；iOS 的「文件」App 也能从 iCloud 云盘、SMB 共享或插在手机上的 U 盘导入。</p></details>

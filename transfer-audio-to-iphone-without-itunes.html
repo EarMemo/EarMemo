@@ -33,7 +33,7 @@
   "description": "Four ways to get mp3, m4b or flac files onto an iPhone without iTunes, a cable, or a cloud account — including dragging them in from a desktop browser.",
   "inLanguage": "en",
   "url": "https://earmemo.app/transfer-audio-to-iphone-without-itunes",
-  "dateModified": "2026-11-05",
+  "dateModified": "2026-11-17",
   "author": {
     "@type": "Person",
     "@id": "https://earmemo.app/about#person",
@@ -208,7 +208,7 @@
   <p class="crumb"><a href="./">EarMemo</a> › Transfer audio without iTunes</p>
   <h1>How to transfer audio files to an iPhone without iTunes</h1>
   <div class="answer"><p>iTunes is no longer needed. Four routes work: drag files in from a desktop browser over your local Wi-Fi, import through the iOS <b>Files</b> app (iCloud Drive, SMB share, or a USB drive), send them via the <b>Share Sheet</b>, or AirDrop from a Mac. All four land the files in a player app, not Apple Music.</p></div>
-  <p class="meta">Last updated 2026-11-05 · Written by Fan YANG, the developer of EarMemo.</p>
+  <p class="meta">Last updated 2026-11-17 · Written by Fan YANG, the developer of EarMemo.</p>
 
   <h2>Why iTunes syncing stopped being the answer</h2>
   <p>Apple split iTunes up in macOS Catalina; syncing moved into Finder, and audiobooks and music took different paths. Meanwhile iOS gained a real filesystem through the Files app, and apps gained the right to own a document folder. The result is that a modern local player can take files directly — no library database in the middle.</p>
@@ -225,6 +225,7 @@
   <p>Plug the phone into a Mac, open Finder, go to the Files tab, and drag into the app's document folder. Or AirDrop from a Mac and pick the player when iOS asks where to open it. Both are fine for a handful of files and tedious for a hundred.</p>
   <h2>Which route for which situation</h2>
   <div class="tablewrap"><table><thead><tr><th>Your situation</th><th>Best route</th><th>Why</th></tr></thead><tbody><tr><td>A 40-file audiobook on your laptop</td><td>Wi-Fi browser transfer</td><td>One drag, folder structure kept, no cable.</td></tr><tr><td>Files already in iCloud Drive or Dropbox</td><td>Files app</td><td>No transfer at all — import in place.</td></tr><tr><td>A single episode someone emailed you</td><td>Share Sheet</td><td>Two taps.</td></tr><tr><td>A USB stick full of lectures</td><td>Files app</td><td>Plug it into the phone and import directly.</td></tr><tr><td>You are on public or office Wi-Fi</td><td>Files app or cable</td><td>Do not run a local web server on a network you do not control.</td></tr></tbody></table></div>
+  <p>Moving audiobooks? Once an m4b is in, EarMemo reads its built-in chapters and keeps your place in each book — see <a href="./m4b-audiobook-player-iphone">how to play M4B and MP3 audiobooks on iPhone</a>.</p>
   <h2>A caution about Wi-Fi transfer that most apps do not print</h2>
   <p>While Wi-Fi transfer is running, EarMemo is a small web server on your local network, and it announces itself over Bonjour. Anyone else on that same network can open the page and upload files while it is on. The page does not show them what others uploaded, but someone technical can use the token in the page to read this session's file names and progress; files in your library cannot be seen or downloaded. That is fine on your own home network and a bad idea on café, hotel, or open office Wi-Fi. Turn it off when the transfer is done — it does not run in the background, and it never reaches beyond your local network gateway.</p>
 

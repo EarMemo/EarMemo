@@ -33,7 +33,7 @@
   "description": "Play M4B (with chapters), MP3 and FLAC audiobooks you already own on iPhone — no Audible, no subscription — plus when a different player is the better choice.",
   "inLanguage": "en",
   "url": "https://earmemo.app/m4b-audiobook-player-iphone",
-  "dateModified": "2026-10-15",
+  "dateModified": "2026-11-17",
   "author": {
     "@type": "Person",
     "@id": "https://earmemo.app/about#person",
@@ -73,7 +73,7 @@
       "name": "Can an iPhone play M4B files?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, with a third-party player. iOS itself will not add a loose m4b file to Apple Books unless it came from the store, but apps like EarMemo, BookPlayer and Bound play m4b directly from their own libraries."
+        "text": "Yes. Apple Books plays DRM-free m4b audiobooks you add yourself, but a loose file usually has to go through a computer: add it to the Books app on a Mac and sync it to the iPhone in Finder (on Windows, iTunes or the Apple Devices app). To skip the computer, a player app such as EarMemo, BookPlayer or Bound imports m4b straight from the Files app or over Wi-Fi."
       }
     },
     {
@@ -208,7 +208,7 @@
   <p class="crumb"><a href="./">EarMemo</a> › M4B audiobook player for iPhone</p>
   <h1>How to play M4B and MP3 audiobooks on an iPhone you already own the files for</h1>
   <div class="answer"><p>Copy the files onto your iPhone and open them in a local audiobook player. <b>EarMemo</b> plays m4b, mp3, m4a, aac, flac and wav straight from the device, reads the chapters built into M4B files, keeps your position per book, and needs no account or internet for playback. It cannot open DRM-protected Audible or Apple Books purchases — nothing third-party can.</p></div>
-  <p class="meta">Last updated 2026-10-15 · Written by Fan YANG, the developer of EarMemo.</p>
+  <p class="meta">Last updated 2026-11-17 · Written by Fan YANG, the developer of EarMemo.</p>
 
   <h2>Which files can actually be played</h2>
   <p>The dividing line is not the file extension — it is DRM. A DRM-free file plays in any player you like. A DRM-protected purchase only plays in the store's own app, by design.</p>
@@ -216,6 +216,7 @@
   <h2>Getting the books onto the phone</h2>
   <p>EarMemo takes four routes in, and none of them involve iTunes:</p>
   <ol class="steps"><li><b>Wi-Fi transfer.</b> Turn it on in EarMemo, open the address it shows in any desktop browser, and drag the files in over your local network. No cable, no cloud, nothing leaves the network.</li><li><b>Files app.</b> Import from iCloud Drive, Dropbox, an SMB share, or a USB drive plugged into the phone. Folder structure is preserved, so a book split into 40 chapter files stays one book.</li><li><b>Share Sheet.</b> Received a file in Mail or Messages? Share → EarMemo.</li><li><b>Finder / USB.</b> Drag into the app's document folder the classic way.</li></ol>
+  <p>Each route is walked through step by step, with which one suits which situation, in <a href="./transfer-audio-to-iphone-without-itunes">how to transfer audio files to an iPhone without iTunes</a>.</p>
   <h2>How EarMemo compares — including where it loses</h2>
   <p>There are several good local audiobook players on iOS. They are built around different priorities, so pick by what you actually need rather than by feature count.</p>
   <div class="tablewrap"><table><thead><tr><th>If the thing you need most is…</th><th>Reach for</th><th>Why</th></tr></thead><tbody><tr><td>Notes tied to the exact second, exported as Markdown</td><td>EarMemo</td><td>Write while listening; tap a marker to jump back; in a chaptered book, notes sit under their chapter. Export plain .md files with Pro.</td></tr><tr><td>Offline playback and notes without an account</td><td>EarMemo</td><td>No app server or analytics; optional Wi-Fi transfer stays on the local network.</td></tr><tr><td>CarPlay</td><td>Bound or BookPlayer</td><td>EarMemo has no CarPlay support.</td></tr><tr><td>Importing books from Dropbox or OneDrive</td><td>Bound</td><td>Bound can download from those services; EarMemo plays files stored on the device.</td></tr><tr><td>Open source</td><td>BookPlayer</td><td>EarMemo is not open source.</td></tr></tbody></table></div><p class="meta" style="border:0;padding:0;margin:-6px 0 18px">Alternatives described from their developers' published descriptions, checked 2026-10-10.</p>
@@ -234,7 +235,7 @@
   </div>
 
   <h2>Questions people actually ask</h2>
-  <details><summary>Can an iPhone play M4B files?</summary><p>Yes, with a third-party player. iOS itself will not add a loose m4b file to Apple Books unless it came from the store, but apps like EarMemo, BookPlayer and Bound play m4b directly from their own libraries.</p></details>
+  <details><summary>Can an iPhone play M4B files?</summary><p>Yes. Apple Books plays DRM-free m4b audiobooks you add yourself, but a loose file usually has to go through a computer: add it to the Books app on a Mac and sync it to the iPhone in Finder (on Windows, iTunes or the Apple Devices app). To skip the computer, a player app such as EarMemo, BookPlayer or Bound imports m4b straight from the Files app or over Wi-Fi.</p></details>
   <details><summary>Does EarMemo read M4B chapters?</summary><p>Yes. EarMemo reads the chapters embedded in M4B files (and other files that carry them) and shows a table of contents. Previous and Next skip by chapter, the progress bar shows the current chapter or the whole book, notes are grouped by chapter, and the sleep timer can stop at the end of a chapter.</p></details>
   <details><summary>Can I play Audible books in EarMemo?</summary><p>No. Audible's .aax and .aaxc files are DRM-protected and only play in Audible's own app. This is a licensing restriction, not a limitation any third-party developer can work around.</p></details>
   <details><summary>Do I need iTunes or a Mac to get audiobooks onto my iPhone?</summary><p>No. EarMemo's Wi-Fi transfer lets you drag files in from any desktop browser on the same network, and the iOS Files app imports from iCloud Drive, Dropbox, SMB shares or a USB drive.</p></details>
