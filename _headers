@@ -1,0 +1,18 @@
+# Cloudflare Pages custom headers.
+# Plain-text resources are served without a charset by default; fetchers that
+# don't sniff then misread 耳记 / ¥ / — as Latin-1 mojibake. Declare UTF-8.
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+
+/pricing.md
+  Content-Type: text/markdown; charset=utf-8
+
+/ja/pricing.md
+  Content-Type: text/markdown; charset=utf-8
+
+/de/pricing.md
+  Content-Type: text/markdown; charset=utf-8
